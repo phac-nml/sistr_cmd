@@ -1,17 +1,14 @@
-from collections import defaultdict
 import os
 import numpy as np
 import pandas as pd
 
-__author__ = 'piotr'
+base_dir = os.path.join(os.path.dirname(__file__), '..')
+here = lambda x: os.path.abspath(os.path.join(base_dir, x))
 
-CGMLST_PROFILES_PATH = os.path.abspath('data/cgmlst/cgmlst330-profiles-nr.csv')
+CGMLST_FASTA_PATH = here('data/cgmlst/cgmlst330.fasta')
+CGMLST_PROFILES_PATH = here('data/cgmlst/cgmlst330-profiles-nr.csv')
 
-GENOMES_TO_SEROVAR_PATH = os.path.abspath('data/cgmlst/genomes-to-serovar.txt')
-
-class CgMLST:
-    blast_runner = None
-
+GENOMES_TO_SEROVAR_PATH = here('data/cgmlst/genomes-to-serovar.txt')
 
 
 def cgmlst_profiles():

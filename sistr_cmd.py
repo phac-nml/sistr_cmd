@@ -79,7 +79,7 @@ if __name__ == '__main__':
     logging.debug('{} distinct cgMLST330 profiles'.format(df_cgmlst_profiles.shape[0]))
 
     logging.info('Running BLAST on serovar predictive cgMLST330 alleles')
-    blast_outfile = blast_runner.blast_against_query('data/cgmlst/cgmlst330.fasta')
+    blast_outfile = blast_runner.blast_against_query(CGMLST_FASTA_PATH)
     logging.info('Reading BLAST output file "{}"'.format(blast_outfile))
     blast_reader = BlastReader(blast_outfile)
     logging.info('Found {} cgMLST330 allele BLAST results'.format(blast_reader.df.shape[0]))
