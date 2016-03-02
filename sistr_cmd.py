@@ -55,6 +55,7 @@ if __name__ == '__main__':
         parser.print_help()
         exit(1)
 
+    import os
     assert os.path.exists(input_fasta), "Input fasta file '{}' must exist!".format(input_fasta)
 
     fasta_filename = os.path.basename(input_fasta)
