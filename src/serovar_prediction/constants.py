@@ -2,6 +2,7 @@ import os
 
 # cgMLST330 distance threshold for refining overall serovar prediction
 CGMLST_DISTANCE_THRESHOLD = 0.1
+MASH_DISTANCE_THRESHOLD = 0.005
 
 base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 here = lambda x: os.path.abspath(os.path.join(base_dir, x))
