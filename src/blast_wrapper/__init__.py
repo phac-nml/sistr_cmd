@@ -137,6 +137,7 @@ class BlastReader:
     is_missing = True
     is_perfect_match = False
     is_trunc = False
+    df = None
 
 
     def __init__(self, blast_outfile):
@@ -157,7 +158,7 @@ class BlastReader:
             self.df.sort_values(by='bitscore', ascending=False, inplace=True)
             self.is_missing = False
         except Exception as e:
-            logging.info('{} -- {}'.format(e.message, blast_outfile))
+            logging.info('{} -- {}'.format(e, blast_outfile))
             self.is_missing = True
 
 

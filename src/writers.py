@@ -11,8 +11,9 @@ def write_pickle(fh, output):
     cPickle.dump(output, fh)
 
 def write_csv(fh, output):
-    # TODO: use pandas to write csv or use Python csv module; layout? index is genome/filename? column names == attr names?
-    pass
+    import pandas as pd
+    df = pd.DataFrame([output])
+    df.to_csv(fh, index=False)
 
 fmt_to_write_func = {'json': write_json,
                      'pickle': write_pickle,
@@ -38,12 +39,12 @@ def write(dest, fmt, serovar_prediction):
             output_dict = serovar_prediction.__dict__
         else:
             output_dict = {}
-            for k,v in serovar_prediction.__dict__.iteritems():
+            for k,v in serovar_prediction.__dict__.items():
                 if isinstance(v, (str, float, int)):
                     output_dict[k] = v
         write_func(fh, output_dict)
     except Exception as ex:
-        logging.error(ex.message)
+        logging.error(ex)
     finally:
         fh.close()
 

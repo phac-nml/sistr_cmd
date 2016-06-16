@@ -47,6 +47,7 @@ class H2FljBPrediction(BlastResultMixin):
 
 
 class SerovarPrediction():
+    genome = None
     serovar = None
     serovar_cgmlst = None
     cgmlst_distance = 1.0
@@ -417,9 +418,14 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
         - otherwise, the serovar is antigen predicted serovar(s)
 
     Args:
+        serovar_prediction (src.serovar_prediction.SerovarPrediction): Serovar prediction results (antigen+cgMLST[+Mash])
+        antigen_predictor (src.serovar_prediction.SerovarPredictor): Antigen search results
 
+    Returns:
+        src.serovar_prediction.SerovarPrediction: Serovar prediction results with overall prediction from antigen + cgMLST
     """
     assert isinstance(serovar_prediction, SerovarPrediction)
+    assert isinstance(antigen_predictor, SerovarPredictor)
 
     h1 = antigen_predictor.h1
     h2 = antigen_predictor.h2
@@ -434,8 +440,12 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
             and (h2 is not None and h2 != '') \
             and (sg is not None and sg != ''):
             serovar_prediction.serovar = '{}:{}:{}'.format(sg, h1, h2)
-        else:
+        elif cgmlst_serovar is not None:
             serovar_prediction.serovar = cgmlst_serovar
+        elif 'mash_match' in serovar_prediction.__dict__:
+            spd = serovar_prediction.__dict__
+            mash_serovar = spd['mash_serovar']
+            serovar_prediction.serovar = mash_serovar
     else:
         serovars_from_antigen = antigen_predictor.serovar.split('|')
         if not isinstance(serovars_from_antigen, list):
@@ -448,5 +458,22 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
                     serovar_prediction.serovar = cgmlst_serovar
                 else:
                     serovar_prediction.serovar = antigen_predictor.serovar
+        elif 'mash_match' in serovar_prediction.__dict__:
+            spd = serovar_prediction.__dict__
+            mash_serovar = spd['mash_serovar']
+            if mash_serovar in serovars_from_antigen:
+                serovar_prediction.serovar = mash_serovar
 
+        if serovar_prediction.serovar is None:
+            serovar_prediction.serovar = serovar_prediction.serovar_antigen
+    if serovar_prediction.h1 is None:
+        serovar_prediction.h1 = '-'
+    if serovar_prediction.h2 is None:
+        serovar_prediction.h2 = '-'
+    if serovar_prediction.serogroup is None:
+        serovar_prediction.serogroup = '-'
+    if serovar_prediction.serovar_antigen is None:
+        serovar_prediction.serovar_antigen = '-:-:-'
+    if serovar_prediction.serovar is None:
+        serovar_prediction.serovar = '???'
     return serovar_prediction

@@ -36,15 +36,14 @@ def mash_dist_trusted(fasta_path):
 
 
 def mash_output_to_pandas_df(mash_out):
-    from StringIO import StringIO
-    mash_header_list = ['ref', 'query', 'dist', 'pval', 'matching']
-    mash_header_str = '\t'.join(mash_header_list)
-    sio_o = StringIO('\n'.join([mash_header_str, mash_out]))
-    df = pd.read_table(sio_o)
+    from io import BytesIO
+    df = pd.read_table(BytesIO(mash_out))
+    df.columns = ['ref', 'query', 'dist', 'pval', 'matching']
     refs = [r.replace('.fasta', '') for r in df['ref']]
     df['ref'] = refs
     genome_serovar_dict = genomes_to_serovar()
     df['serovar'] = [genome_serovar_dict[genome] for genome in refs]
     df['n_match'] = [int(x.split('/')[0]) for x in df['matching']]
     df.sort_values(by='dist', inplace=True)
+    df = df[df['dist'] < 1.0]
     return df
