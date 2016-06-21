@@ -3,9 +3,7 @@
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 [Mash MinHash](https://mash.readthedocs.io/en/latest/) can also be used for serovar prediction.
 
-*Don't want to use a command-line app?*
-
-Try the SISTR web app at https://lfz.corefacility.ca/sistr-app/
+*Don't want to use a command-line app? * Try the SISTR web app at https://lfz.corefacility.ca/sistr-app/
 
 ## Citation
 
@@ -40,23 +38,41 @@ BibTeX:
 - Python (>= v2.7 OR >= v3.4)
     - numpy (>=1.10.4)
     - pandas (>=0.17.1)
-    - pytest (>=2.8.7) for running tests...
 - [Mash v1.0+](https://github.com/marbl/Mash/releases) [optional]
+
+### Python dependencies
+
+You can run the following commands to get up-to-date versions of `numpy` and `pandas`
+
+```bash
+pip install --upgrade pip
+pip install wheel
+pip install numpy pandas
+
+```
 
 ## Usage
 
 ```
-usage: predict_serovar [-h] -i INPUT [-f OUTPUT_FORMAT] [-o OUTPUT_DEST]
-                       [-T TMP_DIR] [-K] [--no-cgmlst] [-m] [-v]
+usage: predict_serovar [-h] [-f OUTPUT_FORMAT] [-o OUTPUT_DEST] [-T TMP_DIR]
+                       [-K] [--no-cgmlst] [-m] [-t THREADS] [-v]
+                       F [F ...]
 
 SISTR (Salmonella In Silico Typing Resource) Command-line Tool
 ==============================================================
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 
+If you find this program useful in your research, please cite as:
+
+The Salmonella In Silico Typing Resource (SISTR): an open web-accessible tool for rapidly typing and subtyping draft Salmonella genome assemblies.
+Catherine Yoshida, Peter Kruczkiewicz, Chad R. Laing, Erika J. Lingohr, Victor P.J. Gannon, John H.E. Nash, Eduardo N. Taboada.
+PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
+
+positional arguments:
+  F                     Input genome FASTA file
+
 optional arguments:
   -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
-                        Input genome FASTA file
   -f OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
                         Output format (json, csv, pickle)
   -o OUTPUT_DEST, --output-dest OUTPUT_DEST
@@ -69,8 +85,11 @@ optional arguments:
   -m, --run-mash        Determine Mash MinHash genomic distances to Salmonella
                         genomes with trusted serovar designations. Mash binary
                         must be in accessible via $PATH (e.g. /usr/bin).
+  -t THREADS, --threads THREADS
+                        Number of parallel threads to run sistr_cmd analysis.
   -v, --verbose         Logging verbosity level (-v == show warnings; -vvv ==
                         show debug info)
+
 ```
 
 ## Example output
@@ -78,7 +97,7 @@ optional arguments:
 By running the following command on a FASTA file of *Salmonella enterica* strain LT2 (https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP014051.1):
 
 ```
-$ python2 sistr_cmd.py --input LT2.fasta -f csv -o out.csv -m
+$ python2 sistr_cmd.py -f csv -o out.csv -m LT2.fasta
 ```
 
 You should see some log messages like so:
@@ -106,10 +125,14 @@ cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,genome,h1,h2,mash_di
 0.0,LT2,330,LT2.fasta,i,"1,2",0.0,LT2,1000,Typhimurium,B,Typhimurium,Typhimurium,Typhimurium
 ```
 
+| cgmlst_distance | cgmlst_genome_match | cgmlst_matching_alleles | genome | h1 | h2 | mash_distance | mash_genome | mash_match | mash_serovar | serogroup | serovar | serovar_antigen | serovar_cgmlst |
+| --------------: | ------------------: | ----------------------: | ------ | -- | -- | ------------: | ----------- | ---------: | ------------ | --------- | ------- | --------------- | -------------- |
+| 0.0 | LT2 | 330 | LT2.fasta | i | "1,2" | 0.0 | LT2 | 1000 | Typhimurium | B | Typhimurium | Typhimurium | Typhimurium |
+
 JSON output:
 
 ```json
-{
+[{
   "mash_serovar": "Typhimurium",
   "serovar_cgmlst": "Typhimurium",
   "cgmlst_matching_alleles": 330,
@@ -124,12 +147,12 @@ JSON output:
   "serovar": "Typhimurium",
   "genome": "LT2.fasta",
   "serogroup": "B"
-}
+}]
 ```
 
 ## TODO
 
-- add more genomes to improve cgMLST and Mash serovar calling
+- add more genomes to improve cgMLST and Mash serovar calling (7511 -> infinity)
 - output of cgMLST allele results
     + output novel alleles?
 
