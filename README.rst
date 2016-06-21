@@ -22,7 +22,7 @@ If you find this tool useful, please cite as:
 BibTeX
 ------
 
-.. code-block:: latex
+.. code-block:: none
 
     @article{Yoshida2016,
       doi = {10.1371/journal.pone.0147101},
@@ -48,6 +48,9 @@ You can install ``sistr_cmd`` using ``pip``:
 .. code-block:: bash
 
     pip install sistr_cmd
+
+
+``sistr_cmd`` is available from PYPI at https://pypi.python.org/pypi/sistr-cmd
 
 Dependencies
 ============
@@ -77,7 +80,7 @@ Usage
 =====
 
 
-.. code-block:: bash
+.. code-block:: none
 
     usage: predict_serovar [-h] [-f OUTPUT_FORMAT] [-o OUTPUT_DEST] [-T TMP_DIR]
                            [-K] [--no-cgmlst] [-m] [-t THREADS] [-v]
@@ -127,7 +130,7 @@ By running the following command on a FASTA file of *Salmonella enterica* strain
 
 You should see some log messages like so:
 
-.. code-block:: bash
+.. code-block:: none
 
     <TIME> INFO: Initializing temporary analysis directory and preparing for BLAST searching. [in sistr_cmd.py:152]
     <TIME> INFO: Temporary FASTA file copied to tmp/LT2.fasta [in sistr_cmd.py:154]
@@ -152,10 +155,10 @@ CSV Output
     cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,genome,h1,h2,mash_distance,mash_genome,mash_match,mash_serovar,serogroup,serovar,serovar_antigen,serovar_cgmlst
     0.0,LT2,330,LT2.fasta,i,"1,2",0.0,LT2,1000,Typhimurium,B,Typhimurium,Typhimurium,Typhimurium
 
+.. csv-table:: 
 
-| cgmlst_distance | cgmlst_genome_match | cgmlst_matching_alleles | genome | h1 | h2 | mash_distance | mash_genome | mash_match | mash_serovar | serogroup | serovar | serovar_antigen | serovar_cgmlst |
-| --------------: | ------------------: | ----------------------: | ------ | --- | --- | ------------: | ----------- | ---------: | ------------ | --------- | ------- | --------------- | -------------- |
-| 0.0 | LT2 | 330 | LT2.fasta | i | "1,2" | 0.0 | LT2 | 1000 | Typhimurium | B | Typhimurium | Typhimurium | Typhimurium |
+   cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,genome,h1,h2,mash_distance,mash_genome,mash_match,mash_serovar,serogroup,serovar,serovar_antigen,serovar_cgmlst
+    0.0,LT2,330,LT2.fasta,i,"1,2",0.0,LT2,1000,Typhimurium,B,Typhimurium,Typhimurium,Typhimurium
 
 
 
