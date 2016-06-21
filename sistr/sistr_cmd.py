@@ -206,7 +206,7 @@ def main():
     outputs = [x.get() for x in res]
 
     if output_path:
-        from src.writers import write
+        from sistr.src.writers import write
         write(output_path, output_format, outputs)
     else:
         logging.warning('No output file written!')

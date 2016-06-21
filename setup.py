@@ -23,7 +23,7 @@ def read(fname):
 
 setup(
     name='sistr_cmd',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(exclude=['tests']),
     url='https://github.com/peterk87/sistr_cmd',
     license='GPLv3',
