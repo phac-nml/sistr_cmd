@@ -5,7 +5,7 @@ import shutil
 from subprocess import Popen, PIPE
 import os
 import pandas as pd
-
+from pandas.io.common import EmptyDataError
 
 
 BLAST_TABLE_COLS = '''
@@ -141,13 +141,15 @@ class BlastReader:
 
 
     def __init__(self, blast_outfile):
-        """
-        Read BLASTN output file into a pandas DataFrame.
+        """Read BLASTN output file into a pandas DataFrame
         Sort the DataFrame by BLAST bitscore.
         If there are no BLASTN results, then no results can be returned.
 
-        @type blast_outfile: str
-        @param blast_outfile: BLASTN output file path
+        Args:
+            blast_outfile (str): `blastn` output file path
+
+        Raises:
+            EmptyDataError: No data could be parsed from the `blastn` output file
         """
         self.blast_outfile = blast_outfile
         try:
@@ -157,8 +159,8 @@ class BlastReader:
             self.df['coverage'] = self.df.length / self.df.qlen
             self.df.sort_values(by='bitscore', ascending=False, inplace=True)
             self.is_missing = False
-        except Exception as e:
-            logging.info('{} -- {}'.format(e, blast_outfile))
+        except EmptyDataError as exc:
+            logging.warning('No BLASTN results to parse from file %s', blast_outfile)
             self.is_missing = True
 
 
@@ -168,6 +170,23 @@ class BlastReader:
 
     @staticmethod
     def df_first_row_to_dict(df):
+        """First DataFrame row to list of dict
+
+        Args:
+            df (pandas.DataFrame): A DataFrame with at least one row
+
+        Returns:
+            A list of dict that looks like:
+
+                [{'C1': 'x'}, {'C2': 'y'}, {'C3': 'z'}]
+
+            from a DataFrame that looks like:
+
+                    C1  C2  C3
+                1   x   y   z
+
+            Else if `df` is `None`, returns `None`
+        """
         if df is not None:
             return [dict(r) for i, r in df.head(1).iterrows()][0]
 
@@ -218,11 +237,12 @@ class BlastReader:
 
 
     def top_result(self):
-        """
+        """Return top `blastn` result
         Try to find a 100% identity and coverage result (perfect match).
         If one does not exist, then retrieve the result with the highest bitscore.
 
-        @return: Ordered dict of BLASTN results or None if no BLASTN results generated
+        Returns:
+            Ordered dict of BLASTN results or None if no BLASTN results generated
         """
 
         if self.is_missing:

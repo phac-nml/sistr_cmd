@@ -39,7 +39,6 @@ H1_FLIC_SIMILARITY_GROUPS = [
      'l,z13,z28',
      'l,z28', ],
     ['(g),m,[s],t',
-     '(g),m,[s],t',
      'g,(m),[s],t',
      'm,t',
      'm,p,t,[u]',
@@ -53,6 +52,7 @@ H1_FLIC_SIMILARITY_GROUPS = [
      'g,[m],t',
      'g,m,[s],[t]', ],
     ['f,g,m,t',
+     'm,t',
      'g,m,t',
      'g,m,[t]',
      'g,m,[s],t',
@@ -81,7 +81,6 @@ H1_FLIC_SIMILARITY_GROUPS = [
      'g,m,[s],[t]',
      'g,m,q',
      'g,m,s',
-     'g,m,s',
      'g,p',
      'g,p,s',
      'g,p,u',
@@ -94,8 +93,8 @@ H1_FLIC_SIMILARITY_GROUPS = [
      'f,g,[t]',
      '[f],g,[t]',
      'f,g,t',
-     'g,t', ],
-    ['[f],g,[t]',
+     'g,t',
+     '[f],g,[t]',
      'f,g,[s]',
      'f,g,[t]',
      'f,g,s', ],
@@ -111,6 +110,8 @@ H1_FLIC_SIMILARITY_GROUPS = [
 ]
 
 H2_FLJB_SIMILARITY_GROUPS = [
+    ['1,2,7',
+     '1,[2],7', ],
     ['1,5',
      '1,[2],5',
      '1,5,[7]',
@@ -121,7 +122,11 @@ H2_FLJB_SIMILARITY_GROUPS = [
      '1,[2],7',
      '1,[5],7', ],
     ['e,n,[x],z15',
-     'e,n,z15', ],
+     'e,n,z15',
+     '[e,n,z15]',
+     '[e,n,x,z15]', ],
     ['e,n,x',
-     'e,n,x,[z15]', ]
+     '[e,n,x]',
+     'e,n,x,[z15]',
+     '[e,n,x,z15]', ]
 ]

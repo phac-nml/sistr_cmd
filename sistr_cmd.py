@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 import logging
 
@@ -9,15 +10,21 @@ prog_desc = '''
 SISTR (Salmonella In Silico Typing Resource) Command-line Tool
 ==============================================================
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
+
+If you find this program useful in your research, please cite as:
+
+The Salmonella In Silico Typing Resource (SISTR): an open web-accessible tool for rapidly typing and subtyping draft Salmonella genome assemblies.
+Catherine Yoshida, Peter Kruczkiewicz, Chad R. Laing, Erika J. Lingohr, Victor P.J. Gannon, John H.E. Nash, Eduardo N. Taboada.
+PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
 '''
 
 parser = argparse.ArgumentParser(prog='predict_serovar',
                                  formatter_class=argparse.RawDescriptionHelpFormatter,
                                  description=prog_desc)
 
-parser.add_argument('-i',
-                    '--input',
-                    required=True,
+parser.add_argument('fastas',
+                    metavar='F',
+                    nargs='+',
                     help='Input genome FASTA file')
 parser.add_argument('-f',
                     '--output-format',
@@ -34,7 +41,6 @@ parser.add_argument('-K',
                     '--keep-tmp',
                     action='store_true',
                     help='Keep temporary analysis files.')
-# parser.add_argument('--antigen_only', action='store_true', help='Antigen gene serovar prediction only')
 parser.add_argument('--no-cgmlst',
                     action='store_true',
                     help='Do not run cgMLST serovar prediction')
@@ -43,13 +49,18 @@ parser.add_argument('-m', '--run-mash',
                     help='''Determine Mash MinHash genomic distances to Salmonella genomes with trusted serovar designations.
                     Mash binary must be in accessible via $PATH (e.g. /usr/bin).
                     ''')
+parser.add_argument('-t', '--threads',
+                    type=int,
+                    default=1,
+                    help='Number of parallel threads to run sistr_cmd analysis.')
 parser.add_argument('-v',
                     '--verbose',
                     action='count',
                     default=2,
                     help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
 
-def run_cgmlst(prediction):
+
+def run_cgmlst(prediction, blast_runner):
     from src.cgmlst import\
         cgmlst_profiles, \
         CGMLST_FASTA_PATH, \
@@ -102,7 +113,7 @@ def run_cgmlst(prediction):
     prediction.cgmlst_matching_alleles = cgmlst_matching_alleles
 
 
-def run_mash():
+def run_mash(input_fasta, prediction):
     from src.mash import mash_dist_trusted, mash_output_to_pandas_df
 
     mash_out = mash_dist_trusted(input_fasta)
@@ -130,52 +141,68 @@ def run_mash():
         break
 
 
+def sistr_predict(input_fasta, tmp_dir):
+    try:
+        assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
+        fasta_filename = os.path.basename(input_fasta)
+        genome_tmp_dir = tmp_dir + '-' + fasta_filename
+        blast_runner = BlastRunner(input_fasta, genome_tmp_dir)
+        logging.info('Initializing temporary analysis directory "%s" and preparing for BLAST searching.', genome_tmp_dir)
+        blast_runner.prep_blast()
+        logging.info('Temporary FASTA file copied to %s', blast_runner.tmp_fasta_path)
+        serovar_predictor = SerovarPredictor(blast_runner)
+        serovar_predictor.predict_serovar_from_antigen_blast()
+        prediction = serovar_predictor.get_serovar_prediction()
+        prediction.genome = fasta_filename
+        if args.run_mash:
+            run_mash(input_fasta, prediction)
+        if not args.no_cgmlst:
+            run_cgmlst(prediction, blast_runner)
+        serovar_from_cgmlst_and_antigen_blast(prediction, serovar_predictor)
+        logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s:H1=%s:H2=%s',
+                     fasta_filename,
+                     prediction.serovar_antigen,
+                     prediction.serogroup,
+                     prediction.h1,
+                     prediction.h2)
+        logging.info('%s | Overall serovar prediction: %s',
+                     fasta_filename,
+                     prediction.serovar)
+    finally:
+        if not keep_tmp:
+            logging.info('Deleting temporary working directory at %s', blast_runner.tmp_work_dir)
+            blast_runner.cleanup()
+        else:
+            logging.info('Keeping temp dir at %s', blast_runner.tmp_work_dir)
+    return prediction
+
 if __name__ == '__main__':
     args = parser.parse_args()
     init_console_logger(args.verbose)
 
-    input_fasta = args.input
+    input_fastas = args.fastas
+    if len(input_fastas) == 0:
+        logging.error('No FASTA files specified!')
+        exit(1)
+
     tmp_dir = args.tmp_dir
     keep_tmp = args.keep_tmp
     output_format = args.output_format
     output_path = args.output_dest
 
-    try:
+    import os
 
-        import os
-        assert os.path.exists(input_fasta), "Input fasta file '{}' must exist!".format(input_fasta)
+    from multiprocessing import Pool
+    n_threads = args.threads
+    logging.info('Initializing thread pool with %s threads', n_threads)
+    pool = Pool(processes=n_threads)
+    logging.info('Running SISTR analysis asynchronously on %s genomes', len(input_fastas))
+    res = [pool.apply_async(sistr_predict, (input_fasta, tmp_dir)) for input_fasta in input_fastas]
+    logging.info('Getting SISTR analysis results')
+    outputs = [x.get() for x in res]
 
-        fasta_filename = os.path.basename(input_fasta)
-
-
-        blast_runner = BlastRunner(input_fasta, tmp_dir)
-        logging.info('Initializing temporary analysis directory and preparing for BLAST searching.')
-        blast_runner.prep_blast()
-        logging.info('Temporary FASTA file copied to {}'.format(blast_runner.tmp_fasta_path))
-
-        serovar_predictor = SerovarPredictor(blast_runner)
-        serovar_predictor.predict_serovar_from_antigen_blast()
-
-        prediction = serovar_predictor.get_serovar_prediction()
-        prediction.genome = fasta_filename
-        if not args.no_cgmlst:
-            run_cgmlst(prediction)
-
-        if args.run_mash:
-            run_mash()
-
-        serovar_from_cgmlst_and_antigen_blast(prediction, serovar_predictor)
-
-        logging.info('Antigen gene BLAST serovar prediction: "{}" serogroup={}:H1={}:H2={}'.format(prediction.serovar_antigen, prediction.serogroup, prediction.h1, prediction.h2))
-        logging.info('Overall serovar prediction: {}'.format(prediction.serovar))
-
-        if output_path:
-            from src.writers import write
-            write(output_path, output_format, prediction)
-
-    finally:
-        if not keep_tmp:
-            logging.info('Deleting temporary working directory at {}'.format(blast_runner.tmp_work_dir))
-            blast_runner.cleanup()
-        else:
-            logging.info('Keeping temp dir at {}'.format(blast_runner.tmp_work_dir))
+    if output_path:
+        from src.writers import write
+        write(output_path, output_format, outputs)
+    else:
+        logging.warning('No output file written!')

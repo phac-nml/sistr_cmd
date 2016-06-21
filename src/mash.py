@@ -8,7 +8,7 @@ MASH_BIN = 'mash'
 base_dir = os.path.join(os.path.dirname(__file__), '..')
 here = lambda x: os.path.abspath(os.path.join(base_dir, x))
 
-MASH_SKETCH_FILE = here('data/mash-sistr-3967-trusted.msh')
+MASH_SKETCH_FILE = here('data/sistr-7511.msh')
 
 
 def mash_dist_trusted(fasta_path):
