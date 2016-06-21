@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+include MANIFEST.in
+include setup.py
+
+recursive-include sistr/data/ *.fasta *.txt *.csv *.msh

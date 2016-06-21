@@ -1,14 +1,11 @@
-import os
+from pkg_resources import resource_filename
 from subprocess import Popen, PIPE
 import pandas as pd
-from src.cgmlst import genomes_to_serovar
+from sistr.src.cgmlst import genomes_to_serovar
+
 
 MASH_BIN = 'mash'
-
-base_dir = os.path.join(os.path.dirname(__file__), '..')
-here = lambda x: os.path.abspath(os.path.join(base_dir, x))
-
-MASH_SKETCH_FILE = here('data/sistr-7511.msh')
+MASH_SKETCH_FILE = resource_filename('sistr', 'data/sistr-7511.msh')
 
 
 def mash_dist_trusted(fasta_path):
@@ -32,7 +29,6 @@ def mash_dist_trusted(fasta_path):
         raise Exception('Could not run Mash dist {}'.format(stderr))
 
     return stdout
-
 
 
 def mash_output_to_pandas_df(mash_out):

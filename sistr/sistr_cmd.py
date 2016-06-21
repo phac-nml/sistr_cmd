@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 import argparse
 import logging
+import os
 
-from src.blast_wrapper import BlastRunner, BlastReader
-from src.logger import init_console_logger
-from src.serovar_prediction import SerovarPredictor, serovar_from_cgmlst_and_antigen_blast
+from sistr.src.blast_wrapper import BlastRunner, BlastReader
+from sistr.src.logger import init_console_logger
+from sistr.src.serovar_prediction import SerovarPredictor, serovar_from_cgmlst_and_antigen_blast
 
-prog_desc = '''
+
+def init_parser():
+    prog_desc = '''
 SISTR (Salmonella In Silico Typing Resource) Command-line Tool
 ==============================================================
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
@@ -18,50 +21,51 @@ Catherine Yoshida, Peter Kruczkiewicz, Chad R. Laing, Erika J. Lingohr, Victor P
 PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
 '''
 
-parser = argparse.ArgumentParser(prog='predict_serovar',
-                                 formatter_class=argparse.RawDescriptionHelpFormatter,
-                                 description=prog_desc)
+    parser = argparse.ArgumentParser(prog='predict_serovar',
+                                     formatter_class=argparse.RawDescriptionHelpFormatter,
+                                     description=prog_desc)
 
-parser.add_argument('fastas',
-                    metavar='F',
-                    nargs='+',
-                    help='Input genome FASTA file')
-parser.add_argument('-f',
-                    '--output-format',
-                    default='json',
-                    help='Output format (json, csv, pickle)')
-parser.add_argument('-o',
-                    '--output-dest',
-                    help='Output')
-parser.add_argument('-T',
-                    '--tmp-dir',
-                    default='tmp',
-                    help='Base temporary working directory for intermediate analysis files.')
-parser.add_argument('-K',
-                    '--keep-tmp',
-                    action='store_true',
-                    help='Keep temporary analysis files.')
-parser.add_argument('--no-cgmlst',
-                    action='store_true',
-                    help='Do not run cgMLST serovar prediction')
-parser.add_argument('-m', '--run-mash',
-                    action='store_true',
-                    help='''Determine Mash MinHash genomic distances to Salmonella genomes with trusted serovar designations.
-                    Mash binary must be in accessible via $PATH (e.g. /usr/bin).
-                    ''')
-parser.add_argument('-t', '--threads',
-                    type=int,
-                    default=1,
-                    help='Number of parallel threads to run sistr_cmd analysis.')
-parser.add_argument('-v',
-                    '--verbose',
-                    action='count',
-                    default=2,
-                    help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
+    parser.add_argument('fastas',
+                        metavar='F',
+                        nargs='+',
+                        help='Input genome FASTA file')
+    parser.add_argument('-f',
+                        '--output-format',
+                        default='json',
+                        help='Output format (json, csv, pickle)')
+    parser.add_argument('-o',
+                        '--output-dest',
+                        help='Output')
+    parser.add_argument('-T',
+                        '--tmp-dir',
+                        default='tmp',
+                        help='Base temporary working directory for intermediate analysis files.')
+    parser.add_argument('-K',
+                        '--keep-tmp',
+                        action='store_true',
+                        help='Keep temporary analysis files.')
+    parser.add_argument('--no-cgmlst',
+                        action='store_true',
+                        help='Do not run cgMLST serovar prediction')
+    parser.add_argument('-m', '--run-mash',
+                        action='store_true',
+                        help='''Determine Mash MinHash genomic distances to Salmonella genomes with trusted serovar designations.
+                        Mash binary must be in accessible via $PATH (e.g. /usr/bin).
+                        ''')
+    parser.add_argument('-t', '--threads',
+                        type=int,
+                        default=1,
+                        help='Number of parallel threads to run sistr_cmd analysis.')
+    parser.add_argument('-v',
+                        '--verbose',
+                        action='count',
+                        default=2,
+                        help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
+    return parser
 
 
 def run_cgmlst(prediction, blast_runner):
-    from src.cgmlst import\
+    from sistr.src.cgmlst import\
         cgmlst_profiles, \
         CGMLST_FASTA_PATH, \
         genomes_to_serovar, \
@@ -114,7 +118,7 @@ def run_cgmlst(prediction, blast_runner):
 
 
 def run_mash(input_fasta, prediction):
-    from src.mash import mash_dist_trusted, mash_output_to_pandas_df
+    from sistr.src.mash import mash_dist_trusted, mash_output_to_pandas_df
 
     mash_out = mash_dist_trusted(input_fasta)
     df_mash = mash_output_to_pandas_df(mash_out)
@@ -141,7 +145,8 @@ def run_mash(input_fasta, prediction):
         break
 
 
-def sistr_predict(input_fasta, tmp_dir):
+def sistr_predict(input_fasta, tmp_dir, keep_tmp, should_run_mash, no_cgmlst):
+    blast_runner = None
     try:
         assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
         fasta_filename = os.path.basename(input_fasta)
@@ -154,9 +159,9 @@ def sistr_predict(input_fasta, tmp_dir):
         serovar_predictor.predict_serovar_from_antigen_blast()
         prediction = serovar_predictor.get_serovar_prediction()
         prediction.genome = fasta_filename
-        if args.run_mash:
+        if should_run_mash:
             run_mash(input_fasta, prediction)
-        if not args.no_cgmlst:
+        if not no_cgmlst:
             run_cgmlst(prediction, blast_runner)
         serovar_from_cgmlst_and_antigen_blast(prediction, serovar_predictor)
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s:H1=%s:H2=%s',
@@ -176,10 +181,11 @@ def sistr_predict(input_fasta, tmp_dir):
             logging.info('Keeping temp dir at %s', blast_runner.tmp_work_dir)
     return prediction
 
-if __name__ == '__main__':
+
+def main():
+    parser = init_parser()
     args = parser.parse_args()
     init_console_logger(args.verbose)
-
     input_fastas = args.fastas
     if len(input_fastas) == 0:
         logging.error('No FASTA files specified!')
@@ -190,14 +196,12 @@ if __name__ == '__main__':
     output_format = args.output_format
     output_path = args.output_dest
 
-    import os
-
     from multiprocessing import Pool
     n_threads = args.threads
     logging.info('Initializing thread pool with %s threads', n_threads)
     pool = Pool(processes=n_threads)
     logging.info('Running SISTR analysis asynchronously on %s genomes', len(input_fastas))
-    res = [pool.apply_async(sistr_predict, (input_fasta, tmp_dir)) for input_fasta in input_fastas]
+    res = [pool.apply_async(sistr_predict, (input_fasta, tmp_dir, keep_tmp, args.run_mash, args.no_cgmlst)) for input_fasta in input_fastas]
     logging.info('Getting SISTR analysis results')
     outputs = [x.get() for x in res]
 
@@ -206,3 +210,7 @@ if __name__ == '__main__':
         write(output_path, output_format, outputs)
     else:
         logging.warning('No output file written!')
+
+
+if __name__ == '__main__':
+    main()

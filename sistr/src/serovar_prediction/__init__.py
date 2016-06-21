@@ -1,9 +1,7 @@
-from __future__ import absolute_import
-
 import pandas as pd
 
-from src.blast_wrapper import BlastReader
-from src.serovar_prediction.constants import \
+from sistr.src.blast_wrapper import BlastReader
+from sistr.src.serovar_prediction.constants import \
     FLJB_FASTA_PATH, \
     FLIC_FASTA_PATH, \
     H2_FLJB_SIMILARITY_GROUPS, \

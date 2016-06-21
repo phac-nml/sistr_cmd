@@ -1,21 +1,15 @@
-import os
+from __future__ import print_function
+
+from pkg_resources import resource_filename
 
 # cgMLST330 distance threshold for refining overall serovar prediction
 CGMLST_DISTANCE_THRESHOLD = 0.1
 MASH_DISTANCE_THRESHOLD = 0.005
-
-base_dir = os.path.join(os.path.dirname(__file__), '..', '..')
-here = lambda x: os.path.abspath(os.path.join(base_dir, x))
-
-SEROVAR_TABLE_PATH = here('data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
-
-# MLST_TO_SEROVAR_MATRIX_PATH = os.path.abspath('data/MLST_to_serovar_matrix.csv')
-
-WZX_FASTA_PATH = here('data/antigens/wzx.fasta')
-WZY_FASTA_PATH = here('data/antigens/wzy.fasta')
-
-FLIC_FASTA_PATH = here('data/antigens/fliC.fasta')
-FLJB_FASTA_PATH = here('data/antigens/fljB.fasta')
+SEROVAR_TABLE_PATH = resource_filename('sistr', 'data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
+WZX_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzx.fasta')
+WZY_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzy.fasta')
+FLIC_FASTA_PATH = resource_filename('sistr', 'data/antigens/fliC.fasta')
+FLJB_FASTA_PATH = resource_filename('sistr', 'data/antigens/fljB.fasta')
 
 SEROGROUP_SIMILARITY_GROUPS = [
     ['E1', 'E4'],
