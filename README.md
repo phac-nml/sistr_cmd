@@ -126,7 +126,7 @@ cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,genome,h1,h2,mash_di
 ```
 
 | cgmlst_distance | cgmlst_genome_match | cgmlst_matching_alleles | genome | h1 | h2 | mash_distance | mash_genome | mash_match | mash_serovar | serogroup | serovar | serovar_antigen | serovar_cgmlst |
-| --------------: | ------------------: | ----------------------: | ------ | -- | -- | ------------: | ----------- | ---------: | ------------ | --------- | ------- | --------------- | -------------- |
+| --------------: | ------------------: | ----------------------: | ------ | --- | --- | ------------: | ----------- | ---------: | ------------ | --------- | ------- | --------------- | -------------- |
 | 0.0 | LT2 | 330 | LT2.fasta | i | "1,2" | 0.0 | LT2 | 1000 | Typhimurium | B | Typhimurium | Typhimurium | Typhimurium |
 
 JSON output:
