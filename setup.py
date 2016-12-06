@@ -23,7 +23,7 @@ def read(fname):
 
 setup(
     name='sistr_cmd',
-    version='0.1.1',
+    version='0.3.0',
     packages=find_packages(exclude=['tests']),
     url='https://github.com/peterk87/sistr_cmd',
     license='GPLv3',
@@ -40,9 +40,9 @@ setup(
                             'data/cgmlst/*.fasta',
                             'data/cgmlst/*.txt',
                             'data/cgmlst/*.csv',]},
-    install_requires=['numpy', 'pandas'],
+    install_requires=['numpy>=1.11.1', 'pandas>=0.18.1'],
     extras_require={
-        'test': ['pytest',],
+        'test': ['pytest>=2.9.2',],
     },
     entry_points={
         'console_scripts': [

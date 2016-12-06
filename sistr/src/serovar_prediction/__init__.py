@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 
 from sistr.src.blast_wrapper import BlastReader
@@ -10,7 +11,15 @@ from sistr.src.serovar_prediction.constants import \
     WZX_FASTA_PATH, \
     SEROGROUP_SIMILARITY_GROUPS, \
     SEROVAR_TABLE_PATH, \
-    CGMLST_DISTANCE_THRESHOLD
+    CGMLST_DISTANCE_THRESHOLD, MASH_DISTANCE_THRESHOLD
+
+spp_name_to_roman = {'enterica': 'I',
+                     'salamae': 'II',
+                     'arizonae': 'IIIa',
+                     'diarizonae': 'IIIb',
+                     'houtenae': 'IV',
+                     'bongori': 'V',
+                     'indica': 'VI'}
 
 
 class BlastResultMixin(object):
@@ -51,6 +60,7 @@ class SerovarPrediction():
     cgmlst_distance = 1.0
     cgmlst_matching_alleles = 0
     cgmlst_genome_match = None
+    cgmlst_subspecies = None
 
     serovar_antigen = None
     serogroup = None
@@ -302,12 +312,14 @@ class SerovarPredictor:
     h1 = None
     h2 = None
     serovar = None
+    subspecies = None
 
-    def __init__(self, blast_runner):
+    def __init__(self, blast_runner, subspecies):
         """
 
         """
         self.blast_runner = blast_runner
+        self.subspecies = subspecies
         self.serogroup_predictor = SerogroupPredictor(self.blast_runner)
         self.h1_predictor = H1Predictor(self.blast_runner)
         self.h2_predictor = H2Predictor(self.blast_runner)
@@ -322,9 +334,8 @@ class SerovarPredictor:
         return self.serogroup, self.h1, self.h2
 
     @staticmethod
-    def get_serovar(df, sg, h1, h2):
+    def get_serovar(df, sg, h1, h2, spp):
         h2_is_missing = '-' in h2
-
         b_sg = df['Serogroup'].isin(sg)
         b_h1 = df['H1'].isin(h1)
         if h2_is_missing:
@@ -332,8 +343,12 @@ class SerovarPredictor:
         else:
             b_h2 = df['H2'].isin(h2)
 
-        df_prediction = df[(b_sg & b_h1 & b_h2)]
-
+        if spp is not None:
+            b_spp = df['subspecies'] == spp
+        else:
+            b_spp = b_sg
+        df_prediction = df[(b_spp & b_sg & b_h1 & b_h2)]
+        logging.debug('Serovar prediction for %s %s:%s:%s is %s', spp, sg, h1, h2, list(df_prediction['Serovar']))
         if df_prediction.shape[0] > 0:
             return '|'.join(list(df_prediction['Serovar']))
 
@@ -347,11 +362,19 @@ class SerovarPredictor:
         h1 = self.h1
         h2 = self.h2
 
+        # no antigen results then serovar == '-:-:-'
+        if sg is None \
+            and h1 is None \
+            and h2 == '-':
+            self.serovar = '-:-:-'
+            return self.serovar
+
         for sg_groups in SEROGROUP_SIMILARITY_GROUPS:
             if sg in sg_groups:
                 sg = sg_groups
                 break
-
+        if sg is None:
+            sg = list(df['Serogroup'].unique())
         if not isinstance(sg, list):
             sg = [sg]
 
@@ -359,7 +382,8 @@ class SerovarPredictor:
             if h1 in h1_groups:
                 h1 = h1_groups
                 break
-
+        if h1 is None:
+            h1 = list(df['H1'].unique())
         if not isinstance(h1, list):
             h1 = [h1]
 
@@ -371,8 +395,21 @@ class SerovarPredictor:
         if not isinstance(h2, list):
             h2 = [h2]
 
-        self.serovar = SerovarPredictor.get_serovar(df, sg, h1, h2)
-
+        self.serovar = SerovarPredictor.get_serovar(df, sg, h1, h2, self.subspecies)
+        if self.serovar is None:
+            try:
+                spp_roman = spp_name_to_roman[self.subspecies]
+            except:
+                spp_roman = None
+            from collections import Counter
+            c = Counter(df.O_antigen[df.Serogroup.isin(sg)])
+            o_antigen = c.most_common()[0][0]
+            h1_first = h1[0]
+            h2_first = h2[0]
+            if spp_roman:
+                self.serovar = '{} {}:{}:{}'.format(spp_roman, o_antigen, h1_first, h2_first)
+            else:
+                self.serovar = '{}:{}:{}'.format(o_antigen, h1_first, h2_first)
         return self.serovar
 
     def get_serovar_prediction(self):
@@ -394,7 +431,7 @@ class SerovarPredictor:
         return serovar_pred
 
 
-def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor):
+def overall_serovar_call(serovar_prediction, antigen_predictor):
     """
     Predict serovar from cgMLST cluster membership analysis and antigen BLAST results.
     SerovarPrediction object is assigned H1, H2 and Serogroup from the antigen BLAST results.
@@ -428,22 +465,42 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
     h1 = antigen_predictor.h1
     h2 = antigen_predictor.h2
     sg = antigen_predictor.serogroup
+    spp = serovar_prediction.cgmlst_subspecies
+    if spp is None:
+        if 'mash_match' in serovar_prediction.__dict__:
+            spp = serovar_prediction.__dict__['mash_subspecies']
+
     serovar_prediction.serovar_antigen = antigen_predictor.serovar
 
     cgmlst_serovar = serovar_prediction.serovar_cgmlst
-    cgmlst_distance = serovar_prediction.cgmlst_distance
+    cgmlst_distance = float(serovar_prediction.cgmlst_distance)
+
+    null_result = '-:-:-'
+
+
+    try:
+        spp_roman = spp_name_to_roman[spp]
+    except:
+        spp_roman = None
+
+    is_antigen_null = lambda x: (x is None or x == '' or x == '-')
+
 
     if antigen_predictor.serovar is None:
-        if (h1 is not None and h1 != '') \
-            and (h2 is not None and h2 != '') \
-            and (sg is not None and sg != ''):
-            serovar_prediction.serovar = '{}:{}:{}'.format(sg, h1, h2)
-        elif cgmlst_serovar is not None:
+        if is_antigen_null(sg) and is_antigen_null(h1) and is_antigen_null(h2):
+            if spp_roman is not None:
+                serovar_prediction.serovar = '{} {}:{}:{}'.format(spp_roman, sg, h1, h2)
+            else:
+                serovar_prediction.serovar = '{}:{}:{}'.format(spp_roman, sg, h1, h2)
+        elif cgmlst_serovar is not None and cgmlst_distance <= CGMLST_DISTANCE_THRESHOLD:
             serovar_prediction.serovar = cgmlst_serovar
-        elif 'mash_match' in serovar_prediction.__dict__:
-            spd = serovar_prediction.__dict__
-            mash_serovar = spd['mash_serovar']
-            serovar_prediction.serovar = mash_serovar
+        else:
+            serovar_prediction.serovar = null_result
+            if 'mash_match' in serovar_prediction.__dict__:
+                spd = serovar_prediction.__dict__
+                mash_dist = float(spd['mash_distance'])
+                if mash_dist <= MASH_DISTANCE_THRESHOLD:
+                    serovar_prediction.serovar = spd['mash_serovar']
     else:
         serovars_from_antigen = antigen_predictor.serovar.split('|')
         if not isinstance(serovars_from_antigen, list):
@@ -454,16 +511,19 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
             else:
                 if float(cgmlst_distance) <= CGMLST_DISTANCE_THRESHOLD:
                     serovar_prediction.serovar = cgmlst_serovar
-                else:
-                    serovar_prediction.serovar = antigen_predictor.serovar
         elif 'mash_match' in serovar_prediction.__dict__:
             spd = serovar_prediction.__dict__
             mash_serovar = spd['mash_serovar']
+            mash_dist = float(spd['mash_distance'])
             if mash_serovar in serovars_from_antigen:
                 serovar_prediction.serovar = mash_serovar
+            else:
+                if mash_dist <= MASH_DISTANCE_THRESHOLD:
+                    serovar_prediction.serovar = mash_serovar
 
         if serovar_prediction.serovar is None:
             serovar_prediction.serovar = serovar_prediction.serovar_antigen
+
     if serovar_prediction.h1 is None:
         serovar_prediction.h1 = '-'
     if serovar_prediction.h2 is None:
@@ -471,7 +531,10 @@ def serovar_from_cgmlst_and_antigen_blast(serovar_prediction, antigen_predictor)
     if serovar_prediction.serogroup is None:
         serovar_prediction.serogroup = '-'
     if serovar_prediction.serovar_antigen is None:
-        serovar_prediction.serovar_antigen = '-:-:-'
+        if spp_roman is not None:
+            serovar_prediction.serovar_antigen = '{} -:-:-'.format(spp_roman)
+        else:
+            serovar_prediction.serovar_antigen = '-:-:-'
     if serovar_prediction.serovar is None:
-        serovar_prediction.serovar = '???'
+        serovar_prediction.serovar = serovar_prediction.serovar_antigen
     return serovar_prediction

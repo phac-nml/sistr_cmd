@@ -19,33 +19,44 @@ VALID_NUCLEOTIDES = {'A', 'a',
                      'X', 'x', } # X for masked nucleotides
 
 
-def read_fasta(filepath):
+def parse_fasta(filepath):
     '''
-    Read a fasta file and return a dict of all headers to sequences.
+    Parse a fasta file returning a generator yielding tuples of fasta headers to sequences.
+
+    Note:
+        This function should give equivalent results to SeqIO from BioPython
+
+        .. code-block:: python
+
+            from Bio import SeqIO
+            # biopython to dict of header-seq
+            hseqs_bio = {r.description:str(r.seq) for r in SeqIO.parse(fasta_path, 'fasta')}
+            # this func to dict of header-seq
+            hseqs = {header:seq for header, seq in parse_fasta(fasta_path)}
+            # both methods should return the same dict
+            assert hseqs == hseqs_bio
 
     Args:
         filepath (str): Fasta file path
 
     Returns:
-        dict: Fasta headers to sequences
+        generator: yields tuples of (<fasta header>, <fasta sequence>)
     '''
-    header_seq = {}
     with open(filepath, 'r') as f:
         seqs = []
         header = ''
         for line in f:
-            line = line.rstrip()
-            if '>' in line:
+            line = line.strip()
+            if line[0] == '>':
                 if header == '':
                     header = line.replace('>','')
                 else:
-                    header_seq[header] = ''.join(seqs)
+                    yield header, ''.join(seqs)
                     seqs = []
                     header = line.replace('>','')
             else:
                 seqs.append(line)
-        header_seq[header] = ''.join(seqs)
-    return header_seq
+        yield header, ''.join(seqs)
 
 
 def fasta_format_check(fasta_path, logger):
