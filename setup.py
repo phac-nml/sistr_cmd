@@ -36,6 +36,7 @@ setup(
     package_dir={'sistr':'sistr'},
     package_data={'sistr': ['data/*.msh',
                             'data/*.csv',
+                            'data/*.txt',
                             'data/antigens/*.fasta',
                             'data/cgmlst/*.fasta',
                             'data/cgmlst/*.txt',
