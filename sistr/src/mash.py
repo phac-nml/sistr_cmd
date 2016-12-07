@@ -54,6 +54,7 @@ def mash_subspeciation(df_mash):
         logging.warning('Min Mash distance (%s) above subspeciation distance threshold (%s)',
                         closest_distance,
                         MASH_SUBSPECIATION_DISTANCE_THRESHOLD)
+        return None
     else:
         df_mash_spp = df_mash[df_mash['dist'] <= MASH_SUBSPECIATION_DISTANCE_THRESHOLD]
         genomes = df_mash_spp['ref']

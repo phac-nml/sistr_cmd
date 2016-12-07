@@ -47,6 +47,8 @@ def parse_fasta(filepath):
         header = ''
         for line in f:
             line = line.strip()
+            if line == '':
+                continue
             if line[0] == '>':
                 if header == '':
                     header = line.replace('>','')
