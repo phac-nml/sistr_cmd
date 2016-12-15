@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+from collections import Counter
 from datetime import datetime
 import logging
 import os
@@ -9,7 +10,7 @@ from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
 from sistr.src.logger import init_console_logger
 from sistr.src.qc import qc
-from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call
+from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call, serovar_table
 
 
 def init_parser():
@@ -136,6 +137,23 @@ def merge_cgmlst_prediction(serovar_prediction, cgmlst_prediction):
     return serovar_prediction
 
 
+def infer_o_antigen(prediction):
+    df_serovar = serovar_table()
+    predicted_serovars = prediction.serovar.split('|') if '|' in prediction.serovar else [prediction.serovar]
+    series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
+    if series_o_antigens.size == 0:
+        sg = prediction.serogroup
+        if sg is None or sg == '' or sg == '-':
+            prediction.o_antigen = '-'
+        else:
+            series_o_antigens = df_serovar.O_antigen[df_serovar.Serogroup == sg]
+            counter_o_antigens = Counter(series_o_antigens)
+            prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+    else:
+        counter_o_antigens = Counter(series_o_antigens)
+        prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+
+
 def sistr_predict(input_fasta, tmp_dir, keep_tmp, args):
     blast_runner = None
     try:
@@ -169,10 +187,12 @@ def sistr_predict(input_fasta, tmp_dir, keep_tmp, args):
         if mash_prediction:
             merge_mash_prediction(prediction, mash_prediction)
         overall_serovar_call(prediction, serovar_predictor)
-        logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s:H1=%s:H2=%s',
+        infer_o_antigen(prediction)
+        logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
                      genome_name,
                      prediction.serovar_antigen,
                      prediction.serogroup,
+                     prediction.o_antigen,
                      prediction.h1,
                      prediction.h2)
         logging.info('%s | Subspecies prediction: %s',
