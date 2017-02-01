@@ -1,11 +1,14 @@
+import logging
+import re, os
 from pkg_resources import resource_filename
 from subprocess import Popen, PIPE
 import pandas as pd
-from sistr.src.cgmlst import genomes_to_serovar
+from sistr.src.serovar_prediction.constants import genomes_to_serovar, genomes_to_subspecies
+from sistr.src.serovar_prediction.constants import MASH_SUBSPECIATION_DISTANCE_THRESHOLD
 
 
 MASH_BIN = 'mash'
-MASH_SKETCH_FILE = resource_filename('sistr', 'data/sistr-7511.msh')
+MASH_SKETCH_FILE = resource_filename('sistr', 'data/sistr.msh')
 
 
 def mash_dist_trusted(fasta_path):
@@ -33,9 +36,9 @@ def mash_dist_trusted(fasta_path):
 
 def mash_output_to_pandas_df(mash_out):
     from io import BytesIO
-    df = pd.read_table(BytesIO(mash_out))
+    df = pd.read_table(BytesIO(mash_out), header=None)
     df.columns = ['ref', 'query', 'dist', 'pval', 'matching']
-    refs = [r.replace('.fasta', '') for r in df['ref']]
+    refs = [re.sub(r'(\.fa$)|(\.fas$)|(\.fasta$)|(\.fna$)', '', os.path.basename(r)) for r in df['ref']]
     df['ref'] = refs
     genome_serovar_dict = genomes_to_serovar()
     df['serovar'] = [genome_serovar_dict[genome] for genome in refs]
@@ -43,3 +46,22 @@ def mash_output_to_pandas_df(mash_out):
     df.sort_values(by='dist', inplace=True)
     df = df[df['dist'] < 1.0]
     return df
+
+
+def mash_subspeciation(df_mash):
+    closest_distance = df_mash['dist'].min()
+    if closest_distance > MASH_SUBSPECIATION_DISTANCE_THRESHOLD:
+        logging.warning('Min Mash distance (%s) above subspeciation distance threshold (%s)',
+                        closest_distance,
+                        MASH_SUBSPECIATION_DISTANCE_THRESHOLD)
+        return None
+    else:
+        df_mash_spp = df_mash[df_mash['dist'] <= MASH_SUBSPECIATION_DISTANCE_THRESHOLD]
+        genomes = df_mash_spp['ref']
+        from collections import Counter
+        genome_spp = genomes_to_subspecies()
+        subspecies_below_threshold = [genome_spp[g] if g in genome_spp else None for g in genomes]
+        subspecies_below_threshold = filter(None, subspecies_below_threshold)
+        subspecies_counter = Counter(subspecies_below_threshold)
+        logging.info('Mash subspecies counter: %s', subspecies_counter)
+        return (subspecies_counter.most_common(1)[0][0], closest_distance, dict(subspecies_counter))

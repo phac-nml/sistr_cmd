@@ -5,12 +5,13 @@ import shutil
 from subprocess import Popen, PIPE
 import os
 import pandas as pd
+import numpy as np
 from pandas.io.common import EmptyDataError
 
 
 BLAST_TABLE_COLS = '''
 qseqid
-sseqid
+stitle
 pident
 length
 mismatch
@@ -23,6 +24,7 @@ evalue
 bitscore
 qlen
 slen
+sseq
 '''.strip().split('\n')
 
 
@@ -80,7 +82,7 @@ class BlastRunner:
             logging.error(ex_msg)
             raise Exception(ex_msg)
 
-    def blast_against_query(self, query_fasta_path):
+    def blast_against_query(self, query_fasta_path, blast_task='megablast', evalue=1e-20, min_pid=85):
 
         if not self.blast_db_created:
             self.prep_blast()
@@ -92,11 +94,14 @@ class BlastRunner:
                                                                           genome_filename,
                                                                           timestamp))
         p = Popen(['blastn',
+                   '-task', blast_task,
                    '-query', query_fasta_path,
                    '-db', '{}'.format(self.tmp_fasta_path),
-                   '-evalue', '1e-6',
+                   '-evalue', '{}'.format(evalue),
+                   '-dust', 'no',
+                   '-perc_identity', '{}'.format(min_pid),
                    '-out', outfile,
-                   '-outfmt', '6 std qlen slen'],
+                   '-outfmt', '6 {}'.format(' '.join(BLAST_TABLE_COLS))],
                   stdout=PIPE,
                   stderr=PIPE)
 
@@ -156,8 +161,16 @@ class BlastReader:
             self.df = pd.read_table(self.blast_outfile, header=None)
             self.df.columns = BLAST_TABLE_COLS
             # calculate the coverage for when results need to be validated
-            self.df['coverage'] = self.df.length / self.df.qlen
+            self.df.loc[:, 'coverage'] = self.df.length / self.df.qlen
             self.df.sort_values(by='bitscore', ascending=False, inplace=True)
+            self.df.loc[:, 'is_trunc'] = BlastReader.trunc(qstart=self.df.qstart,
+                                                           qend=self.df.qend,
+                                                           qlen=self.df.qlen,
+                                                           sstart=self.df.sstart,
+                                                           send=self.df.send,
+                                                           slen=self.df.slen)
+
+            logging.debug(self.df.head())
             self.is_missing = False
         except EmptyDataError as exc:
             logging.warning('No BLASTN results to parse from file %s', blast_outfile)
@@ -192,32 +205,46 @@ class BlastReader:
 
     @staticmethod
     def is_blast_result_trunc(qstart, qend, sstart, send, qlen, slen):
-        """
-        Check if a query sequence is truncated by the end of a subject sequence
+        """Check if a query sequence is truncated by the end of a subject sequence
 
-        @type qstart: int
-        @param qstart: Query sequence start index
-        @type qend: int
-        @param qend: Query sequence end index
-        @type sstart: int
-        @param sstart: Subject sequence start index
-        @type send: int
-        @param send: Subject sequence end index
-        @type qlen: int
-        @param qlen: Query sequence length
-        @type slen: int
-        @param slen: Subject sequence length
-        @return: True if truncated; False is not truncated
+        Args:
+            qstart (int): Query sequence start index
+            qend (int): Query sequence end index
+            sstart (int): Subject sequence start index
+            send (int): Subject sequence end index
+            qlen (int): Query sequence length
+            slen (int): Subject sequence length
+
+        Returns:
+            bool: Result truncated by subject sequence end?
         """
         q_match_len = abs(qstart - qend) + 1
-        # s_match_len = abs(sstart - send) + 1
         s_max = max(sstart, send)
         s_min = min(sstart, send)
-        if q_match_len < qlen:
-            if s_max >= slen or s_min <= 1:
-                return True
+        return (q_match_len < qlen) and (s_max >= slen or s_min <= 1)
 
-        return False
+    @staticmethod
+    def trunc(qstart, qend, sstart, send, qlen, slen):
+        """Check if a query sequence is truncated by the end of a subject sequence
+
+        Args:
+            qstart (int pandas.Series): Query sequence start index
+            qend (int pandas.Series): Query sequence end index
+            sstart (int pandas.Series): Subject sequence start index
+            send (int pandas.Series): Subject sequence end index
+            qlen (int pandas.Series): Query sequence length
+            slen (int pandas.Series): Subject sequence length
+
+        Returns:
+            Boolean pandas.Series: Result truncated by subject sequence end?
+        """
+        ssum2 = (send + sstart) / 2.0
+        sabs2 = np.abs(send - sstart) / 2.0
+        smax = ssum2 + sabs2
+        smin = ssum2 - sabs2
+        q_match_len = np.abs(qstart - qend) + 1
+        return (q_match_len < qlen) & ((smax >= slen) |  (smin <= 1))
+
 
     def perfect_matches(self):
         """
