@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 import argparse
 from collections import Counter
 from datetime import datetime
@@ -6,6 +7,7 @@ import logging
 import os
 import re
 
+from sistr.version import __version__
 from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
 from sistr.src.logger import init_console_logger
@@ -29,7 +31,7 @@ Catherine Yoshida, Peter Kruczkiewicz, Chad R. Laing, Erika J. Lingohr, Victor P
 PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
 '''
 
-    parser = argparse.ArgumentParser(prog='predict_serovar',
+    parser = argparse.ArgumentParser(prog='sistr_cmd',
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
                                      description=prog_desc)
 
@@ -82,6 +84,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         action='count',
                         default=2,
                         help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
+    parser.add_argument('-V', '--version', action='version', version='%(prog)s {}'.format(__version__))
     return parser
 
 
