@@ -29,7 +29,7 @@ Catherine Yoshida, Peter Kruczkiewicz, Chad R. Laing, Erika J. Lingohr, Victor P
 PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
 '''
 
-    parser = argparse.ArgumentParser(prog='sistr',
+    parser = argparse.ArgumentParser(prog='sistr_cmd',
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
                                      description=prog_desc)
 

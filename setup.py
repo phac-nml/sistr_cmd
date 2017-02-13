@@ -21,9 +21,11 @@ Operating System :: POSIX :: Linux
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+exec(open('sistr/version.py').read())
+
 setup(
     name='sistr_cmd',
-    version='0.3.0',
+    version=__version__,
     packages=find_packages(exclude=['tests']),
     url='https://github.com/peterk87/sistr_cmd',
     license='GPLv3',
