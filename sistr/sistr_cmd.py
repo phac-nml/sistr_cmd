@@ -265,10 +265,11 @@ def write_novel_alleles(cgmlst_results, output_path):
                 name = res['name']
                 seq = res['seq']
                 br = res['blast_result']
-                trunc = br['trunc']
-                if not trunc:
-                    fout.write('>{}|{}\n{}\n'.format(marker, name, seq))
-                    count += 1
+                if br is not None and isinstance(br, dict):
+                    trunc = br['trunc']
+                    if not trunc:
+                        fout.write('>{}|{}\n{}\n'.format(marker, name, seq))
+                        count += 1
     return count
 
 

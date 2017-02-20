@@ -14,9 +14,15 @@ def write_csv(fh, output):
     df = pd.DataFrame(output)
     df.to_csv(fh, index=False)
 
+def write_tab(fh, output):
+    import pandas as pd
+    df = pd.DataFrame(output)
+    df.to_csv(fh, index=False, sep='\t')
+
 fmt_to_write_func = {'json': write_json,
                      'pickle': write_pickle,
-                     'csv': write_csv}
+                     'csv': write_csv,
+                     'tab': write_tab,}
 
 
 def write(dest, fmt, serovar_predictions):
