@@ -6,6 +6,7 @@ import logging
 import os
 import re
 
+from sistr.version import __version__
 from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
 from sistr.src.logger import init_console_logger
@@ -87,6 +88,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         action='count',
                         default=2,
                         help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
+    parser.add_argument('-V', '--version', action='version', version='%(prog)s {}'.format(__version__))
     return parser
 
 
