@@ -41,6 +41,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-i',
                         '--input-fasta-genome-name',
                         nargs=2,
+                        metavar=('fasta_path', 'genome_name'),
                         action='append',
                         help='fasta file path to genome name pair')
     parser.add_argument('-f',
@@ -287,7 +288,7 @@ def main():
     init_console_logger(args.verbose)
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name
-    if len(input_fastas) == 0 and paths_names and len(paths_names) == 0:
+    if len(input_fastas) == 0 and (paths_names is None or len(paths_names) == 0):
         raise Exception('No FASTA files specified!')
     if paths_names is None:
         genome_names = [genome_name_from_fasta_path(x) for x in input_fastas]
