@@ -87,7 +87,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
-                        default=2,
+                        default=0,
                         help='Logging verbosity level (-v == show warnings; -vvv == show debug info)')
     parser.add_argument('-V', '--version', action='version', version='%(prog)s {}'.format(__version__))
     return parser
@@ -169,7 +169,8 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         if genome_name is None or genome_name == '':
             genome_name = genome_name_from_fasta_path(input_fasta)
         dtnow = datetime.now()
-        genome_tmp_dir = os.path.join(tmp_dir, dtnow.strftime("%Y%m%d%H%M%S") + '-' + 'SISTR' + '-' + genome_name)
+        genome_name_no_spaces = re.sub(r'\W', '_', genome_name)
+        genome_tmp_dir = os.path.join(tmp_dir, dtnow.strftime("%Y%m%d%H%M%S") + '-' + 'SISTR' + '-' + genome_name_no_spaces)
         blast_runner = BlastRunner(input_fasta, genome_tmp_dir)
         logging.info('Initializing temporary analysis directory "%s" and preparing for BLAST searching.', genome_tmp_dir)
         blast_runner.prep_blast()
@@ -286,6 +287,7 @@ def main():
     parser = init_parser()
     args = parser.parse_args()
     init_console_logger(args.verbose)
+    logging.info('Running sistr_cmd {}'.format(__version__))
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name
     if len(input_fastas) == 0 and (paths_names is None or len(paths_names) == 0):
@@ -334,10 +336,10 @@ def main():
     else:
         logging.warning('No prediction results output file written!')
     if args.cgmlst_profiles:
-        write_cgmlst_profiles(input_fastas, cgmlst_results, args.cgmlst_profiles)
+        write_cgmlst_profiles(genome_names, cgmlst_results, args.cgmlst_profiles)
         logging.info('cgMLST allelic profiles written to %s', args.cgmlst_profiles)
     if args.alleles_output:
-        write_cgmlst_results_json(input_fastas, cgmlst_results, args.alleles_output)
+        write_cgmlst_results_json(genome_names, cgmlst_results, args.alleles_output)
         logging.info('JSON of allele data written to %s for %s cgMLST allele results', args.alleles_output, len(cgmlst_results))
     if args.novel_alleles:
         count = write_novel_alleles(cgmlst_results, args.novel_alleles)

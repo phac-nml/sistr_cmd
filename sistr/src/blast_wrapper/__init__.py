@@ -7,6 +7,7 @@ import os
 import pandas as pd
 import numpy as np
 from pandas.io.common import EmptyDataError
+import re
 
 
 BLAST_TABLE_COLS = '''
@@ -45,7 +46,8 @@ class BlastRunner:
 
     def _copy_fasta_to_work_dir(self):
         filename = os.path.basename(self.fasta_path)
-        dest_path = os.path.join(self.tmp_work_dir, filename)
+        filename_no_spaces = re.sub(r'\W', '_', filename)
+        dest_path = os.path.join(self.tmp_work_dir, filename_no_spaces)
         if self.fasta_path == dest_path:
             self.tmp_fasta_path = dest_path
             return dest_path
