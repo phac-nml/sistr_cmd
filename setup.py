@@ -43,7 +43,7 @@ setup(
                             'data/cgmlst/*.fasta',
                             'data/cgmlst/*.txt',
                             'data/cgmlst/*.csv',]},
-    install_requires=['numpy>=1.11.1', 'pandas>=0.18.1'],
+    install_requires=['numpy>=1.11.1', 'pandas>=0.18.1', 'better_exceptions>=0.1.5'],
     extras_require={
         'test': ['pytest>=2.9.2',],
     },

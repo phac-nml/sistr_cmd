@@ -38,10 +38,23 @@ class BlastRunner:
 
 
     def _create_tmp_folder(self):
-        try:
-            os.makedirs(self.tmp_work_dir)
-        except:
-            pass
+        count = 1
+        tmp_dir = self.tmp_work_dir
+        while True:
+            try:
+                logging.info('Trying to create analysis directory at: %s', tmp_dir)
+                os.makedirs(tmp_dir)
+                break
+            except OSError as e:
+                logging.warning('Error on creation of tmp analysis directory "{}"! {}'.format(
+                    tmp_dir,
+                    e
+                ))
+
+                tmp_dir = '{}_{}'.format(self.tmp_work_dir, count)
+                count += 1
+
+        self.tmp_work_dir = tmp_dir
         return self.tmp_work_dir
 
     def _copy_fasta_to_work_dir(self):

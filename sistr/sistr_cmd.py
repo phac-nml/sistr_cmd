@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import better_exceptions
 import argparse
 from collections import Counter
 from datetime import datetime
