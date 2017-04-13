@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from __future__ import print_function
-import better_exceptions
+
 import argparse
 from collections import Counter
 from datetime import datetime
