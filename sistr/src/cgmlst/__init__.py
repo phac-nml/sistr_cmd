@@ -289,8 +289,8 @@ def cgmlst_subspecies_call(df_relatives):
             CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD)
         return None
     else:
-        df_relatives = df_relatives[df_relatives.distance <= CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD]
-        df_relatives.sort_values('distance', ascending=True, inplace=True)
+        df_relatives = df_relatives.loc[df_relatives.distance <= CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD, :]
+        df_relatives = df_relatives.sort_values('distance', ascending=True)
         logging.debug('df_relatives by cgmlst %s', df_relatives.head())
         genome_spp = genomes_to_subspecies()
         subspecies_below_threshold = [genome_spp[member_genome] if member_genome in genome_spp else None for member_genome in df_relatives.index]

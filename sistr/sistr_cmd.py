@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 import better_exceptions
 import argparse
 from collections import Counter
@@ -52,6 +53,14 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-o',
                         '--output-prediction',
                         help='SISTR serovar prediction output path')
+    parser.add_argument('--full-output',
+                        action='store_true',
+                        default=False,
+                        help='Produce full detailed output')
+    parser.add_argument('--report-blast-results',
+                        action='store_true',
+                        default=False,
+                        help='Report blastn results for each antigen gene')
     parser.add_argument('-p',
                         '--cgmlst-profiles',
                         help='Output CSV file destination for cgMLST allelic profiles')
@@ -248,7 +257,6 @@ def genome_name_from_fasta_path(fasta_path):
     return re.sub(r'(\.fa$)|(\.fas$)|(\.fasta$)|(\.fna$)|(\.\w{1,}$)', '', filename)
 
 
-
 def write_cgmlst_profiles(fastas, cgmlst_results, output_path):
     genome_marker_cgmlst_result = {}
     for genome, res in zip(fastas, cgmlst_results):
@@ -313,13 +321,12 @@ def main():
     output_format = args.output_format
     output_path = args.output_prediction
 
-    from multiprocessing import Pool
     n_threads = args.threads
-
     if n_threads == 1:
         logging.info('Serial single threaded run mode on %s genomes', len(input_fastas))
         outputs = [sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args) for input_fasta, genome_name in zip(input_fastas, genome_names)]
     else:
+        from multiprocessing import Pool
         logging.info('Initializing thread pool with %s threads', n_threads)
         pool = Pool(processes=n_threads)
         logging.info('Running SISTR analysis asynchronously on %s genomes', len(input_fastas))
@@ -333,9 +340,21 @@ def main():
 
     if output_path:
         from sistr.src.writers import write
-        write(output_path, output_format, prediction_outputs)
+        logging.info('Writing full output? %s; reporting blast results? %s',
+                     args.full_output,
+                     args.report_blast_results)
+        write(output_path, output_format, prediction_outputs,
+              full_output=args.full_output,
+              report_blast_results=args.report_blast_results)
     else:
-        logging.warning('No prediction results output file written!')
+        import json
+        from sistr.src.writers import to_dict
+        logging.warning('No prediction results output file written! Writing results summary to stdout as JSON')
+        if args.full_output:
+            outs = [to_dict(x, 0) for x in prediction_outputs]
+        else:
+            outs = [to_dict(x, 0, exclude_keys={'blast_results', 'sseq'}) for x in prediction_outputs]
+        print(json.dumps(outs))
     if args.cgmlst_profiles:
         write_cgmlst_profiles(genome_names, cgmlst_results, args.cgmlst_profiles)
         logging.info('cgMLST allelic profiles written to %s', args.cgmlst_profiles)

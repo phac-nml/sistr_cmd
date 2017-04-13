@@ -1,28 +1,30 @@
 import os
 import pandas as pd
+import shutil
 
 from sistr.src.blast_wrapper import BlastRunner, BLAST_TABLE_COLS, BlastReader
 from sistr.src.serovar_prediction import WZX_FASTA_PATH, get_antigen_name, SerovarPredictor
 
 
-def test_BlastRunner(fasta_path, tmp_dir):
-    br = BlastRunner(fasta_path, tmp_dir)
-    br.prep_blast()
-    assert os.path.exists(tmp_dir)
-    fasta_copy_path = os.path.join(tmp_dir, os.path.basename(fasta_path))
-    nin_path = fasta_copy_path + '.nin'
-    assert os.path.exists(fasta_copy_path)
-    assert os.path.exists(nin_path)
-
-    blast_outfile = br.run_blast(WZX_FASTA_PATH)
-    assert os.path.exists(blast_outfile)
-    # Pandas should be able to parse in the table
-    df = pd.read_table(blast_outfile)
-    # the number of columns needs to be the expected number based on blastn outfmt specs
-    assert len(df.columns) == len(BLAST_TABLE_COLS)
-
-    br.cleanup()
-    assert not os.path.exists(tmp_dir)
+def test_BlastRunner(fasta_path):
+    tmp_dir = '/tmp/test_BlastRunner'
+    try:
+        br = BlastRunner(fasta_path, tmp_dir)
+        blast_outfile = br.run_blast(WZX_FASTA_PATH)
+        assert os.path.exists(tmp_dir)
+        assert os.path.exists(br.tmp_fasta_path)
+        nin_path = br.tmp_fasta_path + '.nin'
+        assert os.path.exists(nin_path)
+        assert os.path.exists(blast_outfile)
+        # Pandas should be able to parse in the table
+        df = pd.read_table(blast_outfile)
+        # the number of columns needs to be the expected number based on blastn outfmt specs
+        assert len(df.columns) == len(BLAST_TABLE_COLS)
+        br.cleanup()
+        assert not os.path.exists(br.tmp_work_dir)
+    finally:
+        if os.path.exists(tmp_dir):
+            shutil.rmtree(tmp_dir)
 
 
 def test_BlastReader(blast_runner):
