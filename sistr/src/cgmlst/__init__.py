@@ -223,9 +223,9 @@ def matches_to_marker_results(df):
             row = v[0]
             seq = row['sseq']
             if '-' in seq:
-                logging.warning('Gaps found in allele. Removing gaps. %s', r)
+                logging.warning('Gaps found in allele. Removing gaps. %s', row)
                 seq = seq.replace('-', '').upper()
-                allele = allele_name(seq)
+            allele = allele_name(seq)
             marker_results[k] = allele_result_dict(allele, seq, row.to_dict())
         else:
             err_msg = 'Empty list of matches for marker {}'.format(k)

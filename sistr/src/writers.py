@@ -156,7 +156,7 @@ fmt_to_write_func = {'json': write_json,
                      'tab': write_tab, }
 
 
-def write(dest, fmt, serovar_predictions, full_output=False, report_blast_results=False):
+def write(dest, fmt, serovar_predictions, more_results=0):
     assert isinstance(serovar_predictions, list)
     if not fmt in fmt_to_write_func:
         logging.warn('Invalid output format "%s". Defaulting to "json"', fmt)
@@ -169,15 +169,15 @@ def write(dest, fmt, serovar_predictions, full_output=False, report_blast_result
         # write in whatever format necessary
         write_func = fmt_to_write_func[fmt]
         exclude_keys_in_output = {'blast_results', 'sseq'}
-        if full_output:
-            exclude_keys_in_output.remove('sseq')
-        if report_blast_results:
+        if more_results >= 2:
             exclude_keys_in_output.remove('blast_results')
+            exclude_keys_in_output.remove('sseq')
+        elif more_results == 1:
             exclude_keys_in_output.remove('sseq')
         if fmt in {'pickle', 'json'}:
             output_dict = [to_dict(v, 0, exclude_keys=exclude_keys_in_output) for v in serovar_predictions]
         else:
-            if full_output:
+            if more_results > 0:
                 output_dict = [flatten_dict(to_dict(v, 0, exclude_keys=exclude_keys_in_output)) for v in
                                serovar_predictions]
             else:

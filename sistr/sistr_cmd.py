@@ -53,14 +53,11 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-o',
                         '--output-prediction',
                         help='SISTR serovar prediction output path')
-    parser.add_argument('--full-output',
-                        action='store_true',
-                        default=False,
-                        help='Produce full detailed output')
-    parser.add_argument('--report-blast-results',
-                        action='store_true',
-                        default=False,
-                        help='Report blastn results for each antigen gene')
+    parser.add_argument('-M',
+                        '--more-results',
+                        action='count',
+                        default=0,
+                        help='Output more detailed results (-M) and all antigen search blastn results (-MM)')
     parser.add_argument('-p',
                         '--cgmlst-profiles',
                         help='Output CSV file destination for cgMLST allelic profiles')
@@ -340,20 +337,20 @@ def main():
 
     if output_path:
         from sistr.src.writers import write
-        logging.info('Writing full output? %s; reporting blast results? %s',
-                     args.full_output,
-                     args.report_blast_results)
-        write(output_path, output_format, prediction_outputs,
-              full_output=args.full_output,
-              report_blast_results=args.report_blast_results)
+        logging.info('Writing results with %s verbosity',
+                     args.more_results)
+        write(output_path, output_format, prediction_outputs, more_results=args.more_results)
     else:
         import json
         from sistr.src.writers import to_dict
         logging.warning('No prediction results output file written! Writing results summary to stdout as JSON')
-        if args.full_output:
-            outs = [to_dict(x, 0) for x in prediction_outputs]
-        else:
-            outs = [to_dict(x, 0, exclude_keys={'blast_results', 'sseq'}) for x in prediction_outputs]
+        exclude_keys_in_output = {'blast_results', 'sseq'}
+        if args.more_results >= 2:
+            exclude_keys_in_output.remove('blast_results')
+            exclude_keys_in_output.remove('sseq')
+        elif args.more_results == 1:
+            exclude_keys_in_output.remove('sseq')
+        outs = [to_dict(x, 0, exclude_keys=exclude_keys_in_output) for x in prediction_outputs]
         print(json.dumps(outs))
     if args.cgmlst_profiles:
         write_cgmlst_profiles(genome_names, cgmlst_results, args.cgmlst_profiles)

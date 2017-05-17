@@ -241,7 +241,7 @@ SRR1265010	Kisarawe
 83680	Panama
 29267	I 4,[5],12:i:-
 63909	Braenderup
-14535	I Rough:z38:-
+14535	Ago
 63907	Enteritidis
 63906	Enteritidis
 63905	Enteritidis
@@ -609,7 +609,7 @@ CVM_21538	Newport
 5862	IIIb 61:l,v:1,5,7:[z57]
 SRR1158084	Typhimurium
 SRR1158080	Saintpaul
-SRR1158081	W:d:-
+SRR1158081	I 45:d:-
 SRR1158082	Heidelberg
 SRR1158083	Saintpaul
 27068	Enteritidis
@@ -830,7 +830,7 @@ SL254	Newport
 27797	Enteritidis
 83338	Paratyphi B var. Java
 SRR1201306	IV 1,40:z4,z24:-
-90468	O61:k:1,5
+90468	IIIb 61:k:1,5,7
 90469	Typhimurium
 90466	Typhimurium
 90467	Typhimurium
@@ -1082,7 +1082,6 @@ DG22	Dublin
 45619	Enteritidis
 45618	Enteritidis
 46084	Alachua
-107172_2	IIIb 47:k:z53
 78702	Paratyphi B var. Java
 SRR1238788	Infantis
 68653	Enteritidis
@@ -2059,7 +2058,7 @@ SRR1122499	Heidelberg
 SARA29	Saintpaul
 639672_46	Enteritidis
 SRR1060732	IIIa 41:z4,z23:-
-SRR1060733	G:z29:1,7
+SRR1060733	II 1,13,23:z29:1,7
 SRR1060730	IIIb 60:r:e,n,x,z15
 SRR1060731	IIIa 48:z4,z23,z32:-
 SRR1060736	II 47:d:z39
@@ -2712,7 +2711,7 @@ SRR1292306	Kingabwa
 73527	Virchow
 73528	Enteritidis
 73529	Saintpaul
-SRR1265004	D3:z29:1,5
+SRR1265004	II 1,9,12,46,27:z29:1,5
 36981	Mbandaka
 99073	Enteritidis
 99070	Stanley
@@ -2802,7 +2801,7 @@ SRR1145622	Heidelberg
 53013	Enteritidis
 53010	Braenderup
 53011	Enteritidis
-9461	O61:z47:z
+9461	IIIb 61:l,v:z
 9460	Durham
 9463	Enteritidis
 53015	Paratyphi B var. Java monophasic
@@ -3436,7 +3435,7 @@ SRR1025985	Inverness
 99081	Typhi
 99080	Enteritidis
 36480	Virchow
-36481	Y:l,v:1,5,7
+36481	IIIb 48:l,v:1,5,7
 SRR1272770	Livingstone
 14889	Weltevreden
 14880	Typhimurium
@@ -5337,7 +5336,7 @@ SRR1258439	Bareilly
 SRR1166620	Typhimurium
 SRR1068284	Hadar
 SRR1068282	Anatum
-SRR1068283	Paratyphi B var. Java monophasic
+SRR1068283	Schleissheim
 69202	I 4,[5],12:i:-
 81173	Mikawasima
 13395	Havana
@@ -5380,7 +5379,7 @@ SRR1133237	Sandiego
 SRR1133238	Uganda
 SRR1133239	Rubislaw
 89895	Bispebjerg
-37839	O58:l,v:z6
+37839	II 58:l,z13,z28:z6
 89894	Agama
 37832	Enteritidis
 37833	Enteritidis
@@ -5595,7 +5594,7 @@ SRR1249080	Altona
 29303	Chester
 29302	Typhimurium
 29301	Typhimurium
-29300	B:z29:1,2,7
+29300	I 1,4,12,27:z29:1,2,7
 29307	Enteritidis
 29306	Enteritidis
 29305	I 4,[5],12:i:-
@@ -5835,7 +5834,7 @@ SRR1166602	Heidelberg
 SRR1166601	Agona
 SRR1166600	Oranienburg
 ATCC_15791	Sloterdijk
-69906	Z:z52:z
+69906	IIIb 50:z52:z
 SRR1166609	Senftenberg
 48276	Braenderup
 5339	Typhi
@@ -6302,7 +6301,7 @@ SRR1263415	Newport
 23518	IIIb 48:z10:e,n,x,z15
 SRR1248947	Typhimurium
 SRR1272768	Kentucky
-SRR1248943	Orbe
+SRR1248943	II 42:b:e,n,x,z15
 SRR1248942	Inganda
 23510	I 4,[5],12:i:-
 23511	I 4,[5],12:i:-
@@ -6384,7 +6383,7 @@ SRR1266069	Newport
 5879	Enteritidis
 3759	Newport
 3758	Kisarawe
-SRR1265007	O61:i:z50
+SRR1265007	IIIb 61:i:z50
 SRR1265006	Senftenberg
 SRR1265001	Dublin
 3751	Braenderup
@@ -7042,7 +7041,7 @@ SRR1141167	Kentucky
 SRR1141168	Hadar
 06_O_05	Agona
 25184	Enteritidis
-25187	O61:r:1,5,(7)
+25187	IIIb 61:r:1,5,(7)
 25186	Enteritidis
 25181	Saintpaul
 25180	Typhimurium
@@ -7220,7 +7219,7 @@ SRR1302838	Enteritidis
 SA_4	Agona
 SRR1946947	I 4,[5],12:i:-
 SRR1202995	Richmond
-SRR1269373	C1:k:z50
+SRR1269373	IIIb 11:k:z53
 SRR1269372	Senftenberg
 SRR1302834	Tennessee
 DT104	Typhimurium
@@ -7849,7 +7848,7 @@ IA_2010008284	Montevideo
 IA_2010008283	Montevideo
 IA_2010008282	Montevideo
 12_6852	IV 18:z36,z38:-
-69909	O65:k:z
+69909	IIIb 65:k:z
 69908	Amager
 69279	I 4,[5],12:i:-
 69278	Newport
@@ -8207,7 +8206,7 @@ SRR1060722	Tilene
 SRR1060725	IV 48:g,z51:-
 SRR1299281	Typhimurium
 SRR1060727	IIIb 38:z10:z53
-SRR1060726	F:z36,z38:-
+SRR1060726	IV 6,7:z36,[z38]:-
 SRR1060729	Oakland
 SRR1060728	IIIb 48:z10:e,n,x,z15
 SRR1299288	Choleraesuis
@@ -8329,7 +8328,7 @@ SRR2002709	Oranienburg
 45584	Kentucky
 45234	Enteritidis
 45589	Enteritidis
-45588	O61:i:z50
+45588	IIIb 61:i:z50
 45232	Enteritidis
 44729	Braenderup
 SRR1048274	Bredeney
@@ -8690,7 +8689,7 @@ SRR1157594	I 4,[5],12:d:-
 SRR1157593	Typhimurium
 SRR1157592	Montevideo
 SRR1157591	Meleagridis
-SRR1157590	Paratyphi B var. Java monophasic
+SRR1157590	Schleissheim
 SRR1060703	Johannesburg
 SRR1060702	Tornow
 SRR1060701	IIIa 42:z4,z23:-
@@ -8869,7 +8868,7 @@ SRR1258561	Weltevreden
 68702	I 4,[5],12:i:-
 82558	Paratyphi A
 68708	I 4,[5],12:i:-
-68709	G:z4,z23,z32:-
+68709	IIIa 1,13,23:z4,z23,z32:-
 57154	Enteritidis
 SRR1033497	Rubislaw
 SRR1033496	Senftenberg
@@ -9470,7 +9469,7 @@ SRR1164508	Weltevreden
 80551	Enteritidis
 SRR1263429	Reading
 80556	Enteritidis
-63867	B:z29:1,2,7
+63867	I 1,4,12,27:z29:1,2,7
 SRR1263425	Enteritidis
 SRR1263424	Bareilly
 80559	Typhimurium
@@ -10336,7 +10335,7 @@ SRR1175811	Bredeney
 SRR1175816	Hartford
 57116	Anatum
 SRR1175814	Troy
-57114	Z:z52:z
+57114	IIIb 50:z52:z
 61857	Newport
 61855	Enteritidis
 61853	Enteritidis
@@ -10568,7 +10567,7 @@ ST1489	Typhimurium
 13437	Thompson
 SRR949436	Heidelberg
 65347	Newport
-65346	O61:k:1,5,7
+65346	IIIb 61:k:1,5,7
 23480	Hadar
 65344	Paratyphi A
 46159	Typhi
@@ -10969,7 +10968,7 @@ SRR1067671	Braenderup
 94086	Virchow
 94087	Mississippi
 SRR1139528	Meleagridis
-SRR1139529	None:z36:-
+SRR1139529	IIIa Rough:z36:-
 SRR1139522	Meleagridis
 SRR1139523	Kiambu
 SRR1139520	Meleagridis
@@ -11262,7 +11261,7 @@ SRR1002809	Cerro
 SRR1002805	Newport
 SRR1002806	Rubislaw
 SRR1002807	Saphra
-SRR1002803	O60:r:1,5,(7)
+SRR1002803	IIIb 60:r:z
 SRR1258618	Kentucky
 SRR1258619	Weltevreden
 53100	Enteritidis
@@ -11610,7 +11609,7 @@ CDC_2009K1277	Typhimurium
 31920	Enteritidis
 43403	Infantis
 43408	Pomona
-43409	P:z47:z35
+43409	IIIb 38:l,v:z35
 31928	Enteritidis
 31929	Enteritidis
 SRR1025982	Inverness
@@ -11684,7 +11683,7 @@ SRR1035567	Nchanga
 SRR1035566	Typhimurium
 SRR1035561	Virchow
 SRR1035560	Typhimurium
-SRR1035563	M:e,h:-
+SRR1035563	I 28:e,h:-
 54044	Typhimurium
 SRR1106579	Derby
 SRR1106578	Derby
@@ -11747,7 +11746,7 @@ SRR949391	Saintpaul
 SRR1122691	Wien
 SRR1982144	Blockley
 39438	Enteritidis
-39439	G:y:-
+39439	I 1,13,23:y:-
 95009	Braenderup
 95006	Anatum
 39432	I 4,[5],12:i:-
@@ -11825,7 +11824,7 @@ SRR1122699	Javiana
 96206	Virchow
 34147	Bovismorbificans
 38348	Enteritidis
-34145	O61:k:1,5
+34145	IIIb 61:k:1,5,7
 60145	Enteritidis
 34143	Typhimurium
 34149	Kentucky
