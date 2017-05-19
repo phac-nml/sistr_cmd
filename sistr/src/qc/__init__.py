@@ -14,30 +14,31 @@ def qc(fasta_path, cgmlst_results, prediction):
     if not is_gsize_acceptable:
         qc_status = 'WARNING'
         qc_msgs.append('WARNING: Input genome size ({} bp) not within expected range of {}-{} (bp) for Salmonella'.format(genome_size, lb_salm_gsize, ub_salm_gsize))
-    if len(cgmlst_results) == 0:
-        missing_cgmlst_count = 330
-    else:
-        missing_cgmlst_count = 0
-        for marker, results in cgmlst_results.items():
-            if results['name'] is None:
-                missing_cgmlst_count += 1
+    if cgmlst_results is not None:
+        if len(cgmlst_results) == 0:
+            missing_cgmlst_count = 330
+        else:
+            missing_cgmlst_count = 0
+            for marker, results in cgmlst_results.items():
+                if results['name'] is None:
+                    missing_cgmlst_count += 1
 
-    if missing_cgmlst_count >= ERR_MISSING_CGMLST_MARKERS:
-        qc_status = 'FAIL'
-        qc_msgs.append('FAIL: Large number of cgMLST330 loci missing (n={} > {})'.format(
-            missing_cgmlst_count,
-            ERR_MISSING_CGMLST_MARKERS))
-    elif missing_cgmlst_count >= WARN_MISSING_CGMLST_MARKERS:
-        qc_status = 'WARNING'
-        qc_msgs.append('FAIL: Moderate number of cgMLST330 loci missing (n={} > {})'.format(
-            missing_cgmlst_count,
-            WARN_MISSING_CGMLST_MARKERS))
-
-    matching_cgmlst_alleles_threshold = (1.0 - CGMLST_DISTANCE_THRESHOLD) * 330
-    if prediction.cgmlst_matching_alleles < matching_cgmlst_alleles_threshold:
-        if qc_status != 'FAIL':
+        if missing_cgmlst_count >= ERR_MISSING_CGMLST_MARKERS:
+            qc_status = 'FAIL'
+            qc_msgs.append('FAIL: Large number of cgMLST330 loci missing (n={} > {})'.format(
+                missing_cgmlst_count,
+                ERR_MISSING_CGMLST_MARKERS))
+        elif missing_cgmlst_count >= WARN_MISSING_CGMLST_MARKERS:
             qc_status = 'WARNING'
-        qc_msgs.append('WARNING: Only matched {} cgMLST330 loci. Min threshold for confident serovar prediction from cgMLST is {}'.format(prediction.cgmlst_matching_alleles, matching_cgmlst_alleles_threshold))
+            qc_msgs.append('FAIL: Moderate number of cgMLST330 loci missing (n={} > {})'.format(
+                missing_cgmlst_count,
+                WARN_MISSING_CGMLST_MARKERS))
+
+        matching_cgmlst_alleles_threshold = (1.0 - CGMLST_DISTANCE_THRESHOLD) * 330
+        if prediction.cgmlst_matching_alleles < matching_cgmlst_alleles_threshold:
+            if qc_status != 'FAIL':
+                qc_status = 'WARNING'
+            qc_msgs.append('WARNING: Only matched {} cgMLST330 loci. Min threshold for confident serovar prediction from cgMLST is {}'.format(prediction.cgmlst_matching_alleles, matching_cgmlst_alleles_threshold))
 
     if prediction.h1 is None or prediction.h1 == '-':
         if qc_status != 'FAIL':
