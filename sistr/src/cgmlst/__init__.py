@@ -13,7 +13,7 @@ from sistr.src.serovar_prediction.constants import CGMLST_SUBSPECIATION_DISTANCE
 
 CGMLST_CENTROID_FASTA_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-centroid.fasta')
 CGMLST_FULL_FASTA_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-full.fasta')
-CGMLST_PROFILES_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-profiles.csv')
+CGMLST_PROFILES_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-profiles.hdf')
 BLASTN_PIDENT_THRESHOLD = 90.0
 
 
@@ -34,7 +34,7 @@ def allele_name(seq):
 
 
 def ref_cgmlst_profiles():
-    return pd.read_csv(CGMLST_PROFILES_PATH, index_col=0)
+    return pd.read_hdf(CGMLST_PROFILES_PATH, key='cgmlst')
 
 
 def process_cgmlst_results(df):

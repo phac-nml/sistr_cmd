@@ -42,8 +42,14 @@ setup(
                             'data/antigens/*.fasta',
                             'data/cgmlst/*.fasta',
                             'data/cgmlst/*.txt',
-                            'data/cgmlst/*.csv',]},
-    install_requires=['numpy>=1.11.1', 'pandas>=0.18.1'],
+                            'data/cgmlst/*.csv',
+                            'data/cgmlst/*.hdf'
+                            ]},
+    install_requires=[
+        'numpy>=1.11.1',
+        'pandas>=0.18.1',
+        'tables>=3.4.2',
+    ],
     extras_require={
         'test': ['pytest>=2.9.2',],
     },
