@@ -48,7 +48,7 @@ setup(
     install_requires=[
         'numpy>=1.11.1',
         'pandas>=0.18.1',
-        'tables>=3.4.2',
+        'tables>=3.3.0',
     ],
     extras_require={
         'test': ['pytest>=2.9.2',],
