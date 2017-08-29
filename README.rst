@@ -3,10 +3,23 @@
 ****************************************************************************
 
 
+|pypi| |nbsp| |license| |nbsp|
+
+.. |pypi| image:: https://badge.fury.io/py/sistr-cmd.svg
+    :target: https://pypi.python.org/pypi/sistr-cmd/
+.. |license| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
+	:target: https://www.gnu.org/licenses/gpl-3.0
+.. |nbsp| unicode:: 0xA0 
+   :trim:
+
+
+
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 `Mash MinHash <https://mash.readthedocs.io/en/latest/>`_ can also be used for serovar prediction.
 
-**Latest stable version: `v0.3.4 <https://github.com/peterk87/sistr_cmd/releases/tag/v0.3.4>`_ **
+.. epigraph::
+
+	`Latest stable version <https://github.com/peterk87/sistr_cmd/releases/latest>`_
 
 
 *Don't want to use a command-line app?* Try the `SISTR web app <https://lfz.corefacility.ca/sistr-app/>`_
@@ -537,6 +550,6 @@ You can run SISTR serovar predictions like so:
 License
 =======
 
-Copyright 2016 Public Health Agency of Canada
+Copyright 2017 Public Health Agency of Canada
 
 Distributed under the GNU Public License version 3.0
