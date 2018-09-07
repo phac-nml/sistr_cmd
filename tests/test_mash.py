@@ -1,8 +1,10 @@
-from sistr.sistr_cmd import run_mash
+# -*- coding: utf-8 -*-
+
+from sistr_cmd.mash import mash_serovar_prediction
 
 
 def test_run_mash(fasta_path):
-    out = run_mash(fasta_path)
+    out = mash_serovar_prediction(fasta_path)
     assert 'mash_match' in out
     assert 'mash_genome' in out
     assert 'mash_distance' in out

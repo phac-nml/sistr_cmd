@@ -1,4 +1,4 @@
-from sistr.src.writers import to_dict, flatten_dict
+from sistr_cmd.writers import to_dict
 import numpy as np
 import pandas as pd
 

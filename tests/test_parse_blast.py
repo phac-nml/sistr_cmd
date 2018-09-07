@@ -2,15 +2,17 @@ import os
 import pandas as pd
 import shutil
 
-from sistr.src.blast_wrapper import BlastRunner, BLAST_TABLE_COLS, BlastReader
-from sistr.src.serovar_prediction import WZX_FASTA_PATH, get_antigen_name, SerovarPredictor
+from sistr_cmd.blast_wrapper import BLAST_TABLE_COLS
+from sistr_cmd.blast_wrapper.reader import BlastReader
+from sistr_cmd.blast_wrapper.runner import BlastRunner
+from sistr_cmd.serovar_prediction import WZX_FASTA_PATH, get_antigen_name, SerovarPredictor
 
 
 def test_BlastRunner(fasta_path):
     tmp_dir = '/tmp/test_BlastRunner'
     try:
         br = BlastRunner(fasta_path, tmp_dir)
-        blast_outfile = br.run_blast(WZX_FASTA_PATH)
+        blast_outfile = br.run(WZX_FASTA_PATH)
         assert os.path.exists(tmp_dir)
         assert os.path.exists(br.tmp_fasta_path)
         nin_path = br.tmp_fasta_path + '.nin'
@@ -28,7 +30,7 @@ def test_BlastRunner(fasta_path):
 
 
 def test_BlastReader(blast_runner):
-    blast_outfile = blast_runner.run_blast(WZX_FASTA_PATH)
+    blast_outfile = blast_runner.run(WZX_FASTA_PATH)
     blast_reader = BlastReader(blast_outfile)
     top_result = blast_reader.top_result()
     assert get_antigen_name(top_result['qseqid']) == 'O58'

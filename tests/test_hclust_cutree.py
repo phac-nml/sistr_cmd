@@ -1,6 +1,7 @@
-from sistr.src.cgmlst.extras.hclust_cutree import profiles_to_np_array, dist_matrix_hamming, complete_linkage, cutree, nr_profiles, expand_clusters_dataframe
+# -*- coding: utf-8 -*-
 
-from sistr.src.cgmlst import CGMLST_PROFILES_PATH
+from sistr_cmd.cgmlst import profiles_to_np_array, dist_matrix_hamming, complete_linkage, cutree, nr_profiles, \
+    expand_clusters_dataframe, CGMLST_PROFILES_PATH
 
 
 def test_read_profiles():

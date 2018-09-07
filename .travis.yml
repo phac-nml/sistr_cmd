@@ -1,0 +1,33 @@
+language: python
+python:
+  - '3.6'
+os:
+  - linux
+
+addons:
+  apt:
+    packages:
+      - zip
+      - gzip
+      - git
+
+branches:
+  only:
+    - master
+    - development
+    - /^.+\/_base$/
+
+before_install:
+  - sudo apt-get -qq update;
+
+install:
+  - "export PATH=$PWD/.travis:$PWD/bin:$PATH"
+  - "mkdir -p deps && cd deps && source install_deps.sh && cd .."
+  - "pwd"
+  - "echo $HOME"
+  - "echo $PATH"
+  - "find deps -executable -type f"
+  - python setup.py install
+
+script:
+  - python setup.py test

@@ -3,7 +3,8 @@ import os
 import pytest
 import shutil
 
-from sistr.src.blast_wrapper import BlastRunner
+from sistr_cmd.blast_wrapper.runner import BlastRunner
+
 
 @pytest.fixture(scope='module')
 def fasta_path():

@@ -5,17 +5,17 @@ This is a longer test (>20 sec) due to running blastn of all alleles of all 330 
 '''
 from __future__ import print_function
 
-from sistr.sistr_cmd import run_cgmlst
-from sistr.src.cgmlst import allele_name
+from sistr_cmd.sistr_cmd import cgmlst_serovar_prediction
+from sistr_cmd.cgmlst import hash_allele_seq
 
 
 def test_hash_allele():
     seq = 'ATGC'
-    chksum = allele_name(seq)
+    chksum = hash_allele_seq(seq)
     assert chksum == 968142784
 
     seq_unicode = u'ATGC'
-    chksum = allele_name(seq_unicode)
+    chksum = hash_allele_seq(seq_unicode)
     assert chksum == 968142784
 
 
@@ -23,7 +23,7 @@ def test_run_cgmlst(blast_runner):
     """
     Expected perfect match against test genome 00_0163 since it is one of the ref genomes.
     """
-    cgmlst_serovar_pred, marker_res = run_cgmlst(blast_runner)
+    cgmlst_serovar_pred, marker_res = cgmlst_serovar_prediction(blast_runner)
     assert isinstance(cgmlst_serovar_pred, dict)
     spp = cgmlst_serovar_pred['subspecies']
     serovar = cgmlst_serovar_pred['serovar']

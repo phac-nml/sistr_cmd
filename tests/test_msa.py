@@ -1,5 +1,5 @@
 from __future__ import print_function
-from sistr.src.cgmlst.msa import msa_mafft, msa_ref_vs_novel, parse_aln_out
+from sistr_cmd.cgmlst.msa import msa_mafft, msa_ref_vs_novel, parse_aln_out
 
 
 def test_parse_aln_out_string():

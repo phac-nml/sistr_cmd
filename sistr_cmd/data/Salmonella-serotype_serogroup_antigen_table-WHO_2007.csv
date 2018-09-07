@@ -1,0 +1,2583 @@
+Serovar,O_antigen,H1,H2,H_other,Serogroup,can_h2_be_missing,subspecies
+Aachen,17,z35,"1,6",,J,False,enterica
+Aarhus,18,"z4,z23",z64,,K,False,enterica
+Aba,"6,8",i,"e,n,z15",,C2-C3,False,enterica
+Abadina,28,"g,m","[e,n,z15]",,M,True,enterica
+Abaetetuba,11,k,"1,5",,F,False,enterica
+Aberdeen,11,i,"1,2",,F,False,enterica
+Abidjan,39,b,"l,w",,Q,False,enterica
+Ablogame,16,"l,z13,z28",z6,,I,False,enterica
+Abobo,16,i,z6,,I,False,enterica
+Abony,"1,4,[5],12,[27]",b,"e,n,x",,B,False,enterica
+Abortusequi,"4,12",-,"e,n,x",,B,False,enterica
+Abortusovis,"4,12",c,"1,6",,B,False,enterica
+Abuja,11,"g,m","1,5",,F,False,enterica
+Accra,"1,3,19",b,z6,,E4,False,enterica
+Ackwepe,"9,46","l,w",-,,D2,True,enterica
+Adabraka,"3,10","z4,z23","[1,7]",,E1,True,enterica
+Adamstown,28,k,"1,6",,M,False,enterica
+Adamstua,11,"e,h","1,6",,F,False,enterica
+Adana,43,z10,"1,5",,U,False,enterica
+Adelaide,35,"f,g",-,[z27],O,True,enterica
+Adeoyo,16,"g,m,[t]",-,,I,True,enterica
+Aderike,28,z38,"e,n,z15",,M,False,enterica
+Adime,"6,7",b,"1,6",,C1,False,enterica
+Adjame,"13,23",r,"1,6",,G,False,enterica
+Aequatoria,"6,7","z4,z23","e,n,z15",,C1,False,enterica
+Aesch,"6,8",z60,"1,2",,C2-C3,False,enterica
+Aflao,"1,6,14,25","l,z28","e,n,x",,H,False,enterica
+Africana,"4,12","r,i","l,w",,B,False,enterica
+Afula,"6,7","f,g,t","e,n,x",,C1,False,enterica
+Agama,"4,12",i,"1,6",,B,False,enterica
+Agbara,16,i,"1,6",,I,False,enterica
+Agbeni,"1,13,23","g,m,[s],[t]",-,,G,True,enterica
+Agege,"3,10",c,"e,n,z15",,E1,False,enterica
+Ago,30,z38,-,,N,True,enterica
+Agodi,35,"g,t",-,,O,True,enterica
+Agona,"1,4,[5],12","f,g,s","[1,2]","[z27],[z45]",B,True,enterica
+"I 4,[5],12:d:-","4,[5],12",d,-,,B,True,enterica
+Agoueve,"13,22",z29,-,,G,True,enterica
+Ahanou,17,i,"1,7",,J,False,enterica
+Ahepe,43,z35,"1,6",,U,False,enterica
+Ahmadi,"1,3,19",d,"1,5",,E4,False,enterica
+Ahoutoue,41,z35,"1,6",,S,False,enterica
+Ahuza,43,k,"1,5",,U,False,enterica
+Ajiobo,"13,23","z4,z23",-,,G,True,enterica
+Akanji,"6,8",r,"1,7",,C2-C3,False,enterica
+Akuafo,16,y,"1,6",,I,False,enterica
+Alabama,"9,12",c,"e,n,z15",,D1,False,enterica
+Alachua,35,"z4,z23",-,"[z37],[z45]",O,True,enterica
+Alagbon,"8,20",y,"1,7",,C2-C3,False,enterica
+Alamo,"6,7","g,z51","1,5",,C1,False,enterica
+Albany,"8,20","z4,z24",-,[z45],C2-C3,True,enterica
+Albert,"4,12",z10,"e,n,x",,B,False,enterica
+Albertbanjul,44,r,"1,5",,V,False,enterica
+Albertslund,"3,10",z38,"1,6",,E1,False,enterica
+Albuquerque,"1,6,14,24",d,z6,,H,False,enterica
+Alexanderplatz,47,z38,-,,X,True,enterica
+Alexanderpolder,8,c,"l,w",,C2-C3,False,enterica
+Alfort,"3,10","f,g","e,n,x",,E1,False,enterica
+Alger,38,"l,v","1,2",,P,False,enterica
+Alkmaar,"1,3,19",a,"l,w",,E4,False,enterica
+Allandale,"1,40",k,"1,6",,R,False,enterica
+Allerton,"3,10",b,"1,6",,E1,False,enterica
+Alma,39,i,"e,n,z15",,Q,False,enterica
+Alminko,"8,20","g,s,t",-,,C2-C3,True,enterica
+Alpenquai,"6,14","l,v","e,n,z15",,H,False,enterica
+Altendorf,"4,12,[27]",c,"1,7",,B,False,enterica
+Altona,"8,20","r,[i]",z6,,C2-C3,False,enterica
+Amager,"3,{10}{15}",y,"1,2",[z45],E1,False,enterica
+Amba,11,k,"l,z13,z28",,F,False,enterica
+Amberg,"6,14,24","l,v","1,7",,H,False,enterica
+Amersfoort,"6,7,14",d,"e,n,x",,C1,False,enterica
+Amherstiana,8,"l,v","1,6",,C2-C3,False,enterica
+Amina,16,i,"1,5",,I,False,enterica
+Aminatu,"3,10",a,"1,2",,E1,False,enterica
+Amounderness,"3,10",i,"1,5",,E1,False,enterica
+Amoutive,28,d,"1,5",,M,False,enterica
+Amsterdam,"3,{10}{15}{15,34}","g,m,s",-,,E1,True,enterica
+Amunigun,16,a,"1,6",,I,False,enterica
+Anatum,"3,{10}{15}{15,34}","e,h","1,6",[z64],E1,False,enterica
+Anderlecht,"3,10",c,"l,w",,E1,False,enterica
+Anecho,35,"g,s,t",-,,O,True,enterica
+Anfo,39,y,"1,2",,Q,False,enterica
+Angers,"8,20",z35,z6,,C2-C3,False,enterica
+Angoda,30,k,"e,n,x",,N,False,enterica
+Angouleme,16,z10,z6,,I,False,enterica
+Ank,28,k,"e,n,z15",,M,False,enterica
+Anna,"13,23",z35,"e,n,z15",,G,False,enterica
+Annedal,16,"r,i","e,n,x",,I,False,enterica
+Antarctica,"9,12","g,z63",-,,D1,True,enterica
+Antonio,57,a,z6,,O57,False,enterica
+Antsalova,51,z,"1,5",,O51,False,enterica
+Antwerpen,"1,42",c,"e,n,z15",,T,False,enterica
+Apapa,45,"m,t",-,,W,True,enterica
+Apeyeme,"8,20",z38,-,,C2-C3,True,enterica
+Aprad,45,z10,-,,W,True,enterica
+Aqua,30,k,"1,6",,N,False,enterica
+Aragua,30,z29,-,,N,True,enterica
+Arapahoe,"6,14","z4,z23","1,5",,H,False,enterica
+Arechavaleta,"4,[5],12",a,"1,7",,B,False,enterica
+Argenteuil,"1,9,46",c,"1,7",,D2,False,enterica
+Arusha,43,z,"e,n,z15",,U,False,enterica
+Aschersleben,30,b,"1,5",,N,False,enterica
+Ashanti,28,b,"1,6",,M,False,enterica
+Assen,21,a,"[1,5]",,L,True,enterica
+Assinie,"3,10","l,w",z6,[z45],E1,False,enterica
+Astridplein,16,"e,h","1,6",,I,False,enterica
+Asylanta,"3,10",c,"1,2",,E1,False,enterica
+Atakpame,"8,20","e,h","1,7",,C2-C3,False,enterica
+Atento,11,b,"1,2",,F,False,enterica
+Athens,"1,40","g,m,s","e,n,x",,R,False,enterica
+Athinai,"6,7",i,"e,n,z15",,C1,False,enterica
+Ati,11,d,"1,2",,F,False,enterica
+Augustenborg,"6,7,14",i,"1,2",,C1,False,enterica
+Aurelianis,"9,12",z,"e,n,z15",,D1,False,enterica
+Austin,"6,7",a,"1,7",,C1,False,enterica
+Australia,48,"l,v","1,5",,Y,False,enterica
+Avignon,16,y,"e,n,z15",,I,False,enterica
+Avonmouth,"1,3,19",i,"e,n,z15",,E4,False,enterica
+Axim,16,"z4,z23",z6,,I,False,enterica
+Ayinde,"1,4,12,27",d,z6,,B,False,enterica
+Ayton,"1,4,12,27","l,w",z6,,B,False,enterica
+Azteca,"4,[5],12,[27]","l,v","1,5",,B,False,enterica
+Babelsberg,28,"z4,z23","[e,n,z15]",,M,True,enterica
+Babili,28,z35,"1,7",,M,False,enterica
+Badagry,16,z10,"1,5",,I,False,enterica
+Baguida,21,"z4,z23",-,,L,True,enterica
+Baguirmi,30,y,"e,n,x",,N,False,enterica
+Bahati,"13,22",b,"e,n,z15",,G,False,enterica
+Bahrenfeld,"6,14,[24]","e,h","1,5",,H,False,enterica
+Baiboukoum,"6,7",k,"1,7",,C1,False,enterica
+Baildon,"9,46",a,"e,n,x",,D2,False,enterica
+Bakau,28,a,"1,7",,M,False,enterica
+Balcones,45,z36,-,,W,True,enterica
+Ball,"1,4,[5],12,[27]",y,"e,n,x",,B,False,enterica
+Bama,17,"m,t",-,,J,True,enterica
+Bamboye,"9,46",b,"l,w",,D2,False,enterica
+Bambylor,"9,46",z,"e,n,z15",,D2,False,enterica
+Banalia,"6,8",b,z6,,C2-C3,False,enterica
+Banana,"1,4,[5],12","m,t","[1,5]",,B,True,enterica
+Banco,28,"r,i","1,7",,M,False,enterica
+Bandia,35,i,"l,w",,O,False,enterica
+Bandim,17,k,"1,6",,J,False,enterica
+Bangkok,38,"z4,z24",-,,P,True,enterica
+Bangui,"9,12",d,"e,n,z15",,D1,False,enterica
+Banjul,"1,6,14,25",a,"e,n,z15",,H,False,enterica
+Bardo,8,"e,h","1,2",,C2-C3,False,enterica
+Bareilly,"6,7,14",y,"1,5",,C1,False,enterica
+Bargny,"8,20",i,"1,5",,C2-C3,False,enterica
+Barmbek,16,d,z6,,I,False,enterica
+Barranquilla,16,d,"e,n,x",,I,False,enterica
+Barry,54,z10,"e,n,z15",,O54,False,enterica
+Basingstoke,"9,46",z35,"e,n,z15",,D2,False,enterica
+Bassa,"6,8","m,t",-,,C2-C3,True,enterica
+Bassadji,28,r,"1,6",,M,False,enterica
+Bata,"9,12",b,"1,7",,D1,False,enterica
+Batonrouge,57,b,"e,n,z15",,O57,False,enterica
+Battle,16,"l,z13,z28","1,6",,I,False,enterica
+Bazenheid,"8,20",z10,"1,2",,C2-C3,False,enterica
+Be,"8,20",a,[z6],,C2-C3,True,enterica
+Beaudesert,"[1],6,14,[25]","e,h","1,7",,H,False,enterica
+Bedford,"1,3,19","l,z13,z28","e,n,z15",,E4,False,enterica
+Belem,"6,8",c,"e,n,x",,C2-C3,False,enterica
+Belfast,"6,8",c,"1,7",,C2-C3,False,enterica
+Bellevue,8,"z4,z23","1,7",,C2-C3,False,enterica
+Benfica,"3,10",b,"e,n,x",,E1,False,enterica
+Benguella,40,b,z6,,R,False,enterica
+Benin,"9,46",y,"1,7",,D2,False,enterica
+Benue,"6,8",y,"l,w",,C2-C3,False,enterica
+Bere,47,"z4,z23",z6,"[z45],[z58]",X,False,enterica
+Bergedorf,"9,46","e,h","1,2",,D2,False,enterica
+Bergen,47,i,"e,n,z15",,X,False,enterica
+Bergues,51,z10,"1,5",,O51,False,enterica
+Berkeley,43,a,"1,5",,U,False,enterica
+Berlin,17,d,"1,5",,J,False,enterica
+Berta,"1,9,12","[f],g,[t]",-,,D1,True,enterica
+Bessi,"3,10",i,"e,n,x",,E1,False,enterica
+Bethune,"1,3,19",k,"1,7",,E4,False,enterica
+Biafra,"3,10",z10,z6,,E1,False,enterica
+Bida,"1,3,19",c,"1,6",,E4,False,enterica
+Bietri,30,y,"1,5",,N,False,enterica
+Bignona,17,b,"e,n,z15",,J,False,enterica
+Bijlmer,"1,40","g,m",-,,R,True,enterica
+Bilu,"1,3,10,19","f,g,t","1,(2),7",,E4,False,enterica
+Binche,47,"z4,z23","l,w",,X,False,enterica
+Bingerville,47,z35,"e,n,z15",,X,False,enterica
+Binningen,45,"g,s,t",-,,W,True,enterica
+Birkenhead,"6,7",c,"1,6",,C1,False,enterica
+Birmingham,"3,{10}{15}",d,"l,w",,E1,False,enterica
+Bispebjerg,"1,4,[5],12",a,"e,n,x",,B,False,enterica
+Bissau,"4,12",c,"e,n,x",,B,False,enterica
+Blancmesnil,"4,12","l,w","e,n,z15",,B,False,enterica
+Blegdam,"9,12","g,m,q",-,,D1,True,enterica
+Blijdorp,"1,6,14,25",c,"1,5",,H,False,enterica
+Blitta,47,y,"e,n,x",,X,False,enterica
+Blockley,"6,8",k,"1,5",[z58],C2-C3,False,enterica
+Bloomsbury,"3,10","g,t","1,5",,E1,False,enterica
+Blukwa,"6,14,18","z4,z24",-,,K,True,enterica
+Bobo,44,d,"1,5",,V,False,enterica
+Bochum,"1,4,[5],12",r,"l,w",,B,False,enterica
+Bodjonegoro,30,"z4,z24",-,,N,True,enterica
+Boecker,"[1],6,14,[25]","l,v","1,7",,H,False,enterica
+Bofflens,41,"z4,z23","1,7",,S,False,enterica
+Bokanjac,28,b,"1,7",,M,False,enterica
+Bolama,44,z,"e,n,x",,V,False,enterica
+Bolombo,"3,10",z38,[z6],,E1,True,enterica
+Bolton,"3,10",y,"e,n,z15",,E1,False,enterica
+Bonames,17,a,"1,2",,J,False,enterica
+Bonariensis,"6,8",i,"e,n,x",,C2-C3,False,enterica
+Bonn,"6,7","l,v","e,n,x",,C1,False,enterica
+Bootle,47,k,"1,5",,X,False,enterica
+Borbeck,"13,22","l,v","1,6",,G,False,enterica
+Bordeaux,52,k,"1,5",,O52,False,enterica
+Borreze,54,"f,g,s",-,,O54,True,enterica
+Borromea,42,i,"1,6",,T,False,enterica
+Bouake,16,z,z6,,I,False,enterica
+Bournemouth,"9,12","e,h","1,2",,D1,False,enterica
+Bousso,"1,6,14,25","z4,z23","[e,n,z15]",,H,True,enterica
+Bovismorbificans,"6,8,20","r,[i]","1,5",[R1…],C2-C3,False,enterica
+Brackenridge,44,z,"1,5",,V,False,enterica
+Bracknell,"13,23",b,"1,6",,G,False,enterica
+Bradford,"4,12,[27]",r,"1,5",,B,False,enterica
+Braenderup,"6,7,14","e,h","e,n,z15",,C1,False,enterica
+Brancaster,"1,4,12,27",z29,-,,B,True,enterica
+Brandenburg,"4,[5],12","l,v","e,n,z15",,B,False,enterica
+Brazil,16,a,"1,5",,I,False,enterica
+Brazos,"6,14,18",a,"e,n,z15",,K,False,enterica
+Brazzaville,"6,7",b,"1,2",,C1,False,enterica
+Breda,"6,8","z4,z23","e,n,x",,C2-C3,False,enterica
+Bredeney,"1,4,12,27","l,v","1,7",[z40],B,False,enterica
+Brefet,44,r,"e,n,z15",,V,False,enterica
+Breukelen,"6,8","l,z13,[z28]","e,n,z15",,C2-C3,False,enterica
+Brevik,16,z,"e,n,[x],z15",,I,False,enterica
+Brezany,"1,4,12,27",d,"1,6",,B,False,enterica
+Brijbhumi,11,i,"1,5",,F,False,enterica
+Brikama,"8,20","r,[i]","l,w",,C2-C3,False,enterica
+Brindisi,11,c,"1,6",,F,False,enterica
+Brisbane,28,z,"e,n,z15",,M,False,enterica
+Bristol,"13,22",z,"1,7",,G,False,enterica
+Brive,"1,42",r,"l,w",,T,False,enterica
+Broc,42,"z4,z23","e,n,z15",,T,False,enterica
+Bron,"13,22","g,m","[e,n,z15]",,G,True,enterica
+Bronx,"6,8",c,"1,6",,C2-C3,False,enterica
+Brooklyn,16,"l,w","e,n,x",,I,False,enterica
+Broughton,"1,3,19",b,"l,w",,E4,False,enterica
+Bruck,"6,7",z,"l,w",,C1,False,enterica
+Bruebach,39,"e,h","1,2",,Q,False,enterica
+Brunei,"8,20",y,"1,5",,C2-C3,False,enterica
+Brunflo,16,r,"1,7",,I,False,enterica
+Bsilla,"6,8",r,"1,2",,C2-C3,False,enterica
+Buckeye,48,d,-,[z58],Y,True,enterica
+Budapest,"1,4,12,[27]","g,t",-,,B,True,enterica
+Bukavu,"1,40","l,z28","1,5",,R,False,enterica
+Bukuru,"6,8",b,"l,w",,C2-C3,False,enterica
+Bulgaria,"6,8",y,"1,6",,C2-C3,False,enterica
+Bullbay,11,"l,v","e,n,z15",,F,False,enterica
+Bulovka,"6,7",z44,-,,C1,True,enterica
+Burgas,16,"l,v","e,n,z15",,I,False,enterica
+Burundi,41,a,-,,S,True,enterica
+Bury,"4,12,27",c,z6,,B,False,enterica
+Businga,"6,7",z,"e,n,z15",,C1,False,enterica
+Butantan,"3,{10}{15}{15,34}",b,"1,5",,E1,False,enterica
+Butare,52,"e,h","1,6",,O52,False,enterica
+Buzu,"[1],6,14,[25]",i,"1,7",,H,False,enterica
+Caen,16,d,"l,w",[z82],I,False,enterica
+Cairina,"3,10",z35,z6,,E1,False,enterica
+Cairns,45,k,"e,n,z15",,W,False,enterica
+Calabar,"1,3,19","e,h","l,w",,E4,False,enterica
+California,"4,12","g,m,t",[z67],,B,True,enterica
+Camberene,35,z10,"1,5",,O,False,enterica
+Camberwell,"9,12",r,"1,7",,D1,False,enterica
+Campinense,"9,12",r,"e,n,z15",,D1,False,enterica
+Canada,"4,12,[27]",b,"1,6",,B,False,enterica
+Canary,40,"l,v","1,6",,R,False,enterica
+Cannobio,28,"z4,z23","1,5",,M,False,enterica
+Cannonhill,"1,3,{10},{15},19",y,"e,n,x",,E4,False,enterica
+Cannstatt,"1,3,19","m,t",-,,E4,True,enterica
+Canton,54,z10,"e,n,x",,O54,False,enterica
+Caracas,"[1],6,14,[25]","g,m,s",-,,H,True,enterica
+Cardoner,16,"g,s,t",-,,I,True,enterica
+Carmel,17,"l,v","e,n,x",,J,False,enterica
+Carnac,18,z10,z6,,K,False,enterica
+Carno,"1,3,19",z,"l,w",,E4,False,enterica
+Carpentras,38,z35,"e,n,z15",,P,False,enterica
+Carrau,"6,14,[24]",y,"1,7",,H,False,enterica
+Carswell,44,"g,z51",-,,V,True,enterica
+Casablanca,45,k,"1,7",,W,False,enterica
+Casamance,40,z,"e,n,x",,R,False,enterica
+Catalunia,28,"l,z13,z28","1,5",,M,False,enterica
+Catanzaro,"6,14","g,s,t",-,,H,True,enterica
+Catumagos,"1,3,19",z35,"1,5",,E4,False,enterica
+Cayar,"6,7",z,"e,n,x",,C1,False,enterica
+Cerro,"6,14,18","z4,z23","[1,5]","[z45],[z82]",K,True,enterica
+Ceyco,"9,46",k,z35,,D2,False,enterica
+Chagoua,"1,13,23",a,"1,5",,G,False,enterica
+Chailey,"6,8","z4,z23","[e,n,z15]",,C2-C3,True,enterica
+Champaign,39,k,"1,5",[z48],Q,False,enterica
+Chandans,11,d,"[e,n,x]",[r],F,True,enterica
+Charity,"[1],6,14,[25]",d,"e,n,x",,H,False,enterica
+Charlottenburg,"6,8",k,"e,n,z15",,C2-C3,False,enterica
+Chartres,"1,4,12","e,h","l,w",,B,False,enterica
+Cheltenham,"9,46",b,"1,5",,D2,False,enterica
+Chennai,"4,12",d,z35,,B,False,enterica
+Chester,"1,4,[5],12","e,h","e,n,x",,B,False,enterica
+Chicago,28,"r,[i]","1,5",,M,False,enterica
+Chichester,"1,3,19",i,"1,6",,E4,False,enterica
+Chichiri,"6,14,24","z4,z24",-,,H,True,enterica
+Chile,"6,7",z,"1,2",,C1,False,enterica
+Chincol,"6,8","g,m,[s]","[e,n,x]",,C2-C3,True,enterica
+Chingola,11,"e,h","1,2",,F,False,enterica
+Chiredzi,11,c,"1,5",,F,False,enterica
+Chittagong,"1,3,10,19",b,z35,,E4,False,enterica
+Choleraesuis,"6,7",c,"1,5",,C1,False,enterica
+Chomedey,"8,20",z10,"e,n,z15",,C2-C3,False,enterica
+Christiansborg,44,"z4,z24",-,,V,True,enterica
+Clackamas,"4,12","l,v","1,6",,B,False,enterica
+Claibornei,"1,9,12",k,"1,5",,D1,False,enterica
+Clanvillian,11,r,"e,n,z15",,F,False,enterica
+Clerkenwell,"3,10",z,"l,w",,E1,False,enterica
+Cleveland,"6,8",z10,"1,7",,C2-C3,False,enterica
+Clontarf,"9,46",k,"1,6",,D2,False,enterica
+Cochin,"9,46",k,"1,5",,D2,False,enterica
+Cochise,18,b,"1,7",,K,False,enterica
+Cocody,"8,20","r,i","e,n,z15",,C2-C3,False,enterica
+Coeln,"1,4,[5],12",y,"1,2",,B,False,enterica
+Coleypark,"6,7,14",a,"l,w",,C1,False,enterica
+Colindale,"6,7",r,"1,7",,C1,False,enterica
+Colobane,11,k,"1,7",,F,False,enterica
+Colombo,38,y,"1,6",,P,False,enterica
+Colorado,"6,7","l,w","1,5",,C1,False,enterica
+Concord,"6,7","l,v","1,2",,C1,False,enterica
+Connecticut,11,"l,z13,z28","1,5",,F,False,enterica
+Coogee,42,"l,v","e,n,z15",,T,False,enterica
+Coquilhatville,"3,10",z10,"1,7",,E1,False,enterica
+Coromandel,"6,7","l,v",z35,,C1,False,enterica
+Corvallis,"8,20","z4,z23",[z6],,C2-C3,True,enterica
+Cotham,28,i,"1,5",,M,False,enterica
+Cotia,18,-,"1,6",,K,False,enterica
+Cotonou,"6,7",c,z6,,C1,False,enterica
+Cremieu,"6,8","e,h","1,6",[R1…],C2-C3,False,enterica
+Crewe,11,z,"1,5",,F,False,enterica
+Croft,28,"g,m,s","[e,n,z15]",,M,True,enterica
+Crossness,67,r,"1,2",,O67,False,enterica
+Cubana,"1,13,23",z29,-,"[z37],[z43]",G,True,enterica
+Cuckmere,"3,10",i,"1,2",,E1,False,enterica
+Cullingworth,28,d,"l,w",,M,False,enterica
+Cumberland,39,i,"e,n,x",,Q,False,enterica
+Curacao,"6,8",a,"1,6",,C2-C3,False,enterica
+Cyprus,"6,8",i,"l,w",,C2-C3,False,enterica
+Czernyring,54,r,"1,5",,O54,False,enterica
+Daarle,"6,8",y,"e,n,x",,C2-C3,False,enterica
+Dabou,"8,20","z4,z23","l,w",,C2-C3,False,enterica
+Dadzie,51,"l,v","e,n,x",,O51,False,enterica
+Dahlem,48,k,"e,n,z15",,Y,False,enterica
+Dahomey,47,k,"1,6",[z58],X,False,enterica
+Dahra,17,b,"1,5",,J,False,enterica
+Dakar,28,a,"1,6",,M,False,enterica
+Dakota,16,z35,"e,n,z15",,I,False,enterica
+Dallgow,"1,3,19",z10,"e,n,z15",,E4,False,enterica
+Damman,"6,7,14",a,z6,,C1,False,enterica
+Dan,51,k,"e,n,z15",,O51,False,enterica
+Dapango,47,r,"1,2",,X,False,enterica
+Daula,"8,20",z,z6,,C2-C3,False,enterica
+Daytona,"6,7",k,"1,6",,C1,False,enterica
+Deckstein,"9,46",r,"1,7",,D2,False,enterica
+Delan,39,y,"e,n,z15",,Q,False,enterica
+Delmenhorst,18,z71,-,,K,True,enterica
+Dembe,35,d,"l,w",[z58],O,False,enterica
+Demerara,"13,23",z10,"l,w",,G,False,enterica
+Denver,"6,7",a,"e,n,z15",,C1,False,enterica
+Derby,"1,4,[5],12","f,g","[1,2]",,B,True,enterica
+Derkle,52,"e,h","1,7",,O52,False,enterica
+Dessau,"1,3,15,19","g,s,t",-,,E4,True,enterica
+Detmold,"9,46",a,"1,2",,D2,False,enterica
+Deversoir,45,c,"e,n,x",,W,False,enterica
+Dibra,28,a,z6,,M,False,enterica
+Dietrichsdorf,39,"m,t",-,,Q,True,enterica
+Dieuppeul,28,i,"1,7",,M,False,enterica
+Diguel,"1,13,22",d,"e,n,z15",,G,False,enterica
+Dingiri,17,z,"1,6",,J,False,enterica
+Diogoye,"8,20",z41,z6,,C2-C3,False,enterica
+Diourbel,21,i,"1,2",,L,False,enterica
+Djakarta,48,"z4,z24",-,,Y,True,enterica
+Djama,"1,42",z29,"[1,5]",,T,True,enterica
+Djelfa,8,b,"1,2",,C2-C3,False,enterica
+Djermaia,28,z29,-,,M,True,enterica
+Djibouti,17,z10,"e,n,x",,J,False,enterica
+Djinten,51,"m,t",-,,O51,True,enterica
+Djugu,"6,7",z10,"e,n,x",,C1,False,enterica
+Doba,"9,46",a,"e,n,z15",,D2,False,enterica
+Doel,28,z,"1,6",,M,False,enterica
+Doncaster,"6,8",a,"1,5",,C2-C3,False,enterica
+Donna,30,"l,v","1,5",,N,False,enterica
+Doorn,28,i,"1,2",,M,False,enterica
+Dortmund,"3,10",z41,"1,[2],5",,E1,False,enterica
+Douala,28,i,"l,w",,M,False,enterica
+Dougi,50,y,"1,6",,Z,False,enterica
+Doulassame,30,a,"e,n,z15",,N,False,enterica
+Drac,47,"l,v","e,n,x",,X,False,enterica
+Dresden,28,c,"e,n,x",,M,False,enterica
+Driffield,"1,40",d,"1,5",,R,False,enterica
+Drogana,"1,4,12,27","r,[i]","e,n,z15",,B,False,enterica
+Dublin,"1,9,12[Vi]","g,p",-,,D1,True,enterica
+Duesseldorf,"6,8","z4,z24",-,,C2-C3,True,enterica
+Dugbe,45,d,"1,6",,W,False,enterica
+Duisburg,"1,4,12,[27]",d,"e,n,z15","[e,h]",B,False,enterica
+Dumfries,"3,10","r,i","1,6",,E1,False,enterica
+Dunkwa,"6,8",d,"1,7",,C2-C3,False,enterica
+Durban,"1,9,12",a,"e,n,z15",,D1,False,enterica
+Durham,"13,23",b,"e,n,z15",,G,False,enterica
+Duval,"1,40",b,"e,n,z15",,R,False,enterica
+Ealing,35,"g,m,s",-,,O,True,enterica
+Eastbourne,"1,9,12","e,h","1,5",,D1,False,enterica
+Eastglam,"1,3,19",c,"1,5",,E4,False,enterica
+Eaubonne,18,"g,s,t",-,,K,True,enterica
+Eberswalde,28,c,"1,6",,M,False,enterica
+Eboko,"6,8",b,"1,7",,C2-C3,False,enterica
+Ebrie,35,"g,m,t",-,,O,True,enterica
+Echa,38,k,"1,2",,P,False,enterica
+Ede,43,b,"e,n,z15",,U,False,enterica
+Edinburg,"6,7,14",b,"1,5",,C1,False,enterica
+Edmonton,"6,8","l,v","e,n,z15",,C2-C3,False,enterica
+Egusi,41,d,"1,5",,S,False,enterica
+Egusitoo,"1,42",b,z6,,T,False,enterica
+Eingedi,"6,7","f,g,t","1,2,7",,C1,False,enterica
+Eko,"4,12","e,h","1,6",,B,False,enterica
+Ekotedo,"9,46","z4,z23",-,,D2,True,enterica
+Ekpoui,47,z29,-,,X,True,enterica
+Elbeuf,44,b,"e,n,x",,V,False,enterica
+Elisabethville,"3,{10}{15}",r,"1,7",,E1,False,enterica
+Elokate,"9,12",c,"1,7",,D1,False,enterica
+Elomrane,"1,9,12",z38,-,,D1,True,enterica
+Emek,"8,20","g,m,s",-,,C2-C3,True,enterica
+Emmastad,38,r,"1,6",,P,False,enterica
+Encino,"1,6,14,25",d,"l,z13,z28",,H,False,enterica
+Enschede,35,z10,"l,w",,O,False,enterica
+Entebbe,"1,4,12,27",z,z6,,B,False,enterica
+Enteritidis,"1,9,12","g,m",-,,D1,True,enterica
+Enugu,16,"l,[z13],z28","[1,5]",,I,True,enterica
+Epalinges,43,"l,w",[z44],,U,True,enterica
+Epicrates,"3,10",b,"l,w",,E1,False,enterica
+Epinay,11,a,"l,z13,z28",,F,False,enterica
+Eppendorf,"1,4,12,[27]",d,"1,5",,B,False,enterica
+Erfurt,11,b,z6,,F,False,enterica
+Escanaba,"6,7",k,"e,n,z15",,C1,False,enterica
+Eschberg,"9,12",d,"1,7",,D1,False,enterica
+Eschweiler,"6,7",z10,"1,6",,C1,False,enterica
+Essen,"4,12","g,m",-,,B,True,enterica
+Essingen,16,"l,w",z6,,I,False,enterica
+Etterbeek,11,"z4,z23","e,n,z15",,F,False,enterica
+Euston,11,"r,i","e,n,x,z15",,F,False,enterica
+Everleigh,"3,10",z29,"e,n,x",,E1,False,enterica
+Evry,35,i,z6,,O,False,enterica
+Ezra,28,z,"1,7",,M,False,enterica
+Fairfield,28,r,"l,w",,M,False,enterica
+Fajara,28,"l,z28","e,n,x",,M,False,enterica
+Faji,"1,42",a,"e,n,z15",,T,False,enterica
+Falkensee,"3,{10}{15}",i,"e,n,z15",,E1,False,enterica
+Fallowfield,"3,10","l,z13,z28","e,n,z15",,E1,False,enterica
+Fann,11,"l,v","e,n,x",,F,False,enterica
+Fanti,"13,23",z38,-,,G,True,enterica
+Farakan,28,z10,"1,5",,M,False,enterica
+Farcha,43,y,"1,2",,U,False,enterica
+Fareham,"1,3,19","r,i","l,w",,E4,False,enterica
+Farmingdale,43,"z4,z23","[1,2]",,U,True,enterica
+Farmsen,"13,23",z,"1,6",,G,False,enterica
+Farsta,"4,12",i,"e,n,x",,B,False,enterica
+Fass,50,"l,v","1,2",,Z,False,enterica
+Fayed,"6,8","l,w","1,2",,C2-C3,False,enterica
+Fehrbellin,47,"z4,z23","1,6",,X,False,enterica
+Ferlo,41,k,"1,6",,S,False,enterica
+Ferruch,8,"e,h","1,5",,C2-C3,False,enterica
+Fillmore,"6,8","e,h","e,n,x",,C2-C3,False,enterica
+Finaghy,"4,12",y,"1,6",,B,False,enterica
+Findorff,11,d,z6,,F,False,enterica
+Finkenwerder,"[1],6,14,[25]",d,"1,5",,H,False,enterica
+Fischerhuette,16,a,"e,n,z15",,I,False,enterica
+Fischerkietz,"1,6,14,25",y,"e,n,x",,H,False,enterica
+Fischerstrasse,44,d,"e,n,z15",,V,False,enterica
+Fitzroy,48,"e,h","1,5",,Y,False,enterica
+Florian,"3,{10}{15}","z4,z24",-,,E1,True,enterica
+Florida,"[1],6,14,[25]",d,"1,7",,H,False,enterica
+Flottbek,52,b,"e,n,x",,O52,False,enterica
+Fluntern,"6,14,18",b,"1,5",,K,False,enterica
+Fomeco,45,b,"e,n,z15",,W,False,enterica
+Fortlamy,16,z,"1,6",,I,False,enterica
+Fortune,"1,4,12,[27]",z10,z6,,B,False,enterica
+Franken,"9,12",z6,z67,,D1,False,enterica
+Frankfurt,16,i,"e,n,z15",,I,False,enterica
+Frederiksberg,"1,42",b,"l,w",,T,False,enterica
+Freefalls,28,b,"l,w",,M,False,enterica
+Freetown,38,y,"1,5",,P,False,enterica
+Freiburg,"3,10","l,z13","1,2",,E1,False,enterica
+Fresno,"9,46",z38,-,,D2,True,enterica
+Friedenau,"13,22",d,"1,6",,G,False,enterica
+Friedrichsfelde,28,"f,g",-,,M,True,enterica
+Frintrop,"1,9,12",b,"1,5",,D1,False,enterica
+Fufu,"3,10",z,"1,5",,E1,False,enterica
+Fulda,"1,3,19","l,w","1,5",,E4,False,enterica
+Fulica,"4,[5],12",a,-,,B,True,enterica
+Fyris,"4,[5],12","l,v","1,2",,B,False,enterica
+Gabon,"6,7","l,w","1,2",,C1,False,enterica
+Gafsa,16,c,"1,6",,I,False,enterica
+Gaillac,"8,20",c,"1,5",,C2-C3,False,enterica
+Galiema,"6,7,14",k,"1,2",,C1,False,enterica
+Galil,"3,10",a,"e,n,z15",,E1,False,enterica
+Gallen,11,a,"1,2",,F,False,enterica
+Gallinarum,"1,9,12",-,-,,D1,True,enterica
+Pullorum,"1,9,12",-,-,,D1,True,enterica
+Gamaba,"1,44","g,m,[s]","[1,6]",,V,True,enterica
+Gambaga,21,z35,"e,n,z15",,L,False,enterica
+Gambia,35,i,"e,n,z15",,O,False,enterica
+Gaminara,16,d,"1,7",,I,False,enterica
+Garba,"1,6,14,25",a,"1,5",,H,False,enterica
+Garoli,"6,7",i,"1,6",,C1,False,enterica
+Gassi,35,"e,h",z6,,O,False,enterica
+Gateshead,"9,46","g,s,t",-,,D2,True,enterica
+Gatineau,"1,3,19",y,"1,5",,E4,False,enterica
+Gatow,"6,7",y,"1,7",,C1,False,enterica
+Gatuni,"6,8",b,"e,n,x",,C2-C3,False,enterica
+Gbadago,"3,{10}{15}",c,"1,5",,E1,False,enterica
+Gdansk,"6,7,14","l,v",z6,,C1,False,enterica
+Gege,30,r,"1,5",,N,False,enterica
+Georgia,"6,7",b,"e,n,z15",,C1,False,enterica
+Gera,"1,42","z4,z23","1,6",,T,False,enterica
+Geraldton,"9,46","l,v","1,6",,D2,False,enterica
+Gerland,16,z,"1,5",,I,False,enterica
+Ghana,21,b,"1,6",,L,False,enterica
+Giessen,30,"g,m,s",-,,N,True,enterica
+Give,"3,{10}{15}{15,34}","l,v","1,7",[d],E1,False,enterica
+Giza,"8,20",y,"1,2",,C2-C3,False,enterica
+Glasgow,16,b,"1,6",,I,False,enterica
+Glidji,11,"l,w","1,5",,F,False,enterica
+Glostrup,"6,8",z10,"e,n,z15",,C2-C3,False,enterica
+Gloucester,"1,4,12,27",i,"l,w",,B,False,enterica
+Gnesta,"1,3,19",b,"1,5",[z37],E4,False,enterica
+Godesberg,30,"g,m,[t]",-,,N,True,enterica
+Goelzau,"3,{10}{15}",a,"1,5",,E1,False,enterica
+Goeteborg,"9,12",c,"1,5",,D1,False,enterica
+Goettingen,"9,12","l,v","e,n,z15",,D1,False,enterica
+Gokul,"1,51",d,"1,5",,O51,False,enterica
+Goldcoast,"6,8",r,"l,w",,C2-C3,False,enterica
+Goma,"6,7","z4,z23",z6,,C1,False,enterica
+Gombe,"6,7,14",d,"e,n,z15",,C1,False,enterica
+Good,21,"f,g","e,n,x",,L,False,enterica
+Gori,17,z,"1,2",,J,False,enterica
+Goulfey,"1,40",k,"1,5",,R,False,enterica
+Gouloumbo,35,c,"1,5",,O,False,enterica
+Goverdhan,"9,12",k,"1,6",,D1,False,enterica
+Gozo,28,"e,h","e,n,z15",,M,False,enterica
+Grampian,"6,7",r,"l,w",,C1,False,enterica
+Grancanaria,16,z39,"[1,6]",,I,True,enterica
+Grandhaven,30,r,"1,2",,N,False,enterica
+Granlo,17,"l,z28","e,n,x",,J,False,enterica
+Graz,43,a,"1,2",,U,False,enterica
+Greiz,40,a,z6,,R,False,enterica
+Groenekan,18,d,"1,5",,K,False,enterica
+Grumpensis,"1,13,23",d,"1,7",,G,False,enterica
+Guarapiranga,30,a,"e,n,x",,N,False,enterica
+Guerin,"9,46","e,h",z6,,D2,False,enterica
+Gueuletapee,"9,12","g,m,s",-,,D1,True,enterica
+Guildford,28,k,"1,2",,M,False,enterica
+Guinea,"1,44",z10,"1,7",,V,False,enterica
+Gustavia,11,d,"1,5",,F,False,enterica
+Gwale,"1,42",k,z6,,T,False,enterica
+Gwoza,"1,3,19",a,"e,n,z15",,E4,False,enterica
+Haardt,8,k,"1,5",,C2-C3,False,enterica
+Hadar,"6,8",z10,"e,n,x",,C2-C3,False,enterica
+Hadejia,17,y,"e,n,z15",,J,False,enterica
+Haduna,"4,12","l,z13,[z28]","1,6",,B,False,enterica
+Haelsingborg,"6,7","m,p,t,[u]",-,,C1,True,enterica
+Haferbreite,42,k,"1,6",,T,False,enterica
+Haga,35,z38,-,,O,True,enterica
+Haifa,"1,4,[5],12",z10,"1,2",,B,False,enterica
+Halle,28,c,"1,7",,M,False,enterica
+Hallfold,"1,4,12,27",c,"l,w",,B,False,enterica
+Handen,"1,13,23",d,"1,2",,G,False,enterica
+Hann,40,k,"e,n,x",,R,False,enterica
+Hannover,16,a,"1,2",,I,False,enterica
+Haouaria,"13,22",c,"e,n,x,z15",,G,False,enterica
+Harburg,"[1],6,14,[25]",k,"1,5",,H,False,enterica
+Harcourt,51,"l,v","1,2",,O51,False,enterica
+Harleystreet,"3,10",z,"1,6",,E1,False,enterica
+Harrisonburg,"3,{10}{15}{15,34}",z10,"1,6",,E1,False,enterica
+Hartford,"6,7",y,"e,n,x",[z67],C1,False,enterica
+Harvestehude,"1,42",y,z6,,T,False,enterica
+Hatfield,28,d,"1,6",,M,False,enterica
+Hato,"1,4,[5],12","g,m,s","[1,2]",,B,True,enterica
+Havana,"1,13,23","f,g,[s]",-,[z79],G,True,enterica
+Hayindogo,"1,3,19","e,h","1,6",,E4,False,enterica
+Heerlen,11,i,"1,6",,F,False,enterica
+Hegau,39,z10,-,,Q,True,enterica
+Heidelberg,"1,4,[5],12",r,"1,2",,B,False,enterica
+"I 4,[5],12:r:-","1,4,[5],12",r,-,,B,True,enterica
+Heistopdenberg,"8,20",b,"l,w",,C2-C3,False,enterica
+Hemingford,50,d,"1,5",[z82],Z,False,enterica
+Hennekamp,42,z35,"e,n,z15",,T,False,enterica
+Hermannswerder,28,c,"1,5",,M,False,enterica
+Heron,16,a,z6,,I,False,enterica
+Herston,"6,8",d,"e,n,z15",,C2-C3,False,enterica
+Herzliya,11,y,"e,n,x",,F,False,enterica
+Hessarek,"4,12,[27]",a,"1,5",,B,False,enterica
+Hidalgo,"6,8","r,[i]","e,n,z15",,C2-C3,False,enterica
+Hiduddify,"6,8","l,z13,z28","1,5",,C2-C3,False,enterica
+Hillegersberg,"9,46",z35,"1,5",,D2,False,enterica
+Hillingdon,"9,46","g,m",-,,D2,True,enterica
+Hillsborough,"6,7",z41,"l,w",,C1,False,enterica
+Hilversum,30,k,"1,2",,N,False,enterica
+Hindmarsh,"8,20",r,"1,5",,C2-C3,False,enterica
+Hisingen,48,a,"1,5,7",,Y,False,enterica
+Hissar,"6,7,14",c,"1,2",,C1,False,enterica
+Hithergreen,16,c,"e,n,z15",,I,False,enterica
+Hoboken,"3,10",i,"l,w",,E1,False,enterica
+Hofit,39,i,"1,5",,Q,False,enterica
+Hoghton,"3,10","l,z13,z28",z6,,E1,False,enterica
+Hohentwiel,30,z,"e,n,x,z15",,N,False,enterica
+Holcomb,"6,8","l,v","e,n,x",,C2-C3,False,enterica
+Homosassa,"1,6,14,25",z,"1,5",,H,False,enterica
+Honelis,28,a,"e,n,z15",,M,False,enterica
+Hongkong,"1,3,19",z,z6,,E4,False,enterica
+Horsham,"1,6,14,[25]","l,v","e,n,x",,H,False,enterica
+Houston,"9,12","l,v","1,5",d,D1,False,enterica
+Huddinge,"3,10",z,"1,7",,E1,False,enterica
+Huettwilen,"1,4,12",a,"l,w",,B,False,enterica
+Hull,16,b,"1,2",,I,False,enterica
+Huvudsta,"3,{10}{15,34}",b,"1,7",,E1,False,enterica
+Hvittingfoss,16,b,"e,n,x",,I,False,enterica
+Hydra,21,c,"1,6",,L,False,enterica
+Ibadan,"13,22",b,"1,5",,G,False,enterica
+Ibaragi,21,y,"1,2",,L,False,enterica
+Idikan,"1,13,23",i,"1,5",,G,False,enterica
+Ikayi,"3,{10}{15}",c,"1,6",,E1,False,enterica
+Ikeja,28,k,"1,7",,M,False,enterica
+Ilala,28,k,"1,5",,M,False,enterica
+Ilugun,"1,3,10,19","z4,z23",z6,,E4,False,enterica
+Imo,45,"l,v","[e,n,z15]",,W,True,enterica
+Inchpark,"6,8",y,"1,7",,C2-C3,False,enterica
+India,"9,46","l,v","1,5",,D2,False,enterica
+Indiana,"1,4,12",z,"1,7",,B,False,enterica
+Infantis,"6,7,14",r,"1,5","[R1…],[z37],[z45],[z49]",C1,False,enterica
+Inganda,"6,7",z10,"1,5",,C1,False,enterica
+Inglis,"9,46",z10,"e,n,x",,D2,False,enterica
+Inpraw,41,z10,"e,n,x",,S,False,enterica
+Inverness,38,k,"1,6",,P,False,enterica
+Ipeko,"9,12",c,"1,6",,D1,False,enterica
+Ipswich,41,"z4,z24","1,5",,S,False,enterica
+Irchel,"9,46",y,"e,n,x",,D2,False,enterica
+Irenea,17,k,"1,5",,J,False,enterica
+Irigny,43,z38,-,,U,True,enterica
+Irumu,"6,7","l,v","1,5",,C1,False,enterica
+Isangi,"6,7,14",d,"1,5",,C1,False,enterica
+Isaszeg,48,z10,"e,n,x",,Y,False,enterica
+Israel,"9,12","e,h","e,n,z15",,D1,False,enterica
+Istanbul,8,z10,"e,n,x",,C2-C3,False,enterica
+Istoria,"1,6,14,25","r,i","1,5",,H,False,enterica
+Isuge,"13,23",d,z6,,G,False,enterica
+Itami,"9,12","l,z13","1,5",,D1,False,enterica
+Ituri,"1,4,12",z10,"1,5",,B,False,enterica
+Itutaba,"9,46",c,z6,,D2,False,enterica
+Ivory,16,r,"1,6",,I,False,enterica
+Ivorycoast,50,z29,-,,Z,True,enterica
+Ivrysurseine,"1,13,23",z,z6,,G,False,enterica
+Jaffna,"1,9,12",d,z35,,D1,False,enterica
+Jalisco,11,y,"1,7",,F,False,enterica
+Jamaica,"9,12",r,"1,5",,D1,False,enterica
+Jambur,21,"l,z28","e,n,z15",,L,False,enterica
+Jangwani,17,a,"1,5",,J,False,enterica
+Javiana,"1,9,12","l,z28","1,5",[R1…],D1,False,enterica
+Jedburgh,"3,{10}{15}",z29,-,,E1,True,enterica
+Jericho,"1,4,12,27",c,"e,n,z15",,B,False,enterica
+Jerusalem,"6,7,14",z10,"l,w",,C1,False,enterica
+Joal,"3,10","l,z28","1,7",,E1,False,enterica
+Jodhpur,45,z29,-,[z45],W,True,enterica
+Johannesburg,"1,40",b,"e,n,x",,R,False,enterica
+Jos,"1,4,12,27",y,"e,n,z15",,B,False,enterica
+Juba,"1,3,19",a,"1,7",,E4,False,enterica
+Jubilee,17,"e,h","1,2",,J,False,enterica
+Jukestown,"13,23",i,"e,n,z15",,G,False,enterica
+Kaapstad,"4,12","e,h","1,7",,B,False,enterica
+Kabete,51,i,"1,5",,O51,False,enterica
+Kaduna,"6,7,14",c,"e,n,z15",,C1,False,enterica
+Kaevlinge,16,"z4,z24",-,,I,True,enterica
+Kahla,"1,42",z35,"1,6",,T,False,enterica
+Kainji,"1,3,19",z,"1,6",,E4,False,enterica
+Kaitaan,"1,6,14,25","m,t",-,,H,True,enterica
+Kalamu,"1,4,[5],12","z4,z24","[1,5]",,B,True,enterica
+Kalina,"3,10",b,"1,2",,E1,False,enterica
+Kallo,"6,8",k,"1,2",,C2-C3,False,enterica
+Kalumburu,"6,8",z,"e,n,z15",,C2-C3,False,enterica
+Kambole,"6,7",d,"1,[2],7",,C1,False,enterica
+Kamoru,"1,4,12,27",y,z6,,B,False,enterica
+Kampala,"1,42",c,z6,,T,False,enterica
+Kande,"1,3,19",b,"e,n,z15",,E4,False,enterica
+Kandla,17,z29,-,,J,True,enterica
+Kaneshie,"1,42",i,"l,w",,T,False,enterica
+Kanifing,"1,6,14,25",z,"1,6",,H,False,enterica
+Kano,"1,4,12,27","l,z13,z28","e,n,x",,B,False,enterica
+Kaolack,47,z,"1,6",,X,False,enterica
+Kapemba,"9,12","l,v","1,7",[z40],D1,False,enterica
+Karachi,45,d,"e,n,x",,W,False,enterica
+Karamoja,"1,40",z41,"1,2",,R,False,enterica
+Karaya,51,b,"1,5",,O51,False,enterica
+Karlshamn,17,d,"e,n,z15",,J,False,enterica
+Kasenyi,38,"e,h","1,5",,P,False,enterica
+Kassberg,"1,6,14,25",c,"1,6",,H,False,enterica
+Kassel,16,z,"e,n,x",,I,False,enterica
+Kastrup,"6,7","e,n,z15","1,6",,C1,False,enterica
+Kedougou,"1,13,23",i,"l,w",,G,False,enterica
+Kentucky,"8,20",i,z6,,C2-C3,False,enterica
+Kenya,"6,7","l,z13","e,n,x",,C1,False,enterica
+Kermel,44,d,"e,n,x",,V,False,enterica
+Kethiabarny,28,"z4,z24",-,,M,True,enterica
+Keurmassar,35,c,"1,2",,O,False,enterica
+Keve,21,"l,w",-,,L,True,enterica
+Kiambu,"1,4,12",z,"1,5",,B,False,enterica
+Kibi,16,"z4,z23","[1,6]",,I,True,enterica
+Kibusi,28,r,"e,n,x",,M,False,enterica
+Kidderminster,38,c,"1,6",[z58],P,False,enterica
+Kiel,"1,2,12","g,p",-,,A,True,enterica
+Kikoma,16,y,"e,n,x",,I,False,enterica
+Kimberley,38,"l,v","1,5",,P,False,enterica
+Kimpese,"9,12",z,"1,6",,D1,False,enterica
+Kimuenza,"1,4,12,27","l,v","e,n,x",,B,False,enterica
+Kindia,"1,3,19","l,z28","e,n,x",,E4,False,enterica
+Kingabwa,43,y,"1,5",,U,False,enterica
+Kingston,"1,4,[5],12,[27]","g,s,t","[1,2]",[z43],B,True,enterica
+Kinondoni,17,a,"e,n,x",,J,False,enterica
+Kinson,"1,3,19",y,"e,n,x",,E4,False,enterica
+Kintambo,"1,13,23","m,t",-,,G,True,enterica
+Kirkee,17,b,"1,2",,J,False,enterica
+Kisangani,"1,4,[5],12",a,"1,2",,B,False,enterica
+Kisarawe,11,k,"e,n,x,[z15]",,F,False,enterica
+Kisii,"6,7",d,"1,2",,C1,False,enterica
+Kitenge,28,y,"e,n,x",,M,False,enterica
+Kivu,"6,7",d,"1,6",,C1,False,enterica
+Klouto,38,z38,-,,P,True,enterica
+Koblenz,16,"l,z13,z28","e,n,x",,I,False,enterica
+Kodjovi,47,c,"1,6",[z78],X,False,enterica
+Koenigstuhl,"1,4,[5],12",z,"e,n,z15",,B,False,enterica
+Koessen,"2,12","l,v","1,5",,A,False,enterica
+Kofandoka,45,r,"e,n,z15",,W,False,enterica
+Koketime,44,z38,-,,V,True,enterica
+Kokoli,30,z35,"1,6",,N,False,enterica
+Kokomlemle,39,"l,v","e,n,x",,Q,False,enterica
+Kolar,"9,46",b,z35,,D2,False,enterica
+Kolda,"8,20",z35,"1,2",,C2-C3,False,enterica
+Konolfingen,28,z35,"1,6",,M,False,enterica
+Konongo,41,r,"1,7",,S,False,enterica
+Konstanz,8,b,"e,n,x",,C2-C3,False,enterica
+Korbol,"8,20",b,"1,5",,C2-C3,False,enterica
+Korkeasaari,28,"e,h","1,5",,M,False,enterica
+Korlebu,"1,3,19",z,"1,5",,E4,False,enterica
+Korovi,38,"g,m,[s]",-,,P,True,enterica
+Kortrijk,"6,7","l,v","1,7",,C1,False,enterica
+Kottbus,"6,8","e,h","1,5",,C2-C3,False,enterica
+Kotte,"6,7",b,z35,,C1,False,enterica
+Kotu,"9,12","l,z28","1,6",,D1,False,enterica
+Kouka,"1,3,19","g,m,[t]",-,,E4,True,enterica
+Koumra,"6,7",b,"1,7",,C1,False,enterica
+Kpeme,28,"e,h","1,7",,M,False,enterica
+Kralingen,"8,20",y,z6,,C2-C3,False,enterica
+Krefeld,"1,3,19",y,"l,w",,E4,False,enterica
+Kristianstad,"3,10",z10,"e,n,z15",,E1,False,enterica
+Kua,44,"z4,z23",-,,V,True,enterica
+Kubacha,"1,4,12,27","l,z13,z28","1,7",,B,False,enterica
+Kuessel,28,i,"e,n,z15",,M,False,enterica
+Kumasi,30,z10,"e,n,z15",,N,False,enterica
+Kunduchi,"1,4,[5],12,[27]","l,[z13],[z28]","1,2",,B,False,enterica
+Kuntair,"1,6,14,25",b,"1,5",,H,False,enterica
+Kuru,"6,8",z,"l,w",,C2-C3,False,enterica
+Labadi,"8,20",d,z6,,C2-C3,False,enterica
+Lagos,"1,4,[5],12",i,"1,5",,B,False,enterica
+Lamberhurst,"3,10","e,h","e,n,z15",,E1,False,enterica
+Lamin,"3,10","l,z28","e,n,x",,E1,False,enterica
+Lamphun,"6,8",y,"1,2",,C2-C3,False,enterica
+Lancaster,17,"l,v","1,7",,J,False,enterica
+Landala,41,z10,"1,6",,S,False,enterica
+Landau,30,i,"1,2",,N,False,enterica
+Landwasser,"3,10",z,z6,,E1,False,enterica
+Langenhorn,18,"m,t",-,,K,True,enterica
+Langensalza,"3,10",y,"l,w",,E1,False,enterica
+Langeveld,"6,7","l,w","e,n,z15",,C1,False,enterica
+Langford,28,b,"e,n,z15",,M,False,enterica
+Lansing,38,i,"1,5",,P,False,enterica
+Laredo,"1,6,14,25",z10,"1,6",,H,False,enterica
+Larochelle,"6,7","e,h","1,2",,C1,False,enterica
+Larose,"6,7","g,z51","e,n,z15",,C1,False,enterica
+Lattenkamp,45,z35,"1,5",,W,False,enterica
+Lawndale,"1,9,12",z,"1,5",,D1,False,enterica
+Lawra,44,k,"e,n,z15",,V,False,enterica
+Leatherhead,41,"m,t","1,6",,S,False,enterica
+Lechler,51,z,"e,n,z15",,O51,False,enterica
+Leda,53,-,"1,6",,O53,False,enterica
+Leer,18,z10,"1,5",,K,False,enterica
+Leeuwarden,11,b,"1,5",,F,False,enterica
+Legon,"1,4,12,[27]",c,"1,5",,B,False,enterica
+Lehrte,16,r,z6,,I,False,enterica
+Leiden,"13,22",z38,-,,G,True,enterica
+Leipzig,41,z10,"1,5",,S,False,enterica
+Leith,"6,8",a,"e,n,z15",,C2-C3,False,enterica
+Lekke,"3,10",d,"1,6",,E1,False,enterica
+Lene,11,z38,-,,F,True,enterica
+Leoben,28,"l,v","1,5",,M,False,enterica
+Leopoldville,"6,7,14",b,z6,,C1,False,enterica
+Lerum,"1,3,19",z,"1,7",,E4,False,enterica
+Lexington,"3,{10}{15}{15,34}",z10,"1,5",[z49],E1,False,enterica
+Lezennes,"6,8","z4,z23","1,7",,C2-C3,False,enterica
+Libreville,28,z10,"1,6",,M,False,enterica
+Ligeo,30,"l,v","1,2",,N,False,enterica
+Ligna,35,z10,z6,,O,False,enterica
+Lika,"6,7",i,"1,7",,C1,False,enterica
+Lille,"6,7,14",z38,-,[z82],C1,True,enterica
+Limete,"1,4,12,[27]",b,"1,5",,B,False,enterica
+Lindenburg,"6,8",i,"1,2",,C2-C3,False,enterica
+Lindern,"6,14,[24]",d,"e,n,x",,H,False,enterica
+Lindi,38,r,"1,5",,P,False,enterica
+Linguere,"9,46",b,z6,,D2,False,enterica
+Lingwala,16,z,"1,7",,I,False,enterica
+Linton,"13,23",r,"e,n,z15",,G,False,enterica
+Lisboa,16,z10,"1,6",,I,False,enterica
+Lishabi,"9,46",z10,"1,7",,D2,False,enterica
+Litchfield,"6,8","l,v","1,2",,C2-C3,False,enterica
+Liverpool,"1,3,19",d,"e,n,z15",,E4,False,enterica
+Livingstone,"6,7,14",d,"l,w",,C1,False,enterica
+Livulu,30,"e,h","1,2",,N,False,enterica
+Ljubljana,"4,12,27",k,"e,n,x",,B,False,enterica
+Llandoff,"1,3,19",z29,[z6],[z37],E4,True,enterica
+Llobregat,"1,44",z10,"e,n,x",,V,False,enterica
+Loanda,"6,8","l,v","1,5",,C2-C3,False,enterica
+Lockleaze,"6,7,14",b,"e,n,x",,C1,False,enterica
+Lode,17,r,"1,2",,J,False,enterica
+Lodz,41,z29,-,,S,True,enterica
+Loenga,"1,42",z10,z6,,T,False,enterica
+Logone,39,d,"1,5",,Q,False,enterica
+Lokomo,17,y,"l,w",,J,False,enterica
+Lokstedt,"1,3,19","l,z13,z28","1,2",,E4,False,enterica
+Lomalinda,"1,9,12",a,"e,n,x",,D1,False,enterica
+Lome,"9,12",r,z6,,D1,False,enterica
+Lomita,"6,7","e,h","1,5",,C1,False,enterica
+Lomnava,16,"l,w","e,n,z15",,I,False,enterica
+London,"3,{10}{15}","l,v","1,6",,E1,False,enterica
+Lonestar,41,c,-,,S,True,enterica
+Losangeles,16,"l,v",z6,,I,False,enterica
+Loubomo,"4,12",z,"1,6",,B,False,enterica
+Louga,30,b,"1,2",,N,False,enterica
+Louisiana,"9,46",z10,z6,,D2,False,enterica
+Lovelace,"13,22","l,v","1,5",,G,False,enterica
+Lowestoft,17,"g,s,t",-,,J,True,enterica
+Lubumbashi,41,r,"1,5",,S,False,enterica
+Luciana,11,a,"e,n,z15",,F,False,enterica
+Luckenwalde,28,z10,"e,n,z15",,M,False,enterica
+Luedinghausen,17,c,"1,5",,J,False,enterica
+Luke,"1,47","g,m",-,,X,True,enterica
+Lund,"6,8","l,v",z6,,C2-C3,False,enterica
+Lutetia,51,"r,i","l,z13,z28",,O51,False,enterica
+Lyon,47,k,"e,n,z15",,X,False,enterica
+Maastricht,11,z41,"1,2",,F,False,enterica
+Macallen,"3,10",z36,-,,E1,True,enterica
+Macclesfield,"9,46","g,m,s","1,2,7",,D2,False,enterica
+Machaga,"1,3,19",i,"e,n,x",,E4,False,enterica
+Madelia,"1,6,14,25",y,"1,7",,H,False,enterica
+Madiago,"1,3,19",c,"1,7",,E4,False,enterica
+Madigan,44,c,"1,5",,V,False,enterica
+Madison,21,d,z6,,L,False,enterica
+Madjorio,"3,10",d,"e,n,z15",,E1,False,enterica
+Madras,"4,[5],12","m,t","e,n,z15",,B,False,enterica
+Magherafelt,"8,20",i,"l,w",,C2-C3,False,enterica
+Magumeri,"1,6,14,25","e,h","1,6",,H,False,enterica
+Magwa,21,d,"e,n,x",,L,False,enterica
+Mahina,"9,46",z10,"e,n,z15",,D2,False,enterica
+Maiduguri,"1,3,19","f,g,t","e,n,z15",,E4,False,enterica
+Makiling,43,z29,-,,U,True,enterica
+Makiso,"6,7","l,z13,z28",z6,,C1,False,enterica
+Malakal,16,"e,h","1,2",,I,False,enterica
+Malaysia,28,z10,"1,7",,M,False,enterica
+Malika,44,"l,z28","1,5",,V,False,enterica
+Malmoe,"6,8",i,"1,7",,C2-C3,False,enterica
+Malstatt,16,b,z6,,I,False,enterica
+Mampeza,"1,6,14,25",i,"1,5",,H,False,enterica
+Mampong,"13,22",z35,"1,6",,G,False,enterica
+Mana,"9,12",b,"e,n,z15",,D1,False,enterica
+Manchester,"6,8","l,v","1,7",,C2-C3,False,enterica
+Mandera,16,"l,z13","e,n,z15",,I,False,enterica
+Mango,38,k,"1,5",,P,False,enterica
+Manhattan,"6,8",d,"1,5",[z58],C2-C3,False,enterica
+Mannheim,11,k,"l,w",,F,False,enterica
+Mapo,"6,8",z10,"1,5",,C2-C3,False,enterica
+Mara,39,"e,h","1,5",,Q,False,enterica
+Maracaibo,11,"l,v","1,5",,F,False,enterica
+Marburg,"13,23",k,-,,G,True,enterica
+Maricopa,"1,42","g,z51","1,5",,T,False,enterica
+Marienthal,"3,10",k,"e,n,z15",,E1,False,enterica
+Maritzburg,"1,44",i,"e,n,z15",,V,False,enterica
+Marmande,"6,8",z,"1,7",,C2-C3,False,enterica
+Maron,"3,10",d,z35,,E1,False,enterica
+Maroua,11,z,"1,7",,F,False,enterica
+Marsabit,52,"l,w","1,5",,O52,False,enterica
+Marseille,11,a,"1,5",,F,False,enterica
+Marshall,"13,22",a,"l,z13,z28",,G,False,enterica
+Martonos,"6,14,24",d,"1,5",,H,False,enterica
+Maryland,57,b,"1,7",,O57,False,enterica
+Marylebone,"9,46",k,"1,2",,D2,False,enterica
+Masembe,"3,10",a,"e,n,x",,E1,False,enterica
+Maska,"1,4,12,27",z41,"e,n,z15",,B,False,enterica
+Massakory,35,r,"l,w",,O,False,enterica
+Massenya,"1,4,12,27",k,"1,5",,B,False,enterica
+Massilia,11,a,"1,6",,F,False,enterica
+Matadi,17,k,"e,n,x",,J,False,enterica
+Mathura,"9,46",i,"e,n,z15",,D2,False,enterica
+Matopeni,30,y,"1,2",,N,False,enterica
+Mattenhof,17,b,"e,n,x",,J,False,enterica
+Maumee,16,k,"1,6",,I,False,enterica
+Mayday,"9,46",y,z6,,D2,False,enterica
+Mbandaka,"6,7,14",z10,"e,n,z15","[z37],[z45]",C1,False,enterica
+Mbao,43,i,"1,2",,U,False,enterica
+Meekatharra,45,a,"e,n,z15",,W,False,enterica
+Melaka,16,b,"1,2,5",,I,False,enterica
+Melbourne,42,z,"e,n,z15",,T,False,enterica
+Meleagridis,"3,{10}{15}{15,34}","e,h","l,w",,E1,False,enterica
+Memphis,18,k,"1,5",,K,False,enterica
+Menden,"6,7",z10,"1,2",,C1,False,enterica
+Mendoza,"9,12","l,v","1,2",,D1,False,enterica
+Menston,"6,7","g,s,[t]","[1,6]",,C1,True,enterica
+Mesbit,47,"m,t","e,n,z15",,X,False,enterica
+Meskin,51,"e,h","1,2",,O51,False,enterica
+Messina,30,d,"1,5",,N,False,enterica
+Mgulani,38,i,"1,2",,P,False,enterica
+Miami,"1,9,12",a,"1,5",,D1,False,enterica
+Michigan,17,"l,v","1,5",,J,False,enterica
+Middlesbrough,"1,42",i,z6,,T,False,enterica
+Midway,"6,14,24",d,"1,7",,H,False,enterica
+Mikawasima,"6,7,14",y,"e,n,z15","[z47],[z50]",C1,False,enterica
+Millesi,"1,40","l,v","1,2",,R,False,enterica
+Milwaukee,43,"f,g,[t]",-,,U,True,enterica
+Mim,"13,22",a,"1,6",,G,False,enterica
+Minna,"1,6,14,25",c,"l,w",,H,False,enterica
+Minnesota,21,b,"e,n,x","[z33],[z49]",L,False,enterica
+Mishmarhaemek,"1,13,23",d,"1,5",,G,False,enterica
+Mississippi,"1,13,23",b,"1,5",,G,False,enterica
+Missouri,11,"g,s,t",-,,F,True,enterica
+Miyazaki,"9,12","l,z13","1,7",,D1,False,enterica
+Mjordan,30,i,"e,n,z15",,N,False,enterica
+Mkamba,"6,7","l,v","1,6",,C1,False,enterica
+Moabit,16,"e,h","l,w",,I,False,enterica
+Mocamedes,28,d,"e,n,x",,M,False,enterica
+Moero,28,b,"1,5",,M,False,enterica
+Moers,11,"m,t",-,,F,True,enterica
+Mokola,"3,10",y,"1,7",,E1,False,enterica
+Molade,"8,20",z10,z6,,C2-C3,False,enterica
+Molesey,52,b,"1,5",,O52,False,enterica
+Mono,"4,12","l,w","1,5",,B,False,enterica
+Mons,"1,4,12,27",d,"l,w",,B,False,enterica
+Monschaui,35,"m,t",-,,O,True,enterica
+Montaigu,"9,46",b,"1,2",,D2,False,enterica
+Montevideo,"6,7,14,[54]","g,m,[p],s","[1,2,7]",,C1,True,enterica
+Montreal,43,c,"1,5",,U,False,enterica
+Morbihan,16,"m,t","e,n,z15",,I,False,enterica
+Morehead,30,i,"1,5",,N,False,enterica
+Morillons,28,"m,t","1,6",,M,False,enterica
+Morningside,30,c,"e,n,z15",,N,False,enterica
+Mornington,"1,6,14,25",y,"e,n,z15",,H,False,enterica
+Morocco,30,"l,z13,z28","e,n,z15",,N,False,enterica
+Morotai,17,"l,v","1,2",,J,False,enterica
+Moroto,28,z10,"l,w",,M,False,enterica
+Moscow,"1,9,12","g,q",-,,D1,True,enterica
+Moualine,47,y,"1,6",,X,False,enterica
+Moundou,51,"l,z28","1,5",,O51,False,enterica
+Mountmagnet,21,r,-,,L,True,enterica
+Mountpleasant,47,z,"1,5",,X,False,enterica
+Moussoro,"1,6,14,25",i,"e,n,z15",,H,False,enterica
+Mowanjum,"6,8",z,"1,5",,C2-C3,False,enterica
+Mpouto,16,"m,t",-,,I,True,enterica
+Muenchen,"6,8",d,"1,2",[z67],C2-C3,False,enterica
+Muenster,"3,{10}{15}{15,34}","e,h","1,5",[z48],E1,False,enterica
+Muguga,44,"m,t",-,,V,True,enterica
+Mulhouse,"1,9,12",z,"1,2",,D1,False,enterica
+Mundonobo,28,d,"1,7",,M,False,enterica
+Mundubbera,54,z29,-,,O54,True,enterica
+Mura,"1,4,12",z10,"l,w",,B,False,enterica
+Mygdal,"4,12",z91,-,,B,True,enterica
+Myrria,"13,23",i,"1,7",,G,False,enterica
+Naestved,"1,9,12","g,p,s",-,,D1,True,enterica
+Nagoya,"6,8",b,"1,5",,C2-C3,False,enterica
+Nakuru,"1,4,12,27",a,z6,,B,False,enterica
+Namibia,"6,7",c,"e,n,x",,C1,False,enterica
+Namoda,47,z10,"e,n,z15",,X,False,enterica
+Namur,39,"z4,z23",-,,Q,True,enterica
+Nanergou,"6,8","g,s,t",-,,C2-C3,True,enterica
+Nanga,"1,13,23","l,v","e,n,z15",,G,False,enterica
+Nantes,"9,46",y,"l,w",,D2,False,enterica
+Napoli,"1,9,12","l,z13","e,n,x",,D1,False,enterica
+Narashino,"6,8",a,"e,n,x",,C2-C3,False,enterica
+Nashua,28,"l,v","e,n,z15",,M,False,enterica
+Natal,"9,12","z4,z24",-,,D1,True,enterica
+Naware,16,z38,-,,I,True,enterica
+Nchanga,"3,{10}{15}","l,v","1,2",,E1,False,enterica
+Ndjamena,"1,6,14,25",b,"1,2",,H,False,enterica
+Ndolo,"1,9,12",d,"1,5",,D1,False,enterica
+Neftenbach,"4,12",z,"e,n,x",,B,False,enterica
+Nessa,"1,6,14,25",z10,"1,2",,H,False,enterica
+Nessziona,"6,7","l,z13","1,5",,C1,False,enterica
+Neudorf,30,b,"e,n,z15",,N,False,enterica
+Neukoelln,"6,7","l,z13,[z28]","e,n,z15",,C1,False,enterica
+Neumuenster,"1,4,12,27",k,"1,6",,B,False,enterica
+Neunkirchen,38,z10,"[1,5]",,P,True,enterica
+Newholland,"4,12,54","m,t",-,,O54,True,enterica
+Newjersey,39,k,"e,n,x",,Q,False,enterica
+Newlands,"3,{10}{15,34}","e,h","e,n,x",,E1,False,enterica
+Newmexico,"9,12","g,z51","1,5",,D1,False,enterica
+Newport,"6,8,20","e,h","1,2","[z67],[z78]",C2-C3,False,enterica
+Newrochelle,"3,10",k,"l,w",,E1,False,enterica
+Newyork,"13,22","g,s,t",-,,G,True,enterica
+Ngaparou,"9,46","z4,z24",-,,D2,True,enterica
+Ngili,"6,7",z10,"1,7",,C1,False,enterica
+Ngor,"1,3,19","l,v","1,5",,E4,False,enterica
+Niakhar,44,a,"1,5",,V,False,enterica
+Niamey,17,d,"l,w",,J,False,enterica
+Niarembe,44,a,"l,w",,V,False,enterica
+Niederoderwitz,43,b,-,,U,True,enterica
+Nieukerk,"6,7,14",d,z6,,C1,False,enterica
+Nigeria,"6,7",r,"1,6",,C1,False,enterica
+Nijmegen,30,y,"e,n,z15",,N,False,enterica
+Nikolaifleet,16,"g,m,s",-,,I,True,enterica
+Niloese,"1,3,19",d,z6,,E4,False,enterica
+Nima,28,y,"1,5",,M,False,enterica
+Nimes,"13,22",z35,"e,n,z15",,G,False,enterica
+Nitra,"2,12","g,m",-,,A,True,enterica
+Niumi,"1,3,19",a,"1,5",,E4,False,enterica
+Njala,38,k,"e,n,x",,P,False,enterica
+Nola,"6,7","e,h","1,7",,C1,False,enterica
+Nordrhein,"9,46","l,z13,z28","e,n,z15",,D2,False,enterica
+Nordufer,"6,8",a,"1,7",,C2-C3,False,enterica
+Norton,"6,7",i,"l,w",,C1,False,enterica
+Norwich,"6,7","e,h","1,6",,C1,False,enterica
+Nottingham,16,d,"e,n,z15",,I,False,enterica
+Nowawes,40,z,z6,,R,False,enterica
+Noya,8,r,"1,7",,C2-C3,False,enterica
+Nuatja,16,k,"e,n,x",,I,False,enterica
+Nyanza,11,z,z6,[z83],F,False,enterica
+Nyborg,"3,{10}{15}","e,h","1,7",,E1,False,enterica
+Nyeko,16,a,"1,7",,I,False,enterica
+Oakey,"6,7","m,t",z64,,C1,False,enterica
+Oakland,"6,7",z,"1,6,[7]",,C1,False,enterica
+Obogu,"6,7","z4,z23","1,5",,C1,False,enterica
+Ochiogu,"1,3,19",z38,"[e,n,z15]",,E4,True,enterica
+Ochsenwerder,"6,7,54",k,"1,5",,O54,False,enterica
+Ockenheim,30,"l,z13,z28","1,6",,N,False,enterica
+Odienne,40,y,"1,5",,R,False,enterica
+Odozi,30,k,"e,n,[x],z15",,N,False,enterica
+Oerlikon,39,"l,v","e,n,z15",,Q,False,enterica
+Oesterbro,"1,3,19",k,"1,5",,E4,False,enterica
+Offa,41,z38,-,,S,True,enterica
+Ogbete,43,z,"1,5",,U,False,enterica
+Ohio,"6,7,14",b,"l,w",[z59],C1,False,enterica
+Ohlstedt,"3,{10}{15}",y,"e,n,x",,E1,False,enterica
+Okatie,"13,23","g,[s],t",-,,G,True,enterica
+Okefoko,"3,10",c,z6,,E1,False,enterica
+Okerara,"3,10",z10,"1,2",,E1,False,enterica
+Oldenburg,16,d,"1,2",,I,False,enterica
+Olten,"9,46",d,"e,n,z15",,D2,False,enterica
+Omifisan,"1,40",z29,-,,R,True,enterica
+Omuna,"6,7",z10,z35,,C1,False,enterica
+Ona,28,"g,s,t",-,,M,True,enterica
+Onarimon,"1,9,12",b,"1,2",,D1,False,enterica
+Onderstepoort,"1,6,14,[25]","e,h","1,5",,H,False,enterica
+Onireke,"3,10",d,"1,7",,E1,False,enterica
+Ontario,"9,46",d,"1,5",,D2,False,enterica
+Oran,38,a,"e,n,z15",,P,False,enterica
+Oranienburg,"6,7,14","m,t",[z57],,C1,True,enterica
+Orbe,42,b,"1,6",,T,False,enterica
+Ord,52,a,"e,n,z15",,O52,False,enterica
+Ordonez,"1,13,23",y,"l,w",,G,False,enterica
+Orientalis,16,k,"e,n,z15",,I,False,enterica
+Orion,"3,{10}{15}{15,34}",y,"1,5",,E1,False,enterica
+Oritamerin,"6,7",i,"1,5",,C1,False,enterica
+Orlando,18,"l,v","e,n,z15",,K,False,enterica
+Orleans,43,d,"1,5",,U,False,enterica
+Os,"9,12",a,"1,6",,D1,False,enterica
+Oskarshamn,28,y,"1,2",,M,False,enterica
+Oslo,"6,7,14",a,"e,n,x",,C1,False,enterica
+Osnabrueck,11,"l,z13,z28","e,n,x",,F,False,enterica
+Othmarschen,"6,7,14","g,m,[t]",-,,C1,True,enterica
+Ottawa,"1,9,12",z41,"1,5",,D1,False,enterica
+Ouagadougou,"1,3,19",i,"1,5",,E4,False,enterica
+Ouakam,"9,46",z29,-,[z45],D2,True,enterica
+Oudwijk,"13,22",b,"1,6",,G,False,enterica
+Overchurch,"1,40","l,w","[1,2]",,R,True,enterica
+Overschie,51,"l,v","1,5",,O51,False,enterica
+Overvecht,30,a,"1,2",,N,False,enterica
+Oxford,"3,{10}{15}{15,34}",a,"1,7",,E1,False,enterica
+Oyonnax,"6,7",y,"1,6",,C1,False,enterica
+Pakistan,8,"l,v","1,2",,C2-C3,False,enterica
+Palamaner,"1,44",d,z35,,V,False,enterica
+Palime,"6,7",z35,"e,n,z15",,C1,False,enterica
+Panama,"1,9,12","l,v","1,5",[R1…],D1,False,enterica
+Papuana,"6,7",r,"e,n,z15",,C1,False,enterica
+Parakou,"1,42","l,w",z35,,T,False,enterica
+Paratyphi A,"1,2,12",a,"[1,5]",,A,True,enterica
+Paratyphi B,"1,4,[5],12",b,"1,2","[z5],[z33]",B,False,enterica
+Paratyphi B var. Java,"1,4,[5],12",b,"1,2","[z5],[z33]",B,False,enterica
+"I 4,[5],12:b:-","4,[5],12",b,-,,B,True,enterica
+Paratyphi C,"6,7,[Vi]",c,"1,5",,C1,False,enterica
+Paris,"8,20",z10,"1,5",,C2-C3,False,enterica
+Parkroyal,"1,3,19","l,v","1,7",,E4,False,enterica
+Pasing,"4,12",z35,"1,5",,B,False,enterica
+Patience,28,d,"e,n,z15",,M,False,enterica
+Penarth,"9,12",z35,z6,,D1,False,enterica
+Penilla,28,"l,z13,z28","e,n,z15",,M,False,enterica
+Pensacola,"1,9,12","m,t","[1,2]",,D1,True,enterica
+Perth,38,y,"e,n,x",,P,False,enterica
+Petahtikve,"1,3,19","f,g,t","1,7",,E4,False,enterica
+Phaliron,8,z,"e,n,z15",,C2-C3,False,enterica
+Pharr,11,b,"e,n,z15",,F,False,enterica
+Picpus,"13,23",z35,"1,6",,G,False,enterica
+Pietersburg,"3,{10}{15,34}",z69,"1,7",,E1,False,enterica
+Pisa,16,i,"l,w",,I,False,enterica
+Planckendael,"6,7","z4,z23","1,6",,C1,False,enterica
+Ploufragan,"1,44","z4,z23","e,n,z15",,V,False,enterica
+Plumaugat,"6,7","g,s,q",-,,C1,True,enterica
+Plymouth,"9,46",d,z6,,D2,False,enterica
+Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,False,enterica
+Podiensis,"3,10",z10,"e,n,x",,E1,False,enterica
+Poeseldorf,"8,20,54",i,z6,,O54,False,enterica
+Poitiers,"6,7",z,"1,5",,C1,False,enterica
+Pomona,28,y,"1,7","[z80],[z90]",M,False,enterica
+Pontypridd,18,"g,m",-,,K,True,enterica
+Poona,"1,13,22",z,"1,6","[z44],[z59]",G,False,enterica
+Portanigra,"8,20",d,"1,7",,C2-C3,False,enterica
+Portland,"9,12",z10,"1,5",,D1,False,enterica
+Potengi,18,z,-,,K,True,enterica
+Potosi,"6,14",z36,"1,5",,H,False,enterica
+Potsdam,"6,7,14","l,v","e,n,z15",,C1,False,enterica
+Potto,"9,46",i,z6,,D2,False,enterica
+Powell,"9,12",y,"1,7",,D1,False,enterica
+Praha,"6,8",y,"e,n,z15",,C2-C3,False,enterica
+Pramiso,"3,10",c,"1,7",,E1,False,enterica
+Presov,"6,8",b,"e,n,z15",,C2-C3,False,enterica
+Preston,"1,4,12",z,"l,w",,B,False,enterica
+Pretoria,11,k,"1,2",,F,False,enterica
+Putten,"13,23",d,"l,w",,G,False,enterica
+Quebec,44,c,"e,n,z15",,V,False,enterica
+Quentin,"9,46",d,"1,6",,D2,False,enterica
+Quincy,30,r,"1,6",,N,False,enterica
+Quinhon,47,z44,-,,X,True,enterica
+Quiniela,"6,8",c,"e,n,z15",,C2-C3,False,enterica
+Ramatgan,30,k,"1,5",,N,False,enterica
+Ramsey,28,"l,w","1,6",,M,False,enterica
+Ratchaburi,"3,10",z35,"1,6",,E1,False,enterica
+Raus,"13,22","f,g","e,n,x",,G,False,enterica
+Rawash,"6,14,18",c,"e,n,x",,K,False,enterica
+Reading,"1,4,[5],12","e,h","1,5",[R1…],B,False,enterica
+Rechovot,"8,20","e,h",z6,,C2-C3,False,enterica
+Redba,"6,7",z10,z6,,C1,False,enterica
+Redhill,11,"e,h","l,z13,z28",,F,False,enterica
+Redlands,16,z10,"e,n,z15",,I,False,enterica
+Regent,"3,10","f,g,[s]","[1,6]",,E1,True,enterica
+Reinickendorf,"4,12","l,z28","e,n,x",,B,False,enterica
+Remete,11,"z4,z23","1,6",,F,False,enterica
+Remiremont,"8,20",z10,"l,w",,C2-C3,False,enterica
+Remo,"1,4,12,27",r,"1,7",,B,False,enterica
+Reubeuss,"8,20","g,m,t",-,,C2-C3,True,enterica
+Rhone,21,c,"e,n,x",,L,False,enterica
+Rhydyfelin,16,"e,h","e,n,x",,I,False,enterica
+Richmond,"6,7",y,"1,2",,C1,False,enterica
+Rideau,"1,3,19","f,g",-,,E4,True,enterica
+Ridge,"9,12",c,z6,,D1,False,enterica
+Ried,"1,13,22","z4,z23","[e,n,z15]",,G,True,enterica
+Riggil,"6,7","g,(t)",-,,C1,True,enterica
+Riogrande,40,b,"1,5",,R,False,enterica
+Rissen,"6,7,14","f,g",-,,C1,True,enterica
+Rittersbach,38,b,"e,n,z15",,P,False,enterica
+Riverside,45,b,"1,5",,W,False,enterica
+Roan,38,"l,v","e,n,x",,P,False,enterica
+Rochdale,50,b,"e,n,x",,Z,False,enterica
+Rogy,28,z10,"1,2",,M,False,enterica
+Romanby,"1,13,23","z4,z24",-,,G,True,enterica
+Roodepoort,"1,13,22",z10,"1,5",,G,False,enterica
+Rosenberg,"9,12","g,z85",-,,D1,True,enterica
+Rossleben,"3,54","e,h","1,6",,O54,False,enterica
+Rostock,"1,9,12","g,p,u",-,,D1,True,enterica
+Rothenburgsort,38,"m,t",-,,P,True,enterica
+Rottnest,"1,13,22",b,"1,7",,G,False,enterica
+Rovaniemi,16,"r,i","1,5",,I,False,enterica
+Royan,"1,6,14,25",z,"e,n,z15",,H,False,enterica
+Ruanda,"9,12",z10,"e,n,z15",,D1,False,enterica
+Rubislaw,11,r,"e,n,x",,F,False,enterica
+Ruiru,21,y,"e,n,x",,L,False,enterica
+Rumford,"6,7",z38,"1,2",[z82],C1,False,enterica
+Runby,"1,6,14,25",c,"e,n,x",,H,False,enterica
+Ruzizi,"3,10","l,v","e,n,z15",,E1,False,enterica
+Saarbruecken,"1,9,12",a,"1,7",,D1,False,enterica
+Saboya,16,"e,h","1,5",,I,False,enterica
+Sada,30,z10,"1,2",,N,False,enterica
+Saintemarie,52,"g,t",-,,O52,True,enterica
+Saintpaul,"1,4,[5],12","e,h","1,2",,B,False,enterica
+Salford,16,"l,v","e,n,x",,I,False,enterica
+Salinas,40,a,"1,7",,R,False,enterica
+Sally,41,z,"1,6",,S,False,enterica
+Saloniki,16,z29,-,,I,True,enterica
+Samaru,41,i,"1,5",,S,False,enterica
+Sambre,"1,3,19","z4,z24",-,,E4,True,enterica
+Sandaga,"3,10",z38,"1,2",,E1,False,enterica
+Sandiego,"1,4,[5],12","e,h","e,n,z15",,B,False,enterica
+Sandow,"6,8","f,g","e,n,z15",,C2-C3,False,enterica
+Sanga,8,b,"1,7",,C2-C3,False,enterica
+Sangalkam,"9,46","m,t",-,,D2,True,enterica
+Sangera,16,b,"e,n,z15",,I,False,enterica
+Sanjuan,"6,7",a,"1,5",,C1,False,enterica
+Sanktgeorg,28,"r,[i]","e,n,z15",,M,False,enterica
+Sanktjohann,"13,23",b,"l,w",,G,False,enterica
+Sanktmarx,"1,3,19","e,h","1,7",,E4,False,enterica
+Santander,28,z35,"e,n,z15",,M,False,enterica
+Santhiaba,40,"l,z28","1,6",,R,False,enterica
+Santiago,"8,20",c,"e,n,x",,C2-C3,False,enterica
+Sao,"1,3,19","e,h","e,n,z15",,E4,False,enterica
+Sapele,"13,23",z10,"e,n,z15",,G,False,enterica
+Saphra,16,y,"1,5",,I,False,enterica
+Sara,"1,6,14,25",z38,"[e,n,x]",,H,True,enterica
+Sarajane,"1,4,[5],12,[27]",d,"e,n,x",,B,False,enterica
+Saugus,40,b,"1,7",,R,False,enterica
+Scarborough,30,k,"l,z13,z28",,N,False,enterica
+Schalkwijk,"6,14,[24]",i,"e,n,z15",,H,False,enterica
+Schleissheim,"4,12,27",b,-,,B,True,enterica
+Schoeneberg,"1,3,19",z,"e,n,z15",,E4,False,enterica
+Schwabach,"6,7",c,"1,7",,C1,False,enterica
+Schwarzengrund,"1,4,12,27",d,"1,7",,B,False,enterica
+Schwerin,"6,8",k,"e,n,x",,C2-C3,False,enterica
+Sculcoates,16,d,"1,5",,I,False,enterica
+Seattle,28,a,"e,n,x",,M,False,enterica
+Sedgwick,44,b,"e,n,z15",,V,False,enterica
+Seegefeld,"3,10","r,i","1,2",,E1,False,enterica
+Sekondi,"3,10","e,h",z6,,E1,False,enterica
+Selby,28,y,z6,,M,False,enterica
+Sendai,"1,9,12",a,"1,5",,D1,False,enterica
+Senegal,11,r,"1,5",,F,False,enterica
+Senftenberg,"1,3,19","g,[s],t",-,"[z27],[z34],[z37],[z43],[z45],[z46],[z82]",E4,True,enterica
+Senneville,30,z10,"1,5",,N,False,enterica
+Seremban,"9,12",i,"1,5",,D1,False,enterica
+Serrekunda,"3,10",k,"1,7",,E1,False,enterica
+Shahalam,44,b,"1,6",,V,False,enterica
+Shamba,16,c,"e,n,x",,I,False,enterica
+Shangani,"3,{10}{15}",d,"1,5",,E1,False,enterica
+Shanghai,16,"l,v","1,6",[z45],I,False,enterica
+Shannon,"3,10",z35,"l,w",,E1,False,enterica
+Sharon,11,k,"1,6",,F,False,enterica
+Sheffield,38,c,"1,5",,P,False,enterica
+Sherbrooke,16,d,"1,6",,I,False,enterica
+Shikmonah,40,a,"1,5",,R,False,enterica
+Shipley,"8,20",b,"e,n,z15",,C2-C3,False,enterica
+Shomolu,28,y,"l,w",,M,False,enterica
+Shoreditch,"9,46",r,"e,n,z15",,D2,False,enterica
+Shubra,"4,[5],12",z,"1,2",,B,False,enterica
+Sica,41,b,"e,n,z15",,S,False,enterica
+Simi,"3,10",r,"e,n,z15",,E1,False,enterica
+Sinchew,"3,10","l,v",z35,,E1,False,enterica
+Sindelfingen,"8,20",y,"l,w",,C2-C3,False,enterica
+Singapore,"6,7",k,"e,n,x",,C1,False,enterica
+Sinstorf,"3,10","l,v","1,5",,E1,False,enterica
+Sinthia,18,z38,-,,K,True,enterica
+Sipane,"1,42",r,"e,n,z15",,T,False,enterica
+Skansen,"6,8",b,"1,2",,C2-C3,False,enterica
+Slade,"1,3,19",y,"e,n,z15",,E4,False,enterica
+Sljeme,"1,47","f,g",-,,X,True,enterica
+Sloterdijk,"1,4,12,27",z35,z6,,B,False,enterica
+Soahanina,"6,14,24",z,"e,n,x",,H,False,enterica
+Soerenga,30,i,"l,w",,N,False,enterica
+Sokode,"9,46",r,z6,,D2,False,enterica
+Solna,28,a,"1,5",,M,False,enterica
+Solt,11,y,"1,5",,F,False,enterica
+Somone,"6,7","z4,z24",-,,C1,True,enterica
+Sontheim,"9,46",d,z35,,D2,False,enterica
+Soumbedioune,28,b,"e,n,x",,M,False,enterica
+Southampton,"4,12,27",r,z6,,B,False,enterica
+Southbank,"3,{10}{15}{15,34}","m,t","[1,6]",,E1,True,enterica
+Souza,"3,{10}{15}",d,"e,n,x",,E1,False,enterica
+Spalentor,"1,42",y,"e,n,z15",,T,False,enterica
+Spartel,21,d,"1,5",,L,False,enterica
+Splott,44,"g,s,t","[1,7]",,V,True,enterica
+Stachus,38,z,-,,P,True,enterica
+Stanley,"1,4,[5],12,[27]",d,"1,2",,B,False,enterica
+Stanleyville,"1,4,[5],12,[27]","z4,z23","[1,2]",,B,True,enterica
+Staoueli,47,k,"1,2",,X,False,enterica
+Steinplatz,30,y,"1,6",,N,False,enterica
+Steinwerder,"3,15,54",y,"1,5",,O54,False,enterica
+Stellingen,47,d,"e,n,x",[z58],X,False,enterica
+Stendal,11,"l,v","1,2",,F,False,enterica
+Sternschanze,30,"g,s,t",-,[z59],N,True,enterica
+Sterrenbos,"6,8",d,"e,n,x",,C2-C3,False,enterica
+Stockholm,"3,{10}{15}",y,z6,,E1,False,enterica
+Stoneferry,30,"z4,z23",-,,N,True,enterica
+Stormont,"3,10",d,"1,2",,E1,False,enterica
+Stourbridge,"6,8",b,"1,6",,C2-C3,False,enterica
+Straengnaes,11,z10,"1,5",,F,False,enterica
+Strasbourg,"9,46",d,"1,7",,D2,False,enterica
+Stratford,"1,3,19",i,"1,2",,E4,False,enterica
+Strathcona,"6,7","l,z13,z28","1,7",,C1,False,enterica
+Stuivenberg,"1,3,19","l,[z13],z28","1,5",,E4,False,enterica
+Stuttgart,"6,7,14",i,z6,,C1,False,enterica
+Suberu,"3,10","g,m",-,,E1,True,enterica
+Sudan,43,"l,z13",-,,U,True,enterica
+Suelldorf,45,"f,g",-,,W,True,enterica
+Sundsvall,"[1],6,14,[25]",z,"e,n,x",,H,False,enterica
+Sunnycove,8,y,"e,n,x",,C2-C3,False,enterica
+Surat,"[1],6,14,[25]","r,[i]","e,n,z15",,H,False,enterica
+Surrey,21,k,"1,(2),5",,L,False,enterica
+Svedvi,"1,3,19","l,v","e,n,z15",,E4,False,enterica
+Sya,47,b,z6,,X,False,enterica
+Sylvania,"[1],6,14,[25]","g,p",-,,H,True,enterica
+Szentes,16,k,"1,2",,I,False,enterica
+Tabligbo,47,"z4,z23","e,n,z15",,X,False,enterica
+Tado,"8,20",c,z6,,C2-C3,False,enterica
+Tafo,"1,4,12,27",z35,"1,7",,B,False,enterica
+Taiping,"13,22","l,z13","e,n,z15",,G,False,enterica
+Takoradi,"6,8",i,"1,5",,C2-C3,False,enterica
+Taksony,"1,3,19",i,z6,,E4,False,enterica
+Tallahassee,"6,8","z4,z32",-,,C2-C3,True,enterica
+Tamale,"8,20",z29,"[e,n,z15]",,C2-C3,True,enterica
+Tambacounda,"1,3,19",b,"e,n,x",,E4,False,enterica
+Tamberma,47,"z4,z24",-,,X,True,enterica
+Tamilnadu,"6,7",z41,z35,,C1,False,enterica
+Tampico,"6,7",z36,"e,n,z15",,C1,False,enterica
+Tananarive,"6,8",y,"1,5",,C2-C3,False,enterica
+Tanger,"1,13,22",y,"1,6",,G,False,enterica
+Tanzania,"1,13,22",z,"e,n,z15",,G,False,enterica
+Tarshyne,"9,12",d,"1,6",,D1,False,enterica
+Taset,"1,42",z41,-,,T,True,enterica
+Taunton,28,k,"e,n,x",,M,False,enterica
+Taylor,38,"l,v","e,n,z15",,P,False,enterica
+Tchad,35,b,-,,O,True,enterica
+Tchamba,17,z,"e,n,z15",,J,False,enterica
+Techimani,28,c,z6,,M,False,enterica
+Teddington,"1,4,12,27",y,"1,7",,B,False,enterica
+Tees,16,"f,g",-,[z37],I,True,enterica
+Tejas,"4,12",z36,-,,B,True,enterica
+Teko,"[1],6,14,[25]",d,"e,n,z15",,H,False,enterica
+Telaviv,28,y,"e,n,z15",,M,False,enterica
+Telelkebir,"13,23",d,"e,n,z15",,G,False,enterica
+Telhashomer,11,z10,"e,n,x",,F,False,enterica
+Teltow,28,"z4,z23","1,6",,M,False,enterica
+Tema,"1,42",z35,z6,,T,False,enterica
+Tempe,30,b,"1,7",[z33],N,False,enterica
+Tendeba,17,y,"e,n,x",,J,False,enterica
+Tennenlohe,18,r,"1,5",,K,False,enterica
+Tennessee,"6,7,14",z29,"[1,2,7]",,C1,True,enterica
+Tennyson,"4,[5],12","g,z51","e,n,z15",,B,False,enterica
+Teshie,"1,47","l,z13,z28","e,n,z15",,X,False,enterica
+Texas,"4,[5],12",k,"e,n,z15",,B,False,enterica
+Thayngen,"1,4,12,27",z41,"1,(2),5",,B,False,enterica
+Thetford,43,k,"1,2",,U,False,enterica
+Thiaroye,38,"e,h","1,2",,P,False,enterica
+Thies,"1,3,19",y,"1,7",,E4,False,enterica
+Thompson,"6,7,14",k,"1,5",[R1…],C1,False,enterica
+Tibati,"3,10",i,"1,6",,E1,False,enterica
+Tienba,"6,7",z35,"1,6",,C1,False,enterica
+Tiergarten,44,a,"e,n,x",,V,False,enterica
+Tiko,"1,40","l,z13,z28","1,2",,R,False,enterica
+Tilburg,"1,3,19",d,"l,w",[z49],E4,False,enterica
+Tilene,"1,40","e,h","1,2",,R,False,enterica
+Tinda,"1,4,12,27",a,"e,n,z15",,B,False,enterica
+Tione,51,a,"e,n,x",,O51,False,enterica
+Togba,16,a,"e,n,x",,I,False,enterica
+Togo,"4,12","l,w","1,6",,B,False,enterica
+Tokoin,"4,12",z10,"e,n,z15",,B,False,enterica
+Tomegbe,"1,42",b,"e,n,z15",,T,False,enterica
+Tomelilla,"1,3,19","l,z28","1,7",,E4,False,enterica
+Tonev,"21,54",b,"e,n,x",,O54,False,enterica
+Toowong,11,a,"1,7",,F,False,enterica
+Torhout,30,"e,h","1,5",,N,False,enterica
+Toricada,"1,42","z4,z24",-,,T,True,enterica
+Tornow,45,"g,m,[s],[t]",-,,W,True,enterica
+Toronto,"9,46","l,v","e,n,x",,D2,False,enterica
+Toucra,48,z,"1,5",[z58],Y,False,enterica
+Toulon,18,"l,w","e,n,z15",,K,False,enterica
+Tounouma,"8,20",b,z6,,C2-C3,False,enterica
+Tours,11,"l,z13","1,2",,F,False,enterica
+Trachau,"4,12,27",y,"1,5",,B,False,enterica
+Transvaal,45,"z4,z24",-,,W,True,enterica
+Travis,"4,[5],12","g,z51","1,7",,B,False,enterica
+Treforest,"1,51",z,"1,6",,O51,False,enterica
+Treguier,"9,12",z10,z6,,D1,False,enterica
+Trier,16,z35,"1,6",,I,False,enterica
+Trimdon,"9,46",z35,z6,,D2,False,enterica
+Tripoli,"1,4,12,27",b,z6,,B,False,enterica
+Trotha,40,z10,z6,,R,False,enterica
+Troy,18,y,"1,7",,K,False,enterica
+Truro,"3,10",i,"1,7",,E1,False,enterica
+Tschangu,"1,13,23","e,h","1,5",,G,False,enterica
+Tsevie,"1,4,12",i,"e,n,z15",,B,False,enterica
+Tshiongwe,"6,8","e,h","e,n,z15",,C2-C3,False,enterica
+Tucson,"[1],6,14,[25]",b,"1,7",,H,False,enterica
+Tudu,"4,12",z10,"1,6",,B,False,enterica
+Tumodi,"1,4,12",i,z6,,B,False,enterica
+Tunis,"1,13,23",y,z6,,G,False,enterica
+Typhi,"9,12[Vi]",d,-,"[j],[z66]",D1,True,enterica
+Typhimurium,"1,4,[5],12",i,"1,2",,B,False,enterica
+"I 4,[5],12:i:-","4,[5],12",i,-,,B,True,enterica
+Typhisuis,"6,7",c,"1,5",,C1,False,enterica
+Tyresoe,"1,4,12,[27]","l,[z13],z28","1,5",,B,False,enterica
+Uccle,"3,54","g,s,t",-,,O54,True,enterica
+Uganda,"3,{10}{15}","l,z13","1,5",,E1,False,enterica
+Ughelli,"3,10",r,"1,5",,E1,False,enterica
+Uhlenhorst,44,z,"l,w",,V,False,enterica
+Uithof,52,a,"1,5",,O52,False,enterica
+Ullevi,"1,13,23",b,"e,n,x",,G,False,enterica
+Umbadah,"1,3,19",d,"1,2",,E4,False,enterica
+Umbilo,28,z10,"e,n,x",,M,False,enterica
+Umhlali,"6,7",a,"1,6",,C1,False,enterica
+Umhlatazana,35,a,"e,n,z15",,O,False,enterica
+Uno,"6,8",z29,"[e,n,z15]",,C2-C3,True,enterica
+Uppsala,"1,4,12,27",b,"1,7",,B,False,enterica
+Urbana,30,b,"e,n,x",,N,False,enterica
+Ursenbach,"1,42",z,"1,6",,T,False,enterica
+Usumbura,"6,14,18",d,"1,7",,K,False,enterica
+Utah,"6,8",c,"1,5",,C2-C3,False,enterica
+Utrecht,52,d,"1,5",,O52,False,enterica
+Uzaramo,"1,6,14,25","z4,z24",-,,H,True,enterica
+Vaertan,"13,22",b,"e,n,x",,G,False,enterica
+Valdosta,"6,8",a,"1,2",,C2-C3,False,enterica
+Vancouver,16,c,"1,5",,I,False,enterica
+Vanier,28,z,"1,5",,M,False,enterica
+Vaugirard,41,b,"1,6",,S,False,enterica
+Vegesack,16,b,"l,w",,I,False,enterica
+Vejle,"3,{10}{15}","e,h","1,2",[z27],E1,False,enterica
+Vellore,"1,4,12,27",z10,z35,,B,False,enterica
+Veneziana,11,i,"e,n,x",,F,False,enterica
+Verona,41,i,"1,6",,S,False,enterica
+Verviers,45,k,"1,5",,W,False,enterica
+Victoria,"1,9,12","l,w","1,5",,D1,False,enterica
+Victoriaborg,17,c,"1,6",,J,False,enterica
+Vietnam,41,b,z6,,S,False,enterica
+Vilvoorde,"1,3,19","e,h","1,5",,E4,False,enterica
+Vinohrady,28,"m,t","[e,n,z15]",,M,True,enterica
+Virchow,"6,7,14",r,"1,2",,C1,False,enterica
+Virginia,8,d,"1,2",,C2-C3,False,enterica
+Visby,"1,3,19",b,"1,6",,E4,False,enterica
+Vitkin,28,"l,v","e,n,x",,M,False,enterica
+Vleuten,44,"f,g",-,,V,True,enterica
+Vogan,"1,42",z38,z6,,T,False,enterica
+Volkmarsdorf,28,i,"1,6",,M,False,enterica
+Volta,11,r,"l,z13,z28",,F,False,enterica
+Vom,"1,4,12,27","l,z13,z28","e,n,z15",,B,False,enterica
+Voulte,43,i,"e,n,x",,U,False,enterica
+Vridi,"1,13,23","e,h","l,w",,G,False,enterica
+Vuadens,"4,12,27","z4,z23",z6,,B,False,enterica
+Wa,16,b,"1,5",,I,False,enterica
+Waedenswil,"9,46","e,h","1,5",,D2,False,enterica
+Wagadugu,"3,10","z4,z23",z6,,E1,False,enterica
+Wagenia,"1,4,12,27",b,"e,n,z15",,B,False,enterica
+Wanatah,"1,3,19",d,"1,7",,E4,False,enterica
+Wandsworth,39,b,"1,2",,Q,False,enterica
+Wangata,"1,9,12","z4,z23","[1,7]",,D1,True,enterica
+Waral,"1,42","m,t",-,,T,True,enterica
+Warengo,17,z,"1,5",,J,False,enterica
+Warmsen,45,d,"e,n,z15",,W,False,enterica
+Warnemuende,28,i,"e,n,x",,M,False,enterica
+Warnow,"6,8",i,"1,6",,C2-C3,False,enterica
+Warragul,"[1],6,14,[25]","g,m",-,,H,True,enterica
+Warri,17,k,"1,7",,J,False,enterica
+Washington,"13,22","m,t",-,,G,True,enterica
+Waycross,41,"z4,z23","[e,n,z15]",,S,True,enterica
+Wayne,30,"g,z51",-,,N,True,enterica
+Wedding,28,c,"e,n,z15",,M,False,enterica
+Welikade,16,"l,v","1,7",,I,False,enterica
+Weltevreden,"3,{10}{15}",r,z6,,E1,False,enterica
+Wenatchee,47,b,"1,2",,X,False,enterica
+Wentworth,11,z10,"1,2",,F,False,enterica
+Wernigerode,"9,46","f,g",-,,D2,True,enterica
+Weslaco,42,z36,-,,T,True,enterica
+Westafrica,"9,12","e,h","1,7",,D1,False,enterica
+Westeinde,16,"l,w","1,6",,I,False,enterica
+Westerstede,"1,3,19","l,z13","1,2",,E4,False,enterica
+Westhampton,"3,{10}{15}{15,34}","g,s,t",-,[z37],E1,True,enterica
+Westminster,"3,{10}{15}",b,z35,,E1,False,enterica
+Weston,16,"e,h",z6,,I,False,enterica
+Westphalia,35,"z4,z24",-,,O,True,enterica
+Weybridge,"3,10",d,z6,,E1,False,enterica
+Wichita,"1,13,23",d,"1,6",[z37],G,False,enterica
+Widemarsh,35,z29,-,,O,True,enterica
+Wien,"1,4,12,[27]",b,"l,w",,B,False,enterica
+Wil,"6,7",d,"l,z13,z28",,C1,False,enterica
+Wilhelmsburg,"1,4,[5],12,[27]",z38,"[e,n,z15]",,B,True,enterica
+Willamette,38,d,"1,5",,P,False,enterica
+Willemstad,"1,13,22","e,h","1,6",,G,False,enterica
+Wilmington,"3,10",b,z6,,E1,False,enterica
+Wimborne,"3,10",k,"1,2",,E1,False,enterica
+Windermere,39,y,"1,5",,Q,False,enterica
+Windsheim,51,a,"1,2",,O51,False,enterica
+Wingrove,"6,8",c,"1,2",,C2-C3,False,enterica
+Winneba,"4,12",r,"1,6",,B,False,enterica
+Winnipeg,54,"e,h","1,5",,O54,False,enterica
+Winslow,"13,22",z,"1,5",,G,False,enterica
+Winston,"6,7","m,t","1,6",,C1,False,enterica
+Winterthur,"1,3,19","l,z13","1,6",,E4,False,enterica
+Wippra,"6,8",z10,z6,,C2-C3,False,enterica
+Wisbech,16,i,"1,7",,I,False,enterica
+Wohlen,11,b,"1,6",,F,False,enterica
+Woodhull,"1,6,14,25",d,"1,6",,H,False,enterica
+Woodinville,11,c,"e,n,x",,F,False,enterica
+Worb,"9,46",b,"e,n,x",,D2,False,enterica
+Worthington,"1,13,23",z,"l,w",[z43],G,False,enterica
+Woumbou,11,y,"e,n,x,z15",,F,False,enterica
+Wuiti,30,z35,"e,n,z15",,N,False,enterica
+Wuppertal,"9,46",z41,-,,D2,True,enterica
+Wyldegreen,"1,13,23",a,"l,w",,G,False,enterica
+Yaba,"3,{10}{15}",b,"e,n,z15",,E1,False,enterica
+Yalding,"1,3,19",r,"e,n,z15",,E4,False,enterica
+Yaounde,"1,4,12,27",z35,"e,n,z15",,B,False,enterica
+Yardley,28,"g,m","1,6",,M,False,enterica
+Yarm,"6,8",z35,"1,2",,C2-C3,False,enterica
+Yarrabah,"13,23",y,"1,7",,G,False,enterica
+Yeerongpilly,"3,10",i,z6,,E1,False,enterica
+Yehuda,11,"z4,z24",-,,F,True,enterica
+Yekepa,"1,40",z35,"e,n,z15",,R,False,enterica
+Yellowknife,"9,12",r,"e,n,x",,D1,False,enterica
+Yenne,"1,3,19",z10,"1,5",,E4,False,enterica
+Yerba,54,"z4,z23",-,,O54,True,enterica
+Yoff,38,"z4,z23","1,2",,P,False,enterica
+Yokoe,"8,20","m,t",-,,C2-C3,True,enterica
+Yolo,35,c,"[e,n,z15]",,O,True,enterica
+Yombesali,47,z35,z6,,X,False,enterica
+Yopougon,45,z,"e,n,z15",,W,False,enterica
+York,"9,12","l,z28","e,n,z15",,D1,False,enterica
+Yoruba,16,c,"l,w",,I,False,enterica
+Yovokome,"8,20",d,"1,5",,C2-C3,False,enterica
+Yundum,"3,10",k,"e,n,x",,E1,False,enterica
+Zadar,"9,46",b,"1,6",,D2,False,enterica
+Zaiman,"9,12","l,v","e,n,x",,D1,False,enterica
+Zaire,30,c,"1,7",,N,False,enterica
+Zanzibar,"3,{10}{15}",k,"1,5",,E1,False,enterica
+Zaria,17,k,"e,n,z15",,J,False,enterica
+Zega,"9,12",d,z6,,D1,False,enterica
+Zehlendorf,30,a,"1,5",,N,False,enterica
+Zerifin,"6,8",z10,"1,2",,C2-C3,False,enterica
+Zigong,16,"l,w","1,5",,I,False,enterica
+Zinder,44,z29,-,,V,True,enterica
+Zongo,"3,10",z35,"1,7",,E1,False,enterica
+Zuilen,"1,3,19",i,"l,w",,E4,False,enterica
+Zwickau,16,"r,i","e,n,z15",,I,False,enterica
+"II 1,4,[5],12,[27]:a:e,n,x","1,4,[5],12,[27]",a,"e,n,x",,B,False,salamae
+"II 1,4,12,[27]:a:z39","1,4,12,[27]",a,z39,,B,False,salamae
+"II 4,12:b:1,5","4,12",b,"1,5",,B,False,salamae
+"II 1,4,[5],12,[27]:b:[e,n,x]","1,4,[5],12,[27]",b,"[e,n,x]",,B,True,salamae
+"II 4,12:d:e,n,x","4,12",d,"e,n,x",,B,False,salamae
+"II 4,12:e,n,x:1,2,7","4,12","e,n,x","1,2,7",,B,False,salamae
+"II 1,4,12,[27]:e,n,x:1,[5],7","1,4,12,[27]","e,n,x","1,[5],7",,B,False,salamae
+"II 1,4,[5],12:f,g,t:z6","1,4,[5],12","f,g,t",z6,,B,False,salamae
+"II 1,4,12,[27]:g,[m],[s],t:e,n,x","1,4,12,[27]","g,[m],[s],t","e,n,x",,B,False,salamae
+"II 1,4,12,[27]:g,[m],t:[1,5]","1,4,12,[27]","g,[m],t","[1,5]",,B,True,salamae
+"II 4,12:g,m,t:z39","4,12","g,m,t",z39,,B,False,salamae
+"II 4,12:g,z:-","4,12","g,z",-,,B,True,salamae
+"II 4,12,27:i:z35","4,12,27",i,z35,,B,False,salamae
+"II 1,4,12,27:k:1,6","1,4,12,27",k,"1,6",,B,False,salamae
+"II 1,4,12,27:l,v:e,n,x","1,4,12,27","l,v","e,n,x",,B,False,salamae
+"II 1,4,12,27:l,v:z39","1,4,12,27","l,v",z39,,B,False,salamae
+"II 4,12:l,w:e,n,x","4,12","l,w","e,n,x",,B,False,salamae
+"II 1,4,12:l,z28:[e,n,x]","1,4,12","l,z28","[e,n,x]",,B,True,salamae
+"II 1,4,12,27:z:1,5","1,4,12,27",z,"1,5",,B,False,salamae
+"II 4,12:z:1,7","4,12",z,"1,7",,B,False,salamae
+"II 1,4,12,27:z:e,n,x","1,4,12,27",z,"e,n,x",,B,False,salamae
+"II 4,12:z:z39","4,12",z,z39,,B,False,salamae
+"II 1,4,12:z29:e,n,x","1,4,12",z29,"e,n,x",,B,False,salamae
+"II 1,4,12,[27]:z39:1,[5],7","1,4,12,[27]",z39,"1,[5],7",,B,False,salamae
+"II 6,7,14:a:1,5","6,7,14",a,"1,5",,C1,False,salamae
+"II 6,7:a:z6","6,7",a,z6,,C1,False,salamae
+"II 6,7:a:z42","6,7",a,z42,,C1,False,salamae
+"II 6,7:b:[e,n,x]:z42","6,7",b,"[e,n,x]",z42,C1,True,salamae
+"II 6,7:b:z39","6,7",b,z39,,C1,False,salamae
+"II 6,7:d:z42","6,7",d,z42,,C1,False,salamae
+"II 6,7:e,n,x:1,6:z42","6,7","e,n,x","1,6",z42,C1,False,salamae
+"II 6,7:g,m,[s],t:e,n,x","6,7","g,m,[s],t","e,n,x",,C1,False,salamae
+"II 6,7:(g),m,[s],t:1,5","6,7","(g),m,[s],t","1,5",,C1,False,salamae
+"II 6,7:g,m,s,t:z39","6,7","g,m,s,t",z39,,C1,False,salamae
+"II 6,7:g,[m],s,t:[z42]","6,7","g,[m],s,t",[z42],,C1,True,salamae
+"II 6,7:g,t:[e,n,x]:z42","6,7","g,t","[e,n,x]",z42,C1,True,salamae
+"IV 6,7:g,z51:-","6,7","g,z51",-,,C1,True,houtenae
+"II 6,7:m,t:-","6,7","m,t",-,,C1,True,salamae
+"IIIb 6,7:(k):z:[z55]","6,7",(k),z,[z55],C1,False,diarizonae
+"II 6,7:k:[z6]","6,7",k,[z6],,C1,True,salamae
+"IIIb 6,7:l,v:1,5,7","6,7","l,v","1,5,7",,C1,False,diarizonae
+"IIIb 6,7:l,v:z53","6,7","l,v",z53,,C1,False,diarizonae
+"II 6,7:l,w:1,5,7","6,7","l,w","1,5,7",,C1,False,salamae
+"II 6,7:l,w:z42","6,7","l,w",z42,,C1,False,salamae
+"II 6,7:l,z28:1,5:[z42]","6,7","l,z28","1,5",[z42],C1,False,salamae
+"II 6,7:l,z28:e,n,x","6,7","l,z28","e,n,x",,C1,False,salamae
+"II 6,7:l,z28:z6","6,7","l,z28",z6,,C1,False,salamae
+"II 6,7:z:1,5","6,7",z,"1,5",,C1,False,salamae
+"II 6,7:z:e,n,x","6,7",z,"e,n,x",,C1,False,salamae
+"II 6,7:z:z6","6,7",z,z6,,C1,False,salamae
+"II 6,7:z:z39","6,7",z,z39,,C1,False,salamae
+"II 6,7:z:z42","6,7",z,z42,,C1,False,salamae
+"II 6,7:z4,z23:-","6,7","z4,z23",-,,C1,True,salamae
+"IV 6,7:z4,z23:-","6,7","z4,z23",-,,C1,True,houtenae
+"II 6,7:z4,z24:z42","6,7","z4,z24",z42,,C1,False,salamae
+"IV 6,7:z4,z24:-","6,7","z4,z24",-,,C1,True,houtenae
+"II 6,7:z6:1,7","6,7",z6,"1,7",,C1,False,salamae
+"II 6,7:z29:[z42]","6,7",z29,[z42],,C1,True,salamae
+"II 6,7:z36:z42","6,7",z36,z42,,C1,False,salamae
+"IV 6,7:z36:-","6,7",z36,-,,C1,True,houtenae
+"IIIb 6,7,14:z39:1,2","6,7,14",z39,"1,2",,C1,False,diarizonae
+"II 6,7:z39:1,5,7","6,7",z39,"1,5,7",,C1,False,salamae
+"VI 6,7:z41:1,7","6,7",z41,"1,7",,C1,False,indica
+"II 6,7:z42:1,[5],7","6,7",z42,"1,[5],7",,C1,False,salamae
+"II 6,7:-:1,6","6,7",-,"1,6",,C1,False,salamae
+"II 6,8:a:e,n,x","6,8",a,"e,n,x",,C2-C3,False,salamae
+"II 6,8:a:z39","6,8",a,z39,,C2-C3,False,salamae
+"II 6,8:a:z52","6,8",a,z52,,C2-C3,False,salamae
+"II 6,8:b:1,5","6,8",b,"1,5",,C2-C3,False,salamae
+"II 6,8:d:z6:z42","6,8",d,z6,z42,C2-C3,False,salamae
+"II 6,8:f,g,m,t:[e,n,x]","6,8","f,g,m,t","[e,n,x]",,C2-C3,True,salamae
+"II 6,8:g,m,t:1,7","6,8","g,m,t","1,7",,C2-C3,False,salamae
+"II 6,8:m,t:1,5","6,8","m,t","1,5",,C2-C3,False,salamae
+"II 6,8:m,t:e,n,x","6,8","m,t","e,n,x",,C2-C3,False,salamae
+IIIb 8:(k):z35,8,(k),z35,,C2-C3,False,diarizonae
+"II 6,8:l,v:e,n,x","6,8","l,v","e,n,x",,C2-C3,False,salamae
+"II 6,8:l,w:z6:z42","6,8","l,w",z6,z42,C2-C3,False,salamae
+"II 6,8:l,z28:e,n,x","6,8","l,z28","e,n,x",,C2-C3,False,salamae
+IIIb 8:r:z,8,r,z,,C2-C3,False,diarizonae
+"II 6,8:y:1,6:z42","6,8",y,"1,6",z42,C2-C3,False,salamae
+"II 6,8:z:1,5","6,8",z,"1,5",,C2-C3,False,salamae
+"II 6,8:z29:1,5","6,8",z29,"1,5",,C2-C3,False,salamae
+"II 6,8:z29:e,n,x:z42","6,8",z29,"e,n,x",z42,C2-C3,False,salamae
+"II 6,8:z29:e,n,x","6,8",z29,"e,n,x",,C2-C3,False,salamae
+"II 9,12:a:1,5","9,12",a,"1,5",,D1,False,salamae
+"II 1,9,12:a:e,n,x","1,9,12",a,"e,n,x",,D1,False,salamae
+"II 9,12:a:z39","9,12",a,z39,,D1,False,salamae
+"II 1,9,12:a:z42","1,9,12",a,z42,,D1,False,salamae
+"II 1,9,12:b:e,n,x","1,9,12",b,"e,n,x",,D1,False,salamae
+"II 1,9,12:b:z6","1,9,12",b,z6,,D1,False,salamae
+"II 1,9,12:b:z39","1,9,12",b,z39,,D1,False,salamae
+"II 1,9,12:d:e,n,x","1,9,12",d,"e,n,x",,D1,False,salamae
+"II 9,12:d:z39","9,12",d,z39,,D1,False,salamae
+"II 9,12:e,n,x:1,[5],7","9,12","e,n,x","1,[5],7",,D1,False,salamae
+"II 9,12:e,n,x:1,6","9,12","e,n,x","1,6",,D1,False,salamae
+"II 1,9,12:g,m,[s],t:[1,5,7]:[z42]","1,9,12","g,m,[s],t","[1,5,7]",[z42],D1,True,salamae
+"II 1,9,12:g,m,s,t:e,n,x","1,9,12","g,m,s,t","e,n,x",,D1,False,salamae
+"II 9,12:g,s,t:e,n,x","9,12","g,s,t","e,n,x",,D1,False,salamae
+"II 1,9,12:g,z62:[e,n,x]","1,9,12","g,z62","[e,n,x]",,D1,True,salamae
+"II 9,12:m,t:e,n,x","9,12","m,t","e,n,x",,D1,False,salamae
+"II 1,9,12:m,t:1,5","1,9,12","m,t","1,5",,D1,False,salamae
+"II 1,9,12:m,t:z39","1,9,12","m,t",z39,,D1,False,salamae
+"II 9,12:l,v:e,n,x","9,12","l,v","e,n,x",,D1,False,salamae
+"II 9,12:l,v:z39","9,12","l,v",z39,,D1,False,salamae
+"II 1,9,12:l,w:e,n,x","1,9,12","l,w","e,n,x",,D1,False,salamae
+"II 9,12:l,z28:1,5:z42","9,12","l,z28","1,5",z42,D1,False,salamae
+"II 9,12:l,z28:e,n,x","9,12","l,z28","e,n,x",,D1,False,salamae
+"II 1,9,12:y:z39","1,9,12",y,z39,,D1,False,salamae
+"II 1,9,12:z:1,7","1,9,12",z,"1,7",,D1,False,salamae
+"II 1,9,12:z:z6","1,9,12",z,z6,,D1,False,salamae
+"II 9,12:z:z39","9,12",z,z39,,D1,False,salamae
+"II 9,12:z29:1,5","9,12",z29,"1,5",,D1,False,salamae
+"II 1,9,12:z29:e,n,x","1,9,12",z29,"e,n,x",,D1,False,salamae
+"II 1,9,12:z39:1,7","1,9,12",z39,"1,7",,D1,False,salamae
+"II 1,9,12:z42:1,[5],7","1,9,12",z42,"1,[5],7",,D1,False,salamae
+"II 9,46:b:e,n,x","9,46",b,"e,n,x",,D2,False,salamae
+"II 9,46:e,n,x:1,5,7","9,46","e,n,x","1,5,7",,D2,False,salamae
+"II 9,46:g,[m],[s],t:[e,n,x]","9,46","g,[m],[s],t","[e,n,x]",,D2,True,salamae
+"II 9,46:g,z62:-","9,46","g,z62",-,,D2,True,salamae
+"II 9,46:m,t:e,n,x","9,46","m,t","e,n,x",,D2,False,salamae
+"II 9,46:z:1,5","9,46",z,"1,5",,D2,False,salamae
+"II 9,46:z:e,n,x","9,46",z,"e,n,x",,D2,False,salamae
+"II 9,46:z:z39","9,46",z,z39,,D2,False,salamae
+"II 9,46:z4,z24:z39:z42","9,46","z4,z24",z39,z42,D2,False,salamae
+"II 9,46:z10:z6","9,46",z10,z6,,D2,False,salamae
+"II 9,46:z10:z39","9,46",z10,z39,,D2,False,salamae
+"II 9,46:z39:1,7","9,46",z39,"1,7",,D2,False,salamae
+"II 1,9,12,46,27:a:z6","1,9,12,46,27",a,z6,,D3,False,salamae
+"II 1,9,12,46,27:c:z39","1,9,12,46,27",c,z39,,D3,False,salamae
+"II 9,12,46,27:g,t:e,n,x","9,12,46,27","g,t","e,n,x",,D3,False,salamae
+"II 1,9,12,46,27:l,z13,z28:z39","1,9,12,46,27","l,z13,z28",z39,,D3,False,salamae
+"II 1,9,12,46,27:y:z39","1,9,12,46,27",y,z39,,D3,False,salamae
+"II 1,9,12,46,27:z4,z24:1,5","1,9,12,46,27","z4,z24","1,5",,D3,False,salamae
+"II 1,9,12,46,27:z10:1,5","1,9,12,46,27",z10,"1,5",,D3,False,salamae
+"II 1,9,12,46,27:z10:e,n,x","1,9,12,46,27",z10,"e,n,x",,D3,False,salamae
+"II 1,9,12,46,27:z10:z39","1,9,12,46,27",z10,z39,,D3,False,salamae
+"II 3,10:a:e,n,x","3,10",a,"e,n,x",,E1,False,salamae
+"II 3,10:a:l,v","3,10",a,"l,v",,E1,False,salamae
+"II 3,10:a:z39","3,10",a,z39,,E1,False,salamae
+"II 3,10:b:e,n,x","3,10",b,"e,n,x",,E1,False,salamae
+"II 3,10:b:z39","3,10",b,z39,,E1,False,salamae
+"II 3,10:d:e,n,x","3,10",d,"e,n,x",,E1,False,salamae
+"II 3,10:e,n,x:1,7","3,10","e,n,x","1,7",,E1,False,salamae
+"II 3,{10}{15}:g,m,s,t:[1,5]","3,{10}{15}","g,m,s,t","[1,5]",,E1,True,salamae
+"II 3,10:g,t:-","3,10","g,t",-,,E1,True,salamae
+"II 3,10:m,t:1,5","3,10","m,t","1,5",,E1,False,salamae
+"II 3,10:m,t:e,n,x","3,10","m,t","e,n,x",,E1,False,salamae
+"II 3,10:l,v:e,n,x","3,10","l,v","e,n,x",,E1,False,salamae
+"II 3,10:l,v:z6","3,10","l,v",z6,,E1,False,salamae
+"II 3,10:l,z28:1,5","3,10","l,z28","1,5",,E1,False,salamae
+"II 3,10:l,z28:e,n,x","3,10","l,z28","e,n,x",,E1,False,salamae
+"II 3,10:l,z28:z39","3,10","l,z28",z39,,E1,False,salamae
+"II 3,10:z:1,5","3,10",z,"1,5",,E1,False,salamae
+"II 3,10:z:e,n,x","3,10",z,"e,n,x",,E1,False,salamae
+"II 3,10:z:z39","3,10",z,z39,,E1,False,salamae
+"II 3,10:z4,z24:-","3,10","z4,z24",-,,E1,True,salamae
+"II 3,10:z29:[e,n,x]","3,10",z29,"[e,n,x]",,E1,True,salamae
+"II 3,10:z35:e,n,x,z15","3,10",z35,"e,n,x,z15",,E1,False,salamae
+"II 3,10:z38:z42","3,10",z38,z42,,E1,False,salamae
+"II 3,10:z39:1,[5],7","3,10",z39,"1,[5],7",,E1,False,salamae
+"II 11:a:e,n,z15:d",11,a,"e,n,z15",d,F,False,salamae
+II 11:a:z6:z42,11,a,z6,z42,F,False,salamae
+"II 11:c:e,n,z15",11,c,"e,n,z15",,F,False,salamae
+"II 11:g,[m],s,t:z39",11,"g,[m],s,t",z39,,F,False,salamae
+"IV 11:g,z51:-",11,"g,z51",-,,F,True,houtenae
+"II 11:m,t:e,n,x",11,"m,t","e,n,x",,F,False,salamae
+IIIb 11:k:z53,11,k,z53,,F,False,diarizonae
+"IIIb 11:l,v:z:[z56]",11,"l,v",z,[z56],F,False,diarizonae
+"IIIb 11:l,v:z53",11,"l,v",z53,,F,False,diarizonae
+"II 11:l,z28:e,n,x",11,"l,z28","e,n,x",,F,False,salamae
+"II 11:z:e,n,x",11,z,"e,n,x",,F,False,salamae
+II 11:z:z39,11,z,z39,,F,False,salamae
+"IIIa 11:z4,z23:-",11,"z4,z23",-,,F,True,arizonae
+"IV 11:z4,z23:-",11,"z4,z23",-,,F,True,houtenae
+"IV 11:z4,z32:-",11,"z4,z32",-,,F,True,houtenae
+"II 11:-:1,5",11,-,"1,5",,F,False,salamae
+"VI 11:a:1,5",11,a,"1,5",,F,False,indica
+"VI 11:b:1,7",11,b,"1,7",,F,False,indica
+"VI 11:b:e,n,x",11,b,"e,n,x",,F,False,indica
+"II 1,13,23:a:1,5","1,13,23",a,"1,5",,G,False,salamae
+"II 13,22:a:e,n,x","13,22",a,"e,n,x",,G,False,salamae
+"II 1,13,23:a:z42","1,13,23",a,z42,,G,False,salamae
+"II 1,13,23:b:[1,5]:z42","1,13,23",b,"[1,5]",z42,G,True,salamae
+"II 1,13,22:b:z42","1,13,22",b,z42,,G,False,salamae
+"II 13,22:d:1,5","13,22",d,"1,5",,G,False,salamae
+"II 13,23:d:e,n,x","13,23",d,"e,n,x",,G,False,salamae
+"II 1,13,23:e,n,x:1,[5],7","1,13,23","e,n,x","1,[5],7",,G,False,salamae
+"IIIb 13,22:g,m,s:z","13,22","g,m,s",z,,G,False,diarizonae
+"II 1,13,22:g,m,t:[1,5]","1,13,22","g,m,t","[1,5]",,G,True,salamae
+"II 1,13,23:g,m,s,t:1,5","1,13,23","g,m,s,t","1,5",,G,False,salamae
+"II 1,13,23:g,m,[s],t:[e,n,x]","1,13,23","g,m,[s],t","[e,n,x]",,G,True,salamae
+"II 1,13,23:g,m,s,t:z42","1,13,23","g,m,s,t",z42,,G,False,salamae
+"II 1,13,22:g,t:[1,5]","1,13,22","g,t","[1,5]",,G,True,salamae
+"II 13,22:g,t:z6","13,22","g,t",z6,,G,False,salamae
+"II 1,13,23:g,t:1,5","1,13,23","g,t","1,5",,G,False,salamae
+"II 13,23:g,t:e,n,x","13,23","g,t","e,n,x",,G,False,salamae
+"II 1,13,23:g,[s],t:z42","1,13,23","g,[s],t",z42,,G,False,salamae
+"IIIa 1,13,23:g,z51:-","1,13,23","g,z51",-,,G,True,arizonae
+"II 1,13,23:m,t:1,5","1,13,23","m,t","1,5",,G,False,salamae
+"II 1,13,23:m,t:e,n,x","1,13,23","m,t","e,n,x",,G,False,salamae
+"II 13,22:m,t:z42:z39","13,22","m,t",z42,z39,G,False,salamae
+"II 1,13,23:m,t:z42","1,13,23","m,t",z42,,G,False,salamae
+"V 1,13,22:i:-","1,13,22",i,-,,G,True,bongori
+"II 13,22:k:1,5:z42","13,22",k,"1,5",z42,G,False,salamae
+"II 13,23:k:z41","13,23",k,z41,,G,False,salamae
+"IIIb 13,22:l,v:1,5,7","13,22","l,v","1,5,7",,G,False,diarizonae
+"II 13,23:l,w:e,n,x","13,23","l,w","e,n,x",,G,False,salamae
+"II 13,22:l,z28:1,5","13,22","l,z28","1,5",,G,False,salamae
+"II 13,23:l,z28:1,5","13,23","l,z28","1,5",,G,False,salamae
+"II 13,23:l,z28:z6","13,23","l,z28",z6,,G,False,salamae
+"II 1,13,23:l,z28:z42","1,13,23","l,z28",z42,,G,False,salamae
+"V 13,22:r:-","13,22",r,-,,G,True,bongori
+"II 1,13,23:z:1,5","1,13,23",z,"1,5",,G,False,salamae
+"IIIb 13,23:z:1,5","13,23",z,"1,5",,G,False,diarizonae
+"II 1,13,23:z:z42","1,13,23",z,z42,,G,False,salamae
+"II 13,22:z:-","13,22",z,-,,G,True,salamae
+"IIIa 13,22:z4,z23:-","13,22","z4,z23",-,,G,True,arizonae
+"IIIa 13,23:z4,z23,[z32]:-","13,23","z4,z23,[z32]",-,,G,True,arizonae
+"IIIa 13,23:z4,z24:-","13,23","z4,z24",-,,G,True,arizonae
+"II 1,13,22:z10:z6","1,13,22",z10,z6,,G,False,salamae
+"II 13,22:z29:1,5","13,22",z29,"1,5",,G,False,salamae
+"II 13,22:z29:e,n,x","13,22",z29,"e,n,x",,G,False,salamae
+"II 1,13,23:z29:1,5","1,13,23",z29,"1,5",,G,False,salamae
+"II 1,13,23:z29:e,n,x","1,13,23",z29,"e,n,x",,G,False,salamae
+"V 13,22:z39:-","13,22",z39,-,,G,True,bongori
+"II 13,22:z39:1,7","13,22",z39,"1,7",,G,False,salamae
+"II 1,13,23:z39:1,5,7","1,13,23",z39,"1,5,7",,G,False,salamae
+"II 1,13,23:[z42]:1,[5],7","1,13,23",[z42],"1,[5],7",,G,False,salamae
+"II 13,23:-:1,6","13,23",-,"1,6",,G,False,salamae
+"VI [1],6,14:a:1,5","[1],6,14",a,"1,5",,H,False,indica
+"VI [1],6,14,[25]:a:e,n,x","[1],6,14,[25]",a,"e,n,x",,H,False,indica
+"IIIb (6),14:b:e,n,x","(6),14",b,"e,n,x",,H,False,diarizonae
+"V 6,14:e,n,z15:-","6,14","e,n,z15",-,,H,True,bongori
+"II 1,6,14:m,t:1,5","1,6,14","m,t","1,5",,H,False,salamae
+"II 6,14:m,t:e,n,x","6,14","m,t","e,n,x",,H,False,salamae
+"II 6,14,[24]:k:1,6","6,14,[24]",k,"1,6",,H,False,salamae
+"II 6,14:k:e,n,x","6,14",k,"e,n,x",,H,False,salamae
+"IIIb (6),14:k:z","(6),14",k,z,,H,False,diarizonae
+"II 1,6,14:k:z6:z42","1,6,14",k,z6,z42,H,False,salamae
+"IIIb (6),14:k:z53","(6),14",k,z53,,H,False,diarizonae
+"IIIb (6),14:l,v:z","(6),14","l,v",z,,H,False,diarizonae
+"IIIb (6),14:l,v:z35","(6),14","l,v",z35,,H,False,diarizonae
+"IIIb (6),14:l,v:z53","(6),14","l,v",z53,,H,False,diarizonae
+"VI 6,14:l,v:z88","6,14","l,v",z88,,H,False,indica
+"IIIb (6),14:r:z","(6),14",r,z,,H,False,diarizonae
+"IV 6,14:z4,z23:-","6,14","z4,z23",-,,H,True,houtenae
+"VI 1,6,14,25:z10:1,(2),7","1,6,14,25",z10,"1,(2),7",,H,False,indica
+"II 1,6,14:z10:1,5","1,6,14",z10,"1,5",,H,False,salamae
+"IIIb (6),14:z10:e,n,x,z15","(6),14",z10,"e,n,x,z15",,H,False,diarizonae
+"IIIb (6),14:z10:z:[z56],[z90]","(6),14",z10,z,"[z56],[z90]",H,False,diarizonae
+"II 1,6,14:z10:z6:z42","1,6,14",z10,z6,z42,H,False,salamae
+"IIIb 6,14:z10:z53","6,14",z10,z53,,H,False,diarizonae
+"II 6,14:z36:-","6,14",z36,-,,H,True,salamae
+"II 1,6,14:z42:1,6","1,6,14",z42,"1,6",,H,False,salamae
+"IIIb 6,14:z52:e,n,x,z15","6,14",z52,"e,n,x,z15",,H,False,diarizonae
+"IIIb [1],6,14,[25]:z52:z35","[1],6,14,[25]",z52,z35,,H,False,diarizonae
+"II 16:b:e,n,x",16,b,"e,n,x",,I,False,salamae
+II 16:b:z39,16,b,z39,,I,False,salamae
+II 16:b:z42,16,b,z42,,I,False,salamae
+"II 16:d:1,5",16,d,"1,5",,I,False,salamae
+"II 16:d:e,n,x",16,d,"e,n,x",,I,False,salamae
+"II 16:e,n,x:1,(5),7",16,"e,n,x","1,(5),7",,I,False,salamae
+"II 16:e,n,x:1,6:z42",16,"e,n,x","1,6",z42,I,False,salamae
+"II 16:g,[m],[s],t:[1,5]:[z42]",16,"g,[m],[s],t","[1,5]",[z42],I,True,salamae
+"II 16:g,[m],[s],t:[e,n,x]",16,"g,[m],[s],t","[e,n,x]",,I,True,salamae
+"II 16:m,t:e,n,x",16,"m,t","e,n,x",,I,False,salamae
+"II 16:m,t:[z42]",16,"m,t",[z42],,I,True,salamae
+IIIb 16:i:z35,16,i,z35,,I,False,diarizonae
+"IIIb 16:(k):e,n,x,z15",16,(k),"e,n,x,z15",,I,False,diarizonae
+IIIb 16:k:z,16,k,z,,I,False,diarizonae
+IIIb 16:(k):z35,16,(k),z35,,I,False,diarizonae
+IIIb 16:k:z53,16,k,z53,,I,False,diarizonae
+"IIIb 16:l,v:1,5,7",16,"l,v","1,5,7",,I,False,diarizonae
+"IIIb 16:l,v:z:[z61]",16,"l,v",z,[z61],I,False,diarizonae
+"IIIb 16:l,v:z35",16,"l,v",z35,,I,False,diarizonae
+"IIIb 16:l,v:z53",16,"l,v",z53,,I,False,diarizonae
+"II 16:l,w:z6",16,"l,w",z6,,I,False,salamae
+"II 16:l,z28:z42",16,"l,z28",z42,,I,False,salamae
+"II 16:z:e,n,x",16,z,"e,n,x",,I,False,salamae
+II 16:z:z42,16,z,z42,,I,False,salamae
+"II 16:z4,z23:-",16,"z4,z23",-,,I,True,salamae
+"IV 16:z4,z23:-",16,"z4,z23",-,,I,True,houtenae
+"II 16:z4,z24:-",16,"z4,z24",-,,I,True,salamae
+"IV 16:z4,z24:-",16,"z4,z24",-,,I,True,houtenae
+"IV 16:z4,z32:-",16,"z4,z32",-,,I,True,houtenae
+"II 16:z6:1,6",16,z6,"1,6",,I,False,salamae
+"IIIb 16:z10:1,7",16,z10,"1,7",,I,False,diarizonae
+"IIIb 16:z10:e,n,x,z15",16,z10,"e,n,x,z15",,I,False,diarizonae
+"II 16:z29:1,5",16,z29,"1,5",,I,False,salamae
+"II 16:z29:e,n,x",16,z29,"e,n,x",,I,False,salamae
+"II 16:z35:e,n,x",16,z35,"e,n,x",,I,False,salamae
+IV 16:z36:-,16,z36,-,,I,True,houtenae
+"II 16:z36:e,n,z15",16,z36,"e,n,z15",,I,False,salamae
+"II 16:z42:1,(5),7",16,z42,"1,(5),7",,I,False,salamae
+"II 16:z42:1,6",16,z42,"1,6",,I,False,salamae
+IIIb 16:z52:z35,16,z52,z35,,I,False,diarizonae
+"II 17:b:e,n,x,z15",17,b,"e,n,x,z15",,J,False,salamae
+II 17:b:z6,17,b,z6,,J,False,salamae
+II 17:c:z39,17,c,z39,,J,False,salamae
+"II 17:e,n,x,z15:1,6",17,"e,n,x,z15","1,6",,J,False,salamae
+"II 17:e,n,x,z15:1,[5],7",17,"e,n,x,z15","1,[5],7",,J,False,salamae
+"II 17:g,m,s,t:-",17,"g,m,s,t",-,,J,True,salamae
+"II 17:g,t:[e,n,x,z15]",17,"g,t","[e,n,x,z15]",,J,True,salamae
+"II 17:g,t:z39",17,"g,t",z39,,J,False,salamae
+"II 17:m,t:-",17,"m,t",-,,J,True,salamae
+IIIb 17:i:z35,17,i,z35,,J,False,diarizonae
+IIIb 17:k:z,17,k,z,,J,False,diarizonae
+II 17:k:-,17,k,-,,J,True,salamae
+"IIIb 17:l,v:e,n,x,z15",17,"l,v","e,n,x,z15",,J,False,diarizonae
+"IIIb 17:l,v:z35",17,"l,v",z35,,J,False,diarizonae
+IIIb 17:r:z,17,r,z,,J,False,diarizonae
+II 17:y:-,17,y,-,,J,True,salamae
+"II 17:z:1,7",17,z,"1,7",,J,False,salamae
+"II 17:z:l,w:z42",17,z,"l,w",z42,J,False,salamae
+"IIIa 17:z4,z23:-",17,"z4,z23",-,,J,True,arizonae
+"IIIa 17:z4,z23,z32:-",17,"z4,z23,z32",-,,J,True,arizonae
+"IIIa 17:z4,z24:-",17,"z4,z24",-,,J,True,arizonae
+"IIIa 17:z4,z32:-",17,"z4,z32",-,,J,True,arizonae
+IIIb 17:z10:z,17,z10,z,,J,False,diarizonae
+II 17:z10:-,17,z10,-,,J,True,salamae
+IIIa 17:z29:-,17,z29,-,,J,True,arizonae
+IV 17:z29:-,17,z29,-,,J,True,houtenae
+IIIa 17:z36:-,17,z36,-,,J,True,arizonae
+IV 17:z36:-,17,z36,-,,J,True,houtenae
+"IIIa 18:g,z51:-",18,"g,z51",-,,K,True,arizonae
+"IV 18:g,z51:-",18,"g,z51",-,,K,True,houtenae
+"II 18:m,t:1,5",18,"m,t","1,5",,K,False,salamae
+IIIb 18:(k):z53,18,(k),z53,,K,False,diarizonae
+IIIb 18:(k):z54,18,(k),z54,,K,False,diarizonae
+"IIIb 18:l,v:e,n,x,z15",18,"l,v","e,n,x,z15",,K,False,diarizonae
+"IIIb 18:l,v:z:[z50]",18,"l,v",z,[z50],K,False,diarizonae
+"IIIb 18:l,v:z53",18,"l,v",z53,,K,False,diarizonae
+IIIb 18:r:z,18,r,z,,K,False,diarizonae
+"II 18:y:e,n,x,z15",18,y,"e,n,x,z15",,K,False,salamae
+"II 18:z4,z23:-",18,"z4,z23",-,,K,True,salamae
+"IIIa 18:z4,z23:-",18,"z4,z23",-,,K,True,arizonae
+"II 18:z4,z24:-",18,"z4,z24",-,,K,True,salamae
+"IIIa 18:z4,z32:-",18,"z4,z32",-,,K,True,arizonae
+"IIIb 18:z10:e,n,x,z15",18,z10,"e,n,x,z15",,K,False,diarizonae
+II 18:z10:z6,18,z10,z6,,K,False,salamae
+II 18:z36:-,18,z36,-,,K,True,salamae
+"IV 18:z36,z38:-",18,"z36,z38",-,,K,True,houtenae
+"II 21:b:1,5",21,b,"1,5",,L,False,salamae
+"II 21:c:e,n,x",21,c,"e,n,x",,L,False,salamae
+"IIIb 21:c:e,n,x,z15",21,c,"e,n,x,z15",,L,False,diarizonae
+"II 21:g,[m],[s],t:-",21,"g,[m],[s],t",-,,L,True,salamae
+"IIIa 21:g,z51:-",21,"g,z51",-,,L,True,arizonae
+"IV 21:g,z51:-",21,"g,z51",-,,L,True,houtenae
+"II 21:m,t:-",21,"m,t",-,,L,True,salamae
+"IV 21:m,t:-",21,"m,t",-,,L,True,houtenae
+"IIIb 21:i:1,5,7",21,i,"1,5,7",,L,False,diarizonae
+"IIIb 21:i:e,n,x,z15",21,i,"e,n,x,z15",,L,False,diarizonae
+"IIIb 21:k:e,n,x,z15",21,k,"e,n,x,z15",,L,False,diarizonae
+IIIb 21:k:z,21,k,z,,L,False,diarizonae
+"IIIb 21:l,v:z",21,"l,v",z,,L,False,diarizonae
+"IIIb 21:l,v:z57",21,"l,v",z57,,L,False,diarizonae
+IIIb 21:r:z,21,r,z,,L,False,diarizonae
+II 21:z:-,21,z,-,,L,True,salamae
+"IIIa 21:z4,z23:-",21,"z4,z23",-,,L,True,arizonae
+"IV 21:z4,z23:-",21,"z4,z23",-,,L,True,houtenae
+"II 21:z4,z24:-",21,"z4,z24",-,,L,True,salamae
+"IIIa 21:z4,z24:-",21,"z4,z24",-,,L,True,arizonae
+"IV 21:z4,z32:-",21,"z4,z32",-,,L,True,houtenae
+"IIIb 21:z10:e,n,x,z15",21,z10,"e,n,x,z15",,L,False,diarizonae
+IIIb 21:z10:z,21,z10,z,,L,False,diarizonae
+II 21:z10:[z6],21,z10,[z6],,L,True,salamae
+IIIb 21:z10:z53,21,z10,z53,,L,False,diarizonae
+IIIa 21:z29:-,21,z29,-,,L,True,arizonae
+IIIa 21:z36:-,21,z36,-,,L,True,arizonae
+IV 21:z36:-,21,z36,-,,L,True,houtenae
+"IIIb 21:z65:e,n,x,z15",21,z65,"e,n,x,z15",,L,False,diarizonae
+"II 28:a:e,n,x",28,a,"e,n,x",,M,False,salamae
+"II 28:b:e,n,x",28,b,"e,n,x",,M,False,salamae
+II 28:b:z6,28,b,z6,,M,False,salamae
+"II 28:e,n,x:1,7",28,"e,n,x","1,7",,M,False,salamae
+"II 28:e,n,z15:z87",28,"e,n,z15",z87,,M,False,salamae
+"II 28:g,(m),[s],t:1,5",28,"g,(m),[s],t","1,5",,M,False,salamae
+"II 28:g,m,t:e,n,x",28,"g,m,t","e,n,x",,M,False,salamae
+"II 28:g,m,t:z39",28,"g,m,t",z39,,M,False,salamae
+"II 28:g,s,t:e,n,x",28,"g,s,t","e,n,x",,M,False,salamae
+"II 28:m,t:[e,n,x]",28,"m,t","[e,n,x]",,M,True,salamae
+"II 28:m,t:z39",28,"m,t",z39,,M,False,salamae
+"IIIb 28:k:1,7",28,k,"1,7",,M,False,diarizonae
+"II 28:l,z28:1,5",28,"l,z28","1,5",,M,False,salamae
+"II 28:l,z28:e,n,x",28,"l,z28","e,n,x",,M,False,salamae
+"II 28:r:e,n,z15",28,r,"e,n,z15",,M,False,salamae
+"II 28:z:1,5",28,z,"1,5",,M,False,salamae
+II 28:z:z39,28,z,z39,,M,False,salamae
+IIIb 28:z10:z,28,z10,z,,M,False,diarizonae
+"II 28:z29:1,5",28,z29,"1,5",,M,False,salamae
+"II 28:z29:e,n,x",28,z29,"e,n,x",,M,False,salamae
+II 30:a:z39,30,a,z39,,N,False,salamae
+II 30:b:z6,30,b,z6,,N,False,salamae
+II 30:c:z39,30,c,z39,,N,False,salamae
+"II 30:g,m,s:e,n,x",30,"g,m,s","e,n,x",,N,False,salamae
+"II 30:g,t:-",30,"g,t",-,,N,True,salamae
+"II 30:m,t:-",30,"m,t",-,,N,True,salamae
+"II 30:k:e,n,x,z15",30,k,"e,n,x,z15",,N,False,salamae
+"II 30:l,z28:z6",30,"l,z28",z6,,N,False,salamae
+"II 30:z6:1,6",30,z6,"1,6",,N,False,salamae
+"II 30:z10:e,n,x,z15",30,z10,"e,n,x,z15",,N,False,salamae
+"II 30:z39:1,7",30,z39,"1,7",,N,False,salamae
+"II 35:d:1,5",35,d,"1,5",,O,False,salamae
+"II 35:g,m,s,t:-",35,"g,m,s,t",-,,O,True,salamae
+"II 35:g,t:1,5",35,"g,t","1,5",,O,False,salamae
+"II 35:g,t:z42",35,"g,t",z42,,O,False,salamae
+"IIIa 35:g,z51:-",35,"g,z51",-,,O,True,arizonae
+"II 35:m,t:-",35,"m,t",-,,O,True,salamae
+"IIIb 35:i:e,n,x,z15",35,i,"e,n,x,z15",,O,False,diarizonae
+IIIb 35:i:z,35,i,z,,O,False,diarizonae
+IIIb 35:i:z35,35,i,z35,,O,False,diarizonae
+IIIb 35:i:z53,35,i,z53,,O,False,diarizonae
+"IIIb 35:k:e,n,x,z15",35,k,"e,n,x,z15",,O,False,diarizonae
+IIIb 35:k:z,35,k,z,,O,False,diarizonae
+IIIb 35:(k):z35,35,(k),z35,,O,False,diarizonae
+IIIb 35:k:z53:[z50],35,k,z53,[z50],O,False,diarizonae
+"IIIb 35:l,v:1,5,7",35,"l,v","1,5,7",,O,False,diarizonae
+"IIIb 35:l,v:e,n,x,z15:[z50]",35,"l,v","e,n,x,z15",[z50],O,False,diarizonae
+"IIIb 35:l,v:z35:[z67]",35,"l,v",z35,[z67],O,False,diarizonae
+"II 35:l,z28:-",35,"l,z28",-,,O,True,salamae
+"IIIb 35:r:e,n,x,z15",35,r,"e,n,x,z15",,O,False,diarizonae
+IIIb 35:r:z,35,r,z,,O,False,diarizonae
+IIIb 35:r:z35,35,r,z35,,O,False,diarizonae
+IIIb 35:r:z61,35,r,z61,,O,False,diarizonae
+"IIIa 35:z4,z23:-",35,"z4,z23",-,,O,True,arizonae
+"IIIa 35:z4,z24:-",35,"z4,z24",-,,O,True,arizonae
+"IIIa 35:z4,z32:-",35,"z4,z32",-,,O,True,arizonae
+IIIb 35:z10:z35,35,z10,z35,,O,False,diarizonae
+"II 35:z29:e,n,x",35,z29,"e,n,x",,O,False,salamae
+IIIa 35:z29:-,35,z29,-,,O,True,arizonae
+IIIa 35:z36:-,35,z36,-,,O,True,arizonae
+"IIIb 35:z52:1,5,7",35,z52,"1,5,7",,O,False,diarizonae
+"IIIb 35:z52:e,n,x,z15",35,z52,"e,n,x,z15",,O,False,diarizonae
+IIIb 35:z52:z,35,z52,z,,O,False,diarizonae
+IIIb 35:z52:z35,35,z52,z35,,O,False,diarizonae
+"II 38:b:1,2",38,b,"1,2",,P,False,salamae
+"II 38:d:[1,5]",38,d,"[1,5]",,P,True,salamae
+II 38:d:z39,38,d,z39,,P,False,salamae
+"II 38:g,t:-",38,"g,t",-,,P,True,salamae
+"IIIa 38:g,z51:-",38,"g,z51",-,,P,True,arizonae
+"IV 38:g,z51:-",38,"g,z51",-,,P,True,houtenae
+IIIb 38:i:z,38,i,z,,P,False,diarizonae
+IIIb 38:i:z53,38,i,z53,,P,False,diarizonae
+"IIIb 38:k:e,n,x,z15",38,k,"e,n,x,z15",,P,False,diarizonae
+IIIb 38:k:z,38,k,z,,P,False,diarizonae
+IIIb 38:k:z53,38,k,z53,,P,False,diarizonae
+"IIIb 38:(k):1,5,7",38,(k),"1,5,7",,P,False,diarizonae
+IIIb 38:(k):z35:[z56],38,(k),z35,[z56],P,False,diarizonae
+IIIb 38:(k):-,38,(k),-,,P,True,diarizonae
+IIIb 38:(k):z55,38,(k),z55,,P,False,diarizonae
+"IIIb 38:l,v:z",38,"l,v",z,,P,False,diarizonae
+"IIIb 38:l,v:z35",38,"l,v",z35,,P,False,diarizonae
+"IIIb 38:l,v:[z53]:[z54]",38,"l,v",[z53],[z54],P,True,diarizonae
+"IIIb 38:r:1,5,7",38,r,"1,5,7",,P,False,diarizonae
+"IIIb 38:r:e,n,x,z15",38,r,"e,n,x,z15",,P,False,diarizonae
+IIIb 38:r:z:[z57],38,r,z,[z57],P,False,diarizonae
+IIIb 38:r:z35,38,r,z35,,P,False,diarizonae
+"IIIa 38:z4,z23:-",38,"z4,z23",-,,P,True,arizonae
+"IV 38:z4,z23:-",38,"z4,z23",-,,P,True,houtenae
+IIIb 38:z10:z,38,z10,z,,P,False,diarizonae
+IIIb 38:z10:z53,38,z10,z53,,P,False,diarizonae
+IIIb 38:z52:z35,38,z52,z35,,P,False,diarizonae
+IIIb 38:z52:z53,38,z52,z53,,P,False,diarizonae
+"IIIb 38:z53:-:[z47],[z50],[z76]",38,z53,-,"[z47],[z50],[z76]",P,True,diarizonae
+IIIb 38:z61:[z53],38,z61,[z53],,P,True,diarizonae
+II 39:a:z39,39,a,z39,,Q,False,salamae
+"II 39:c:e,n,x",39,c,"e,n,x",,Q,False,salamae
+"II 39:e,n,x:1,7",39,"e,n,x","1,7",,Q,False,salamae
+"II 39:[g],m,t:[e,n,x]",39,"[g],m,t","[e,n,x]",,Q,True,salamae
+"II 39:l,v:1,5",39,"l,v","1,5",,Q,False,salamae
+"II 39:l,z28:e,n,x",39,"l,z28","e,n,x",,Q,False,salamae
+"II 39:l,z28:z39",39,"l,z28",z39,,Q,False,salamae
+II 39:z10:z6,39,z10,z6,,Q,False,salamae
+"II 39:-:1,7",39,-,"1,7",,Q,False,salamae
+II 40:a:z39,40,a,z39,,R,False,salamae
+II 40:b:-,40,b,-,,R,True,salamae
+"II 1,40:c:e,n,x,z15","1,40",c,"e,n,x,z15",,R,False,salamae
+II 40:c:z6,40,c,z6,,R,False,salamae
+"II 1,40:c:z39","1,40",c,z39,,R,False,salamae
+II 40:d:-,40,d,-,,R,True,salamae
+"II 1,40:e,n,x:1,[5],7","1,40","e,n,x","1,[5],7",,R,False,salamae
+"II 1,40:e,n,x,z15:1,6","1,40","e,n,x,z15","1,6",,R,False,salamae
+"II 1,40:g,[m],[s],[t]:e,n,x","1,40","g,[m],[s],[t]","e,n,x",,R,False,salamae
+"II 1,40:g,[m],[s],t:[1,5]","1,40","g,[m],[s],t","[1,5]",,R,True,salamae
+"II 1,40:g,t:e,n,x,z15","1,40","g,t","e,n,x,z15",,R,False,salamae
+"II 40:g,t:z39",40,"g,t",z39,,R,False,salamae
+"IV 1,40:g,t:-","1,40","g,t",-,,R,True,houtenae
+"II 1,40:g,[m],[s],t:z42","1,40","g,[m],[s],t",z42,,R,False,salamae
+"IIIa 40:g,z51:-",40,"g,z51",-,,R,True,arizonae
+"IIIb 40:g,z51:e,n,x,z15",40,"g,z51","e,n,x,z15",,R,False,diarizonae
+"IV 1,40:g,z51:-","1,40","g,z51",-,,R,True,houtenae
+"II 40:m,t:e,n,x",40,"m,t","e,n,x",,R,False,salamae
+"II 40:m,t:z39",40,"m,t",z39,,R,False,salamae
+"II 1,40:m,t:z42","1,40","m,t",z42,,R,False,salamae
+"IV 40:m,t:-",40,"m,t",-,,R,True,houtenae
+"IIIb 40:i:1,5,7",40,i,"1,5,7",,R,False,diarizonae
+"II 1,40:k:e,n,x,z15","1,40",k,"e,n,x,z15",,R,False,salamae
+IIIb 40:k:z:z57,40,k,z,z57,R,False,diarizonae
+II 40:k:z6,40,k,z6,,R,False,salamae
+IIIb 40:k:z53,40,k,z53,,R,False,diarizonae
+"II 40:l,v:e,n,x",40,"l,v","e,n,x",,R,False,salamae
+"IIIb 40:l,v:z",40,"l,v",z,,R,False,diarizonae
+"IIIb 1,40:l,v:z53","1,40","l,v",z53,,R,False,diarizonae
+"II 40:l,z28:e,n,x",40,"l,z28","e,n,x",,R,False,salamae
+"II 1,40:l,z28:1,5:z42","1,40","l,z28","1,5",z42,R,False,salamae
+"II 1,40:l,z28:z39","1,40","l,z28",z39,,R,False,salamae
+IIIb 40:r:z53,40,r,z53,,R,False,diarizonae
+"II 1,40:z:1,5","1,40",z,"1,5",,R,False,salamae
+"II 1,40:z:z6","1,40",z,z6,,R,False,salamae
+"II 1,40:z:z39","1,40",z,z39,,R,False,salamae
+II 40:z:z42,40,z,z42,,R,False,salamae
+"IIIa 40:z4,z23:-",40,"z4,z23",-,,R,True,arizonae
+"IV 1,40:z4,z23:-","1,40","z4,z23",-,,R,True,houtenae
+"II 40:z4,z24:z39",40,"z4,z24",z39,,R,False,salamae
+"IIIa 40:z4,z24:-",40,"z4,z24",-,,R,True,arizonae
+"IV 1,40:z4,z24:-","1,40","z4,z24",-,,R,True,houtenae
+"IIIa 40:z4,z32:-",40,"z4,z32",-,,R,True,arizonae
+"IV 1,40:z4,z32:-","1,40","z4,z32",-,,R,True,houtenae
+"II 1,40:z6:1,5","1,40",z6,"1,5",,R,False,salamae
+"II 40:z10:e,n,x",40,z10,"e,n,x",,R,False,salamae
+IIIb 40:z10:z35,40,z10,z35,,R,False,diarizonae
+IIIa 40:z29:-,40,z29,-,,R,True,arizonae
+"II 1,40:z35:e,n,x,z15","1,40",z35,"e,n,x,z15",,R,False,salamae
+"V 1,40:z35:-","1,40",z35,-,,R,True,bongori
+IIIa 40:z36:-,40,z36,-,,R,True,arizonae
+"II 1,40:z39:1,5:z42","1,40",z39,"1,5",z42,R,False,salamae
+"II 1,40:z39:1,6","1,40",z39,"1,6",,R,False,salamae
+"IIIb 40:z39:1,6",40,z39,"1,6",,R,False,diarizonae
+"II 40:z39:1,7",40,z39,"1,7",,R,False,salamae
+"II 1,40:z42:1,6","1,40",z42,"1,6",,R,False,salamae
+"II 1,40:[z42]:1,(5),7","1,40",[z42],"1,(5),7",,R,False,salamae
+"II 1,40:z81:z6","1,40",z81,z6,,R,False,salamae
+"V 1,40:z81:-","1,40",z81,-,,R,True,bongori
+"II 41:b:1,5",41,b,"1,5",,S,False,salamae
+"VI 41:b:1,7",41,b,"1,7",,S,False,indica
+"IIIb 41:c:e,n,x,z15",41,c,"e,n,x,z15",,S,False,diarizonae
+II 41:c:z6,41,c,z6,,S,False,salamae
+II 41:d:z6,41,d,z6,,S,False,salamae
+"II 41:g,m,s,t:z6",41,"g,m,s,t",z6,,S,False,salamae
+"II 41:g,t:-",41,"g,t",-,,S,True,salamae
+"IIIa 41:g,z51:-",41,"g,z51",-,,S,True,arizonae
+"II 41:k:1,6",41,k,"1,6",,S,False,salamae
+II 41:k:z6,41,k,z6,,S,False,salamae
+IIIb 41:(k):z35,41,(k),z35,,S,False,diarizonae
+"II 41:l,z13,z28:e,n,x,z15",41,"l,z13,z28","e,n,x,z15",,S,False,salamae
+"II 41:z:1,5",41,z,"1,5",,S,False,salamae
+"IIIa 41:z4,z23:-",41,"z4,z23",-,,S,True,arizonae
+"IV 41:z4,z23:-",41,"z4,z23",-,,S,True,houtenae
+"IIIa 41:z4,z23,z32:-",41,"z4,z23,z32",-,,S,True,arizonae
+"IIIa 41:z4,z24:-",41,"z4,z24",-,,S,True,arizonae
+"IIIa 41:z4,z32:-",41,"z4,z32",-,,S,True,arizonae
+"II 41:z10:1,2",41,z10,"1,2",,S,False,salamae
+"II 41:z10:e,n,x,z15",41,z10,"e,n,x,z15",,S,False,salamae
+II 41:z10:z6,41,z10,z6,,S,False,salamae
+IIIa 41:z29:-,41,z29,-,,S,True,arizonae
+IV 41:z29:-,41,z29,-,,S,True,houtenae
+IIIa 41:z36:-,41,z36,-,,S,True,arizonae
+IV 41:z36:-,41,z36,-,,S,True,houtenae
+IV 41:z52:-,41,z52,-,,S,True,houtenae
+"II 41:-:1,6",41,-,"1,6",,S,False,salamae
+"II 42:b:1,5",42,b,"1,5",,T,False,salamae
+"II 42:b:e,n,x,z15",42,b,"e,n,x,z15",,T,False,salamae
+II 42:b:z6,42,b,z6,,T,False,salamae
+II 42:d:z6,42,d,z6,,T,False,salamae
+"II 42:e,n,x:1,6",42,"e,n,x","1,6",,T,False,salamae
+"II 42:g,t:-",42,"g,t",-,,T,True,salamae
+"IIIa 42:g,z51:-",42,"g,z51",-,,T,True,arizonae
+"IV 1,42:g,z51:-","1,42","g,z51",-,,T,True,houtenae
+"II 42:m,t:[e,n,x,z15]",42,"m,t","[e,n,x,z15]",,T,True,salamae
+"IIIb 42:k:e,n,x,z15",42,k,"e,n,x,z15",,T,False,diarizonae
+IIIb 42:k:z,42,k,z,,T,False,diarizonae
+IIIb 42:(k):z35,42,(k),z35,,T,False,diarizonae
+"IIIb 42:l,v:1,5,7:[z76]",42,"l,v","1,5,7",[z76],T,False,diarizonae
+"II 42:l,v:e,n,x,z15",42,"l,v","e,n,x,z15",,T,False,salamae
+"IIIb 42:l,v:e,n,x,z15",42,"l,v","e,n,x,z15",,T,False,diarizonae
+"IIIb 42:l,v:z",42,"l,v",z,,T,False,diarizonae
+"IIIb 42:l,v:z53",42,"l,v",z53,,T,False,diarizonae
+"II 1,42:l,w:e,n,x","1,42","l,w","e,n,x",,T,False,salamae
+"II 1,42:l,[z13],z28:[z6]","1,42","l,[z13],z28",[z6],,T,True,salamae
+IIIb 42:r:z,42,r,z,,T,False,diarizonae
+IIIb 42:r:z53,42,r,z53,,T,False,diarizonae
+II 42:r:-,42,r,-,,T,True,salamae
+IIIb 42:r:-:[z50],42,r,-,[z50],T,True,diarizonae
+"II 42:z:1,5",42,z,"1,5",,T,False,salamae
+"II 42:z:e,n,x,z15",42,z,"e,n,x,z15",,T,False,salamae
+II 42:z:z6,42,z,z6,,T,False,salamae
+"IIIa 42:z4,z23:-",42,"z4,z23",-,,T,True,arizonae
+"IIIa 42:z4,z24:-",42,"z4,z24",-,,T,True,arizonae
+"IV 1,42:z4,z24:-","1,42","z4,z24",-,,T,True,houtenae
+"II 42:z6:1,6",42,z6,"1,6",,T,False,salamae
+"II 42:z10:1,2",42,z10,"1,2",,T,False,salamae
+"II 42:z10:e,n,x,z15",42,z10,"e,n,x,z15",,T,False,salamae
+"IIIb 42:z10:e,n,x,z15:[z60]",42,z10,"e,n,x,z15",[z60],T,False,diarizonae
+IIIb 42:z10:z,42,z10,z,,T,False,diarizonae
+II 42:z10:z6,42,z10,z6,,T,False,salamae
+IIIb 42:z10:z35,42,z10,z35,,T,False,diarizonae
+IIIb 42:z10:z67,42,z10,z67,,T,False,diarizonae
+II 42:z29:-,42,z29,-,,T,True,salamae
+IV 42:z36:-,42,z36,-,,T,True,houtenae
+IIIb 42:z52:z,42,z52,z,,T,False,diarizonae
+"IIIb 42:z57:1,5",42,z57,"1,5",,T,False,diarizonae
+"II 43:a:1,5",43,a,"1,5",,U,False,salamae
+II 43:a:z6,43,a,z6,,U,False,salamae
+II 43:b:z42,43,b,z42,,U,False,salamae
+"II 43:d:e,n,x,z15",43,d,"e,n,x,z15",,U,False,salamae
+II 43:d:z39,43,d,z39,,U,False,salamae
+II 43:d:z42,43,d,z42,,U,False,salamae
+"II 43:e,n,x,z15:1,(5),7",43,"e,n,x,z15","1,(5),7",,U,False,salamae
+"II 43:e,n,x,z15:1,6",43,"e,n,x,z15","1,6",,U,False,salamae
+"II 43:g,m,[s],t:[z42]",43,"g,m,[s],t",[z42],,U,True,salamae
+"II 43:g,t:[1,5]",43,"g,t","[1,5]",,U,True,salamae
+"IIIb 43:g,t:-",43,"g,t",-,,U,True,diarizonae
+"IIIa 43:g,z51:-",43,"g,z51",-,,U,True,arizonae
+"IV 43:g,z51:-",43,"g,z51",-,,U,True,houtenae
+"II 43:g,z62:e,n,x",43,"g,z62","e,n,x",,U,False,salamae
+IIIb 43:k:z,43,k,z,,U,False,diarizonae
+"IIIb 43:l,v:z53:[z56]",43,"l,v",z53,[z56],U,False,diarizonae
+"II 43:l,z13,z28:1,5",43,"l,z13,z28","1,5",,U,False,salamae
+"IIIb 43:r:e,n,x,z15",43,r,"e,n,x,z15",,U,False,diarizonae
+IIIb 43:r:z,43,r,z,,U,False,diarizonae
+IIIb 43:r:z53,43,r,z53,,U,False,diarizonae
+"II 43:z:1,5",43,z,"1,5",,U,False,salamae
+"II 43:z4,z23:-",43,"z4,z23",-,,U,True,salamae
+"IIIa 43:z4,z23:-",43,"z4,z23",-,,U,True,arizonae
+"IV 43:z4,z23:-",43,"z4,z23",-,,U,True,houtenae
+"IIIa 43:z4,z24:-",43,"z4,z24",-,,U,True,arizonae
+"IV 43:z4,z24:-",43,"z4,z24",-,,U,True,houtenae
+"IV 43:z4,z32:-",43,"z4,z32",-,,U,True,houtenae
+"II 43:z29:e,n,x",43,z29,"e,n,x",,U,False,salamae
+II 43:z29:z42,43,z29,z42,,U,False,salamae
+IIIa 43:z29:-,43,z29,-,,U,True,arizonae
+IV 43:z29:-,43,z29,-,,U,True,houtenae
+IIIa 43:z36:-,43,z36,-,,U,True,arizonae
+"IV 43:z36,z38:-",43,"z36,z38",-,,U,True,houtenae
+"II 43:z42:[1,5,7]",43,z42,"[1,5,7]",,U,True,salamae
+IIIb 43:z52:z53,43,z52,z53,,U,False,diarizonae
+IV 44:a:-,44,a,-,,V,True,houtenae
+"II 1,44:e,n,x:1,6","1,44","e,n,x","1,6",,V,False,salamae
+"II 44:g,t:z42",44,"g,t",z42,,V,False,salamae
+"IIIb 1,44:g,t:1,5:z42","1,44","g,t","1,5",z42,V,False,diarizonae
+"IV 44:g,z51:-",44,"g,z51",-,,V,True,houtenae
+"II 1,44:m,t:z42","1,44","m,t",z42,,V,False,salamae
+V 44:r:-,44,r,-,,V,True,bongori
+"II 44:z4,z23:-",44,"z4,z23",-,,V,True,salamae
+"IIIa 44:z4,z23:-",44,"z4,z23",-,,V,True,arizonae
+"IV 44:z4,z23:-",44,"z4,z23",-,,V,True,houtenae
+"IIIa 44:z4,z23,z32:-",44,"z4,z23,z32",-,,V,True,arizonae
+"IIIa 44:z4,z24:-",44,"z4,z24",-,,V,True,arizonae
+"IV 44:z4,z24:-",44,"z4,z24",-,,V,True,houtenae
+"IIIa 44:z4,z32:-",44,"z4,z32",-,,V,True,arizonae
+"IV 1,44:z4,z32:-","1,44","z4,z32",-,,V,True,houtenae
+"II 44:z29:e,n,x:z42",44,z29,"e,n,x",z42,V,False,salamae
+IV 44:z29:-,44,z29,-,,V,True,houtenae
+"IV 44:z36,[z38]:-",44,"z36,[z38]",-,,V,True,houtenae
+"II 1,44:z39:e,n,x,z15","1,44",z39,"e,n,x,z15",,V,False,salamae
+V 44:z39:-,44,z39,-,,V,True,bongori
+"VI 45:a:e,n,x",45,a,"e,n,x",,W,False,indica
+II 45:a:z10,45,a,z10,,W,False,salamae
+"II 45:g,m,s,t:1,5",45,"g,m,s,t","1,5",,W,False,salamae
+"II 45:g,m,s,t:e,n,x",45,"g,m,s,t","e,n,x",,W,False,salamae
+"II 45:g,m,t:e,n,x,z15",45,"g,m,t","e,n,x,z15",,W,False,salamae
+"IIIa 45:g,z51:-",45,"g,z51",-,,W,True,arizonae
+"IV 45:g,z51:-",45,"g,z51",-,,W,True,houtenae
+"II 45:m,t:1,5",45,"m,t","1,5",,W,False,salamae
+"II 45:z:1,5",45,z,"1,5",,W,False,salamae
+II 45:z:z39,45,z,z39,,W,False,salamae
+"IIIa 45:z4,z23:-",45,"z4,z23",-,,W,True,arizonae
+"IV 45:z4,z23:-",45,"z4,z23",-,,W,True,houtenae
+"IIIa 45:z4,z24:-",45,"z4,z24",-,,W,True,arizonae
+"IIIa 45:z,z:-",45,"z,z",-,,W,True,arizonae
+"II 45:z29:1,5",45,z29,"1,5",,W,False,salamae
+"II 45:z29:e,n,x",45,z29,"e,n,x",,W,False,salamae
+II 45:z29:z42,45,z29,z42,,W,False,salamae
+IIIa 45:z29:-,45,z29,-,,W,True,arizonae
+IIIa 45:z36:-,45,z36,-,,W,True,arizonae
+"IV 45:z36,z38:-",45,"z36,z38",-,,W,True,houtenae
+"II 47:a:1,5",47,a,"1,5",,X,False,salamae
+"II 47:a:e,n,x,z15",47,a,"e,n,x,z15",,X,False,salamae
+"II 47:b:1,5",47,b,"1,5",,X,False,salamae
+"II 47:b:e,n,x,z15",47,b,"e,n,x,z15",,X,False,salamae
+II 47:b:z6,47,b,z6,,X,False,salamae
+"IIIb 47:c:1,5,7",47,c,"1,5,7",,X,False,diarizonae
+"IIIb 47:c:e,n,x,z15:[z57]",47,c,"e,n,x,z15",[z57],X,False,diarizonae
+IIIb 47:c:z,47,c,z,,X,False,diarizonae
+IIIb 47:c:z35,47,c,z35,,X,False,diarizonae
+"II 47:d:1,5",47,d,"1,5",,X,False,salamae
+"II 47:d:e,n,x,z15",47,d,"e,n,x,z15",,X,False,salamae
+II 47:d:z39,47,d,z39,,X,False,salamae
+"II 47:e,n,x,z15:1,6",47,"e,n,x,z15","1,6",,X,False,salamae
+"II 47:[g,t]:e,n,x",47,"[g,t]","e,n,x",,X,False,salamae
+"IIIa 47:g,z51:-",47,"g,z51",-,,X,True,arizonae
+"IIIb 47:i:e,n,x,z15:[z50]",47,i,"e,n,x,z15",[z50],X,False,diarizonae
+IIIb 47:i:z,47,i,z,,X,False,diarizonae
+IIIb 47:i:z35,47,i,z35,,X,False,diarizonae
+"IIIb 47:i:z53:[z57],[z84]",47,i,z53,"[z57],[z84]",X,False,diarizonae
+"IIIb 47:k:1,5,7",47,k,"1,5,7",,X,False,diarizonae
+"IIIb 47:k:e,n,x,z15",47,k,"e,n,x,z15",,X,False,diarizonae
+IIIb 47:k:z,47,k,z,,X,False,diarizonae
+IIIb 47:k:z35,47,k,z35,,X,False,diarizonae
+IIIb 47:k:z53:[z84],47,k,z53,[z84],X,False,diarizonae
+"IIIb 47:l,v:1,[5],7:[z50]",47,"l,v","1,[5],7",[z50],X,False,diarizonae
+"IIIb 47:l,v:e,n,x,z15",47,"l,v","e,n,x,z15",,X,False,diarizonae
+"IIIb 47:l,v:z",47,"l,v",z,,X,False,diarizonae
+"IIIb 47:l,v:z35",47,"l,v",z35,,X,False,diarizonae
+"IIIb 47:l,v:z53",47,"l,v",z53,,X,False,diarizonae
+"IIIb 47:l,v:z57",47,"l,v",z57,,X,False,diarizonae
+"IV 47:l,v:-",47,"l,v",-,,X,True,houtenae
+"IIIb 47:r:e,n,x,z15",47,r,"e,n,x,z15",,X,False,diarizonae
+"IIIb 47:r:1,5,7",47,r,"1,5,7",,X,False,diarizonae
+IIIb 47:r:z,47,r,z,,X,False,diarizonae
+"IIIb 47:r,[i]:z35",47,"r,[i]",z35,,X,False,diarizonae
+"IIIb 47:r:z53:[z70],[z74],[z77],[z90]",47,r,z53,"[z70],[z74],[z77],[z90]",X,False,diarizonae
+"II 47:z:e,n,x,z15",47,z,"e,n,x,z15",,X,False,salamae
+II 47:z:z6,47,z,z6,,X,False,salamae
+"IIIa 47:z4,z23:-",47,"z4,z23",-,,X,True,arizonae
+"II 47:z6:1,6",47,z6,"1,6",,X,False,salamae
+"IIIb 47:z10:1,5,7",47,z10,"1,5,7",,X,False,diarizonae
+IIIb 47:z10:z,47,z10,z,,X,False,diarizonae
+IIIb 47:z10:z35,47,z10,z35,,X,False,diarizonae
+"II 47:z29:e,n,x,z15",47,z29,"e,n,x,z15",,X,False,salamae
+IIIa 47:z29:-,47,z29,-,,X,True,arizonae
+IV 47:z36:-,47,z36,-,,X,True,houtenae
+"IIIb 47:z52:1,5:z54",47,z52,"1,5",z54,X,False,diarizonae
+"IIIb 47:z52:1,5,7",47,z52,"1,5,7",,X,False,diarizonae
+"IIIb 47:z52:e,n,x,z15",47,z52,"e,n,x,z15",,X,False,diarizonae
+IIIb 47:z52:z,47,z52,z,,X,False,diarizonae
+IIIb 47:z52:z35,47,z52,z35,,X,False,diarizonae
+IIIb 47:z53:-:[z90],47,z53,-,[z90],X,True,diarizonae
+II 48:a:z6,48,a,z6,,Y,False,salamae
+II 48:a:z39,48,a,z39,,Y,False,salamae
+II 48:b:z6,48,b,z6,,Y,False,salamae
+"II 48:b:e,n,x,z15",48,b,"e,n,x,z15",,Y,False,salamae
+V 48:b:-,48,b,-,,Y,True,bongori
+IIIb 48:c:z,48,c,z,,Y,False,diarizonae
+"II 48:d:1,2",48,d,"1,2",,Y,False,salamae
+II 48:d:z6,48,d,z6,,Y,False,salamae
+"II 48:e,n,x,z15:z6",48,"e,n,x,z15",z6,,Y,False,salamae
+"II 48:g,m,t:-",48,"g,m,t",-,,Y,True,salamae
+"IIIa 48:g,z51:-",48,"g,z51",-,,Y,True,arizonae
+"IV 48:g,z51:-",48,"g,z51",-,,Y,True,houtenae
+IIIb 48:i:z:[z72],48,i,z,[z72],Y,False,diarizonae
+IIIb 48:i:z35:[z57],48,i,z35,[z57],Y,False,diarizonae
+IIIb 48:i:z53,48,i,z53,,Y,False,diarizonae
+IIIb 48:i:z61,48,i,z61,,Y,False,diarizonae
+V 48:i:-,48,i,-,,Y,True,bongori
+"IIIb 48:k:1,5,(7)",48,k,"1,5,(7)",,Y,False,diarizonae
+"II 48:k:e,n,x,z15",48,k,"e,n,x,z15",,Y,False,salamae
+"IIIb 48:k:e,n,x,z15",48,k,"e,n,x,z15",,Y,False,diarizonae
+IIIb 48:k:z,48,k,z,,Y,False,diarizonae
+IIIb 48:k:z35:[z75],48,k,z35,[z75],Y,False,diarizonae
+II 48:k:z39,48,k,z39,,Y,False,salamae
+IIIb 48:k:z53,48,k,z53,,Y,False,diarizonae
+"IIIb 48:l,v:1,5,(7):[z47],[z50],[z89]",48,"l,v","1,5,(7)","[z47],[z50],[z89]",Y,False,diarizonae
+"IIIb 48:l,v:z",48,"l,v",z,,Y,False,diarizonae
+"IIIb 48:l,w:1,5,7:[z50]",48,"l,w","1,5,7",[z50],Y,False,diarizonae
+"IIIb 48:r:e,n,x,z15",48,r,"e,n,x,z15",,Y,False,diarizonae
+IIIb 48:r:z,48,r,z,,Y,False,diarizonae
+"II 48:z:1,5",48,z,"1,5",,Y,False,salamae
+"IIIb 48:z:1,5,7",48,z,"1,5,7",,Y,False,diarizonae
+"IIIa 48:z4,z23:-",48,"z4,z23",-,,Y,True,arizonae
+"IV 48:z4,z23:-",48,"z4,z23",-,,Y,True,houtenae
+"IIIa 48:z4,z23,z32:-",48,"z4,z23,z32",-,,Y,True,arizonae
+"IIIa 48:z4,z24:-",48,"z4,z24",-,,Y,True,arizonae
+"IIIb 48:z4,z24:-",48,"z4,z24",-,,Y,True,diarizonae
+"IIIa 48:z4,z32:-",48,"z4,z32",-,,Y,True,arizonae
+"IV 48:z4,z32:-",48,"z4,z32",-,,Y,True,houtenae
+"II 48:z10:[1,5]",48,z10,"[1,5]",,Y,True,salamae
+"VI 48:z10:1,5",48,z10,"1,5",,Y,False,indica
+"II 48:z10:1,6",48,z10,"1,6",,Y,False,salamae
+"IIIb 48:z10:e,n,x,z15",48,z10,"e,n,x,z15",,Y,False,diarizonae
+IIIb 48:z10:z,48,z10,z,,Y,False,diarizonae
+II 48:z29:-,48,z29,-,,Y,True,salamae
+IIIa 48:z29:-,48,z29,-,,Y,True,arizonae
+IV 48:z29:-,48,z29,-,,Y,True,houtenae
+IIIb 48:z35:z52,48,z35,z52,,Y,False,diarizonae
+V 48:z35:-,48,z35,-,,Y,True,bongori
+IIIa 48:z36:-,48,z36,-,,Y,True,arizonae
+"IV 48:z36,[z38]:-",48,"z36,[z38]",-,,Y,True,houtenae
+II 48:z39:z81,48,z39,z81,,Y,False,salamae
+V 48:z39:-,48,z39,-,,Y,True,bongori
+V 48:z41:-,48,z41,-,,Y,True,bongori
+"IIIb 48:z52:e,n,x,z15",48,z52,"e,n,x,z15",,Y,False,diarizonae
+IIIb 48:z52:z,48,z52,z,,Y,False,diarizonae
+V 48:z65:-,48,z65,-,,Y,True,bongori
+V 48:z81:-,48,z81,-,,Y,True,bongori
+IV 50:a:-,50,a,-,,Z,True,houtenae
+II 50:b:z6,50,b,z6,,Z,False,salamae
+IV 50:b:-,50,b,-,,Z,True,houtenae
+IV 50:d:-,50,d,-,,Z,True,houtenae
+"II 50:e,n,x:1,7",50,"e,n,x","1,7",,Z,False,salamae
+"II 50:g,[m],s,t:[1,5]",50,"g,[m],s,t","[1,5]",,Z,True,salamae
+"IIIa 50:g,z51:-",50,"g,z51",-,,Z,True,arizonae
+"IV 50:g,z51:-",50,"g,z51",-,,Z,True,houtenae
+"II 50:g,z62:e,n,x",50,"g,z62","e,n,x",,Z,False,salamae
+"II 50:m,t:z6:z42",50,"m,t",z6,z42,Z,False,salamae
+"IIIb 50:i:1,5,7",50,i,"1,5,7",,Z,False,diarizonae
+"IIIb 50:i:e,n,x,z15",50,i,"e,n,x,z15",,Z,False,diarizonae
+IIIb 50:i:z,50,i,z,,Z,False,diarizonae
+IIIb 50:i:z53,50,i,z53,,Z,False,diarizonae
+"IIIb 50:k:1,5,7",50,k,"1,5,7",,Z,False,diarizonae
+"II 50:k:e,n,x:z42",50,k,"e,n,x",z42,Z,False,salamae
+"IIIb 50:k:e,n,x,z15",50,k,"e,n,x,z15",,Z,False,diarizonae
+"IIIb 50:k:z:[z50],[z57],[z68],[z86]",50,k,z,"[z50],[z57],[z68],[z86]",Z,False,diarizonae
+II 50:k:z6,50,k,z6,,Z,False,salamae
+IIIb 50:k:z35,50,k,z35,,Z,False,diarizonae
+IIIb 50:k:z53,50,k,z53,,Z,False,diarizonae
+"IIIb 50:l,v:e,n,x,z15",50,"l,v","e,n,x,z15",,Z,False,diarizonae
+"IIIb 50:l,v:z",50,"l,v",z,,Z,False,diarizonae
+"IIIb 50:l,v:z35",50,"l,v",z35,,Z,False,diarizonae
+"IIIb 50:l,v:z57",50,"l,v",z57,,Z,False,diarizonae
+"VI 50:l,v:z67",50,"l,v",z67,,Z,False,indica
+"II 50:l,w:e,n,x,z15:z42",50,"l,w","e,n,x,z15",z42,Z,False,salamae
+"II 50:l,z28:z42",50,"l,z28",z42,,Z,False,salamae
+"IIIb 50:r:1,5,(7)",50,r,"1,5,(7)",,Z,False,diarizonae
+"IIIb 50:r:e,n,x,z15",50,r,"e,n,x,z15",,Z,False,diarizonae
+IIIb 50:r:z:[z67],50,r,z,[z67],Z,False,diarizonae
+IIIb 50:r:z35:[z58],50,r,z35,[z58],Z,False,diarizonae
+IIIb 50:r:z53,50,r,z53,,Z,False,diarizonae
+"II 50:z:e,n,x",50,z,"e,n,x",,Z,False,salamae
+IIIb 50:z:z52,50,z,z52,,Z,False,diarizonae
+"IIIa 50:z4,z23:-",50,"z4,z23",-,,Z,True,arizonae
+"IV 50:z4,z23:-",50,"z4,z23",-,,Z,True,houtenae
+"IIIa 50:z4,z23,z32:-",50,"z4,z23,z32",-,,Z,True,arizonae
+"IIIa 50:z4,z24:-",50,"z4,z24",-,,Z,True,arizonae
+"IV 50:z4,z24:-",50,"z4,z24",-,,Z,True,houtenae
+"IIIa 50:z4,z32:-",50,"z4,z32",-,,Z,True,arizonae
+"IV 50:z4,z32:-",50,"z4,z32",-,,Z,True,houtenae
+IIIb 50:z10:z:[z56],50,z10,z,[z56],Z,False,diarizonae
+II 50:z10:z6:z42,50,z10,z6,z42,Z,False,salamae
+IIIb 50:z10:z53,50,z10,z53,,Z,False,diarizonae
+IIIa 50:z29:-,50,z29,-,,Z,True,arizonae
+IIIa 50:z36:-,50,z36,-,,Z,True,arizonae
+"II 50:z42:1,7",50,z42,"1,7",,Z,False,salamae
+"IIIb 50:z52:1,5,7",50,z52,"1,5,7",,Z,False,diarizonae
+IIIb 50:z52:z35,50,z52,z35,,Z,False,diarizonae
+IIIb 50:z52:z53,50,z52,z53,,Z,False,diarizonae
+IV 51:a:-,51,a,-,,O51,True,houtenae
+IV 51:b:-,51,b,-,,O51,True,houtenae
+II 51:c:-,51,c,-,,O51,True,salamae
+"II 51:g,s,t:e,n,x",51,"g,s,t","e,n,x",,O51,False,salamae
+"IIIa 51:g,z51:-",51,"g,z51",-,,O51,True,arizonae
+IIIb 51:k:z35,51,k,z35,,O51,False,diarizonae
+"IIIb 51:l,v:z",51,"l,v",z,,O51,False,diarizonae
+"II 51:l,z28:z6",51,"l,z28",z6,,O51,False,salamae
+"II 51:l,z28:z39",51,"l,z28",z39,,O51,False,salamae
+"IIIa 51:z4,z23:-",51,"z4,z23",-,,O51,True,arizonae
+"IV 51:z4,z23:-",51,"z4,z23",-,,O51,True,houtenae
+"IIIa 51:z4,z24:-",51,"z4,z24",-,,O51,True,arizonae
+"IIIa 51:z4,z32:-",51,"z4,z32",-,,O51,True,arizonae
+"II 51:z29:e,n,x,z15",51,z29,"e,n,x,z15",,O51,False,salamae
+"II 51:-:1,7",51,-,"1,7",,O51,False,salamae
+II 52:c:k,52,c,k,,O52,False,salamae
+"II 52:d:e,n,x,z15",52,d,"e,n,x,z15",,O52,False,salamae
+II 52:d:z39,52,d,z39,,O52,False,salamae
+"II 52:g,t:-",52,"g,t",-,,O52,True,salamae
+"IIIb 52:k:e,n,x,z15",52,k,"e,n,x,z15",,O52,False,diarizonae
+IIIb 52:k:z35,52,k,z35,,O52,False,diarizonae
+IIIb 52:k:z53,52,k,z53,,O52,False,diarizonae
+"IIIb 52:l,v:z53",52,"l,v",z53,,O52,False,diarizonae
+II 52:z:z39,52,z,z39,,O52,False,salamae
+IIIb 52:z:z52,52,z,z52,,O52,False,diarizonae
+"II 52:z39:1,5,7",52,z39,"1,5,7",,O52,False,salamae
+"II 52:z44:1,5,7",52,z44,"1,5,7",,O52,False,salamae
+"II 53:c:1,5:[R1...]",53,c,"1,5",[R1...],O53,False,salamae
+"II 53:d:1,5",53,d,"1,5",,O53,False,salamae
+"II 1,53:d:z39","1,53",d,z39,,O53,False,salamae
+II 53:d:z42,53,d,z42,,O53,False,salamae
+"IIIa 53:g,z51:-",53,"g,z51",-,,O53,True,arizonae
+"IV 1,53:g,z51:-","1,53","g,z51",-,,O53,True,houtenae
+IIIb 53:i:z,53,i,z,,O53,False,diarizonae
+"IIIb 53:k:e,n,x,z15",53,k,"e,n,x,z15",,O53,False,diarizonae
+IIIb 53:k:z,53,k,z,,O53,False,diarizonae
+IIIb 53:(k):z35,53,(k),z35,,O53,False,diarizonae
+IIIb 53:k:z53,53,k,z53,,O53,False,diarizonae
+"IIIb 53:l,v:e,n,x,z15",53,"l,v","e,n,x,z15",,O53,False,diarizonae
+"IIIb 53:l,v:z",53,"l,v",z,,O53,False,diarizonae
+"IIIb 53:l,v:z35",53,"l,v",z35,,O53,False,diarizonae
+"II 53:l,z28:e,n,x",53,"l,z28","e,n,x",,O53,False,salamae
+"II 53:l,z28:z6",53,"l,z28",z6,,O53,False,salamae
+"II 53:l,z28:z39",53,"l,z28",z39,,O53,False,salamae
+IIIb 53:r:z,53,r,z,,O53,False,diarizonae
+IIIb 53:r:z35,53,r,z35,,O53,False,diarizonae
+IIIb 53:r:z68,53,r,z68,,O53,False,diarizonae
+"II 53:z:1,5",53,z,"1,5",,O53,False,salamae
+"IIIb 53:z:1,5,(7)",53,z,"1,5,(7)",,O53,False,diarizonae
+II 53:z:z6,53,z,z6,,O53,False,salamae
+"IIIa 53:z4,z23:-",53,"z4,z23",-,,O53,True,arizonae
+"IV 53:z4,z23:-",53,"z4,z23",-,,O53,True,houtenae
+"IIIa 53:z4,z23,z32:-",53,"z4,z23,z32",-,,O53,True,arizonae
+"II 53:z4,z24:-",53,"z4,z24",-,,O53,True,salamae
+"IIIa 53:z4,z24:-",53,"z4,z24",-,,O53,True,arizonae
+IIIb 53:z10:z,53,z10,z,,O53,False,diarizonae
+IIIb 53:z10:z35,53,z10,z35,,O53,False,diarizonae
+IIIa 53:z29:-,53,z29,-,,O53,True,arizonae
+"IV 1,53:z36,z38:-","1,53","z36,z38",-,,O53,True,houtenae
+IIIb 53:z52:z35,53,z52,z35,,O53,False,diarizonae
+IIIb 53:z52:z53,53,z52,z53,,O53,False,diarizonae
+II 55:k:z39,55,k,z39,,O55,False,salamae
+"II 56:b:[1,5]",56,b,"[1,5]",,O56,True,salamae
+II 56:d:-,56,d,-,,O56,True,salamae
+"II 56:e,n,x:1,7",56,"e,n,x","1,7",,O56,False,salamae
+"II 56:l,v:z39",56,"l,v",z39,,O56,False,salamae
+"II 56:l,z28:-",56,"l,z28",-,,O56,True,salamae
+II 56:z:z6,56,z,z6,,O56,False,salamae
+"IIIa 56:z4,z23:-",56,"z4,z23",-,,O56,True,arizonae
+"IIIa 56:z4,z23,z32:-",56,"z4,z23,z32",-,,O56,True,arizonae
+"II 56:z10:e,n,x",56,z10,"e,n,x",,O56,False,salamae
+IIIa 56:z29:-,56,z29,-,,O56,True,arizonae
+II 57:a:z6:z42,57,a,z6,z42,O57,False,salamae
+"IIIb 57:c:e,n,x,z15",57,c,"e,n,x,z15",,O57,False,diarizonae
+"IIIb 57:c:z:[z70],[z90]",57,c,z,"[z70],[z90]",O57,False,diarizonae
+"II 57:d:1,5",57,d,"1,5",,O57,False,salamae
+"II 57:g,[m],s,t:z42",57,"g,[m],s,t",z42,,O57,False,salamae
+"II 57:g,t:-",57,"g,t",-,,O57,True,salamae
+"IIIb 57:i:e,n,x,z15",57,i,"e,n,x,z15",,O57,False,diarizonae
+IIIb 57:i:z,57,i,z,,O57,False,diarizonae
+"IIIb 57:k:e,n,x,z15",57,k,"e,n,x,z15",,O57,False,diarizonae
+"IV 57:z4,z23:-",57,"z4,z23",-,,O57,True,houtenae
+IIIb 57:z10:z,57,z10,z,,O57,False,diarizonae
+II 57:z29:z42,57,z29,z42,,O57,False,salamae
+"II 57:z39:e,n,x,z15",57,z39,"e,n,x,z15",,O57,False,salamae
+"II 57:z42:1,6:z53",57,z42,"1,6",z53,O57,False,salamae
+II 58:a:z6,58,a,z6,,O58,False,salamae
+"II 58:b:1,5",58,b,"1,5",,O58,False,salamae
+II 58:c:z6,58,c,z6,,O58,False,salamae
+II 58:d:z6,58,d,z6,,O58,False,salamae
+"IIIb 58:i:e,n,x,z15",58,i,"e,n,x,z15",,O58,False,diarizonae
+IIIb 58:i:z53,58,i,z53,,O58,False,diarizonae
+IIIb 58:k:z,58,k,z,,O58,False,diarizonae
+"IIIb 58:l,v:e,n,x,z15",58,"l,v","e,n,x,z15",,O58,False,diarizonae
+"IIIb 58:l,v:z35",58,"l,v",z35,,O58,False,diarizonae
+"II 58:l,z13,z28:1,5",58,"l,z13,z28","1,5",,O58,False,salamae
+"II 58:l,z13,z28:z6",58,"l,z13,z28",z6,,O58,False,salamae
+"IIIb 58:r:e,n,x,z15",58,r,"e,n,x,z15",,O58,False,diarizonae
+IIIb 58:r:z,58,r,z,,O58,False,diarizonae
+"IIIb 58:r:z53:[z47],[z57],[z70],[z73]",58,r,z53,"[z47],[z57],[z70],[z73]",O58,False,diarizonae
+"II 58:z6:1,6",58,z6,"1,6",,O58,False,salamae
+"II 58:z10:1,6",58,z10,"1,6",,O58,False,salamae
+"IIIb 58:z10:e,n,x,z15",58,z10,"e,n,x,z15",,O58,False,diarizonae
+II 58:z10:z6,58,z10,z6,,O58,False,salamae
+IIIb 58:z10:z53:[z50],58,z10,z53,[z50],O58,False,diarizonae
+"II 58:z39:e,n,x,z15",58,z39,"e,n,x,z15",,O58,False,salamae
+IIIb 58:z52:z,58,z52,z,,O58,False,diarizonae
+IIIb 58:z52:z35,58,z52,z35,,O58,False,diarizonae
+"IIIb 59:c:e,n,x,z15",59,c,"e,n,x,z15",,O59,False,diarizonae
+"IIIb 59:i:e,n,x,z15",59,i,"e,n,x,z15",,O59,False,diarizonae
+IIIb 59:i:z,59,i,z,,O59,False,diarizonae
+IIIb 59:i:z35:[z84],59,i,z35,[z84],O59,False,diarizonae
+"IIIb 59:(k):e,n,x,z15",59,(k),"e,n,x,z15",,O59,False,diarizonae
+II 59:k:z65,59,k,z65,,O59,False,salamae
+IIIb 59:(k):z,59,(k),z,,O59,False,diarizonae
+IIIb 59:(k):z35,59,(k),z35,,O59,False,diarizonae
+IIIb 59:k:z53,59,k,z53,,O59,False,diarizonae
+"IIIb 59:l,v:z",59,"l,v",z,,O59,False,diarizonae
+"IIIb 59:l,v:z53",59,"l,v",z53,,O59,False,diarizonae
+IIIb 59:r:z35,59,r,z35,,O59,False,diarizonae
+"II 1,59:z:z6","1,59",z,z6,,O59,False,salamae
+"IIIa 59:z4,z23:-",59,"z4,z23",-,,O59,True,arizonae
+IIIb 59:z10:z53,59,z10,z53,,O59,False,diarizonae
+IIIb 59:z10:z57,59,z10,z57,,O59,False,diarizonae
+IIIa 59:z29:-,59,z29,-,,O59,True,arizonae
+IIIa 59:z36:-,59,z36,-,,O59,True,arizonae
+VI 59:z36:-,59,z36,-,,O59,True,indica
+IIIb 59:z52:z53,59,z52,z53,,O59,False,diarizonae
+II 60:b:-:[R1...],60,b,-,[R1...],O60,True,salamae
+"II 60:g,m,t:z6",60,"g,m,t",z6,,O60,False,salamae
+"IIIb 60:i:[e,n,x,z15]:[z50]",60,i,"[e,n,x,z15]",[z50],O60,True,diarizonae
+IIIb 60:i:[z]:[z50],60,i,[z],[z50],O60,True,diarizonae
+IIIb 60:i:[z35]:[z50],60,i,[z35],[z50],O60,True,diarizonae
+IIIb 60:k:z,60,k,z,,O60,False,diarizonae
+IIIb 60:k:z35,60,k,z35,,O60,False,diarizonae
+IIIb 60:(k):z53,60,(k),z53,,O60,False,diarizonae
+"IIIb 60:l,v:z",60,"l,v",z,,O60,False,diarizonae
+"IIIb 60:r:e,n,x,z15",60,r,"e,n,x,z15",,O60,False,diarizonae
+IIIb 60:r:z,60,r,z,,O60,False,diarizonae
+IIIb 60:r:z35,60,r,z35,,O60,False,diarizonae
+IIIb 60:r:z53,60,r,z53,,O60,False,diarizonae
+"II 60:z:e,n,x",60,z,"e,n,x",,O60,False,salamae
+IIIb 60:z10:z,60,z10,z,,O60,False,diarizonae
+IIIb 60:z10:z35,60,z10,z35,,O60,False,diarizonae
+IIIb 60:z10:z53,60,z10,z53,,O60,False,diarizonae
+"II 60:z29:e,n,x",60,z29,"e,n,x",,O60,False,salamae
+V 60:z41:-,60,z41,-,,O60,True,bongori
+"IIIb 60:z52:1,5,[7]",60,z52,"1,5,[7]",,O60,False,diarizonae
+IIIb 60:z52:z,60,z52,z,,O60,False,diarizonae
+IIIb 60:z52:z35,60,z52,z35,,O60,False,diarizonae
+IIIb 60:z52:z53,60,z52,z53,,O60,False,diarizonae
+"IIIb 61:c:1,5,(7)",61,c,"1,5,(7)",,O61,False,diarizonae
+IIIb 61:c:z35,61,c,z35,,O61,False,diarizonae
+"IIIb 61:i:e,n,x,z15",61,i,"e,n,x,z15",,O61,False,diarizonae
+IIIb 61:i:z,61,i,z,,O61,False,diarizonae
+IIIb 61:i:z35,61,i,z35,,O61,False,diarizonae
+IIIb 61:i:z53,61,i,z53,,O61,False,diarizonae
+"IIIb 61:k:1,5,(7)",61,k,"1,5,(7)",,O61,False,diarizonae
+IIIb 61:k:z35,61,k,z35,,O61,False,diarizonae
+IIIb 61:(k):z53,61,(k),z53,,O61,False,diarizonae
+"IIIb 61:l,v:1,5,7:[z57]",61,"l,v","1,5,7",[z57],O61,False,diarizonae
+"IIIb 61:l,v:z",61,"l,v",z,,O61,False,diarizonae
+"IIIb 61:l,v:z35",61,"l,v",z35,,O61,False,diarizonae
+"IIIb 61:r:1,5,7",61,r,"1,5,7",,O61,False,diarizonae
+IIIb 61:r:z,61,r,z,,O61,False,diarizonae
+IIIb 61:r:z35,61,r,z35,,O61,False,diarizonae
+"IIIb 61:r:z53:[z47],[z50]",61,r,z53,"[z47],[z50]",O61,False,diarizonae
+IIIb 61:z10:z35,61,z10,z35,,O61,False,diarizonae
+V 61:z35:-,61,z35,-,,O61,True,bongori
+"IIIb 61:z52:1,5,7",61,z52,"1,5,7",,O61,False,diarizonae
+IIIb 61:z52:z,61,z52,z,,O61,False,diarizonae
+IIIb 61:z52:z35,61,z52,z35,,O61,False,diarizonae
+IIIb 61:z52:z53,61,z52,z53,,O61,False,diarizonae
+"IIIa 62:g,z51:-",62,"g,z51",-,,O62,True,arizonae
+"IIIa 62:z4,z23:-",62,"z4,z23",-,,O62,True,arizonae
+"IIIa 62:z4,z32:-",62,"z4,z32",-,,O62,True,arizonae
+IIIa 62:z29:-,62,z29,-,,O62,True,arizonae
+IIIa 62:z36:-,62,z36,-,,O62,True,arizonae
+"IIIa 63:g,z51:-",63,"g,z51",-,,O63,True,arizonae
+IIIb 63:(k):z,63,(k),z,,O63,False,diarizonae
+"IIIa 63:z4,z23:-",63,"z4,z23",-,,O63,True,arizonae
+"IIIa 63:z4,z32:-",63,"z4,z32",-,,O63,True,arizonae
+IIIa 63:z36:-,63,z36,-,,O63,True,arizonae
+"IIIb 65:c:1,5,7",65,c,"1,5,7",,O65,False,diarizonae
+IIIb 65:c:z,65,c,z,,O65,False,diarizonae
+IIIb 65:c:z53,65,c,z53,,O65,False,diarizonae
+"II 65:g,t:-",65,"g,t",-,,O65,True,salamae
+"IIIb 65:i:e,n,x,z15",65,i,"e,n,x,z15",,O65,False,diarizonae
+IIIb 65:i:z,65,i,z,,O65,False,diarizonae
+IIIb 65:(k):z,65,(k),z,,O65,False,diarizonae
+IIIb 65:(k):z35,65,(k),z35,,O65,False,diarizonae
+IIIb 65:(k):z53,65,(k),z53,,O65,False,diarizonae
+"IIIb 65:l,v:e,n,x,z15",65,"l,v","e,n,x,z15",,O65,False,diarizonae
+"IIIb 65:l,v:z",65,"l,v",z,,O65,False,diarizonae
+"IIIb 65:l,v:z35",65,"l,v",z35,,O65,False,diarizonae
+"IIIb 65:l,v:z53",65,"l,v",z53,,O65,False,diarizonae
+IIIb 65:r:z35,65,r,z35,,O65,False,diarizonae
+"IIIb 65:z10:e,n,x,z15",65,z10,"e,n,x,z15",,O65,False,diarizonae
+IIIb 65:z10:z,65,z10,z,,O65,False,diarizonae
+"IIIb 65:z52:e,n,x,z15",65,z52,"e,n,x,z15",,O65,False,diarizonae
+IIIb 65:z52:z,65,z52,z,,O65,False,diarizonae
+IIIb 65:z52:z35,65,z52,z35,,O65,False,diarizonae
+IIIb 65:z52:z53,65,z52,z53,,O65,False,diarizonae
+"II 65:-:1,6",65,-,"1,6",,O65,False,salamae
+V 66:z35:-,66,z35,-,,O66,True,bongori
+V 66:z39:-,66,z39,-,,O66,True,bongori
+V 66:z41:-,66,z41,-,,O66,True,bongori
+V 66:z65:-,66,z65,-,,O66,True,bongori
+V 66:z81:-,66,z81,-,,O66,True,bongori
