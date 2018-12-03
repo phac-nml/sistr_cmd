@@ -1,3 +1,2670 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a2ffa704a93582d7b3e2c5df8ca02dde1af769718a1cc289b80bf682e3f76cc
-size 120411
+Serovar,O_antigen,H1,H2,H_other,Serogroup,can_h2_be_missing,subspecies
+Paratyphi A,"1,2,12",a,"1,5",,A,TRUE,enterica
+Nitra,"2,12","g,m",-,,A,TRUE,enterica
+Kiel,"1,2,12","g,p",-,,A,TRUE,enterica
+Koessen,"2,12","l,v","1,5",,A,FALSE,enterica
+Abortusequi,"4,12",-,"e,n,x",,B,FALSE,enterica
+Fulica,"4,[5],12",a,-,,B,TRUE,enterica
+Kisangani,"1,4,[5],12",a,"1,2",,B,FALSE,enterica
+Hessarek,"4,12,[27]",a,"1,5",,B,FALSE,enterica
+Arechavaleta,"4,[5],12",a,"1,7",,B,FALSE,enterica
+Bispebjerg,"1,4,[5],12",a,"e,n,x",,B,FALSE,enterica
+"II 1,4,[5],12,[27]:a:e,n,x","1,4,[5],12,[27]",a,"e,n,x",,B,FALSE,salamae
+Tinda,"1,4,12,27",a,"e,n,z15",,B,FALSE,enterica
+Huettwilen,"1,4,12",a,"l,w",,B,FALSE,enterica
+"II 1,4,12,[27]:a:z39","1,4,12,[27]",a,z39,,B,FALSE,salamae
+II 4:a:z39,"1,4,12,[27]",a,z39,,B,FALSE,salamae
+Nakuru,"1,4,12,27",a,z6,,B,FALSE,enterica
+"I 1,4,[5],12:b:-","1,4,[5],12",b,-,,B,TRUE,enterica
+"II 1,4,12,[27]:b:[e,n,x]","1,4,12,[27]",b,-,,B,TRUE,salamae
+Paratyphi B,"1,4,[5],12",b,"1,2","[z5],[z33]",B,FALSE,enterica
+Paratyphi B var. Java,"1,4,[5],12",b,"1,2","[z5],[z33]",B,FALSE,enterica
+"II 4,12:b:1,5","4,12",b,"1,5",,B,FALSE,salamae
+Limete,"1,4,12,[27]",b,"1,5",,B,FALSE,enterica
+Canada,"4,12,[27]",b,"1,6",,B,FALSE,enterica
+Uppsala,"1,4,12,27",b,"1,7",,B,FALSE,enterica
+Abony,"1,4,[5],12,[27]",b,"e,n,x",,B,FALSE,enterica
+"II 1,4,[5],12,[27]:b:[e,n,x]","1,4,[5],12,[27]",b,"e,n,x",,B,TRUE,salamae
+Wagenia,"1,4,12,27",b,"e,n,z15",,B,FALSE,enterica
+Wien,"1,4,12,[27]",b,"l,w",,B,FALSE,enterica
+Tripoli,"1,4,12,27",b,z6,,B,FALSE,enterica
+Legon,"1,4,12,[27]",c,"1,5",,B,FALSE,enterica
+Abortusovis,"4,12",c,"1,6",,B,FALSE,enterica
+Altendorf,"4,12,[27]",c,"1,7",,B,FALSE,enterica
+Bissau,"4,12",c,"e,n,x",,B,FALSE,enterica
+Jericho,"1,4,12,27",c,"e,n,z15",,B,FALSE,enterica
+Hallfold,"1,4,12,27",c,"l,w",,B,FALSE,enterica
+Bury,"4,12,27",c,z6,,B,FALSE,enterica
+"I 1,4,[5],12:d:-","1,4,[5],12",d,-,,B,TRUE,enterica
+Stanley,"1,4,[5],12,[27]",d,"1,2",,B,FALSE,enterica
+Eppendorf,"1,4,12,[27]",d,"1,5",,B,FALSE,enterica
+Brezany,"1,4,12,27",d,"1,6",,B,FALSE,enterica
+Schwarzengrund,"1,4,12,27",d,"1,7",,B,FALSE,enterica
+"II 4,12:d:e,n,x","4,12",d,"e,n,x",,B,FALSE,salamae
+Sarajane,"1,4,[5],12,[27]",d,"e,n,x",,B,FALSE,enterica
+Duisburg,"1,4,12,[27]",d,"e,n,z15","[e,h]",B,FALSE,enterica
+Mons,"1,4,12,27",d,"l,w",,B,FALSE,enterica
+Chennai,"4,12",d,z35,,B,FALSE,enterica
+Ayinde,"1,4,12,27",d,z6,,B,FALSE,enterica
+Saintpaul,"1,4,[5],12","e,h","1,2",,B,FALSE,enterica
+Reading,"1,4,[5],12","e,h","1,5",,B,FALSE,enterica
+Eko,"4,12","e,h","1,6",,B,FALSE,enterica
+Kaapstad,"4,12","e,h","1,7",,B,FALSE,enterica
+Chester,"1,4,[5],12","e,h","e,n,x",,B,FALSE,enterica
+Sandiego,"1,4,[5],12","e,h","e,n,z15",,B,FALSE,enterica
+Chartres,"1,4,12","e,h","l,w",,B,FALSE,enterica
+"II 4,12:e,n,x:1,2,7","4,12","e,n,x","1,2,7",,B,FALSE,salamae
+"II 4:e,n,x:1,5,7","1,4,12,[27]","e,n,x","1,5,7",,B,FALSE,salamae
+Derby,"1,4,[5],12","f,g","1,2",,B,TRUE,enterica
+Agona,"1,4,[5],12","f,g,s","1,2","[z27],[z45]",B,TRUE,enterica
+"II 1,4,[5],12:f,g,t:z6","1,4,[5],12","f,g,t",z6,,B,FALSE,salamae
+"II 1,4,12,[27]:g,[m],[s],t:e,n,x","1,4,12,[27]","g,[m],[s],t","e,n,x",,B,FALSE,salamae
+"II 1,4,12,[27]:g,[m],t:[1,5]","1,4,12,[27]","g,[m],t","1,5",,B,TRUE,salamae
+"II 4:g,m,t:1,5","1,4,12,[27]","g,[m],t","1,5",,B,TRUE,salamae
+Essen,"4,12","g,m",-,,B,TRUE,enterica
+Hato,"1,4,[5],12","g,m,s","1,2",,B,TRUE,enterica
+"II 4,12:g,m,t:z39","4,12","g,m,t",z39,,B,FALSE,salamae
+California,"4,12","g,m,t",z67,,B,TRUE,enterica
+Kingston,"1,4,[5],12,[27]","g,s,t","1,2",[z43],B,TRUE,enterica
+Budapest,"1,4,12,[27]","g,t",-,,B,TRUE,enterica
+Travis,"4,[5],12","g,z51","1,7",,B,FALSE,enterica
+Tennyson,"4,[5],12","g,z51","e,n,z15",,B,FALSE,enterica
+"I 1,4,[5],12:i:-","1,4,[5],12",i,-,,B,TRUE,enterica
+Typhimurium,"1,4,[5],12",i,"1,2",,B,FALSE,enterica
+Lagos,"1,4,[5],12",i,"1,5",,B,FALSE,enterica
+Agama,"4,12",i,"1,6",,B,FALSE,enterica
+Farsta,"4,12",i,"e,n,x",,B,FALSE,enterica
+Tsevie,"1,4,12",i,"e,n,z15",,B,FALSE,enterica
+Gloucester,"1,4,12,27",i,"l,w",,B,FALSE,enterica
+"II 4,12,27:i:z35","4,12,27",i,z35,,B,FALSE,salamae
+Tumodi,"1,4,12",i,z6,,B,FALSE,enterica
+Massenya,"1,4,12,27",k,"1,5",,B,FALSE,enterica
+"II 1,4,12,27:k:1,6","1,4,12,27",k,"1,6",,B,FALSE,salamae
+Neumuenster,"1,4,12,27",k,"1,6",,B,FALSE,enterica
+Ljubljana,"4,12,27",k,"e,n,x",,B,FALSE,enterica
+Texas,"4,[5],12",k,"e,n,z15",,B,FALSE,enterica
+Kunduchi,"1,4,[5],12,[27]","l,[z13],[z28]","1,2",,B,FALSE,enterica
+Tyresoe,"1,4,12,[27]","l,[z13],z28","1,5",,B,FALSE,enterica
+Fyris,"4,[5],12","l,v","1,2",,B,FALSE,enterica
+Azteca,"4,[5],12,[27]","l,v","1,5",,B,FALSE,enterica
+Clackamas,"4,12","l,v","1,6",,B,FALSE,enterica
+Bredeney,"1,4,12,27","l,v","1,7",[z40],B,FALSE,enterica
+"II 1,4,12,27:l,v:e,n,x","1,4,12,27","l,v","e,n,x",,B,FALSE,salamae
+Kimuenza,"1,4,12,27","l,v","e,n,x",,B,FALSE,enterica
+Brandenburg,"4,[5],12","l,v","e,n,z15",,B,FALSE,enterica
+"II 1,4,12,27:l,v:z39","1,4,12,27","l,v",z39,,B,FALSE,salamae
+Mono,"4,12","l,w","1,5",,B,FALSE,enterica
+Togo,"4,12","l,w","1,6",,B,FALSE,enterica
+"II 4,12:l,w:e,n,x","4,12","l,w","e,n,x",,B,FALSE,salamae
+"II 4:l,w:e,n,x","4,12","l,w","e,n,x",,B,FALSE,salamae
+Blancmesnil,"4,12","l,w","e,n,z15",,B,FALSE,enterica
+Ayton,"1,4,12,27","l,w",z6,,B,FALSE,enterica
+Haduna,"4,12","l,z13,[z28]","1,6",,B,FALSE,enterica
+Kubacha,"1,4,12,27","l,z13,z28","1,7",,B,FALSE,enterica
+Kano,"1,4,12,27","l,z13,z28","e,n,x",,B,FALSE,enterica
+Vom,"1,4,12,27","l,z13,z28","e,n,z15",,B,FALSE,enterica
+"II 1,4,12:l,z28:[e,n,x]","1,4,12","l,z28","e,n,x",,B,TRUE,salamae
+Reinickendorf,"4,12","l,z28","e,n,x",,B,FALSE,enterica
+Banana,"1,4,[5],12","m,t","1,5",,B,TRUE,enterica
+Madras,"4,[5],12","m,t","e,n,z15",,B,FALSE,enterica
+"I 1,4,[5],12:r:-","1,4,[5],12",r,-,,B,TRUE,enterica
+Heidelberg,"1,4,[5],12",r,"1,2",,B,FALSE,enterica
+Bradford,"4,12,[27]",r,"1,5",,B,FALSE,enterica
+Winneba,"4,12",r,"1,6",,B,FALSE,enterica
+Remo,"1,4,12,27",r,"1,7",,B,FALSE,enterica
+Bochum,"1,4,[5],12",r,"l,w",,B,FALSE,enterica
+Southampton,"4,12,27",r,z6,,B,FALSE,enterica
+Drogana,"1,4,12,27","r,[i]","e,n,z15",,B,FALSE,enterica
+Africana,"4,12","r,i","l,w",,B,FALSE,enterica
+Coeln,"1,4,[5],12",y,"1,2",,B,FALSE,enterica
+Trachau,"4,12,27",y,"1,5",,B,FALSE,enterica
+Finaghy,"4,12",y,"1,6",,B,FALSE,enterica
+Teddington,"1,4,12,27",y,"1,7",,B,FALSE,enterica
+Ball,"1,4,[5],12,[27]",y,"e,n,x",,B,FALSE,enterica
+Jos,"1,4,12,27",y,"e,n,z15",,B,FALSE,enterica
+Kamoru,"1,4,12,27",y,z6,,B,FALSE,enterica
+Shubra,"4,[5],12",z,"1,2",,B,FALSE,enterica
+"II 1,4,12,27:z:1,5","1,4,12,27",z,"1,5",,B,FALSE,salamae
+Kiambu,"1,4,12",z,"1,5",,B,FALSE,enterica
+Loubomo,"4,12",z,"1,6",,B,FALSE,enterica
+"II 4,12:z:1,7","4,12",z,"1,7",,B,FALSE,salamae
+Indiana,"1,4,12",z,"1,7",,B,FALSE,enterica
+"II 1,4,12,27:z:e,n,x","1,4,12,27",z,"e,n,x",,B,FALSE,salamae
+Neftenbach,"4,12",z,"e,n,x",,B,FALSE,enterica
+Koenigstuhl,"1,4,[5],12",z,"e,n,z15",,B,FALSE,enterica
+Preston,"1,4,12",z,"l,w",,B,FALSE,enterica
+"II 4,12:z:z39","4,12",z,z39,,B,FALSE,salamae
+Entebbe,"1,4,12,27",z,z6,,B,FALSE,enterica
+Haifa,"1,4,[5],12",z10,"1,2",,B,FALSE,enterica
+Ituri,"1,4,12",z10,"1,5",,B,FALSE,enterica
+Tudu,"4,12",z10,"1,6",,B,FALSE,enterica
+Albert,"4,12",z10,"e,n,x",,B,FALSE,enterica
+Tokoin,"4,12",z10,"e,n,z15",,B,FALSE,enterica
+Mura,"1,4,12",z10,"l,w",,B,FALSE,enterica
+Vellore,"1,4,12,27",z10,z35,,B,FALSE,enterica
+Fortune,"1,4,12,[27]",z10,z6,,B,FALSE,enterica
+Brancaster,"1,4,12,27",z29,-,,B,TRUE,enterica
+"II 1,4,12:z29:e,n,x","1,4,12",z29,"e,n,x",,B,FALSE,salamae
+Pasing,"4,12",z35,"1,5",,B,FALSE,enterica
+Tafo,"1,4,12,27",z35,"1,7",,B,FALSE,enterica
+Yaounde,"1,4,12,27",z35,"e,n,z15",,B,FALSE,enterica
+Sloterdijk,"1,4,12,27",z35,z6,,B,FALSE,enterica
+Tejas,"4,12",z36,-,,B,TRUE,enterica
+Wilhelmsburg,"1,4,[5],12,[27]",z38,"e,n,z15",,B,TRUE,enterica
+"II 1,4,12,[27]:z39:1,[5],7","1,4,12,[27]",z39,"1,5,7",,B,FALSE,salamae
+Stanleyville,"1,4,[5],12,[27]","z4,z23","1,2",,B,TRUE,enterica
+Vuadens,"4,12,27","z4,z23",z6,,B,FALSE,enterica
+Kalamu,"1,4,[5],12","z4,z24","1,5",,B,TRUE,enterica
+Thayngen,"1,4,12,27",z41,"1,(2),5",,B,FALSE,enterica
+Maska,"1,4,12,27",z41,"e,n,z15",,B,FALSE,enterica
+Mygdal,"4,12",z91,-,,B,TRUE,enterica
+"II 6,7:(g),m,[s],t:1,5","6,7","(g),m,[s],t","1,5",,C1,FALSE,salamae
+"IIIb 6,7:(k):z:[z55]","6,7",(k),z,[z55],C1,FALSE,diarizonae
+"II 6,7,14:a:1,5","6,7,14",a,"1,5",,C1,FALSE,salamae
+"II 7:a:1,5","6,7,14",a,"1,5",,C1,FALSE,salamae
+Sanjuan,"6,7",a,"1,5",,C1,FALSE,enterica
+Umhlali,"6,7",a,"1,6",,C1,FALSE,enterica
+Austin,"6,7",a,"1,7",,C1,FALSE,enterica
+Oslo,"6,7,14",a,"e,n,x",,C1,FALSE,enterica
+Denver,"6,7",a,"e,n,z15",,C1,FALSE,enterica
+Coleypark,"6,7,14",a,"l,w",,C1,FALSE,enterica
+"II 6,7:a:z42","6,7",a,z42,,C1,FALSE,salamae
+Damman,"6,7,14",a,z6,,C1,FALSE,enterica
+"II 6,7:a:z6","6,7",a,z6,,C1,FALSE,salamae
+Brazzaville,"6,7",b,"1,2",,C1,FALSE,enterica
+Edinburg,"6,7,14",b,"1,5",,C1,FALSE,enterica
+Adime,"6,7",b,"1,6",,C1,FALSE,enterica
+Koumra,"6,7",b,"1,7",,C1,FALSE,enterica
+"II 6,7:b:[e,n,x]:z42","6,7",b,"e,n,x",z42,C1,TRUE,salamae
+Lockleaze,"6,7,14",b,"e,n,x",,C1,FALSE,enterica
+Georgia,"6,7",b,"e,n,z15",,C1,FALSE,enterica
+Ohio,"6,7,14",b,"l,w",[z59],C1,FALSE,enterica
+Kotte,"6,7",b,z35,,C1,FALSE,enterica
+"II 6,7:b:z39","6,7",b,z39,,C1,FALSE,salamae
+Leopoldville,"6,7,14",b,z6,,C1,FALSE,enterica
+Hissar,"6,7,14",c,"1,2",,C1,FALSE,enterica
+Choleraesuis,"6,7",c,"1,5",,C1,FALSE,enterica
+Paratyphi C,"6,7,[Vi]",c,"1,5",,C1,FALSE,enterica
+Typhisuis,"6,7",c,"1,5",,C1,FALSE,enterica
+Birkenhead,"6,7",c,"1,6",,C1,FALSE,enterica
+Schwabach,"6,7",c,"1,7",,C1,FALSE,enterica
+Namibia,"6,7",c,"e,n,x",,C1,FALSE,enterica
+Kaduna,"6,7,14",c,"e,n,z15",,C1,FALSE,enterica
+Cotonou,"6,7",c,z6,,C1,FALSE,enterica
+Kisii,"6,7",d,"1,2",,C1,FALSE,enterica
+Kambole,"6,7",d,"1,2,7",,C1,FALSE,enterica
+Isangi,"6,7,14",d,"1,5",,C1,FALSE,enterica
+Kivu,"6,7",d,"1,6",,C1,FALSE,enterica
+Amersfoort,"6,7,14",d,"e,n,x",,C1,FALSE,enterica
+Gombe,"6,7,14",d,"e,n,z15",,C1,FALSE,enterica
+Livingstone,"6,7,14",d,"l,w",,C1,FALSE,enterica
+Wil,"6,7",d,"l,z13,z28",,C1,FALSE,enterica
+"II 6,7:d:z42","6,7",d,z42,,C1,FALSE,salamae
+Nieukerk,"6,7,14",d,z6,,C1,FALSE,enterica
+Larochelle,"6,7","e,h","1,2",,C1,FALSE,enterica
+Lomita,"6,7","e,h","1,5",,C1,FALSE,enterica
+Norwich,"6,7","e,h","1,6",,C1,FALSE,enterica
+Nola,"6,7","e,h","1,7",,C1,FALSE,enterica
+Braenderup,"6,7,14","e,h","e,n,z15",,C1,FALSE,enterica
+"II 6,7:e,n,x:1,6:z42","6,7","e,n,x","1,6",z42,C1,FALSE,salamae
+Kastrup,"6,7","e,n,z15","1,6",,C1,FALSE,enterica
+Rissen,"6,7,14","f,g",-,,C1,TRUE,enterica
+Eingedi,"6,7","f,g,t","1,2,7",,C1,FALSE,enterica
+Afula,"6,7","f,g,t","e,n,x",,C1,FALSE,enterica
+Riggil,"6,7","g,(t)",-,,C1,TRUE,enterica
+"II 6,7:g,[m],s,t:[z42]","6,7","g,[m],s,t",z42,,C1,TRUE,salamae
+Montevideo,"6,7,14,[54]","g,m,[p],s","1,2,7",,C1,TRUE,enterica
+"II 6,7:g,m,[s],t:e,n,x","6,7","g,m,[s],t","e,n,x",,C1,FALSE,salamae
+"II 7:g,m,t:-","6,7","g,m,[t]",-,,C1,TRUE,salamae
+Othmarschen,"6,7,14","g,m,[t]",-,,C1,TRUE,enterica
+Lubbock,"6,7","g,m,s","e,n,z15",,C1,FALSE,enterica
+"II 6,7:g,m,s,t:z39","6,7","g,m,s,t",z39,,C1,FALSE,salamae
+Menston,"6,7","g,s,[t]","1,6",,C1,TRUE,enterica
+Plumaugat,"6,7","g,s,q",-,,C1,TRUE,enterica
+"II 6,7:g,t:[e,n,x]:z42","6,7","g,t","e,n,x",z42,C1,TRUE,salamae
+"IIIa 7:g,z51:-","6,7","g,z51",-,,C1,TRUE,arizonae
+"IV 6,7:g,z51:-","6,7","g,z51",-,,C1,TRUE,houtenae
+Alamo,"6,7","g,z51","1,5",,C1,FALSE,enterica
+"IIIa 7:g,z51:1,5","6,7","g,z51","1,5",,C1,FALSE,arizonae
+Larose,"6,7","g,z51","e,n,z15",,C1,FALSE,enterica
+Augustenborg,"6,7,14",i,"1,2",,C1,FALSE,enterica
+Oritamerin,"6,7",i,"1,5",,C1,FALSE,enterica
+Garoli,"6,7",i,"1,6",,C1,FALSE,enterica
+Lika,"6,7",i,"1,7",,C1,FALSE,enterica
+Athinai,"6,7",i,"e,n,z15",,C1,FALSE,enterica
+Norton,"6,7",i,"l,w",,C1,FALSE,enterica
+Stuttgart,"6,7,14",i,z6,,C1,FALSE,enterica
+Galiema,"6,7,14",k,"1,2",,C1,FALSE,enterica
+Thompson,"6,7,14",k,"1,5",,C1,FALSE,enterica
+Daytona,"6,7",k,"1,6",,C1,FALSE,enterica
+Baiboukoum,"6,7",k,"1,7",,C1,FALSE,enterica
+Singapore,"6,7",k,"e,n,x",,C1,FALSE,enterica
+Escanaba,"6,7",k,"e,n,z15",,C1,FALSE,enterica
+"II 6,7:k:[z6]","6,7",k,z6,,C1,TRUE,salamae
+Concord,"6,7","l,v","1,2",,C1,FALSE,enterica
+Irumu,"6,7","l,v","1,5",,C1,FALSE,enterica
+"IIIb 6,7:l,v:1,5,7","6,7","l,v","1,5,7",,C1,FALSE,diarizonae
+Mkamba,"6,7","l,v","1,6",,C1,FALSE,enterica
+Kortrijk,"6,7","l,v","1,7",,C1,FALSE,enterica
+Bonn,"6,7","l,v","e,n,x",,C1,FALSE,enterica
+Potsdam,"6,7,14","l,v","e,n,z15",,C1,FALSE,enterica
+Coromandel,"6,7","l,v",z35,,C1,FALSE,enterica
+"IIIb 6,7:l,v:z53","6,7","l,v",z53,,C1,FALSE,diarizonae
+"IIIb 7:l,v:z53","6,7","l,v",z53,,C1,FALSE,diarizonae
+Gdansk,"6,7,14","l,v",z6,,C1,FALSE,enterica
+Gabon,"6,7","l,w","1,2",,C1,FALSE,enterica
+Colorado,"6,7","l,w","1,5",,C1,FALSE,enterica
+"II 6,7:l,w:1,5,7","6,7","l,w","1,5,7",,C1,FALSE,salamae
+Langeveld,"6,7","l,w","e,n,z15",,C1,FALSE,enterica
+"II 6,7:l,w:z42","6,7","l,w",z42,,C1,FALSE,salamae
+Nessziona,"6,7","l,z13","1,5",,C1,FALSE,enterica
+Kenya,"6,7","l,z13","e,n,x",,C1,FALSE,enterica
+Neukoelln,"6,7","l,z13,[z28]","e,n,z15",,C1,FALSE,enterica
+Strathcona,"6,7","l,z13,z28","1,7",,C1,FALSE,enterica
+Makiso,"6,7","l,z13,z28",z6,,C1,FALSE,enterica
+"II 6,7:l,z28:1,5:[z42]","6,7","l,z28","1,5",[z42],C1,FALSE,salamae
+"II 6,7:l,z28:e,n,x","6,7","l,z28","e,n,x",,C1,FALSE,salamae
+"II 6,7:l,z28:z6","6,7","l,z28",z6,,C1,FALSE,salamae
+Haelsingborg,"6,7","m,p,t,[u]",-,,C1,TRUE,enterica
+"II 6,7:m,t:-","6,7","m,t",-,,C1,TRUE,salamae
+Winston,"6,7","m,t","1,6",,C1,FALSE,enterica
+Oranienburg,"6,7,14","m,t",z57,,C1,TRUE,enterica
+Oakey,"6,7","m,t",z64,,C1,FALSE,enterica
+Virchow,"6,7,14",r,"1,2",,C1,FALSE,enterica
+Infantis,"6,7,14",r,"1,5",,C1,FALSE,enterica
+Nigeria,"6,7",r,"1,6",,C1,FALSE,enterica
+Colindale,"6,7",r,"1,7",,C1,FALSE,enterica
+Papuana,"6,7",r,"e,n,z15",,C1,FALSE,enterica
+Grampian,"6,7",r,"l,w",,C1,FALSE,enterica
+Richmond,"6,7",y,"1,2",,C1,FALSE,enterica
+Bareilly,"6,7,14",y,"1,5",,C1,FALSE,enterica
+Oyonnax,"6,7",y,"1,6",,C1,FALSE,enterica
+Gatow,"6,7",y,"1,7",,C1,FALSE,enterica
+Hartford,"6,7",y,"e,n,x",[z67],C1,FALSE,enterica
+Mikawasima,"6,7,14",y,"e,n,z15","[z47],[z50]",C1,FALSE,enterica
+Chile,"6,7",z,"1,2",,C1,FALSE,enterica
+"II 6,7:z:1,5","6,7",z,"1,5",,C1,FALSE,salamae
+Poitiers,"6,7",z,"1,5",,C1,FALSE,enterica
+Oakland,"6,7",z,"1,6,7",,C1,FALSE,enterica
+Cayar,"6,7",z,"e,n,x",,C1,FALSE,enterica
+"II 6,7:z:e,n,x","6,7",z,"e,n,x",,C1,FALSE,salamae
+Businga,"6,7",z,"e,n,z15",,C1,FALSE,enterica
+Bruck,"6,7",z,"l,w",,C1,FALSE,enterica
+"II 6,7:z:z39","6,7",z,z39,,C1,FALSE,salamae
+"II 6,7:z:z42","6,7",z,z42,,C1,FALSE,salamae
+"II 6,7:z:z6","6,7",z,z6,,C1,FALSE,salamae
+Menden,"6,7",z10,"1,2",,C1,FALSE,enterica
+Inganda,"6,7",z10,"1,5",,C1,FALSE,enterica
+Eschweiler,"6,7",z10,"1,6",,C1,FALSE,enterica
+Ngili,"6,7",z10,"1,7",,C1,FALSE,enterica
+Djugu,"6,7",z10,"e,n,x",,C1,FALSE,enterica
+Mbandaka,"6,7,14",z10,"e,n,z15","[z37],[z45]",C1,FALSE,enterica
+Jerusalem,"6,7,14",z10,"l,w",,C1,FALSE,enterica
+Omuna,"6,7",z10,z35,,C1,FALSE,enterica
+Redba,"6,7",z10,z6,,C1,FALSE,enterica
+Tennessee,"6,7,14",z29,"1,2,7",,C1,TRUE,enterica
+"II 6,7:z29:[z42]","6,7",z29,z42,,C1,TRUE,salamae
+Tienba,"6,7",z35,"1,6",,C1,FALSE,enterica
+Palime,"6,7",z35,"e,n,z15",,C1,FALSE,enterica
+"IV 6,7:z36:-","6,7",z36,-,,C1,TRUE,houtenae
+IV 7:z36:-,"6,7",z36,-,,C1,TRUE,houtenae
+Tampico,"6,7",z36,"e,n,z15",,C1,FALSE,enterica
+"II 6,7:z36:z42","6,7",z36,z42,,C1,FALSE,salamae
+Lille,"6,7,14",z38,-,[z82],C1,TRUE,enterica
+Rumford,"6,7",z38,"1,2",[z82],C1,FALSE,enterica
+"IIIb 6,7,14:z39:1,2","6,7,14",z39,"1,2",,C1,FALSE,diarizonae
+"IIIb 7:z39:1,2","6,7,14",z39,"1,2",,C1,FALSE,diarizonae
+"II 6,7:z39:1,5,7","6,7",z39,"1,5,7",,C1,FALSE,salamae
+"II 6,7:z4,z23:-","6,7","z4,z23",-,,C1,TRUE,salamae
+"IV 6,7:z4,z23:-","6,7","z4,z23",-,,C1,TRUE,houtenae
+"IV 7:z4,z23:-","6,7","z4,z23",-,,C1,TRUE,houtenae
+Obogu,"6,7","z4,z23","1,5",,C1,FALSE,enterica
+Planckendael,"6,7","z4,z23","1,6",,C1,FALSE,enterica
+Aequatoria,"6,7","z4,z23","e,n,z15",,C1,FALSE,enterica
+Goma,"6,7","z4,z23",z6,,C1,FALSE,enterica
+"IV 6,7:z4,z24:-","6,7","z4,z24",-,,C1,TRUE,houtenae
+Somone,"6,7","z4,z24",-,,C1,TRUE,enterica
+"II 6,7:z4,z24:z42","6,7","z4,z24",z42,,C1,FALSE,salamae
+"VI 6,7:z41:1,7","6,7",z41,"1,7",,C1,FALSE,indica
+Hillsborough,"6,7",z41,"l,w",,C1,FALSE,enterica
+Tamilnadu,"6,7",z41,z35,,C1,FALSE,enterica
+"II 6,7:z42:1,[5],7","6,7",z42,"1,5,7",,C1,FALSE,salamae
+Bulovka,"6,7",z44,-,,C1,TRUE,enterica
+"II 6,7:z6:1,7","6,7",z6,"1,7",,C1,FALSE,salamae
+IIIb 8:(k):z35,8,(k),z35,,C2-C3,FALSE,diarizonae
+Valdosta,"6,8",a,"1,2",,C2-C3,FALSE,enterica
+Doncaster,"6,8",a,"1,5",,C2-C3,FALSE,enterica
+Curacao,"6,8",a,"1,6",,C2-C3,FALSE,enterica
+Nordufer,"6,8",a,"1,7",,C2-C3,FALSE,enterica
+"II 6,8:a:e,n,x","6,8",a,"e,n,x",,C2-C3,FALSE,salamae
+Narashino,"6,8",a,"e,n,x",,C2-C3,FALSE,enterica
+Leith,"6,8",a,"e,n,z15",,C2-C3,FALSE,enterica
+"II 6,8:a:z39","6,8",a,z39,,C2-C3,FALSE,salamae
+"II 6,8:a:z52","6,8",a,z52,,C2-C3,FALSE,salamae
+Be,"8,20",a,z6,,C2-C3,TRUE,enterica
+Djelfa,8,b,"1,2",,C2-C3,FALSE,enterica
+Skansen,"6,8",b,"1,2",,C2-C3,FALSE,enterica
+"II 6,8:b:1,5","6,8",b,"1,5",,C2-C3,FALSE,salamae
+Korbol,"8,20",b,"1,5",,C2-C3,FALSE,enterica
+Nagoya,"6,8",b,"1,5",,C2-C3,FALSE,enterica
+Stourbridge,"6,8",b,"1,6",,C2-C3,FALSE,enterica
+Eboko,"6,8",b,"1,7",,C2-C3,FALSE,enterica
+Sanga,8,b,"1,7",,C2-C3,FALSE,enterica
+Gatuni,"6,8",b,"e,n,x",,C2-C3,FALSE,enterica
+Konstanz,8,b,"e,n,x",,C2-C3,FALSE,enterica
+Presov,"6,8",b,"e,n,z15",,C2-C3,FALSE,enterica
+Shipley,"8,20",b,"e,n,z15",,C2-C3,FALSE,enterica
+Bukuru,"6,8",b,"l,w",,C2-C3,FALSE,enterica
+Heistopdenberg,"8,20",b,"l,w",,C2-C3,FALSE,enterica
+Banalia,"6,8",b,z6,,C2-C3,FALSE,enterica
+Tounouma,"8,20",b,z6,,C2-C3,FALSE,enterica
+Wingrove,"6,8",c,"1,2",,C2-C3,FALSE,enterica
+Gaillac,"8,20",c,"1,5",,C2-C3,FALSE,enterica
+Utah,"6,8",c,"1,5",,C2-C3,FALSE,enterica
+Bronx,"6,8",c,"1,6",,C2-C3,FALSE,enterica
+Belfast,"6,8",c,"1,7",,C2-C3,FALSE,enterica
+Belem,"6,8",c,"e,n,x",,C2-C3,FALSE,enterica
+Santiago,"8,20",c,"e,n,x",,C2-C3,FALSE,enterica
+Quiniela,"6,8",c,"e,n,z15",,C2-C3,FALSE,enterica
+Alexanderpolder,8,c,"l,w",,C2-C3,FALSE,enterica
+Tado,"8,20",c,z6,,C2-C3,FALSE,enterica
+Muenchen,"6,8",d,"1,2",[z67],C2-C3,FALSE,enterica
+Virginia,8,d,"1,2",,C2-C3,FALSE,enterica
+Manhattan,"6,8",d,"1,5",[z58],C2-C3,FALSE,enterica
+Yovokome,"8,20",d,"1,5",,C2-C3,FALSE,enterica
+Dunkwa,"6,8",d,"1,7",,C2-C3,FALSE,enterica
+Portanigra,"8,20",d,"1,7",,C2-C3,FALSE,enterica
+Sterrenbos,"6,8",d,"e,n,x",,C2-C3,FALSE,enterica
+Herston,"6,8",d,"e,n,z15",,C2-C3,FALSE,enterica
+II 8:d:z6,"6,8",d,z6,,C2-C3,FALSE,salamae
+Labadi,"8,20",d,z6,,C2-C3,FALSE,enterica
+Newport,"6,8,20","e,h","1,2","[z67],[z78]",C2-C3,FALSE,enterica
+Bardo,8,"e,h","1,2",,C2-C3,FALSE,enterica
+Ferruch,8,"e,h","1,5",,C2-C3,FALSE,enterica
+Kottbus,"6,8","e,h","1,5",,C2-C3,FALSE,enterica
+Cremieu,"6,8","e,h","1,6",,C2-C3,FALSE,enterica
+Atakpame,"8,20","e,h","1,7",,C2-C3,FALSE,enterica
+Fillmore,"6,8","e,h","e,n,x",,C2-C3,FALSE,enterica
+Tshiongwe,"6,8","e,h","e,n,z15",,C2-C3,FALSE,enterica
+Rechovot,"8,20","e,h",z6,,C2-C3,FALSE,enterica
+Sandow,"6,8","f,g","e,n,z15",,C2-C3,FALSE,enterica
+"II 6,8:f,g,m,t:[e,n,x]","6,8","f,g,m,t","e,n,x",,C2-C3,TRUE,salamae
+Chincol,"6,8","g,m,[s]","e,n,x",,C2-C3,TRUE,enterica
+Emek,"8,20","g,m,s",-,,C2-C3,TRUE,enterica
+Reubeuss,"8,20","g,m,t",-,,C2-C3,TRUE,enterica
+"II 6,8:g,m,t:1,7","6,8","g,m,t","1,7",,C2-C3,FALSE,salamae
+Alminko,"8,20","g,s,t",-,,C2-C3,TRUE,enterica
+Nanergou,"6,8","g,s,t",-,,C2-C3,TRUE,enterica
+Lindenburg,"6,8",i,"1,2",,C2-C3,FALSE,enterica
+Bargny,"8,20",i,"1,5",,C2-C3,FALSE,enterica
+Takoradi,"6,8",i,"1,5",,C2-C3,FALSE,enterica
+Warnow,"6,8",i,"1,6",,C2-C3,FALSE,enterica
+Malmoe,"6,8",i,"1,7",,C2-C3,FALSE,enterica
+Bonariensis,"6,8",i,"e,n,x",,C2-C3,FALSE,enterica
+Aba,"6,8",i,"e,n,z15",,C2-C3,FALSE,enterica
+Cyprus,"6,8",i,"l,w",,C2-C3,FALSE,enterica
+Magherafelt,"8,20",i,"l,w",,C2-C3,FALSE,enterica
+Kentucky,"8,20",i,z6,,C2-C3,FALSE,enterica
+Kallo,"6,8",k,"1,2",,C2-C3,FALSE,enterica
+Blockley,"6,8",k,"1,5",[z58],C2-C3,FALSE,enterica
+Haardt,8,k,"1,5",,C2-C3,FALSE,enterica
+Schwerin,"6,8",k,"e,n,x",,C2-C3,FALSE,enterica
+Charlottenburg,"6,8",k,"e,n,z15",,C2-C3,FALSE,enterica
+Litchfield,"6,8","l,v","1,2",,C2-C3,FALSE,enterica
+Pakistan,8,"l,v","1,2",,C2-C3,FALSE,enterica
+Loanda,"6,8","l,v","1,5",,C2-C3,FALSE,enterica
+Amherstiana,8,"l,v","1,6",,C2-C3,FALSE,enterica
+Manchester,"6,8","l,v","1,7",,C2-C3,FALSE,enterica
+Holcomb,"6,8","l,v","e,n,x",,C2-C3,FALSE,enterica
+"II 6,8:l,v:e,n,x","6,8","l,v","e,n,x",,C2-C3,FALSE,salamae
+Edmonton,"6,8","l,v","e,n,z15",,C2-C3,FALSE,enterica
+Lund,"6,8","l,v",z6,,C2-C3,FALSE,enterica
+Fayed,"6,8","l,w","1,2",,C2-C3,FALSE,enterica
+"II 6,8:l,w:z6:z42","6,8","l,w",z6,z42,C2-C3,FALSE,salamae
+Breukelen,"6,8","l,z13,[z28]","e,n,z15",,C2-C3,FALSE,enterica
+Hiduddify,"6,8","l,z13,z28","1,5",,C2-C3,FALSE,enterica
+"II 6,8:l,z28:e,n,x","6,8","l,z28","e,n,x",,C2-C3,FALSE,salamae
+Bassa,"6,8","m,t",-,,C2-C3,TRUE,enterica
+Yokoe,"8,20","m,t",-,,C2-C3,TRUE,enterica
+"II 6,8:m,t:1,5","6,8","m,t","1,5",,C2-C3,FALSE,salamae
+"II 6,8:m,t:e,n,x","6,8","m,t","e,n,x",,C2-C3,FALSE,salamae
+Bsilla,"6,8",r,"1,2",,C2-C3,FALSE,enterica
+Hindmarsh,"8,20",r,"1,5",,C2-C3,FALSE,enterica
+Akanji,"6,8",r,"1,7",,C2-C3,FALSE,enterica
+Noya,8,r,"1,7",,C2-C3,FALSE,enterica
+Goldcoast,"6,8",r,"l,w",,C2-C3,FALSE,enterica
+IIIb 8:r:z,8,r,z,,C2-C3,FALSE,diarizonae
+Bovismorbificans,"6,8,20","r,[i]","1,5",,C2-C3,FALSE,enterica
+Hidalgo,"6,8","r,[i]","e,n,z15",,C2-C3,FALSE,enterica
+Brikama,"8,20","r,[i]","l,w",,C2-C3,FALSE,enterica
+Altona,"8,20","r,[i]",z6,,C2-C3,FALSE,enterica
+Cocody,"8,20","r,i","e,n,z15",,C2-C3,FALSE,enterica
+Giza,"8,20",y,"1,2",,C2-C3,FALSE,enterica
+Lamphun,"6,8",y,"1,2",,C2-C3,FALSE,enterica
+Brunei,"8,20",y,"1,5",,C2-C3,FALSE,enterica
+Tananarive,"6,8",y,"1,5",,C2-C3,FALSE,enterica
+"II 6,8:y:1,6:z42","6,8",y,"1,6",z42,C2-C3,FALSE,salamae
+Bulgaria,"6,8",y,"1,6",,C2-C3,FALSE,enterica
+Alagbon,"8,20",y,"1,7",,C2-C3,FALSE,enterica
+Inchpark,"6,8",y,"1,7",,C2-C3,FALSE,enterica
+Daarle,"6,8",y,"e,n,x",,C2-C3,FALSE,enterica
+Sunnycove,8,y,"e,n,x",,C2-C3,FALSE,enterica
+Praha,"6,8",y,"e,n,z15",,C2-C3,FALSE,enterica
+Benue,"6,8",y,"l,w",,C2-C3,FALSE,enterica
+Sindelfingen,"8,20",y,"l,w",,C2-C3,FALSE,enterica
+Kralingen,"8,20",y,z6,,C2-C3,FALSE,enterica
+"II 6,8:z:1,5","6,8",z,"1,5",,C2-C3,FALSE,salamae
+Mowanjum,"6,8",z,"1,5",,C2-C3,FALSE,enterica
+Marmande,"6,8",z,"1,7",,C2-C3,FALSE,enterica
+Kalumburu,"6,8",z,"e,n,z15",,C2-C3,FALSE,enterica
+Phaliron,8,z,"e,n,z15",,C2-C3,FALSE,enterica
+Kuru,"6,8",z,"l,w",,C2-C3,FALSE,enterica
+Daula,"8,20",z,z6,,C2-C3,FALSE,enterica
+Bazenheid,"8,20",z10,"1,2",,C2-C3,FALSE,enterica
+Zerifin,"6,8",z10,"1,2",,C2-C3,FALSE,enterica
+Mapo,"6,8",z10,"1,5",,C2-C3,FALSE,enterica
+Paris,"8,20",z10,"1,5",,C2-C3,FALSE,enterica
+Cleveland,"6,8",z10,"1,7",,C2-C3,FALSE,enterica
+Hadar,"6,8",z10,"e,n,x",,C2-C3,FALSE,enterica
+Istanbul,8,z10,"e,n,x",,C2-C3,FALSE,enterica
+Chomedey,"8,20",z10,"e,n,z15",,C2-C3,FALSE,enterica
+Glostrup,"6,8",z10,"e,n,z15",,C2-C3,FALSE,enterica
+Remiremont,"8,20",z10,"l,w",,C2-C3,FALSE,enterica
+Molade,"8,20",z10,z6,,C2-C3,FALSE,enterica
+Wippra,"6,8",z10,z6,,C2-C3,FALSE,enterica
+"II 6,8:z29:1,5","6,8",z29,"1,5",,C2-C3,FALSE,salamae
+"II 6,8:z29:e,n,x","6,8",z29,"e,n,x",,C2-C3,FALSE,salamae
+Tamale,"8,20",z29,"e,n,z15",,C2-C3,TRUE,enterica
+Uno,"6,8",z29,"e,n,z15",,C2-C3,TRUE,enterica
+Kolda,"8,20",z35,"1,2",,C2-C3,FALSE,enterica
+Yarm,"6,8",z35,"1,2",,C2-C3,FALSE,enterica
+Angers,"8,20",z35,z6,,C2-C3,FALSE,enterica
+Apeyeme,"8,20",z38,-,,C2-C3,TRUE,enterica
+Bellevue,8,"z4,z23","1,7",,C2-C3,FALSE,enterica
+Lezennes,"6,8","z4,z23","1,7",,C2-C3,FALSE,enterica
+Breda,"6,8","z4,z23","e,n,x",,C2-C3,FALSE,enterica
+Chailey,"6,8","z4,z23","e,n,z15",,C2-C3,TRUE,enterica
+Dabou,"8,20","z4,z23","l,w",,C2-C3,FALSE,enterica
+Corvallis,"8,20","z4,z23",z6,,C2-C3,TRUE,enterica
+Albany,"8,20","z4,z24",-,[z45],C2-C3,TRUE,enterica
+Duesseldorf,"6,8","z4,z24",-,,C2-C3,TRUE,enterica
+Tallahassee,"6,8","z4,z32",-,,C2-C3,TRUE,enterica
+Diogoye,"8,20",z41,z6,,C2-C3,FALSE,enterica
+Aesch,"6,8",z60,"1,2",,C2-C3,FALSE,enterica
+Gallinarum,"1,9,12",-,-,,D1,TRUE,enterica
+Pullorum,"1,9,12",-,-,,D1,TRUE,enterica
+Berta,"1,9,12","[f],g,[t]",-,,D1,TRUE,enterica
+"II 9,12:a:1,5","9,12",a,"1,5",,D1,FALSE,salamae
+Miami,"1,9,12",a,"1,5",,D1,FALSE,enterica
+Sendai,"1,9,12",a,"1,5",,D1,FALSE,enterica
+Os,"9,12",a,"1,6",,D1,FALSE,enterica
+Saarbruecken,"1,9,12",a,"1,7",,D1,FALSE,enterica
+"II 1,9,12:a:e,n,x","1,9,12",a,"e,n,x",,D1,FALSE,salamae
+Lomalinda,"1,9,12",a,"e,n,x",,D1,FALSE,enterica
+Durban,"1,9,12",a,"e,n,z15",,D1,FALSE,enterica
+"II 9,12:a:z39","9,12",a,z39,,D1,FALSE,salamae
+"II 1,9,12:a:z42","1,9,12",a,z42,,D1,FALSE,salamae
+Onarimon,"1,9,12",b,"1,2",,D1,FALSE,enterica
+Frintrop,"1,9,12",b,"1,5",,D1,FALSE,enterica
+Bata,"9,12",b,"1,7",,D1,FALSE,enterica
+"II 1,9,12:b:e,n,x","1,9,12",b,"e,n,x",,D1,FALSE,salamae
+Mana,"9,12",b,"e,n,z15",,D1,FALSE,enterica
+"II 1,9,12:b:z39","1,9,12",b,z39,,D1,FALSE,salamae
+"II 1,9,12:b:z6","1,9,12",b,z6,,D1,FALSE,salamae
+Goeteborg,"9,12",c,"1,5",,D1,FALSE,enterica
+Ipeko,"9,12",c,"1,6",,D1,FALSE,enterica
+Elokate,"9,12",c,"1,7",,D1,FALSE,enterica
+Alabama,"9,12",c,"e,n,z15",,D1,FALSE,enterica
+Ridge,"9,12",c,z6,,D1,FALSE,enterica
+Typhi,"9,12[Vi]",d,-,"[j],[z66]",D1,TRUE,enterica
+Ndolo,"1,9,12",d,"1,5",,D1,FALSE,enterica
+Tarshyne,"9,12",d,"1,6",,D1,FALSE,enterica
+Eschberg,"9,12",d,"1,7",,D1,FALSE,enterica
+"II 1,9,12:d:e,n,x","1,9,12",d,"e,n,x",,D1,FALSE,salamae
+Bangui,"9,12",d,"e,n,z15",,D1,FALSE,enterica
+Jaffna,"1,9,12",d,z35,,D1,FALSE,enterica
+"II 9,12:d:z39","9,12",d,z39,,D1,FALSE,salamae
+II 9:d:z39,"9,12",d,z39,,D1,FALSE,salamae
+Zega,"9,12",d,z6,,D1,FALSE,enterica
+Bournemouth,"9,12","e,h","1,2",,D1,FALSE,enterica
+Eastbourne,"1,9,12","e,h","1,5",,D1,FALSE,enterica
+Westafrica,"9,12","e,h","1,7",,D1,FALSE,enterica
+Israel,"9,12","e,h","e,n,z15",,D1,FALSE,enterica
+"II 9,12:e,n,x:1,[5],7","9,12","e,n,x","1,5,7",,D1,FALSE,salamae
+"II 9,12:e,n,x:1,6","9,12","e,n,x","1,6",,D1,FALSE,salamae
+Enteritidis,"1,9,12","g,m",-,,D1,TRUE,enterica
+"II 1,9,12:g,m,[s],t:[1,5,7]:[z42]","1,9,12","g,m,[s],t","1,5,7",[z42],D1,TRUE,salamae
+Blegdam,"9,12","g,m,q",-,,D1,TRUE,enterica
+Gueuletapee,"9,12","g,m,s",-,,D1,TRUE,enterica
+"II 1,9,12:g,m,s,t:e,n,x","1,9,12","g,m,s,t","e,n,x",,D1,FALSE,salamae
+Dublin,"1,9,12[Vi]","g,p",-,,D1,TRUE,enterica
+Naestved,"1,9,12","g,p,s",-,,D1,TRUE,enterica
+Rostock,"1,9,12","g,p,u",-,,D1,TRUE,enterica
+Moscow,"1,9,12","g,q",-,,D1,TRUE,enterica
+"II 9,12:g,s,t:e,n,x","9,12","g,s,t","e,n,x",,D1,FALSE,salamae
+"IIIa 9:g,z51:1,5","9,12","g,z51","1,5",,D1,FALSE,arizonae
+Newmexico,"9,12","g,z51","1,5",,D1,FALSE,enterica
+"II 1,9,12:g,z62:[e,n,x]","1,9,12","g,z62","e,n,x",,D1,TRUE,salamae
+"II 9:g,z62:e,n,x","1,9,12","g,z62","e,n,x",,D1,TRUE,salamae
+Antarctica,"9,12","g,z63",-,,D1,TRUE,enterica
+Rosenberg,"9,12","g,z85",-,,D1,TRUE,enterica
+Seremban,"9,12",i,"1,5",,D1,FALSE,enterica
+Claibornei,"1,9,12",k,"1,5",,D1,FALSE,enterica
+Goverdhan,"9,12",k,"1,6",,D1,FALSE,enterica
+Mendoza,"9,12","l,v","1,2",,D1,FALSE,enterica
+Houston,"9,12","l,v","1,5",d,D1,FALSE,enterica
+Panama,"1,9,12","l,v","1,5",,D1,FALSE,enterica
+Kapemba,"9,12","l,v","1,7",[z40],D1,FALSE,enterica
+"II 9,12:l,v:e,n,x","9,12","l,v","e,n,x",,D1,FALSE,salamae
+Zaiman,"9,12","l,v","e,n,x",,D1,FALSE,enterica
+Goettingen,"9,12","l,v","e,n,z15",,D1,FALSE,enterica
+"II 9,12:l,v:z39","9,12","l,v",z39,,D1,FALSE,salamae
+Victoria,"1,9,12","l,w","1,5",,D1,FALSE,enterica
+"II 1,9,12:l,w:e,n,x","1,9,12","l,w","e,n,x",,D1,FALSE,salamae
+Itami,"9,12","l,z13","1,5",,D1,FALSE,enterica
+Miyazaki,"9,12","l,z13","1,7",,D1,FALSE,enterica
+Napoli,"1,9,12","l,z13","e,n,x",,D1,FALSE,enterica
+"II 9,12:l,z28:1,5","9,12","l,z28","1,5",z42,D1,FALSE,salamae
+Javiana,"1,9,12","l,z28","1,5",,D1,FALSE,enterica
+Kotu,"9,12","l,z28","1,6",,D1,FALSE,enterica
+"II 9,12:l,z28:e,n,x","9,12","l,z28","e,n,x",,D1,FALSE,salamae
+York,"9,12","l,z28","e,n,z15",,D1,FALSE,enterica
+Pensacola,"1,9,12","m,t","1,2",,D1,TRUE,enterica
+"II 1,9,12:m,t:1,5","1,9,12","m,t","1,5",,D1,FALSE,salamae
+"II 9,12:m,t:e,n,x","9,12","m,t","e,n,x",,D1,FALSE,salamae
+"II 1,9,12:m,t:z39","1,9,12","m,t",z39,,D1,FALSE,salamae
+Jamaica,"9,12",r,"1,5",,D1,FALSE,enterica
+Camberwell,"9,12",r,"1,7",,D1,FALSE,enterica
+Yellowknife,"9,12",r,"e,n,x",,D1,FALSE,enterica
+Campinense,"9,12",r,"e,n,z15",,D1,FALSE,enterica
+Lome,"9,12",r,z6,,D1,FALSE,enterica
+Powell,"9,12",y,"1,7",,D1,FALSE,enterica
+"II 1,9,12:y:z39","1,9,12",y,z39,,D1,FALSE,salamae
+Mulhouse,"1,9,12",z,"1,2",,D1,FALSE,enterica
+Lawndale,"1,9,12",z,"1,5",,D1,FALSE,enterica
+Kimpese,"9,12",z,"1,6",,D1,FALSE,enterica
+"II 1,9,12:z:1,7","1,9,12",z,"1,7",,D1,FALSE,salamae
+Aurelianis,"9,12",z,"e,n,z15",,D1,FALSE,enterica
+"II 9,12:z:z39","9,12",z,z39,,D1,FALSE,salamae
+"II 1,9,12:z:z6","1,9,12",z,z6,,D1,FALSE,salamae
+Portland,"9,12",z10,"1,5",,D1,FALSE,enterica
+Ruanda,"9,12",z10,"e,n,z15",,D1,FALSE,enterica
+Treguier,"9,12",z10,z6,,D1,FALSE,enterica
+"II 9,12:z29:1,5","9,12",z29,"1,5",,D1,FALSE,salamae
+"II 1,9,12:z29:e,n,x","1,9,12",z29,"e,n,x",,D1,FALSE,salamae
+Penarth,"9,12",z35,z6,,D1,FALSE,enterica
+Elomrane,"1,9,12",z38,-,,D1,TRUE,enterica
+"II 1,9,12:z39:1,7","1,9,12",z39,"1,7",,D1,FALSE,salamae
+Wangata,"1,9,12","z4,z23","1,7",,D1,TRUE,enterica
+Natal,"9,12","z4,z24",-,,D1,TRUE,enterica
+Ottawa,"1,9,12",z41,"1,5",,D1,FALSE,enterica
+"II 1,9,12:z42:1,[5],7","1,9,12",z42,"1,5,7",,D1,FALSE,salamae
+"II 9:z42:1,5,7","1,9,12",z42,"1,5,7",,D1,FALSE,salamae
+Franken,"9,12",z6,z67,,D1,FALSE,enterica
+Detmold,"9,46",a,"1,2",,D2,FALSE,enterica
+Baildon,"9,46",a,"e,n,x",,D2,FALSE,enterica
+Doba,"9,46",a,"e,n,z15",,D2,FALSE,enterica
+Montaigu,"9,46",b,"1,2",,D2,FALSE,enterica
+Cheltenham,"9,46",b,"1,5",,D2,FALSE,enterica
+Zadar,"9,46",b,"1,6",,D2,FALSE,enterica
+"II 9,46:b:e,n,x","9,46",b,"e,n,x",,D2,FALSE,salamae
+Worb,"9,46",b,"e,n,x",,D2,FALSE,enterica
+Bamboye,"9,46",b,"l,w",,D2,FALSE,enterica
+Kolar,"9,46",b,z35,,D2,FALSE,enterica
+Linguere,"9,46",b,z6,,D2,FALSE,enterica
+Argenteuil,"1,9,46",c,"1,7",,D2,FALSE,enterica
+Itutaba,"9,46",c,z6,,D2,FALSE,enterica
+Ontario,"9,46",d,"1,5",,D2,FALSE,enterica
+Quentin,"9,46",d,"1,6",,D2,FALSE,enterica
+Strasbourg,"9,46",d,"1,7",,D2,FALSE,enterica
+Olten,"9,46",d,"e,n,z15",,D2,FALSE,enterica
+Sontheim,"9,46",d,z35,,D2,FALSE,enterica
+Plymouth,"9,46",d,z6,,D2,FALSE,enterica
+Bergedorf,"9,46","e,h","1,2",,D2,FALSE,enterica
+Waedenswil,"9,46","e,h","1,5",,D2,FALSE,enterica
+Guerin,"9,46","e,h",z6,,D2,FALSE,enterica
+"II 9,46:e,n,x:1,5,7","9,46","e,n,x","1,5,7",,D2,FALSE,salamae
+Wernigerode,"9,46","f,g",-,,D2,TRUE,enterica
+"II 9,46:g,[m],[s],t:[e,n,x]","9,46","g,[m],[s],t","e,n,x",,D2,TRUE,salamae
+Hillingdon,"9,46","g,m",-,,D2,TRUE,enterica
+Macclesfield,"9,46","g,m,s","1,2,7",,D2,FALSE,enterica
+Gateshead,"9,46","g,s,t",-,,D2,TRUE,enterica
+"II 9,46:g,z62:-","9,46","g,z62",-,,D2,TRUE,salamae
+Mathura,"9,46",i,"e,n,z15",,D2,FALSE,enterica
+Potto,"9,46",i,z6,,D2,FALSE,enterica
+Marylebone,"9,46",k,"1,2",,D2,FALSE,enterica
+Cochin,"9,46",k,"1,5",,D2,FALSE,enterica
+Clontarf,"9,46",k,"1,6",,D2,FALSE,enterica
+Ceyco,"9,46",k,z35,,D2,FALSE,enterica
+India,"9,46","l,v","1,5",,D2,FALSE,enterica
+Geraldton,"9,46","l,v","1,6",,D2,FALSE,enterica
+Toronto,"9,46","l,v","e,n,x",,D2,FALSE,enterica
+Ackwepe,"9,46","l,w",-,,D2,TRUE,enterica
+Nordrhein,"9,46","l,z13,z28","e,n,z15",,D2,FALSE,enterica
+Sangalkam,"9,46","m,t",-,,D2,TRUE,enterica
+"II 9,46:m,t:e,n,x","9,46","m,t","e,n,x",,D2,FALSE,salamae
+Deckstein,"9,46",r,"1,7",,D2,FALSE,enterica
+Shoreditch,"9,46",r,"e,n,z15",,D2,FALSE,enterica
+Sokode,"9,46",r,z6,,D2,FALSE,enterica
+Benin,"9,46",y,"1,7",,D2,FALSE,enterica
+Irchel,"9,46",y,"e,n,x",,D2,FALSE,enterica
+Nantes,"9,46",y,"l,w",,D2,FALSE,enterica
+Mayday,"9,46",y,z6,,D2,FALSE,enterica
+"II 9,46:z:1,5","9,46",z,"1,5",,D2,FALSE,salamae
+"II 9,46:z:e,n,x","9,46",z,"e,n,x",,D2,FALSE,salamae
+Bambylor,"9,46",z,"e,n,z15",,D2,FALSE,enterica
+"II 9,46:z:z39","9,46",z,z39,,D2,FALSE,salamae
+Lishabi,"9,46",z10,"1,7",,D2,FALSE,enterica
+Inglis,"9,46",z10,"e,n,x",,D2,FALSE,enterica
+Mahina,"9,46",z10,"e,n,z15",,D2,FALSE,enterica
+"II 9,46:z10:z39","9,46",z10,z39,,D2,FALSE,salamae
+"II 9,46:z10:z6","9,46",z10,z6,,D2,FALSE,salamae
+Louisiana,"9,46",z10,z6,,D2,FALSE,enterica
+Ouakam,"9,46",z29,-,[z45],D2,TRUE,enterica
+Hillegersberg,"9,46",z35,"1,5",,D2,FALSE,enterica
+Basingstoke,"9,46",z35,"e,n,z15",,D2,FALSE,enterica
+Trimdon,"9,46",z35,z6,,D2,FALSE,enterica
+Fresno,"9,46",z38,-,,D2,TRUE,enterica
+"II 9,46:z39:1,7","9,46",z39,"1,7",,D2,FALSE,salamae
+Ekotedo,"9,46","z4,z23",-,,D2,TRUE,enterica
+Ngaparou,"9,46","z4,z24",-,,D2,TRUE,enterica
+"II 9,46:z4,z24:z39","9,46","z4,z24",z39,,D2,FALSE,salamae
+Wuppertal,"9,46",z41,-,,D2,TRUE,enterica
+"II 1,9,12,46,27:a:z6","1,9,12,46,27",a,z6,,D3,FALSE,salamae
+"II 1,9,12,46,27:c:z39","1,9,12,46,27",c,z39,,D3,FALSE,salamae
+"II 9,12,46,27:g,t:e,n,x","9,12,46,27","g,t","e,n,x",,D3,FALSE,salamae
+"II 1,9,12,46,27:y:z39","1,9,12,46,27",y,z39,,D3,FALSE,salamae
+"II 1,9,12,46,27:z10:e,n,x","1,9,12,46,27",z10,"e,n,x",,D3,FALSE,salamae
+"II 1,9,12,46,27:z4,z24:1,5","1,9,12,46,27","z4,z24","1,5",,D3,FALSE,salamae
+Goelzau,"3,{10}{15}",a,"1,5",,E1,FALSE,enterica
+"II 3,10:a:e,n,x","3,10",a,"e,n,x",,E1,FALSE,salamae
+Galil,"3,10",a,"e,n,z15",,E1,FALSE,enterica
+"II 3,10:a:z39","3,10",a,z39,,E1,FALSE,salamae
+Kalina,"3,10",b,"1,2",,E1,FALSE,enterica
+Butantan,"3,{10}{15}{15,34}",b,"1,5",,E1,FALSE,enterica
+Allerton,"3,10",b,"1,6",,E1,FALSE,enterica
+Huvudsta,"3,{10}{15,34}",b,"1,7",,E1,FALSE,enterica
+Benfica,"3,10",b,"e,n,x",,E1,FALSE,enterica
+"II 3,10:b:e,n,x","3,10",b,"e,n,x",,E1,FALSE,salamae
+Yaba,"3,{10}{15}",b,"e,n,z15",,E1,FALSE,enterica
+Epicrates,"3,10",b,"l,w",,E1,FALSE,enterica
+Westminster,"3,{10}{15}",b,z35,,E1,FALSE,enterica
+"II 3,10:b:z39","3,10",b,z39,,E1,FALSE,salamae
+Wilmington,"3,10",b,z6,,E1,FALSE,enterica
+Asylanta,"3,10",c,"1,2",,E1,FALSE,enterica
+Gbadago,"3,{10}{15}",c,"1,5",,E1,FALSE,enterica
+Ikayi,"3,{10}{15}",c,"1,6",,E1,FALSE,enterica
+Pramiso,"3,10",c,"1,7",,E1,FALSE,enterica
+Agege,"3,10",c,"e,n,z15",,E1,FALSE,enterica
+Anderlecht,"3,10",c,"l,w",,E1,FALSE,enterica
+Okefoko,"3,10",c,z6,,E1,FALSE,enterica
+Stormont,"3,10",d,"1,2",,E1,FALSE,enterica
+Shangani,"3,{10}{15}",d,"1,5",,E1,FALSE,enterica
+Lekke,"3,10",d,"1,6",,E1,FALSE,enterica
+Onireke,"3,10",d,"1,7",,E1,FALSE,enterica
+"II 3,10:d:e,n,x","3,10",d,"e,n,x",,E1,FALSE,salamae
+Souza,"3,{10}{15}",d,"e,n,x",,E1,FALSE,enterica
+Madjorio,"3,10",d,"e,n,z15",,E1,FALSE,enterica
+Birmingham,"3,{10}{15}",d,"l,w",,E1,FALSE,enterica
+Maron,"3,10",d,z35,,E1,FALSE,enterica
+Weybridge,"3,10",d,z6,,E1,FALSE,enterica
+Vejle,"3,{10}{15}","e,h","1,2",[z27],E1,FALSE,enterica
+Muenster,"3,{10}{15}{15,34}","e,h","1,5",[z48],E1,FALSE,enterica
+Anatum,"3,{10}{15}{15,34}","e,h","1,6",[z64],E1,FALSE,enterica
+Nyborg,"3,{10}{15}","e,h","1,7",,E1,FALSE,enterica
+Newlands,"3,{10}{15,34}","e,h","e,n,x",,E1,FALSE,enterica
+Lamberhurst,"3,10","e,h","e,n,z15",,E1,FALSE,enterica
+Meleagridis,"3,{10}{15}{15,34}","e,h","l,w",,E1,FALSE,enterica
+Sekondi,"3,10","e,h",z6,,E1,FALSE,enterica
+"II 3,10:e,n,x:1,7","3,10","e,n,x","1,7",,E1,FALSE,salamae
+Alfort,"3,10","f,g","e,n,x",,E1,FALSE,enterica
+Regent,"3,10","f,g,[s]","1,6",,E1,TRUE,enterica
+Suberu,"3,10","g,m",-,,E1,TRUE,enterica
+Amsterdam,"3,{10}{15}{15,34}","g,m,s",-,,E1,TRUE,enterica
+"II 3,{10}{15}:g,m,s,t:[1,5]","3,{10}{15}","g,m,s,t","1,5",,E1,TRUE,salamae
+Westhampton,"3,{10}{15}{15,34}","g,s,t",-,[z37],E1,TRUE,enterica
+"II 3,10:g,t:-","3,10","g,t",-,,E1,TRUE,salamae
+Bloomsbury,"3,10","g,t","1,5",,E1,FALSE,enterica
+Cuckmere,"3,10",i,"1,2",,E1,FALSE,enterica
+Amounderness,"3,10",i,"1,5",,E1,FALSE,enterica
+Tibati,"3,10",i,"1,6",,E1,FALSE,enterica
+Truro,"3,10",i,"1,7",,E1,FALSE,enterica
+Bessi,"3,10",i,"e,n,x",,E1,FALSE,enterica
+Falkensee,"3,{10}{15}",i,"e,n,z15",,E1,FALSE,enterica
+Hoboken,"3,10",i,"l,w",,E1,FALSE,enterica
+Yeerongpilly,"3,10",i,z6,,E1,FALSE,enterica
+Wimborne,"3,10",k,"1,2",,E1,FALSE,enterica
+Zanzibar,"3,{10}{15}",k,"1,5",,E1,FALSE,enterica
+Serrekunda,"3,10",k,"1,7",,E1,FALSE,enterica
+Yundum,"3,10",k,"e,n,x",,E1,FALSE,enterica
+Marienthal,"3,10",k,"e,n,z15",,E1,FALSE,enterica
+Newrochelle,"3,10",k,"l,w",,E1,FALSE,enterica
+Nchanga,"3,{10}{15}","l,v","1,2",,E1,FALSE,enterica
+Sinstorf,"3,10","l,v","1,5",,E1,FALSE,enterica
+London,"3,{10}{15}","l,v","1,6",,E1,FALSE,enterica
+Give,"3,{10}{15}{15,34}","l,v","1,7",[d],E1,FALSE,enterica
+"II 3,10:l,v:e,n,x","3,10","l,v","e,n,x",,E1,FALSE,salamae
+Ruzizi,"3,10","l,v","e,n,z15",,E1,FALSE,enterica
+Sinchew,"3,10","l,v",z35,,E1,FALSE,enterica
+"II 3,10:l,v:z6","3,10","l,v",z6,,E1,FALSE,salamae
+Assinie,"3,10","l,w",z6,[z45],E1,FALSE,enterica
+Freiburg,"3,10","l,z13","1,2",,E1,FALSE,enterica
+Uganda,"3,{10}{15}","l,z13","1,5",,E1,FALSE,enterica
+Fallowfield,"3,10","l,z13,z28","e,n,z15",,E1,FALSE,enterica
+Hoghton,"3,10","l,z13,z28",z6,,E1,FALSE,enterica
+"II 3,10:l,z28:1,5","3,10","l,z28","1,5",,E1,FALSE,salamae
+Joal,"3,10","l,z28","1,7",,E1,FALSE,enterica
+"II 3,10:l,z28:e,n,x","3,10","l,z28","e,n,x",,E1,FALSE,salamae
+Lamin,"3,10","l,z28","e,n,x",,E1,FALSE,enterica
+"II 3,10:l,z28:z39","3,10","l,z28",z39,,E1,FALSE,salamae
+"II 3,10:m,t:1,5","3,10","m,t","1,5",,E1,FALSE,salamae
+Southbank,"3,{10}{15}{15,34}","m,t","1,6",,E1,TRUE,enterica
+"II 3,10:m,t:e,n,x","3,10","m,t","e,n,x",,E1,FALSE,salamae
+Ughelli,"3,10",r,"1,5",,E1,FALSE,enterica
+Elisabethville,"3,{10}{15}",r,"1,7",,E1,FALSE,enterica
+Simi,"3,10",r,"e,n,z15",,E1,FALSE,enterica
+Weltevreden,"3,{10}{15}",r,z6,,E1,FALSE,enterica
+Seegefeld,"3,10","r,i","1,2",,E1,FALSE,enterica
+Dumfries,"3,10","r,i","1,6",,E1,FALSE,enterica
+Amager,"3,{10}{15}",y,"1,2",[z45],E1,FALSE,enterica
+Orion,"3,{10}{15}{15,34}",y,"1,5",,E1,FALSE,enterica
+Mokola,"3,10",y,"1,7",,E1,FALSE,enterica
+Ohlstedt,"3,{10}{15}",y,"e,n,x",,E1,FALSE,enterica
+Bolton,"3,10",y,"e,n,z15",,E1,FALSE,enterica
+Langensalza,"3,10",y,"l,w",,E1,FALSE,enterica
+Stockholm,"3,{10}{15}",y,z6,,E1,FALSE,enterica
+Fufu,"3,10",z,"1,5",,E1,FALSE,enterica
+"II 3,10:z:1,5","3,10",z,"1,5",,E1,FALSE,salamae
+Harleystreet,"3,10",z,"1,6",,E1,FALSE,enterica
+Huddinge,"3,10",z,"1,7",,E1,FALSE,enterica
+"II 3,10:z:e,n,x","3,10",z,"e,n,x",,E1,FALSE,salamae
+Clerkenwell,"3,10",z,"l,w",,E1,FALSE,enterica
+"II 3,10:z:z39","3,10",z,z39,,E1,FALSE,salamae
+Landwasser,"3,10",z,z6,,E1,FALSE,enterica
+Okerara,"3,10",z10,"1,2",,E1,FALSE,enterica
+Lexington,"3,{10}{15}{15,34}",z10,"1,5",[z49],E1,FALSE,enterica
+Harrisonburg,"3,{10}{15}{15,34}",z10,"1,6",,E1,FALSE,enterica
+Coquilhatville,"3,10",z10,"1,7",,E1,FALSE,enterica
+Podiensis,"3,10",z10,"e,n,x",,E1,FALSE,enterica
+Kristianstad,"3,10",z10,"e,n,z15",,E1,FALSE,enterica
+Biafra,"3,10",z10,z6,,E1,FALSE,enterica
+Jedburgh,"3,{10}{15}",z29,-,,E1,TRUE,enterica
+Everleigh,"3,10",z29,"e,n,x",,E1,FALSE,enterica
+"II 3,10:z29:[e,n,x]","3,10",z29,"e,n,x",,E1,TRUE,salamae
+Ratchaburi,"3,10",z35,"1,6",,E1,FALSE,enterica
+Zongo,"3,10",z35,"1,7",,E1,FALSE,enterica
+"II 3,10:z35:e,n,x,z15","3,10",z35,"e,n,x,z15",,E1,FALSE,salamae
+Shannon,"3,10",z35,"l,w",,E1,FALSE,enterica
+Cairina,"3,10",z35,z6,,E1,FALSE,enterica
+Macallen,"3,10",z36,-,,E1,TRUE,enterica
+Sandaga,"3,10",z38,"1,2",,E1,FALSE,enterica
+Albertslund,"3,10",z38,"1,6",,E1,FALSE,enterica
+"II 3,10:z38:z42","3,10",z38,z42,,E1,FALSE,salamae
+Bolombo,"3,10",z38,z6,,E1,TRUE,enterica
+"II 3,10:z39:1,[5],7","3,10",z39,"1,5,7",,E1,FALSE,salamae
+Adabraka,"3,10","z4,z23","1,7",,E1,TRUE,enterica
+Wagadugu,"3,10","z4,z23",z6,,E1,FALSE,enterica
+Florian,"3,{10}{15}","z4,z24",-,,E1,TRUE,enterica
+"II 3,10:z4,z24:-","3,10","z4,z24",-,,E1,TRUE,salamae
+Dortmund,"3,10",z41,"1,2,5",,E1,FALSE,enterica
+Pietersburg,"3,{10}{15,34}",z69,"1,7",,E1,FALSE,enterica
+Niumi,"1,3,19",a,"1,5",,E4,FALSE,enterica
+Juba,"1,3,19",a,"1,7",,E4,FALSE,enterica
+Gwoza,"1,3,19",a,"e,n,z15",,E4,FALSE,enterica
+Alkmaar,"1,3,19",a,"l,w",,E4,FALSE,enterica
+Gnesta,"1,3,19",b,"1,5",[z37],E4,FALSE,enterica
+Visby,"1,3,19",b,"1,6",,E4,FALSE,enterica
+Tambacounda,"1,3,19",b,"e,n,x",,E4,FALSE,enterica
+Kande,"1,3,19",b,"e,n,z15",,E4,FALSE,enterica
+Broughton,"1,3,19",b,"l,w",,E4,FALSE,enterica
+Chittagong,"1,3,10,19",b,z35,,E4,FALSE,enterica
+Accra,"1,3,19",b,z6,,E4,FALSE,enterica
+Eastglam,"1,3,19",c,"1,5",,E4,FALSE,enterica
+Bida,"1,3,19",c,"1,6",,E4,FALSE,enterica
+Madiago,"1,3,19",c,"1,7",,E4,FALSE,enterica
+Umbadah,"1,3,19",d,"1,2",,E4,FALSE,enterica
+Ahmadi,"1,3,19",d,"1,5",,E4,FALSE,enterica
+Wanatah,"1,3,19",d,"1,7",,E4,FALSE,enterica
+Liverpool,"1,3,19",d,"e,n,z15",,E4,FALSE,enterica
+Tilburg,"1,3,19",d,"l,w",[z49],E4,FALSE,enterica
+Niloese,"1,3,19",d,z6,,E4,FALSE,enterica
+Vilvoorde,"1,3,19","e,h","1,5",,E4,FALSE,enterica
+Hayindogo,"1,3,19","e,h","1,6",,E4,FALSE,enterica
+Sanktmarx,"1,3,19","e,h","1,7",,E4,FALSE,enterica
+Sao,"1,3,19","e,h","e,n,z15",,E4,FALSE,enterica
+Calabar,"1,3,19","e,h","l,w",,E4,FALSE,enterica
+Rideau,"1,3,19","f,g",-,,E4,TRUE,enterica
+Bilu,"1,3,10,19","f,g,t","1,(2),7",,E4,FALSE,enterica
+Petahtikve,"1,3,19","f,g,t","1,7",,E4,FALSE,enterica
+Maiduguri,"1,3,19","f,g,t","e,n,z15",,E4,FALSE,enterica
+Senftenberg,"1,3,19","g,[s],t",-,"[z27],[z34],[z37],[z43],[z45],[z46],[z82]",E4,TRUE,enterica
+Kouka,"1,3,19","g,m,[t]",-,,E4,TRUE,enterica
+Dessau,"1,3,15,19","g,s,t",-,,E4,TRUE,enterica
+Stratford,"1,3,19",i,"1,2",,E4,FALSE,enterica
+Ouagadougou,"1,3,19",i,"1,5",,E4,FALSE,enterica
+Chichester,"1,3,19",i,"1,6",,E4,FALSE,enterica
+Machaga,"1,3,19",i,"e,n,x",,E4,FALSE,enterica
+Avonmouth,"1,3,19",i,"e,n,z15",,E4,FALSE,enterica
+Zuilen,"1,3,19",i,"l,w",,E4,FALSE,enterica
+Taksony,"1,3,19",i,z6,,E4,FALSE,enterica
+Oesterbro,"1,3,19",k,"1,5",,E4,FALSE,enterica
+Bethune,"1,3,19",k,"1,7",,E4,FALSE,enterica
+Stuivenberg,"1,3,19","l,[z13],z28","1,5",,E4,FALSE,enterica
+Ngor,"1,3,19","l,v","1,5",,E4,FALSE,enterica
+Parkroyal,"1,3,19","l,v","1,7",,E4,FALSE,enterica
+Svedvi,"1,3,19","l,v","e,n,z15",,E4,FALSE,enterica
+Fulda,"1,3,19","l,w","1,5",,E4,FALSE,enterica
+Westerstede,"1,3,19","l,z13","1,2",,E4,FALSE,enterica
+Winterthur,"1,3,19","l,z13","1,6",,E4,FALSE,enterica
+Lokstedt,"1,3,19","l,z13,z28","1,2",,E4,FALSE,enterica
+Bedford,"1,3,19","l,z13,z28","e,n,z15",,E4,FALSE,enterica
+Tomelilla,"1,3,19","l,z28","1,7",,E4,FALSE,enterica
+Kindia,"1,3,19","l,z28","e,n,x",,E4,FALSE,enterica
+Cannstatt,"1,3,19","m,t",-,,E4,TRUE,enterica
+Yalding,"1,3,19",r,"e,n,z15",,E4,FALSE,enterica
+Fareham,"1,3,19","r,i","l,w",,E4,FALSE,enterica
+Gatineau,"1,3,19",y,"1,5",,E4,FALSE,enterica
+Thies,"1,3,19",y,"1,7",,E4,FALSE,enterica
+Cannonhill,"1,3,{10},{15},19",y,"e,n,x",,E4,FALSE,enterica
+Kinson,"1,3,19",y,"e,n,x",,E4,FALSE,enterica
+Slade,"1,3,19",y,"e,n,z15",,E4,FALSE,enterica
+Krefeld,"1,3,19",y,"l,w",,E4,FALSE,enterica
+Korlebu,"1,3,19",z,"1,5",,E4,FALSE,enterica
+Kainji,"1,3,19",z,"1,6",,E4,FALSE,enterica
+Lerum,"1,3,19",z,"1,7",,E4,FALSE,enterica
+Schoeneberg,"1,3,19",z,"e,n,z15",,E4,FALSE,enterica
+Carno,"1,3,19",z,"l,w",,E4,FALSE,enterica
+Hongkong,"1,3,19",z,z6,,E4,FALSE,enterica
+Yenne,"1,3,19",z10,"1,5",,E4,FALSE,enterica
+Dallgow,"1,3,19",z10,"e,n,z15",,E4,FALSE,enterica
+Llandoff,"1,3,19",z29,z6,[z37],E4,TRUE,enterica
+Catumagos,"1,3,19",z35,"1,5",,E4,FALSE,enterica
+Ochiogu,"1,3,19",z38,"e,n,z15",,E4,TRUE,enterica
+Ilugun,"1,3,10,19","z4,z23",z6,,E4,FALSE,enterica
+Sambre,"1,3,19","z4,z24",-,,E4,TRUE,enterica
+Gallen,11,a,"1,2",,F,FALSE,enterica
+Marseille,11,a,"1,5",,F,FALSE,enterica
+"VI 11:a:1,5",11,a,"1,5",,F,FALSE,indica
+Massilia,11,a,"1,6",,F,FALSE,enterica
+Toowong,11,a,"1,7",,F,FALSE,enterica
+"II 11:a:e,n,z15:d",11,a,"e,n,z15",d,F,FALSE,salamae
+Luciana,11,a,"e,n,z15",,F,FALSE,enterica
+Epinay,11,a,"l,z13,z28",,F,FALSE,enterica
+II 11:a:z6:z42,11,a,z6,z42,F,FALSE,salamae
+Atento,11,b,"1,2",,F,FALSE,enterica
+Leeuwarden,11,b,"1,5",,F,FALSE,enterica
+Wohlen,11,b,"1,6",,F,FALSE,enterica
+"VI 11:b:1,7",11,b,"1,7",,F,FALSE,indica
+"VI 11:b:e,n,x",11,b,"e,n,x",,F,FALSE,indica
+Pharr,11,b,"e,n,z15",,F,FALSE,enterica
+Erfurt,11,b,z6,,F,FALSE,enterica
+Chiredzi,11,c,"1,5",,F,FALSE,enterica
+Brindisi,11,c,"1,6",,F,FALSE,enterica
+Woodinville,11,c,"e,n,x",,F,FALSE,enterica
+"II 11:c:e,n,z15",11,c,"e,n,z15",,F,FALSE,salamae
+Ati,11,d,"1,2",,F,FALSE,enterica
+Gustavia,11,d,"1,5",,F,FALSE,enterica
+Chandans,11,d,"e,n,x",[r],F,TRUE,enterica
+Findorff,11,d,z6,,F,FALSE,enterica
+Chingola,11,"e,h","1,2",,F,FALSE,enterica
+Adamstua,11,"e,h","1,6",,F,FALSE,enterica
+Redhill,11,"e,h","l,z13,z28",,F,FALSE,enterica
+"II 11:g,[m],s,t:z39",11,"g,[m],s,t",z39,,F,FALSE,salamae
+Abuja,11,"g,m","1,5",,F,FALSE,enterica
+Missouri,11,"g,s,t",-,,F,TRUE,enterica
+"IV 11:g,z51:-",11,"g,z51",-,,F,TRUE,houtenae
+Aberdeen,11,i,"1,2",,F,FALSE,enterica
+Brijbhumi,11,i,"1,5",,F,FALSE,enterica
+Heerlen,11,i,"1,6",,F,FALSE,enterica
+Veneziana,11,i,"e,n,x",,F,FALSE,enterica
+Pretoria,11,k,"1,2",,F,FALSE,enterica
+Abaetetuba,11,k,"1,5",,F,FALSE,enterica
+Sharon,11,k,"1,6",,F,FALSE,enterica
+Colobane,11,k,"1,7",,F,FALSE,enterica
+Kisarawe,11,k,"e,n,x,z15",,F,FALSE,enterica
+Mannheim,11,k,"l,w",,F,FALSE,enterica
+Amba,11,k,"l,z13,z28",,F,FALSE,enterica
+IIIb 11:k:z53,11,k,z53,,F,FALSE,diarizonae
+Stendal,11,"l,v","1,2",,F,FALSE,enterica
+Maracaibo,11,"l,v","1,5",,F,FALSE,enterica
+Fann,11,"l,v","e,n,x",,F,FALSE,enterica
+Bullbay,11,"l,v","e,n,z15",,F,FALSE,enterica
+"IIIb 11:l,v:z",11,"l,v",z,,F,FALSE,diarizonae
+"IIIb 11:l,v:z53",11,"l,v",z53,,F,FALSE,diarizonae
+Glidji,11,"l,w","1,5",,F,FALSE,enterica
+Tours,11,"l,z13","1,2",,F,FALSE,enterica
+Connecticut,11,"l,z13,z28","1,5",,F,FALSE,enterica
+Osnabrueck,11,"l,z13,z28","e,n,x",,F,FALSE,enterica
+"II 11:l,z28:e,n,x",11,"l,z28","e,n,x",,F,FALSE,salamae
+Moers,11,"m,t",-,,F,TRUE,enterica
+"II 11:m,t:e,n,x",11,"m,t","e,n,x",,F,FALSE,salamae
+Senegal,11,r,"1,5",,F,FALSE,enterica
+Rubislaw,11,r,"e,n,x",,F,FALSE,enterica
+Clanvillian,11,r,"e,n,z15",,F,FALSE,enterica
+Volta,11,r,"l,z13,z28",,F,FALSE,enterica
+Euston,11,"r,i","e,n,x,z15",,F,FALSE,enterica
+Solt,11,y,"1,5",,F,FALSE,enterica
+Jalisco,11,y,"1,7",,F,FALSE,enterica
+Herzliya,11,y,"e,n,x",,F,FALSE,enterica
+Woumbou,11,y,"e,n,x,z15",,F,FALSE,enterica
+Crewe,11,z,"1,5",,F,FALSE,enterica
+Maroua,11,z,"1,7",,F,FALSE,enterica
+"II 11:z:e,n,x",11,z,"e,n,x",,F,FALSE,salamae
+II 11:z:z39,11,z,z39,,F,FALSE,salamae
+Nyanza,11,z,z6,[z83],F,FALSE,enterica
+Wentworth,11,z10,"1,2",,F,FALSE,enterica
+Straengnaes,11,z10,"1,5",,F,FALSE,enterica
+Telhashomer,11,z10,"e,n,x",,F,FALSE,enterica
+Lene,11,z38,-,,F,TRUE,enterica
+"IIIa 11:z4,z23:-",11,"z4,z23",-,,F,TRUE,arizonae
+"IV 11:z4,z23:-",11,"z4,z23",-,,F,TRUE,houtenae
+Remete,11,"z4,z23","1,6",,F,FALSE,enterica
+Etterbeek,11,"z4,z23","e,n,z15",,F,FALSE,enterica
+Yehuda,11,"z4,z24",-,,F,TRUE,enterica
+"IV 11:z4,z32:-",11,"z4,z32",-,,F,TRUE,houtenae
+Maastricht,11,z41,"1,2",,F,FALSE,enterica
+"II 13,23:-:1,6","13,23",-,"1,6",,G,FALSE,salamae
+"II 13:-:1,6","13,23",-,"1,6",,G,FALSE,salamae
+"II 1,13,23:[z42]:1,[5],7","1,13,23",[z42],"1,5,7",,G,FALSE,salamae
+Chagoua,"1,13,23",a,"1,5",,G,FALSE,enterica
+"II 1,13,23:a:1,5","1,13,23",a,"1,5",,G,FALSE,salamae
+"II 13:a:1,5","1,13,23",a,"1,5",,G,FALSE,salamae
+Mim,"13,22",a,"1,6",,G,FALSE,enterica
+"II 13,22:a:e,n,x","13,22",a,"e,n,x",,G,FALSE,salamae
+"II 13:a:e,n,x","13,22",a,"e,n,x",,G,FALSE,salamae
+Wyldegreen,"1,13,23",a,"l,w",,G,FALSE,enterica
+Marshall,"13,22",a,"l,z13,z28",,G,FALSE,enterica
+"II 1,13,23:a:z42","1,13,23",a,z42,,G,FALSE,salamae
+II 13:a:z42,"1,13,23",a,z42,,G,FALSE,salamae
+"II 1,13,23:b:[1,5]:z42","1,13,23",b,"1,5",z42,G,TRUE,salamae
+Ibadan,"13,22",b,"1,5",,G,FALSE,enterica
+"II 13:b:1,5","1,13,23",b,"1,5",,G,TRUE,salamae
+Mississippi,"1,13,23",b,"1,5",,G,FALSE,enterica
+Bracknell,"13,23",b,"1,6",,G,FALSE,enterica
+Oudwijk,"13,22",b,"1,6",,G,FALSE,enterica
+Rottnest,"1,13,22",b,"1,7",,G,FALSE,enterica
+Ullevi,"1,13,23",b,"e,n,x",,G,FALSE,enterica
+Vaertan,"13,22",b,"e,n,x",,G,FALSE,enterica
+Bahati,"13,22",b,"e,n,z15",,G,FALSE,enterica
+Durham,"13,23",b,"e,n,z15",,G,FALSE,enterica
+Sanktjohann,"13,23",b,"l,w",,G,FALSE,enterica
+"II 1,13,22:b:z42","1,13,22",b,z42,,G,FALSE,salamae
+Haouaria,"13,22",c,"e,n,x,z15",,G,FALSE,enterica
+Handen,"1,13,23",d,"1,2",,G,FALSE,enterica
+"II 13,22:d:1,5","13,22",d,"1,5",,G,FALSE,salamae
+Mishmarhaemek,"1,13,23",d,"1,5",,G,FALSE,enterica
+Wichita,"1,13,23",d,"1,6",[z37],G,FALSE,enterica
+Friedenau,"13,22",d,"1,6",,G,FALSE,enterica
+Grumpensis,"1,13,23",d,"1,7",,G,FALSE,enterica
+"II 13,23:d:e,n,x","13,23",d,"e,n,x",,G,FALSE,salamae
+"II 13:d:e,n,x","13,23",d,"e,n,x",,G,FALSE,salamae
+Diguel,"1,13,22",d,"e,n,z15",,G,FALSE,enterica
+Telelkebir,"13,23",d,"e,n,z15",,G,FALSE,enterica
+Putten,"13,23",d,"l,w",,G,FALSE,enterica
+Isuge,"13,23",d,z6,,G,FALSE,enterica
+Tschangu,"1,13,23","e,h","1,5",,G,FALSE,enterica
+Willemstad,"1,13,22","e,h","1,6",,G,FALSE,enterica
+Vridi,"1,13,23","e,h","l,w",,G,FALSE,enterica
+"II 1,13,23:e,n,x:1,[5],7","1,13,23","e,n,x","1,5,7",,G,FALSE,salamae
+Raus,"13,22","f,g","e,n,x",,G,FALSE,enterica
+Havana,"1,13,23","f,g,[s]",-,[z79],G,TRUE,enterica
+Okatie,"13,23","g,[s],t",-,,G,TRUE,enterica
+"II 1,13,23:g,[s],t:z42","1,13,23","g,[s],t",z42,,G,FALSE,salamae
+Bron,"13,22","g,m","e,n,z15",,G,TRUE,enterica
+Agbeni,"1,13,23","g,m,[s],[t]",-,,G,TRUE,enterica
+"II 1,13,23:g,m,[s],t:[e,n,x]","1,13,23","g,m,[s],t","e,n,x",,G,TRUE,salamae
+"IIIb 13,22:g,m,s:z","13,22","g,m,s",z,,G,FALSE,diarizonae
+"II 1,13,23:g,m,s,t:1,5","1,13,23","g,m,s,t","1,5",,G,FALSE,salamae
+"II 1,13,23:g,m,s,t:z42","1,13,23","g,m,s,t",z42,,G,FALSE,salamae
+"II 1,13,22:g,m,t:[1,5]","1,13,22","g,m,t","1,5",,G,TRUE,salamae
+Newyork,"13,22","g,s,t",-,,G,TRUE,enterica
+"II 1,13,22:g,t:[1,5]","1,13,22","g,t","1,5",,G,TRUE,salamae
+"II 13:g,t:1,5","1,13,22","g,t","1,5",,G,TRUE,salamae
+"II 13,23:g,t:e,n,x","13,23","g,t","e,n,x",,G,FALSE,salamae
+"II 13,22:g,t:z6","13,22","g,t",z6,,G,FALSE,salamae
+"IIIa 1,13,23:g,z51:-","1,13,23","g,z51",-,,G,TRUE,arizonae
+"V 1,13,22:i:-","1,13,22",i,-,,G,TRUE,bongori
+Idikan,"1,13,23",i,"1,5",,G,FALSE,enterica
+Myrria,"13,23",i,"1,7",,G,FALSE,enterica
+Jukestown,"13,23",i,"e,n,z15",,G,FALSE,enterica
+Kedougou,"1,13,23",i,"l,w",,G,FALSE,enterica
+Marburg,"13,23",k,-,,G,TRUE,enterica
+"II 13,22:k:1,5:z42","13,22",k,"1,5",z42,G,FALSE,salamae
+"II 13:k:1,5","13,22",k,"1,5",,G,FALSE,salamae
+"II 13,23:k:z41","13,23",k,z41,,G,FALSE,salamae
+Lovelace,"13,22","l,v","1,5",,G,FALSE,enterica
+"IIIb 13,22:l,v:1,5,7","13,22","l,v","1,5,7",,G,FALSE,diarizonae
+Borbeck,"13,22","l,v","1,6",,G,FALSE,enterica
+Nanga,"1,13,23","l,v","e,n,z15",,G,FALSE,enterica
+"II 13,23:l,w:e,n,x","13,23","l,w","e,n,x",,G,FALSE,salamae
+Taiping,"13,22","l,z13","e,n,z15",,G,FALSE,enterica
+"II 13,22:l,z28:1,5","13,22","l,z28","1,5",,G,FALSE,salamae
+"II 13,23:l,z28:1,5","13,23","l,z28","1,5",,G,FALSE,salamae
+"II 1,13,23:l,z28:z42","1,13,23","l,z28",z42,,G,FALSE,salamae
+"II 13,23:l,z28:z6","13,23","l,z28",z6,,G,FALSE,salamae
+Kintambo,"1,13,23","m,t",-,,G,TRUE,enterica
+Washington,"13,22","m,t",-,,G,TRUE,enterica
+"II 1,13,23:m,t:1,5","1,13,23","m,t","1,5",,G,FALSE,salamae
+"II 1,13,23:m,t:e,n,x","1,13,23","m,t","e,n,x",,G,FALSE,salamae
+"II 13,22:m,t:z42:z39","13,22","m,t",z42,z39,G,FALSE,salamae
+"V 13,22:r:-","13,22",r,-,,G,TRUE,bongori
+V 13:r:-,"13,22",r,-,,G,TRUE,bongori
+Adjame,"13,23",r,"1,6",,G,FALSE,enterica
+Linton,"13,23",r,"e,n,z15",,G,FALSE,enterica
+Tanger,"1,13,22",y,"1,6",,G,FALSE,enterica
+Yarrabah,"13,23",y,"1,7",,G,FALSE,enterica
+Ordonez,"1,13,23",y,"l,w",,G,FALSE,enterica
+Tunis,"1,13,23",y,z6,,G,FALSE,enterica
+"II 13,22:z:-","13,22",z,-,,G,TRUE,salamae
+"II 1,13,23:z:1,5","1,13,23",z,"1,5",,G,FALSE,salamae
+"IIIb 13,23:z:1,5","13,23",z,"1,5",,G,FALSE,diarizonae
+Winslow,"13,22",z,"1,5",,G,FALSE,enterica
+Poona,"1,13,22",z,"1,6","[z44],[z59]",G,FALSE,enterica
+Farmsen,"13,23",z,"1,6",,G,FALSE,enterica
+Bristol,"13,22",z,"1,7",,G,FALSE,enterica
+Tanzania,"1,13,22",z,"e,n,z15",,G,FALSE,enterica
+Worthington,"1,13,23",z,"l,w",[z43],G,FALSE,enterica
+"II 1,13,23:z:z42","1,13,23",z,z42,,G,FALSE,salamae
+Ivrysurseine,"1,13,23",z,z6,,G,FALSE,enterica
+Roodepoort,"1,13,22",z10,"1,5",,G,FALSE,enterica
+Sapele,"13,23",z10,"e,n,z15",,G,FALSE,enterica
+Demerara,"13,23",z10,"l,w",,G,FALSE,enterica
+"II 1,13,22:z10:z6","1,13,22",z10,z6,,G,FALSE,salamae
+II 13:z10:z6,"1,13,22",z10,z6,,G,FALSE,salamae
+Cubana,"1,13,23",z29,-,"[z37],[z43]",G,TRUE,enterica
+Agoueve,"13,22",z29,-,,G,TRUE,enterica
+"II 1,13,23:z29:1,5","1,13,23",z29,"1,5",,G,FALSE,salamae
+"II 13,22:z29:1,5","13,22",z29,"1,5",,G,FALSE,salamae
+"II 1,13,23:z29:e,n,x","1,13,23",z29,"e,n,x",,G,FALSE,salamae
+Mampong,"13,22",z35,"1,6",,G,FALSE,enterica
+Picpus,"13,23",z35,"1,6",,G,FALSE,enterica
+Anna,"13,23",z35,"e,n,z15",,G,FALSE,enterica
+Nimes,"13,22",z35,"e,n,z15",,G,FALSE,enterica
+Fanti,"13,23",z38,-,,G,TRUE,enterica
+Leiden,"13,22",z38,-,,G,TRUE,enterica
+"V 13,22:z39:-","13,22",z39,-,,G,TRUE,bongori
+"II 1,13,23:z39:1,5,7","1,13,23",z39,"1,5,7",,G,FALSE,salamae
+"II 13,22:z39:1,7","13,22",z39,"1,7",,G,FALSE,salamae
+Ajiobo,"13,23","z4,z23",-,,G,TRUE,enterica
+"IIIa 13,22:z4,z23:-","13,22","z4,z23",-,,G,TRUE,arizonae
+Ried,"1,13,22","z4,z23","e,n,z15",,G,TRUE,enterica
+"IIIa 13:z4,z23,z32:-","13,23","z4,z23,[z32]",-,,G,TRUE,arizonae
+"IIIa 13,23:z4,z24:-","13,23","z4,z24",-,,G,TRUE,arizonae
+"IIIa 13:z4,z24:-","13,23","z4,z24",-,,G,TRUE,arizonae
+Romanby,"1,13,23","z4,z24",-,,G,TRUE,enterica
+Garba,"1,6,14,25",a,"1,5",,H,FALSE,enterica
+"VI [1],6,14:a:1,5","[1],6,14",a,"1,5",,H,FALSE,indica
+"VI [1],6,14,[25]:a:e,n,x","[1],6,14,[25]",a,"e,n,x",,H,FALSE,indica
+Banjul,"1,6,14,25",a,"e,n,z15",,H,FALSE,enterica
+Ndjamena,"1,6,14,25",b,"1,2",,H,FALSE,enterica
+Kuntair,"1,6,14,25",b,"1,5",,H,FALSE,enterica
+Tucson,"[1],6,14,[25]",b,"1,7",,H,FALSE,enterica
+"IIIb (6),14:b:e,n,x","(6),14",b,"e,n,x",,H,FALSE,diarizonae
+Blijdorp,"1,6,14,25",c,"1,5",,H,FALSE,enterica
+Kassberg,"1,6,14,25",c,"1,6",,H,FALSE,enterica
+Runby,"1,6,14,25",c,"e,n,x",,H,FALSE,enterica
+Minna,"1,6,14,25",c,"l,w",,H,FALSE,enterica
+Finkenwerder,"[1],6,14,[25]",d,"1,5",,H,FALSE,enterica
+Martonos,"6,14,24",d,"1,5",,H,FALSE,enterica
+Woodhull,"1,6,14,25",d,"1,6",,H,FALSE,enterica
+Florida,"[1],6,14,[25]",d,"1,7",,H,FALSE,enterica
+Midway,"6,14,24",d,"1,7",,H,FALSE,enterica
+Charity,"[1],6,14,[25]",d,"e,n,x",,H,FALSE,enterica
+Lindern,"6,14,[24]",d,"e,n,x",,H,FALSE,enterica
+Teko,"[1],6,14,[25]",d,"e,n,z15",,H,FALSE,enterica
+Encino,"1,6,14,25",d,"l,z13,z28",,H,FALSE,enterica
+Albuquerque,"1,6,14,24",d,z6,,H,FALSE,enterica
+Bahrenfeld,"6,14,[24]","e,h","1,5",,H,FALSE,enterica
+Onderstepoort,"1,6,14,[25]","e,h","1,5",,H,FALSE,enterica
+Magumeri,"1,6,14,25","e,h","1,6",,H,FALSE,enterica
+Beaudesert,"[1],6,14,[25]","e,h","1,7",,H,FALSE,enterica
+"V 6,14:e,n,z15:-","6,14","e,n,z15",-,,H,TRUE,bongori
+Warragul,"[1],6,14,[25]","g,m",-,,H,TRUE,enterica
+Caracas,"[1],6,14,[25]","g,m,s",-,,H,TRUE,enterica
+Sylvania,"[1],6,14,[25]","g,p",-,,H,TRUE,enterica
+Catanzaro,"6,14","g,s,t",-,,H,TRUE,enterica
+Mampeza,"1,6,14,25",i,"1,5",,H,FALSE,enterica
+Buzu,"[1],6,14,[25]",i,"1,7",,H,FALSE,enterica
+Moussoro,"1,6,14,25",i,"e,n,z15",,H,FALSE,enterica
+Schalkwijk,"6,14,[24]",i,"e,n,z15",,H,FALSE,enterica
+Harburg,"[1],6,14,[25]",k,"1,5",,H,FALSE,enterica
+"II 6,14,[24]:k:1,6","6,14,[24]",k,"1,6",,H,FALSE,salamae
+"II 6,14:k:e,n,x","6,14",k,"e,n,x",,H,FALSE,salamae
+"IIIb (6),14:k:z","(6),14",k,z,,H,FALSE,diarizonae
+"IIIb (6),14:k:z53","(6),14",k,z53,,H,FALSE,diarizonae
+"II 1,6,14:k:z6:z42","1,6,14",k,z6,z42,H,FALSE,salamae
+Amberg,"6,14,24","l,v","1,7",,H,FALSE,enterica
+Boecker,"[1],6,14,[25]","l,v","1,7",,H,FALSE,enterica
+Horsham,"1,6,14,[25]","l,v","e,n,x",,H,FALSE,enterica
+Alpenquai,"6,14","l,v","e,n,z15",,H,FALSE,enterica
+"IIIb (6),14:l,v:z","(6),14","l,v",z,,H,FALSE,diarizonae
+"IIIb 6,14:l,v:z35","(6),14","l,v",z35,,H,FALSE,diarizonae
+"IIIb 6,14:l,v:z53","(6),14","l,v",z53,,H,FALSE,diarizonae
+"VI 6,14:l,v:z88","6,14","l,v",z88,,H,FALSE,indica
+Aflao,"1,6,14,25","l,z28","e,n,x",,H,FALSE,enterica
+Kaitaan,"1,6,14,25","m,t",-,,H,TRUE,enterica
+"II 1,6,14:m,t:1,5","1,6,14","m,t","1,5",,H,FALSE,salamae
+"II 6,14:m,t:e,n,x","6,14","m,t","e,n,x",,H,FALSE,salamae
+"IIIb (6),14:r:z","(6),14",r,z,,H,FALSE,diarizonae
+Surat,"[1],6,14,[25]","r,[i]","e,n,z15",,H,FALSE,enterica
+Istoria,"1,6,14,25","r,i","1,5",,H,FALSE,enterica
+Carrau,"6,14,[24]",y,"1,7",,H,FALSE,enterica
+Madelia,"1,6,14,25",y,"1,7",,H,FALSE,enterica
+Fischerkietz,"1,6,14,25",y,"e,n,x",,H,FALSE,enterica
+Mornington,"1,6,14,25",y,"e,n,z15",,H,FALSE,enterica
+Homosassa,"1,6,14,25",z,"1,5",,H,FALSE,enterica
+Kanifing,"1,6,14,25",z,"1,6",,H,FALSE,enterica
+Soahanina,"6,14,24",z,"e,n,x",,H,FALSE,enterica
+Sundsvall,"[1],6,14,[25]",z,"e,n,x",,H,FALSE,enterica
+Royan,"1,6,14,25",z,"e,n,z15",,H,FALSE,enterica
+Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,FALSE,enterica
+"VI 1,6,14,25:z10:1,(2),7","1,6,14,25",z10,"1,(2),7",,H,FALSE,indica
+Nessa,"1,6,14,25",z10,"1,2",,H,FALSE,enterica
+"II 1,6,14:z10:1,5","1,6,14",z10,"1,5",,H,FALSE,salamae
+Laredo,"1,6,14,25",z10,"1,6",,H,FALSE,enterica
+"IIIb (6),14:z10:e,n,x,z15","(6),14",z10,"e,n,x,z15",,H,FALSE,diarizonae
+"IIIb (6),14:z10:z:[z56],[z90]","(6),14",z10,z,"[z56],[z90]",H,FALSE,diarizonae
+"IIIb 6,14:z10:z","(6),14",z10,z,,H,FALSE,diarizonae
+"IIIb 6,14:z10:z53","6,14",z10,z53,,H,FALSE,diarizonae
+"II 1,6,14:z10:z6:z42","1,6,14",z10,z6,z42,H,FALSE,salamae
+"II 6,14:z10:z6","1,6,14",z10,z6,,H,FALSE,salamae
+"II 6,14:z36:-","6,14",z36,-,,H,TRUE,salamae
+Potosi,"6,14",z36,"1,5",,H,FALSE,enterica
+Sara,"1,6,14,25",z38,"e,n,x",,H,TRUE,enterica
+"IV 6,14:z4,z23:-","6,14","z4,z23",-,,H,TRUE,houtenae
+Arapahoe,"6,14","z4,z23","1,5",,H,FALSE,enterica
+Bousso,"1,6,14,25","z4,z23","e,n,z15",,H,TRUE,enterica
+Chichiri,"6,14,24","z4,z24",-,,H,TRUE,enterica
+Uzaramo,"1,6,14,25","z4,z24",-,,H,TRUE,enterica
+"II 1,6,14:z42:1,6","1,6,14",z42,"1,6",,H,FALSE,salamae
+"II 6,14:z42:1,6","1,6,14",z42,"1,6",,H,FALSE,salamae
+"IIIb 6,14:z52:e,n,x,z15","6,14",z52,"e,n,x,z15",,H,FALSE,diarizonae
+"IIIb [1],6,14,[25]:z52:z35","[1],6,14,[25]",z52,z35,,H,FALSE,diarizonae
+"IIIb 6,14:z52:z35","[1],6,14,[25]",z52,z35,,H,FALSE,diarizonae
+"IIIb 16:(k):e,n,x,z15",16,(k),"e,n,x,z15",,I,FALSE,diarizonae
+IIIb 16:(k):z35,16,(k),z35,,I,FALSE,diarizonae
+Hannover,16,a,"1,2",,I,FALSE,enterica
+Brazil,16,a,"1,5",,I,FALSE,enterica
+Amunigun,16,a,"1,6",,I,FALSE,enterica
+Nyeko,16,a,"1,7",,I,FALSE,enterica
+Togba,16,a,"e,n,x",,I,FALSE,enterica
+Fischerhuette,16,a,"e,n,z15",,I,FALSE,enterica
+Heron,16,a,z6,,I,FALSE,enterica
+Hull,16,b,"1,2",,I,FALSE,enterica
+Melaka,16,b,"1,2,5",,I,FALSE,enterica
+Wa,16,b,"1,5",,I,FALSE,enterica
+Glasgow,16,b,"1,6",,I,FALSE,enterica
+Hvittingfoss,16,b,"e,n,x",,I,FALSE,enterica
+"II 16:b:e,n,x",16,b,"e,n,x",,I,FALSE,salamae
+Sangera,16,b,"e,n,z15",,I,FALSE,enterica
+Vegesack,16,b,"l,w",,I,FALSE,enterica
+II 16:b:z39,16,b,z39,,I,FALSE,salamae
+II 16:b:z42,16,b,z42,,I,FALSE,salamae
+Malstatt,16,b,z6,,I,FALSE,enterica
+Vancouver,16,c,"1,5",,I,FALSE,enterica
+Gafsa,16,c,"1,6",,I,FALSE,enterica
+Shamba,16,c,"e,n,x",,I,FALSE,enterica
+Hithergreen,16,c,"e,n,z15",,I,FALSE,enterica
+Yoruba,16,c,"l,w",,I,FALSE,enterica
+Oldenburg,16,d,"1,2",,I,FALSE,enterica
+"II 16:d:1,5",16,d,"1,5",,I,FALSE,salamae
+Sculcoates,16,d,"1,5",,I,FALSE,enterica
+Sherbrooke,16,d,"1,6",,I,FALSE,enterica
+Gaminara,16,d,"1,7",,I,FALSE,enterica
+Barranquilla,16,d,"e,n,x",,I,FALSE,enterica
+"II 16:d:e,n,x",16,d,"e,n,x",,I,FALSE,salamae
+Nottingham,16,d,"e,n,z15",,I,FALSE,enterica
+Caen,16,d,"l,w",[z82],I,FALSE,enterica
+Barmbek,16,d,z6,,I,FALSE,enterica
+Malakal,16,"e,h","1,2",,I,FALSE,enterica
+Saboya,16,"e,h","1,5",,I,FALSE,enterica
+Astridplein,16,"e,h","1,6",,I,FALSE,enterica
+Rhydyfelin,16,"e,h","e,n,x",,I,FALSE,enterica
+Moabit,16,"e,h","l,w",,I,FALSE,enterica
+Weston,16,"e,h",z6,,I,FALSE,enterica
+"II 16:e,n,x:1,(5),7",16,"e,n,x","1,(5),7",,I,FALSE,salamae
+"II 16:e,n,x:1,6:z42",16,"e,n,x","1,6",z42,I,FALSE,salamae
+Tees,16,"f,g",-,[z37],I,TRUE,enterica
+"II 16:g,[m],[s],t:[e,n,x]",16,"g,[m],[s],t","e,n,x",,I,TRUE,salamae
+Adeoyo,16,"g,m,[t]",-,,I,TRUE,enterica
+Nikolaifleet,16,"g,m,s",-,,I,TRUE,enterica
+Cardoner,16,"g,s,t",-,,I,TRUE,enterica
+Amina,16,i,"1,5",,I,FALSE,enterica
+Agbara,16,i,"1,6",,I,FALSE,enterica
+Wisbech,16,i,"1,7",,I,FALSE,enterica
+Frankfurt,16,i,"e,n,z15",,I,FALSE,enterica
+Pisa,16,i,"l,w",,I,FALSE,enterica
+IIIb 16:i:z35,16,i,z35,,I,FALSE,diarizonae
+Abobo,16,i,z6,,I,FALSE,enterica
+Szentes,16,k,"1,2",,I,FALSE,enterica
+Maumee,16,k,"1,6",,I,FALSE,enterica
+Nuatja,16,k,"e,n,x",,I,FALSE,enterica
+Orientalis,16,k,"e,n,z15",,I,FALSE,enterica
+IIIb 16:k:z,16,k,z,,I,FALSE,diarizonae
+IIIb 16:k:z53,16,k,z53,,I,FALSE,diarizonae
+Enugu,16,"l,[z13],z28","1,5",,I,TRUE,enterica
+"IIIb 16:l,v:1,5,7",16,"l,v","1,5,7",,I,FALSE,diarizonae
+Shanghai,16,"l,v","1,6",[z45],I,FALSE,enterica
+Welikade,16,"l,v","1,7",,I,FALSE,enterica
+Salford,16,"l,v","e,n,x",,I,FALSE,enterica
+Burgas,16,"l,v","e,n,z15",,I,FALSE,enterica
+"IIIb 16:l,v:z35",16,"l,v",z35,,I,FALSE,diarizonae
+"IIIb 16:l,v:z53",16,"l,v",z53,,I,FALSE,diarizonae
+Losangeles,16,"l,v",z6,,I,FALSE,enterica
+Zigong,16,"l,w","1,5",,I,FALSE,enterica
+Westeinde,16,"l,w","1,6",,I,FALSE,enterica
+Brooklyn,16,"l,w","e,n,x",,I,FALSE,enterica
+Lomnava,16,"l,w","e,n,z15",,I,FALSE,enterica
+Essingen,16,"l,w",z6,,I,FALSE,enterica
+"II 16:l,w:z6",16,"l,w",z6,,I,FALSE,salamae
+Mandera,16,"l,z13","e,n,z15",,I,FALSE,enterica
+Battle,16,"l,z13,z28","1,6",,I,FALSE,enterica
+Koblenz,16,"l,z13,z28","e,n,x",,I,FALSE,enterica
+Ablogame,16,"l,z13,z28",z6,,I,FALSE,enterica
+"II 16:l,z28:z42",16,"l,z28",z42,,I,FALSE,salamae
+Mpouto,16,"m,t",-,,I,TRUE,enterica
+"II 16:m,t:e,n,x",16,"m,t","e,n,x",,I,FALSE,salamae
+Morbihan,16,"m,t","e,n,z15",,I,FALSE,enterica
+"II 16:m,t:[z42]",16,"m,t",z42,,I,TRUE,salamae
+Ivory,16,r,"1,6",,I,FALSE,enterica
+Brunflo,16,r,"1,7",,I,FALSE,enterica
+Lehrte,16,r,z6,,I,FALSE,enterica
+Rovaniemi,16,"r,i","1,5",,I,FALSE,enterica
+Annedal,16,"r,i","e,n,x",,I,FALSE,enterica
+Zwickau,16,"r,i","e,n,z15",,I,FALSE,enterica
+Saphra,16,y,"1,5",,I,FALSE,enterica
+Akuafo,16,y,"1,6",,I,FALSE,enterica
+Kikoma,16,y,"e,n,x",,I,FALSE,enterica
+Avignon,16,y,"e,n,z15",,I,FALSE,enterica
+Gerland,16,z,"1,5",,I,FALSE,enterica
+Fortlamy,16,z,"1,6",,I,FALSE,enterica
+Lingwala,16,z,"1,7",,I,FALSE,enterica
+"II 16:z:e,n,x",16,z,"e,n,x",,I,FALSE,salamae
+Kassel,16,z,"e,n,x",,I,FALSE,enterica
+Brevik,16,z,"e,n,x,z15",,I,FALSE,enterica
+II 16:z:z42,16,z,z42,,I,FALSE,salamae
+Bouake,16,z,z6,,I,FALSE,enterica
+Badagry,16,z10,"1,5",,I,FALSE,enterica
+Lisboa,16,z10,"1,6",,I,FALSE,enterica
+"IIIb 16:z10:1,7",16,z10,"1,7",,I,FALSE,diarizonae
+"IIIb 16:z10:e,n,x,z15",16,z10,"e,n,x,z15",,I,FALSE,diarizonae
+Redlands,16,z10,"e,n,z15",,I,FALSE,enterica
+Angouleme,16,z10,z6,,I,FALSE,enterica
+Saloniki,16,z29,-,,I,TRUE,enterica
+"II 16:z29:1,5",16,z29,"1,5",,I,FALSE,salamae
+"II 16:z29:e,n,x",16,z29,"e,n,x",,I,FALSE,salamae
+Trier,16,z35,"1,6",,I,FALSE,enterica
+"II 16:z35:e,n,x",16,z35,"e,n,x",,I,FALSE,salamae
+Dakota,16,z35,"e,n,z15",,I,FALSE,enterica
+IV 16:z36:-,16,z36,-,,I,TRUE,houtenae
+"II 16:z36:e,n,z15",16,z36,"e,n,z15",,I,FALSE,salamae
+Naware,16,z38,-,,I,TRUE,enterica
+Grancanaria,16,z39,"1,6",,I,TRUE,enterica
+"II 16:z4,z23:-",16,"z4,z23",-,,I,TRUE,salamae
+"IV 16:z4,z23:-",16,"z4,z23",-,,I,TRUE,houtenae
+Kibi,16,"z4,z23","1,6",,I,TRUE,enterica
+Axim,16,"z4,z23",z6,,I,FALSE,enterica
+"II 16:z4,z24:-",16,"z4,z24",-,,I,TRUE,salamae
+"IV 16:z4,z24:-",16,"z4,z24",-,,I,TRUE,houtenae
+Kaevlinge,16,"z4,z24",-,,I,TRUE,enterica
+"IV 16:z4,z32:-",16,"z4,z32",-,,I,TRUE,houtenae
+"II 16:z42:1,(5),7",16,z42,"1,(5),7",,I,FALSE,salamae
+"II 16:z42:1,6",16,z42,"1,6",,I,FALSE,salamae
+IIIb 16:z52:z35,16,z52,z35,,I,FALSE,diarizonae
+"II 16:z6:1,6",16,z6,"1,6",,I,FALSE,salamae
+Bonames,17,a,"1,2",,J,FALSE,enterica
+Jangwani,17,a,"1,5",,J,FALSE,enterica
+Kinondoni,17,a,"e,n,x",,J,FALSE,enterica
+Kirkee,17,b,"1,2",,J,FALSE,enterica
+Dahra,17,b,"1,5",,J,FALSE,enterica
+Mattenhof,17,b,"e,n,x",,J,FALSE,enterica
+"II 17:b:e,n,x,z15",17,b,"e,n,x,z15",,J,FALSE,salamae
+Bignona,17,b,"e,n,z15",,J,FALSE,enterica
+II 17:b:z6,17,b,z6,,J,FALSE,salamae
+Luedinghausen,17,c,"1,5",,J,FALSE,enterica
+Victoriaborg,17,c,"1,6",,J,FALSE,enterica
+II 17:c:z39,17,c,z39,,J,FALSE,salamae
+Berlin,17,d,"1,5",,J,FALSE,enterica
+Karlshamn,17,d,"e,n,z15",,J,FALSE,enterica
+Niamey,17,d,"l,w",,J,FALSE,enterica
+Jubilee,17,"e,h","1,2",,J,FALSE,enterica
+"II 17:e,n,x,z15:1,[5],7",17,"e,n,x,z15","1,5,7",,J,FALSE,salamae
+"II 17:e,n,x,z15:1,6",17,"e,n,x,z15","1,6",,J,FALSE,salamae
+"II 17:g,m,s,t:-",17,"g,m,s,t",-,,J,TRUE,salamae
+Lowestoft,17,"g,s,t",-,,J,TRUE,enterica
+"II 17:g,t:[e,n,x,z15]",17,"g,t","e,n,x,z15",,J,TRUE,salamae
+"II 17:g,t:z39",17,"g,t",z39,,J,FALSE,salamae
+Ahanou,17,i,"1,7",,J,FALSE,enterica
+IIIb 17:i:z35,17,i,z35,,J,FALSE,diarizonae
+II 17:k:-,17,k,-,,J,TRUE,salamae
+Irenea,17,k,"1,5",,J,FALSE,enterica
+Bandim,17,k,"1,6",,J,FALSE,enterica
+Warri,17,k,"1,7",,J,FALSE,enterica
+Matadi,17,k,"e,n,x",,J,FALSE,enterica
+Zaria,17,k,"e,n,z15",,J,FALSE,enterica
+IIIb 17:k:z,17,k,z,,J,FALSE,diarizonae
+Morotai,17,"l,v","1,2",,J,FALSE,enterica
+Michigan,17,"l,v","1,5",,J,FALSE,enterica
+Lancaster,17,"l,v","1,7",,J,FALSE,enterica
+Carmel,17,"l,v","e,n,x",,J,FALSE,enterica
+"IIIb 17:l,v:e,n,x,z15",17,"l,v","e,n,x,z15",,J,FALSE,diarizonae
+"IIIb 17:l,v:z35",17,"l,v",z35,,J,FALSE,diarizonae
+Granlo,17,"l,z28","e,n,x",,J,FALSE,enterica
+Bama,17,"m,t",-,,J,TRUE,enterica
+"II 17:m,t:-",17,"m,t",-,,J,TRUE,salamae
+Lode,17,r,"1,2",,J,FALSE,enterica
+IIIb 17:r:z,17,r,z,,J,FALSE,diarizonae
+II 17:y:-,17,y,-,,J,TRUE,salamae
+Tendeba,17,y,"e,n,x",,J,FALSE,enterica
+Hadejia,17,y,"e,n,z15",,J,FALSE,enterica
+Lokomo,17,y,"l,w",,J,FALSE,enterica
+Gori,17,z,"1,2",,J,FALSE,enterica
+Warengo,17,z,"1,5",,J,FALSE,enterica
+Dingiri,17,z,"1,6",,J,FALSE,enterica
+"II 17:z:1,7",17,z,"1,7",,J,FALSE,salamae
+Tchamba,17,z,"e,n,z15",,J,FALSE,enterica
+"II 17:z:l,w",17,z,"l,w",,J,FALSE,salamae
+II 17:z10:-,17,z10,-,,J,TRUE,salamae
+Djibouti,17,z10,"e,n,x",,J,FALSE,enterica
+"IIIb 17:z10:e,n,x,z15",17,z10,"e,n,x,z15",,J,FALSE,diarizonae
+IIIb 17:z10:z,17,z10,z,,J,FALSE,diarizonae
+IIIa 17:z29:-,17,z29,-,,J,TRUE,arizonae
+IV 17:z29:-,17,z29,-,,J,TRUE,houtenae
+Kandla,17,z29,-,,J,TRUE,enterica
+Aachen,17,z35,"1,6",,J,FALSE,enterica
+IIIa 17:z36:-,17,z36,-,,J,TRUE,arizonae
+IV 17:z36:-,17,z36,-,,J,TRUE,houtenae
+"IIIa 17:z4,z23:-",17,"z4,z23",-,,J,TRUE,arizonae
+"IIIa 17:z4,z23,z32:-",17,"z4,z23,z32",-,,J,TRUE,arizonae
+"IIIa 17:z4,z24:-",17,"z4,z24",-,,J,TRUE,arizonae
+"IIIa 17:z4,z32:-",17,"z4,z32",-,,J,TRUE,arizonae
+Cotia,18,-,"1,6",,K,FALSE,enterica
+IIIb 18:(k):z53,18,(k),z53,,K,FALSE,diarizonae
+IIIb 18:k:z53,18,(k),z53,,K,FALSE,diarizonae
+IIIb 18:(k):z54,18,(k),z54,,K,FALSE,diarizonae
+IIIb 18:k:z54,18,(k),z54,,K,FALSE,diarizonae
+Brazos,"6,14,18",a,"e,n,z15",,K,FALSE,enterica
+Fluntern,"6,14,18",b,"1,5",,K,FALSE,enterica
+Cochise,18,b,"1,7",,K,FALSE,enterica
+Rawash,"6,14,18",c,"e,n,x",,K,FALSE,enterica
+Groenekan,18,d,"1,5",,K,FALSE,enterica
+Usumbura,"6,14,18",d,"1,7",,K,FALSE,enterica
+Pontypridd,18,"g,m",-,,K,TRUE,enterica
+Eaubonne,18,"g,s,t",-,,K,TRUE,enterica
+"IIIa 18:g,z51:-",18,"g,z51",-,,K,TRUE,arizonae
+"IV 18:g,z51:-",18,"g,z51",-,,K,TRUE,houtenae
+Memphis,18,k,"1,5",,K,FALSE,enterica
+"IIIb 18:l,v:e,n,x,z15",18,"l,v","e,n,x,z15",,K,FALSE,diarizonae
+Orlando,18,"l,v","e,n,z15",,K,FALSE,enterica
+"IIIb 18:l,v:z",18,"l,v",z,,K,FALSE,diarizonae
+"IIIb 18:l,v:z53",18,"l,v",z53,,K,FALSE,diarizonae
+Toulon,18,"l,w","e,n,z15",,K,FALSE,enterica
+Langenhorn,18,"m,t",-,,K,TRUE,enterica
+"II 18:m,t:1,5",18,"m,t","1,5",,K,FALSE,salamae
+Tennenlohe,18,r,"1,5",,K,FALSE,enterica
+IIIb 18:r:z,18,r,z,,K,FALSE,diarizonae
+Troy,18,y,"1,7",,K,FALSE,enterica
+"II 18:y:e,n,x,z15",18,y,"e,n,x,z15",,K,FALSE,salamae
+Potengi,18,z,-,,K,TRUE,enterica
+Leer,18,z10,"1,5",,K,FALSE,enterica
+"IIIb 18:z10:e,n,x,z15",18,z10,"e,n,x,z15",,K,FALSE,diarizonae
+Carnac,18,z10,z6,,K,FALSE,enterica
+II 18:z10:z6,18,z10,z6,,K,FALSE,salamae
+II 18:z36:-,18,z36,-,,K,TRUE,salamae
+"IV 18:z36,z38:-",18,"z36,z38",-,,K,TRUE,houtenae
+Sinthia,18,z38,-,,K,TRUE,enterica
+"II 18:z4,z23:-",18,"z4,z23",-,,K,TRUE,salamae
+"IIIa 18:z4,z23:-",18,"z4,z23",-,,K,TRUE,arizonae
+Cerro,"6,14,18","z4,z23","1,5","[z45],[z82]",K,TRUE,enterica
+Aarhus,18,"z4,z23",z64,,K,FALSE,enterica
+Blukwa,"6,14,18","z4,z24",-,,K,TRUE,enterica
+"II 18:z4,z24:-",18,"z4,z24",-,,K,TRUE,salamae
+"IIIa 18:z4,z32:-",18,"z4,z32",-,,K,TRUE,arizonae
+Delmenhorst,18,z71,-,,K,TRUE,enterica
+"IIIb 16:k:e,n,x,z15",16,(k),"e,n,x,z15",,l,FALSE,diarizonae
+IIIb 16:k:z35,16,(k),z35,,l,FALSE,diarizonae
+Assen,21,a,"1,5",,L,TRUE,enterica
+"II 21:b:1,5",21,b,"1,5",,L,FALSE,salamae
+Ghana,21,b,"1,6",,L,FALSE,enterica
+Minnesota,21,b,"e,n,x","[z33],[z49]",L,FALSE,enterica
+Hydra,21,c,"1,6",,L,FALSE,enterica
+"II 21:c:e,n,x",21,c,"e,n,x",,L,FALSE,salamae
+Rhone,21,c,"e,n,x",,L,FALSE,enterica
+"IIIb 21:c:e,n,x,z15",21,c,"e,n,x,z15",,L,FALSE,diarizonae
+Spartel,21,d,"1,5",,L,FALSE,enterica
+Magwa,21,d,"e,n,x",,L,FALSE,enterica
+Madison,21,d,z6,,L,FALSE,enterica
+"II 16:e,n,x:1,5,7",16,"e,n,x","1,(5),7",,l,FALSE,salamae
+"II 16:e,n,x:1,6",16,"e,n,x","1,6",,l,FALSE,salamae
+Good,21,"f,g","e,n,x",,L,FALSE,enterica
+"II 21:g,[m],[s],t:-",21,"g,[m],[s],t",-,,L,TRUE,salamae
+"II 21:g,m,s,t:-",21,"g,[m],[s],t",-,,L,TRUE,salamae
+"II 16:g,m,s,t:1,5",16,"g,[m],[s],t","1,5",,l,TRUE,salamae
+"II 16:g,m,s,t:e,n,x",16,"g,[m],[s],t","e,n,x",,l,TRUE,salamae
+"IIIa 21:g,z51:-",21,"g,z51",-,,L,TRUE,arizonae
+"IV 21:g,z51:-",21,"g,z51",-,,L,TRUE,houtenae
+Diourbel,21,i,"1,2",,L,FALSE,enterica
+"IIIb 21:i:1,5,7",21,i,"1,5,7",,L,FALSE,diarizonae
+"IIIb 21:i:e,n,x,z15",21,i,"e,n,x,z15",,L,FALSE,diarizonae
+Surrey,21,k,"1,(2),5",,L,FALSE,enterica
+"IIIb 21:k:e,n,x,z15",21,k,"e,n,x,z15",,L,FALSE,diarizonae
+IIIb 21:k:z,21,k,z,,L,FALSE,diarizonae
+"IIIb 16:l,v:z",16,"l,v",z,,l,FALSE,diarizonae
+"IIIb 21:l,v:z",21,"l,v",z,,L,FALSE,diarizonae
+"IIIb 21:l,v:z57",21,"l,v",z57,,L,FALSE,diarizonae
+Keve,21,"l,w",-,,L,TRUE,enterica
+Jambur,21,"l,z28","e,n,z15",,L,FALSE,enterica
+"II 21:m,t:-",21,"m,t",-,,L,TRUE,salamae
+"IV 21:m,t:-",21,"m,t",-,,L,TRUE,houtenae
+"II 16:m,t:z42",16,"m,t",z42,,l,TRUE,salamae
+Mountmagnet,21,r,-,,L,TRUE,enterica
+IIIb 21:r:z,21,r,z,,L,FALSE,diarizonae
+Ibaragi,21,y,"1,2",,L,FALSE,enterica
+Ruiru,21,y,"e,n,x",,L,FALSE,enterica
+II 21:z:-,21,z,-,,L,TRUE,salamae
+"IIIb 21:z10:e,n,x,z15",21,z10,"e,n,x,z15",,L,FALSE,diarizonae
+IIIb 21:z10:z,21,z10,z,,L,FALSE,diarizonae
+IIIb 21:z10:z53,21,z10,z53,,L,FALSE,diarizonae
+II 21:z10:[z6],21,z10,z6,,L,TRUE,salamae
+II 21:z10:z6,21,z10,z6,,L,TRUE,salamae
+IIIa 21:z29:-,21,z29,-,,L,TRUE,arizonae
+Gambaga,21,z35,"e,n,z15",,L,FALSE,enterica
+IIIa 21:z36:-,21,z36,-,,L,TRUE,arizonae
+IV 21:z36:-,21,z36,-,,L,TRUE,houtenae
+Baguida,21,"z4,z23",-,,L,TRUE,enterica
+"IIIa 21:z4,z23:-",21,"z4,z23",-,,L,TRUE,arizonae
+"IV 21:z4,z23:-",21,"z4,z23",-,,L,TRUE,houtenae
+"II 21:z4,z24:-",21,"z4,z24",-,,L,TRUE,salamae
+"IIIa 21:z4,z24:-",21,"z4,z24",-,,L,TRUE,arizonae
+"IV 21:z4,z32:-",21,"z4,z32",-,,L,TRUE,houtenae
+"II 16:z42:1,5,7",16,z42,"1,(5),7",,l,FALSE,salamae
+"IIIb 21:z65:e,n,x,z15",21,z65,"e,n,x,z15",,L,FALSE,diarizonae
+Solna,28,a,"1,5",,M,FALSE,enterica
+Dakar,28,a,"1,6",,M,FALSE,enterica
+Bakau,28,a,"1,7",,M,FALSE,enterica
+"II 28:a:e,n,x",28,a,"e,n,x",,M,FALSE,salamae
+Seattle,28,a,"e,n,x",,M,FALSE,enterica
+Honelis,28,a,"e,n,z15",,M,FALSE,enterica
+Dibra,28,a,z6,,M,FALSE,enterica
+Moero,28,b,"1,5",,M,FALSE,enterica
+Ashanti,28,b,"1,6",,M,FALSE,enterica
+Bokanjac,28,b,"1,7",,M,FALSE,enterica
+"II 28:b:e,n,x",28,b,"e,n,x",,M,FALSE,salamae
+Soumbedioune,28,b,"e,n,x",,M,FALSE,enterica
+Langford,28,b,"e,n,z15",,M,FALSE,enterica
+Freefalls,28,b,"l,w",,M,FALSE,enterica
+II 28:b:z6,28,b,z6,,M,FALSE,salamae
+Hermannswerder,28,c,"1,5",,M,FALSE,enterica
+Eberswalde,28,c,"1,6",,M,FALSE,enterica
+Halle,28,c,"1,7",,M,FALSE,enterica
+Dresden,28,c,"e,n,x",,M,FALSE,enterica
+Wedding,28,c,"e,n,z15",,M,FALSE,enterica
+Techimani,28,c,z6,,M,FALSE,enterica
+Amoutive,28,d,"1,5",,M,FALSE,enterica
+Hatfield,28,d,"1,6",,M,FALSE,enterica
+Mundonobo,28,d,"1,7",,M,FALSE,enterica
+Mocamedes,28,d,"e,n,x",,M,FALSE,enterica
+Patience,28,d,"e,n,z15",,M,FALSE,enterica
+Cullingworth,28,d,"l,w",,M,FALSE,enterica
+Korkeasaari,28,"e,h","1,5",,M,FALSE,enterica
+Kpeme,28,"e,h","1,7",,M,FALSE,enterica
+Gozo,28,"e,h","e,n,z15",,M,FALSE,enterica
+"II 28:e,n,x:1,7",28,"e,n,x","1,7",,M,FALSE,salamae
+"II 28:e,n,z15:z87",28,"e,n,z15",z87,,M,FALSE,salamae
+Friedrichsfelde,28,"f,g",-,,M,TRUE,enterica
+"II 28:g,(m),[s],t:1,5",28,"g,(m),[s],t","1,5",,M,FALSE,salamae
+"II 28:g,m,s,t:1,5",28,"g,(m),[s],t","1,5",,M,FALSE,salamae
+Yardley,28,"g,m","1,6",,M,FALSE,enterica
+Abadina,28,"g,m","e,n,z15",,M,TRUE,enterica
+Croft,28,"g,m,s","e,n,z15",,M,TRUE,enterica
+"II 28:g,m,t:e,n,x",28,"g,m,t","e,n,x",,M,FALSE,salamae
+"II 28:g,m,t:z39",28,"g,m,t",z39,,M,FALSE,salamae
+Ona,28,"g,s,t",-,,M,TRUE,enterica
+"II 28:g,s,t:e,n,x",28,"g,s,t","e,n,x",,M,FALSE,salamae
+Doorn,28,i,"1,2",,M,FALSE,enterica
+Cotham,28,i,"1,5",,M,FALSE,enterica
+Volkmarsdorf,28,i,"1,6",,M,FALSE,enterica
+Dieuppeul,28,i,"1,7",,M,FALSE,enterica
+Warnemuende,28,i,"e,n,x",,M,FALSE,enterica
+Kuessel,28,i,"e,n,z15",,M,FALSE,enterica
+Douala,28,i,"l,w",,M,FALSE,enterica
+Guildford,28,k,"1,2",,M,FALSE,enterica
+Ilala,28,k,"1,5",,M,FALSE,enterica
+Adamstown,28,k,"1,6",,M,FALSE,enterica
+"IIIb 28:k:1,7",28,k,"1,7",,M,FALSE,diarizonae
+Ikeja,28,k,"1,7",,M,FALSE,enterica
+Taunton,28,k,"e,n,x",,M,FALSE,enterica
+Ank,28,k,"e,n,z15",,M,FALSE,enterica
+Leoben,28,"l,v","1,5",,M,FALSE,enterica
+Vitkin,28,"l,v","e,n,x",,M,FALSE,enterica
+Nashua,28,"l,v","e,n,z15",,M,FALSE,enterica
+Ramsey,28,"l,w","1,6",,M,FALSE,enterica
+Catalunia,28,"l,z13,z28","1,5",,M,FALSE,enterica
+Penilla,28,"l,z13,z28","e,n,z15",,M,FALSE,enterica
+"II 28:l,z28:1,5",28,"l,z28","1,5",,M,FALSE,salamae
+Fajara,28,"l,z28","e,n,x",,M,FALSE,enterica
+"II 28:l,z28:e,n,x",28,"l,z28","e,n,x",,M,FALSE,salamae
+Morillons,28,"m,t","1,6",,M,FALSE,enterica
+"II 28:m,t:[e,n,x]",28,"m,t","e,n,x",,M,TRUE,salamae
+"II 28:m,t:e,n,x",28,"m,t","e,n,x",,M,TRUE,salamae
+Vinohrady,28,"m,t","e,n,z15",,M,TRUE,enterica
+"II 28:m,t:z39",28,"m,t",z39,,M,FALSE,salamae
+Bassadji,28,r,"1,6",,M,FALSE,enterica
+Kibusi,28,r,"e,n,x",,M,FALSE,enterica
+"II 28:r:e,n,z15",28,r,"e,n,z15",,M,FALSE,salamae
+Fairfield,28,r,"l,w",,M,FALSE,enterica
+Chicago,28,"r,[i]","1,5",,M,FALSE,enterica
+Sanktgeorg,28,"r,[i]","e,n,z15",,M,FALSE,enterica
+Banco,28,"r,i","1,7",,M,FALSE,enterica
+Oskarshamn,28,y,"1,2",,M,FALSE,enterica
+Nima,28,y,"1,5",,M,FALSE,enterica
+Pomona,28,y,"1,7","[z80],[z90]",M,FALSE,enterica
+Kitenge,28,y,"e,n,x",,M,FALSE,enterica
+Telaviv,28,y,"e,n,z15",,M,FALSE,enterica
+Shomolu,28,y,"l,w",,M,FALSE,enterica
+Selby,28,y,z6,,M,FALSE,enterica
+"II 28:z:1,5",28,z,"1,5",,M,FALSE,salamae
+Vanier,28,z,"1,5",,M,FALSE,enterica
+Doel,28,z,"1,6",,M,FALSE,enterica
+Ezra,28,z,"1,7",,M,FALSE,enterica
+Brisbane,28,z,"e,n,z15",,M,FALSE,enterica
+II 28:z:z39,28,z,z39,,M,FALSE,salamae
+Rogy,28,z10,"1,2",,M,FALSE,enterica
+Farakan,28,z10,"1,5",,M,FALSE,enterica
+Libreville,28,z10,"1,6",,M,FALSE,enterica
+Malaysia,28,z10,"1,7",,M,FALSE,enterica
+Umbilo,28,z10,"e,n,x",,M,FALSE,enterica
+Luckenwalde,28,z10,"e,n,z15",,M,FALSE,enterica
+Moroto,28,z10,"l,w",,M,FALSE,enterica
+IIIb 28:z10:z,28,z10,z,,M,FALSE,diarizonae
+Djermaia,28,z29,-,,M,TRUE,enterica
+"II 28:z29:1,5",28,z29,"1,5",,M,FALSE,salamae
+"II 28:z29:e,n,x",28,z29,"e,n,x",,M,FALSE,salamae
+Konolfingen,28,z35,"1,6",,M,FALSE,enterica
+Babili,28,z35,"1,7",,M,FALSE,enterica
+Santander,28,z35,"e,n,z15",,M,FALSE,enterica
+Aderike,28,z38,"e,n,z15",,M,FALSE,enterica
+Cannobio,28,"z4,z23","1,5",,M,FALSE,enterica
+Teltow,28,"z4,z23","1,6",,M,FALSE,enterica
+Babelsberg,28,"z4,z23","e,n,z15",,M,TRUE,enterica
+Kethiabarny,28,"z4,z24",-,,M,TRUE,enterica
+Overvecht,30,a,"1,2",,N,FALSE,enterica
+Zehlendorf,30,a,"1,5",,N,FALSE,enterica
+Guarapiranga,30,a,"e,n,x",,N,FALSE,enterica
+Doulassame,30,a,"e,n,z15",,N,FALSE,enterica
+II 30:a:z39,30,a,z39,,N,FALSE,salamae
+Louga,30,b,"1,2",,N,FALSE,enterica
+Aschersleben,30,b,"1,5",,N,FALSE,enterica
+Tempe,30,b,"1,7",[z33],N,FALSE,enterica
+Urbana,30,b,"e,n,x",,N,FALSE,enterica
+Neudorf,30,b,"e,n,z15",,N,FALSE,enterica
+II 30:b:z6,30,b,z6,,N,FALSE,salamae
+Zaire,30,c,"1,7",,N,FALSE,enterica
+Morningside,30,c,"e,n,z15",,N,FALSE,enterica
+II 30:c:z39,30,c,z39,,N,FALSE,salamae
+Messina,30,d,"1,5",,N,FALSE,enterica
+Livulu,30,"e,h","1,2",,N,FALSE,enterica
+Torhout,30,"e,h","1,5",,N,FALSE,enterica
+Godesberg,30,"g,m,[t]",-,,N,TRUE,enterica
+Giessen,30,"g,m,s",-,,N,TRUE,enterica
+"II 30:g,m,s:e,n,x",30,"g,m,s","e,n,x",,N,FALSE,salamae
+Sternschanze,30,"g,s,t",-,[z59],N,TRUE,enterica
+"II 30:g,t:-",30,"g,t",-,,N,TRUE,salamae
+Wayne,30,"g,z51",-,,N,TRUE,enterica
+Landau,30,i,"1,2",,N,FALSE,enterica
+Morehead,30,i,"1,5",,N,FALSE,enterica
+Mjordan,30,i,"e,n,z15",,N,FALSE,enterica
+Soerenga,30,i,"l,w",,N,FALSE,enterica
+Hilversum,30,k,"1,2",,N,FALSE,enterica
+Ramatgan,30,k,"1,5",,N,FALSE,enterica
+Aqua,30,k,"1,6",,N,FALSE,enterica
+Angoda,30,k,"e,n,x",,N,FALSE,enterica
+"II 30:k:e,n,x,z15",30,k,"e,n,x,z15",,N,FALSE,salamae
+Odozi,30,k,"e,n,x,z15",,N,FALSE,enterica
+Scarborough,30,k,"l,z13,z28",,N,FALSE,enterica
+Ligeo,30,"l,v","1,2",,N,FALSE,enterica
+Donna,30,"l,v","1,5",,N,FALSE,enterica
+Ockenheim,30,"l,z13,z28","1,6",,N,FALSE,enterica
+Morocco,30,"l,z13,z28","e,n,z15",,N,FALSE,enterica
+"II 30:l,z28:z6",30,"l,z28",z6,,N,FALSE,salamae
+"II 30:m,t:-",30,"m,t",-,,N,TRUE,salamae
+Grandhaven,30,r,"1,2",,N,FALSE,enterica
+Gege,30,r,"1,5",,N,FALSE,enterica
+Quincy,30,r,"1,6",,N,FALSE,enterica
+Matopeni,30,y,"1,2",,N,FALSE,enterica
+Bietri,30,y,"1,5",,N,FALSE,enterica
+Steinplatz,30,y,"1,6",,N,FALSE,enterica
+Baguirmi,30,y,"e,n,x",,N,FALSE,enterica
+Nijmegen,30,y,"e,n,z15",,N,FALSE,enterica
+Hohentwiel,30,z,"e,n,x,z15",,N,FALSE,enterica
+Sada,30,z10,"1,2",,N,FALSE,enterica
+Senneville,30,z10,"1,5",,N,FALSE,enterica
+"II 30:z10:e,n,x,z15",30,z10,"e,n,x,z15",,N,FALSE,salamae
+Kumasi,30,z10,"e,n,z15",,N,FALSE,enterica
+Aragua,30,z29,-,,N,TRUE,enterica
+Kokoli,30,z35,"1,6",,N,FALSE,enterica
+Wuiti,30,z35,"e,n,z15",,N,FALSE,enterica
+Ago,30,z38,-,,N,TRUE,enterica
+"II 30:z39:1,7",30,z39,"1,7",,N,FALSE,salamae
+Stoneferry,30,"z4,z23",-,,N,TRUE,enterica
+Bodjonegoro,30,"z4,z24",-,,N,TRUE,enterica
+"II 30:z6:1,6",30,z6,"1,6",,N,FALSE,salamae
+IIIb 35:(k):z35,35,(k),z35,,O,FALSE,diarizonae
+IIIb 35:k:z35,35,(k),z35,,O,FALSE,diarizonae
+Umhlatazana,35,a,"e,n,z15",,O,FALSE,enterica
+Tchad,35,b,-,,O,TRUE,enterica
+Keurmassar,35,c,"1,2",,O,FALSE,enterica
+Gouloumbo,35,c,"1,5",,O,FALSE,enterica
+Yolo,35,c,"e,n,z15",,O,TRUE,enterica
+"II 35:d:1,5",35,d,"1,5",,O,FALSE,salamae
+Dembe,35,d,"l,w",[z58],O,FALSE,enterica
+Gassi,35,"e,h",z6,,O,FALSE,enterica
+Adelaide,35,"f,g",-,[z27],O,TRUE,enterica
+Ealing,35,"g,m,s",-,,O,TRUE,enterica
+"II 35:g,m,s,t:-",35,"g,m,s,t",-,,O,TRUE,salamae
+Ebrie,35,"g,m,t",-,,O,TRUE,enterica
+Anecho,35,"g,s,t",-,,O,TRUE,enterica
+Agodi,35,"g,t",-,,O,TRUE,enterica
+"II 35:g,t:1,5",35,"g,t","1,5",,O,FALSE,salamae
+"II 35:g,t:z42",35,"g,t",z42,,O,FALSE,salamae
+"IIIa 35:g,z51:-",35,"g,z51",-,,O,TRUE,arizonae
+"IIIb 35:i:e,n,x,z15",35,i,"e,n,x,z15",,O,FALSE,diarizonae
+Gambia,35,i,"e,n,z15",,O,FALSE,enterica
+Bandia,35,i,"l,w",,O,FALSE,enterica
+IIIb 35:i:z,35,i,z,,O,FALSE,diarizonae
+IIIb 35:i:z35,35,i,z35,,O,FALSE,diarizonae
+IIIb 35:i:z53,35,i,z53,,O,FALSE,diarizonae
+Evry,35,i,z6,,O,FALSE,enterica
+"IIIb 35:k:e,n,x,z15",35,k,"e,n,x,z15",,O,FALSE,diarizonae
+IIIb 35:k:z,35,k,z,,O,FALSE,diarizonae
+IIIb 35:k:z53:[z50],35,k,z53,[z50],O,FALSE,diarizonae
+IIIb 35:k:z53,35,k,z53,,O,FALSE,diarizonae
+"IIIb 35:l,v:1,5,7",35,"l,v","1,5,7",,O,FALSE,diarizonae
+"IIIb 35:l,v:e,n,x,z15:[z50]",35,"l,v","e,n,x,z15",[z50],O,FALSE,diarizonae
+"IIIb 35:l,v:e,n,x,z15",35,"l,v","e,n,x,z15",,O,FALSE,diarizonae
+"IIIb 35:l,v:z35:[z67]",35,"l,v",z35,[z67],O,FALSE,diarizonae
+"IIIb 35:l,v:z35",35,"l,v",z35,,O,FALSE,diarizonae
+"II 35:l,z28:-",35,"l,z28",-,,O,TRUE,salamae
+"II 35:m,t:-",35,"m,t",-,,O,TRUE,salamae
+Monschaui,35,"m,t",-,,O,TRUE,enterica
+"IIIb 35:r:e,n,x,z15",35,r,"e,n,x,z15",,O,FALSE,diarizonae
+Massakory,35,r,"l,w",,O,FALSE,enterica
+IIIb 35:r:z,35,r,z,,O,FALSE,diarizonae
+IIIb 35:r:z35,35,r,z35,,O,FALSE,diarizonae
+IIIb 35:r:z61,35,r,z61,,O,FALSE,diarizonae
+Camberene,35,z10,"1,5",,O,FALSE,enterica
+Enschede,35,z10,"l,w",,O,FALSE,enterica
+IIIb 35:z10:z35,35,z10,z35,,O,FALSE,diarizonae
+Ligna,35,z10,z6,,O,FALSE,enterica
+IIIa 35:z29:-,35,z29,-,,O,TRUE,arizonae
+Widemarsh,35,z29,-,,O,TRUE,enterica
+"II 35:z29:e,n,x",35,z29,"e,n,x",,O,FALSE,salamae
+IIIa 35:z36:-,35,z36,-,,O,TRUE,arizonae
+Haga,35,z38,-,,O,TRUE,enterica
+Alachua,35,"z4,z23",-,"[z37],[z45]",O,TRUE,enterica
+"IIIa 35:z4,z23:-",35,"z4,z23",-,,O,TRUE,arizonae
+"IIIa 35:z4,z24:-",35,"z4,z24",-,,O,TRUE,arizonae
+Westphalia,35,"z4,z24",-,,O,TRUE,enterica
+"IIIa 35:z4,z32:-",35,"z4,z32",-,,O,TRUE,arizonae
+"IIIb 35:z52:1,5,7",35,z52,"1,5,7",,O,FALSE,diarizonae
+"IIIb 35:z52:e,n,x,z15",35,z52,"e,n,x,z15",,O,FALSE,diarizonae
+IIIb 35:z52:z,35,z52,z,,O,FALSE,diarizonae
+IIIb 35:z52:z35,35,z52,z35,,O,FALSE,diarizonae
+"II 51:-:1,7",51,-,"1,7",,O:51,FALSE,salamae
+IV 51:a:-,51,a,-,,O:51,TRUE,houtenae
+Windsheim,51,a,"1,2",,O:51,FALSE,enterica
+Tione,51,a,"e,n,x",,O:51,FALSE,enterica
+IV 51:b:-,51,b,-,,O:51,TRUE,houtenae
+Karaya,51,b,"1,5",,O:51,FALSE,enterica
+II 51:c:-,51,c,-,,O:51,TRUE,salamae
+Gokul,"1,51",d,"1,5",,O:51,FALSE,enterica
+Meskin,51,"e,h","1,2",,O:51,FALSE,enterica
+"II 51:g,s,t:e,n,x",51,"g,s,t","e,n,x",,O:51,FALSE,salamae
+"IIIa 51:g,z51:-",51,"g,z51",-,,O:51,TRUE,arizonae
+Kabete,51,i,"1,5",,O:51,FALSE,enterica
+Dan,51,k,"e,n,z15",,O:51,FALSE,enterica
+IIIb 51:k:z35,51,k,z35,,O:51,FALSE,diarizonae
+Harcourt,51,"l,v","1,2",,O:51,FALSE,enterica
+Overschie,51,"l,v","1,5",,O:51,FALSE,enterica
+Dadzie,51,"l,v","e,n,x",,O:51,FALSE,enterica
+"IIIb 51:l,v:z",51,"l,v",z,,O:51,FALSE,diarizonae
+Moundou,51,"l,z28","1,5",,O:51,FALSE,enterica
+"II 51:l,z28:z39",51,"l,z28",z39,,O:51,FALSE,salamae
+"II 51:l,z28:z6",51,"l,z28",z6,,O:51,FALSE,salamae
+Djinten,51,"m,t",-,,O:51,TRUE,enterica
+Lutetia,51,"r,i","l,z13,z28",,O:51,FALSE,enterica
+Antsalova,51,z,"1,5",,O:51,FALSE,enterica
+Treforest,"1,51",z,"1,6",,O:51,FALSE,enterica
+Lechler,51,z,"e,n,z15",,O:51,FALSE,enterica
+Bergues,51,z10,"1,5",,O:51,FALSE,enterica
+"II 51:z29:e,n,x,z15",51,z29,"e,n,x,z15",,O:51,FALSE,salamae
+"IIIa 51:z4,z23:-",51,"z4,z23",-,,O:51,TRUE,arizonae
+"IV 51:z4,z23:-",51,"z4,z23",-,,O:51,TRUE,houtenae
+"IIIa 51:z4,z24:-",51,"z4,z24",-,,O:51,TRUE,arizonae
+"IIIa 51:z4,z32:-",51,"z4,z32",-,,O:51,TRUE,arizonae
+Uithof,52,a,"1,5",,O:52,FALSE,enterica
+Ord,52,a,"e,n,z15",,O:52,FALSE,enterica
+Molesey,52,b,"1,5",,O:52,FALSE,enterica
+Flottbek,52,b,"e,n,x",,O:52,FALSE,enterica
+II 52:c:k,52,c,k,,O:52,FALSE,salamae
+Utrecht,52,d,"1,5",,O:52,FALSE,enterica
+"II 52:d:e,n,x,z15",52,d,"e,n,x,z15",,O:52,FALSE,salamae
+II 52:d:z39,52,d,z39,,O:52,FALSE,salamae
+Butare,52,"e,h","1,6",,O:52,FALSE,enterica
+Derkle,52,"e,h","1,7",,O:52,FALSE,enterica
+"II 52:g,t:-",52,"g,t",-,,O:52,TRUE,salamae
+Saintemarie,52,"g,t",-,,O:52,TRUE,enterica
+Bordeaux,52,k,"1,5",,O:52,FALSE,enterica
+"IIIb 52:k:e,n,x,z15",52,k,"e,n,x,z15",,O:52,FALSE,diarizonae
+IIIb 52:k:z35,52,k,z35,,O:52,FALSE,diarizonae
+IIIb 52:k:z53,52,k,z53,,O:52,FALSE,diarizonae
+"IIIb 52:l,v:z53",52,"l,v",z53,,O:52,FALSE,diarizonae
+Marsabit,52,"l,w","1,5",,O:52,FALSE,enterica
+II 52:z:z39,52,z,z39,,O:52,FALSE,salamae
+IIIb 52:z:z52,52,z,z52,,O:52,FALSE,diarizonae
+"II 52:z39:1,5,7",52,z39,"1,5,7",,O:52,FALSE,salamae
+"II 52:z44:1,5,7",52,z44,"1,5,7",,O:52,FALSE,salamae
+Leda,53,-,"1,6",,O:53,FALSE,enterica
+IIIb 53:k:z35,53,(k),z35,,O:53,FALSE,diarizonae
+IIIb 53:(k):z35,53,(k),z35,,O:53,FALSE,diarizonae
+"II 53:c:1,5",53,c,"1,5",,O:53,FALSE,salamae
+"II 53:d:1,5",53,d,"1,5",,O:53,FALSE,salamae
+II 53:d:z39,"1,53",d,z39,,O:53,FALSE,salamae
+"II 1,53:d:z39","1,53",d,z39,,O:53,FALSE,salamae
+II 53:d:z42,53,d,z42,,O:53,FALSE,salamae
+"IV 53:g,z51:-",53,"g,z51",-,,O:53,TRUE,houtenae
+"IIIa 53:g,z51:-",53,"g,z51",-,,O:53,TRUE,arizonae
+"IV 1,53:g,z51:-","1,53","g,z51",-,,O:53,TRUE,houtenae
+IIIb 53:i:z,53,i,z,,O:53,FALSE,diarizonae
+"IIIb 53:k:e,n,x,z15",53,k,"e,n,x,z15",,O:53,FALSE,diarizonae
+IIIb 53:k:z,53,k,z,,O:53,FALSE,diarizonae
+IIIb 53:k:z53,53,k,z53,,O:53,FALSE,diarizonae
+"IIIb 53:l,v:e,n,x,z15",53,"l,v","e,n,x,z15",,O:53,FALSE,diarizonae
+"IIIb 53:l,v:z",53,"l,v",z,,O:53,FALSE,diarizonae
+"IIIb 53:l,v:z35",53,"l,v",z35,,O:53,FALSE,diarizonae
+"II 53:l,z28:e,n,x",53,"l,z28","e,n,x",,O:53,FALSE,salamae
+"II 53:l,z28:z39",53,"l,z28",z39,,O:53,FALSE,salamae
+"II 53:l,z28:z6",53,"l,z28",z6,,O:53,FALSE,salamae
+IIIb 53:r:z,53,r,z,,O:53,FALSE,diarizonae
+IIIb 53:r:z35,53,r,z35,,O:53,FALSE,diarizonae
+IIIb 53:r:z68,53,r,z68,,O:53,FALSE,diarizonae
+"II 53:z:1,5",53,z,"1,5",,O:53,FALSE,salamae
+"IIIb 53:z:1,5,(7)",53,z,"1,5,(7)",,O:53,FALSE,diarizonae
+II 53:z:z6,53,z,z6,,O:53,FALSE,salamae
+IIIb 53:z10:z,53,z10,z,,O:53,FALSE,diarizonae
+IIIb 53:z10:z35,53,z10,z35,,O:53,FALSE,diarizonae
+IIIa 53:z29:-,53,z29,-,,O:53,TRUE,arizonae
+"IV 53:z36,z38:-","1,53","z36,z38",-,,O:53,TRUE,houtenae
+"IV 1,53:z36,z38:-","1,53","z36,z38",-,,O:53,TRUE,houtenae
+"IIIa 53:z4,z23:-",53,"z4,z23",-,,O:53,TRUE,arizonae
+"IV 53:z4,z23:-",53,"z4,z23",-,,O:53,TRUE,houtenae
+"IIIa 53:z4,z23,z32:-",53,"z4,z23,z32",-,,O:53,TRUE,arizonae
+"II 53:z4,z24:-",53,"z4,z24",-,,O:53,TRUE,salamae
+"IIIa 53:z4,z24:-",53,"z4,z24",-,,O:53,TRUE,arizonae
+IIIb 53:z52:z35,53,z52,z35,,O:53,FALSE,diarizonae
+IIIb 53:z52:z53,53,z52,z53,,O:53,FALSE,diarizonae
+Tonev,"21,54",b,"e,n,x",,O:54,FALSE,enterica
+Winnipeg,54,"e,h","1,5",,O:54,FALSE,enterica
+Rossleben,"3,54","e,h","1,6",,O:54,FALSE,enterica
+Borreze,54,"f,g,s",-,,O:54,TRUE,enterica
+Uccle,"3,54","g,s,t",-,,O:54,TRUE,enterica
+Poeseldorf,"8,20,54",i,z6,,O:54,FALSE,enterica
+Ochsenwerder,"6,7,54",k,"1,5",,O:54,FALSE,enterica
+Newholland,"4,12,54","m,t",-,,O:54,TRUE,enterica
+Czernyring,54,r,"1,5",,O:54,FALSE,enterica
+Steinwerder,"3,15,54",y,"1,5",,O:54,FALSE,enterica
+Canton,54,z10,"e,n,x",,O:54,FALSE,enterica
+Barry,54,z10,"e,n,z15",,O:54,FALSE,enterica
+Mundubbera,54,z29,-,,O:54,TRUE,enterica
+Yerba,54,"z4,z23",-,,O:54,TRUE,enterica
+II 55:k:z39,55,k,z39,,O:55,FALSE,salamae
+"II 56:b:[1,5]",56,b,"1,5",,O:56,TRUE,salamae
+II 56:d:-,56,d,-,,O:56,TRUE,salamae
+"II 56:e,n,x:1,7",56,"e,n,x","1,7",,O:56,FALSE,salamae
+"II 56:l,v:z39",56,"l,v",z39,,O:56,FALSE,salamae
+"II 56:l,z28:-",56,"l,z28",-,,O:56,TRUE,salamae
+II 56:z:z6,56,z,z6,,O:56,FALSE,salamae
+"II 56:z10:e,n,x",56,z10,"e,n,x",,O:56,FALSE,salamae
+IIIa 56:z29:-,56,z29,-,,O:56,TRUE,arizonae
+"IIIa 56:z4,z23:-",56,"z4,z23",-,,O:56,TRUE,arizonae
+"IIIa 56:z4,z23,z32:-",56,"z4,z23,z32",-,,O:56,TRUE,arizonae
+II 57:a:z42,57,a,z42,,O:57,FALSE,salamae
+II 57:a:z6:z42,57,a,z6,z42,O:57,FALSE,salamae
+Antonio,57,a,z6,,O:57,FALSE,enterica
+Maryland,57,b,"1,7",,O:57,FALSE,enterica
+Batonrouge,57,b,"e,n,z15",,O:57,FALSE,enterica
+"IIIb 57:c:e,n,x,z15",57,c,"e,n,x,z15",,O:57,FALSE,diarizonae
+IIIb 57:c:z,57,c,z,,O:57,FALSE,diarizonae
+"II 57:d:1,5",57,d,"1,5",,O:57,FALSE,salamae
+"II 57:g,[m],s,t:z42",57,"g,[m],s,t",z42,,O:57,FALSE,salamae
+"II 57:g,m,s,t:z42",57,"g,[m],s,t",z42,,O:57,FALSE,salamae
+"II 57:g,t:-",57,"g,t",-,,O:57,TRUE,salamae
+"IIIb 57:i:e,n,x,z15",57,i,"e,n,x,z15",,O:57,FALSE,diarizonae
+IIIb 57:i:z,57,i,z,,O:57,FALSE,diarizonae
+"IIIb 57:k:e,n,x,z15",57,k,"e,n,x,z15",,O:57,FALSE,diarizonae
+IIIb 57:z10:z,57,z10,z,,O:57,FALSE,diarizonae
+II 57:z29:z42,57,z29,z42,,O:57,FALSE,salamae
+"II 57:z39:e,n,x,z15",57,z39,"e,n,x,z15",,O:57,FALSE,salamae
+"IV 57:z4,z23:-",57,"z4,z23",-,,O:57,TRUE,houtenae
+"II 57:z42:1,6",57,z42,"1,6",,O:57,FALSE,salamae
+"II 57:z42:1,6:z53",57,z42,"1,6",z53,O:57,FALSE,salamae
+II 58:a:z6,58,a,z6,,O:58,FALSE,salamae
+"II 58:b:1,5",58,b,"1,5",,O:58,FALSE,salamae
+II 58:c:z6,58,c,z6,,O:58,FALSE,salamae
+II 58:d:z6,58,d,z6,,O:58,FALSE,salamae
+"IIIb 58:i:e,n,x,z15",58,i,"e,n,x,z15",,O:58,FALSE,diarizonae
+IIIb 58:i:z53,58,i,z53,,O:58,FALSE,diarizonae
+IIIb 58:k:z,58,k,z,,O:58,FALSE,diarizonae
+"IIIb 58:l,v:e,n,x,z15",58,"l,v","e,n,x,z15",,O:58,FALSE,diarizonae
+"IIIb 58:l,v:z35",58,"l,v",z35,,O:58,FALSE,diarizonae
+"II 58:l,z13,z28:1,5",58,"l,z13,z28","1,5",,O:58,FALSE,salamae
+"II 58:l,z13,z28:z6",58,"l,z13,z28",z6,,O:58,FALSE,salamae
+"IIIb 58:r:e,n,x,z15",58,r,"e,n,x,z15",,O:58,FALSE,diarizonae
+IIIb 58:r:z,58,r,z,,O:58,FALSE,diarizonae
+IIIb 58:r:z53,58,r,z53,,O:58,FALSE,diarizonae
+"IIIb 58:r:z53:[z47],[z57],[z70],[z73]",58,r,z53,"[z47],[z57],[z70],[z73]",O:58,FALSE,diarizonae
+"II 58:z10:1,6",58,z10,"1,6",,O:58,FALSE,salamae
+"IIIb 58:z10:e,n,x,z15",58,z10,"e,n,x,z15",,O:58,FALSE,diarizonae
+IIIb 58:z10:z53,58,z10,z53,,O:58,FALSE,diarizonae
+IIIb 58:z10:z53:[z50],58,z10,z53,[z50],O:58,FALSE,diarizonae
+II 58:z10:z6,58,z10,z6,,O:58,FALSE,salamae
+"II 58:z39:e,n,x,z15",58,z39,"e,n,x,z15",,O:58,FALSE,salamae
+IIIb 58:z52:z,58,z52,z,,O:58,FALSE,diarizonae
+IIIb 58:z52:z35,58,z52,z35,,O:58,FALSE,diarizonae
+"II 58:z6:1,6",58,z6,"1,6",,O:58,FALSE,salamae
+"IIIb 59:k:e,n,x,z15",59,(k),"e,n,x,z15",,O:59,FALSE,diarizonae
+IIIb 59:k:z,59,(k),z,,O:59,FALSE,diarizonae
+IIIb 59:k:z35,59,(k),z35,,O:59,FALSE,diarizonae
+"IIIb 59:c:e,n,x,z15",59,c,"e,n,x,z15",,O:59,FALSE,diarizonae
+"IIIb 59:i:e,n,x,z15",59,i,"e,n,x,z15",,O:59,FALSE,diarizonae
+IIIb 59:i:z,59,i,z,,O:59,FALSE,diarizonae
+IIIb 59:i:z35,59,i,z35,,O:59,FALSE,diarizonae
+IIIb 59:k:z53,59,k,z53,,O:59,FALSE,diarizonae
+II 59:k:z65,59,k,z65,,O:59,FALSE,salamae
+"IIIb 59:l,v:z",59,"l,v",z,,O:59,FALSE,diarizonae
+"IIIb 59:l,v:z53",59,"l,v",z53,,O:59,FALSE,diarizonae
+IIIb 59:r:z35,59,r,z35,,O:59,FALSE,diarizonae
+II 59:z:z6,"1,59",z,z6,,O:59,FALSE,salamae
+"II 1,59:z:z6","1,59",z,z6,,O:59,FALSE,salamae
+IIIb 59:z10:z53,59,z10,z53,,O:59,FALSE,diarizonae
+IIIb 59:z10:z57,59,z10,z57,,O:59,FALSE,diarizonae
+IIIa 59:z29:-,59,z29,-,,O:59,TRUE,arizonae
+IIIa 59:z36:-,59,z36,-,,O:59,TRUE,arizonae
+VI 59:z36:-,59,z36,-,,O:59,TRUE,indica
+"IIIa 59:z4,z23:-",59,"z4,z23",-,,O:59,TRUE,arizonae
+IIIb 59:z52:z53,59,z52,z53,,O:59,FALSE,diarizonae
+IIIb 60:k:z53,60,(k),z53,,O:60,FALSE,diarizonae
+IIIb 60:(k):z53,60,(k),z53,,O:60,FALSE,diarizonae
+II 60:b:-,60,b,-,,O:60,TRUE,salamae
+"II 60:g,m,t:z6",60,"g,m,t",z6,,O:60,FALSE,salamae
+"IIIb 60:i:e,n,x,z15",60,i,"e,n,x,z15",,O:60,TRUE,diarizonae
+"IIIb 60:i:[e,n,x,z15]:[z50]",60,i,"e,n,x,z15",[z50],O:60,TRUE,diarizonae
+IIIb 60:i:z,60,i,z,,O:60,TRUE,diarizonae
+IIIb 60:i:[z]:[z50],60,i,z,[z50],O:60,TRUE,diarizonae
+IIIb 60:i:z35,60,i,z35,,O:60,TRUE,diarizonae
+IIIb 60:i:[z35]:[z50],60,i,z35,[z50],O:60,TRUE,diarizonae
+IIIb 60:k:z,60,k,z,,O:60,FALSE,diarizonae
+IIIb 60:k:z35,60,k,z35,,O:60,FALSE,diarizonae
+"IIIb 60:l,v:z",60,"l,v",z,,O:60,FALSE,diarizonae
+"IIIb 60:r:e,n,x,z15",60,r,"e,n,x,z15",,O:60,FALSE,diarizonae
+IIIb 60:r:z,60,r,z,,O:60,FALSE,diarizonae
+IIIb 60:r:z35,60,r,z35,,O:60,FALSE,diarizonae
+IIIb 60:r:z53,60,r,z53,,O:60,FALSE,diarizonae
+"II 60:z:e,n,x",60,z,"e,n,x",,O:60,FALSE,salamae
+IIIb 60:z10:z,60,z10,z,,O:60,FALSE,diarizonae
+IIIb 60:z10:z35,60,z10,z35,,O:60,FALSE,diarizonae
+IIIb 60:z10:z53,60,z10,z53,,O:60,FALSE,diarizonae
+"II 60:z29:e,n,x",60,z29,"e,n,x",,O:60,FALSE,salamae
+V 60:z41:-,60,z41,-,,O:60,TRUE,bongori
+"IIIb 60:z52:1,5,7",60,z52,"1,5,7",,O:60,FALSE,diarizonae
+IIIb 60:z52:z,60,z52,z,,O:60,FALSE,diarizonae
+IIIb 60:z52:z35,60,z52,z35,,O:60,FALSE,diarizonae
+IIIb 60:z52:z53,60,z52,z53,,O:60,FALSE,diarizonae
+IIIb 61:k:z53,61,(k),z53,,O:61,FALSE,diarizonae
+IIIb 61:(k):z53,61,(k),z53,,O:61,FALSE,diarizonae
+"IIIb 61:c:1,5,7",61,c,"1,5,(7)",,O:61,FALSE,diarizonae
+"IIIb 61:c:1,5,(7)",61,c,"1,5,(7)",,O:61,FALSE,diarizonae
+IIIb 61:c:z35,61,c,z35,,O:61,FALSE,diarizonae
+"IIIb 61:i:e,n,x,z15",61,i,"e,n,x,z15",,O:61,FALSE,diarizonae
+IIIb 61:i:z,61,i,z,,O:61,FALSE,diarizonae
+IIIb 61:i:z35,61,i,z35,,O:61,FALSE,diarizonae
+IIIb 61:i:z53,61,i,z53,,O:61,FALSE,diarizonae
+"IIIb 61:k:1,5,7",61,k,"1,5,(7)",,O:61,FALSE,diarizonae
+IIIb 61:k:z35,61,k,z35,,O:61,FALSE,diarizonae
+"IIIb 61:l,v:1,5,7",61,"l,v","1,5,7",,O:61,FALSE,diarizonae
+"IIIb 61:l,v:z",61,"l,v",z,,O:61,FALSE,diarizonae
+"IIIb 61:l,v:z35",61,"l,v",z35,,O:61,FALSE,diarizonae
+"IIIb 61:r:1,5,7",61,r,"1,5,7",,O:61,FALSE,diarizonae
+IIIb 61:r:z,61,r,z,,O:61,FALSE,diarizonae
+IIIb 61:r:z35,61,r,z35,,O:61,FALSE,diarizonae
+IIIb 61:r:z53,61,r,z53,,O:61,FALSE,diarizonae
+IIIb 61:z10:z35,61,z10,z35,,O:61,FALSE,diarizonae
+V 61:z35:-,61,z35,-,,O:61,TRUE,bongori
+"IIIb 61:z52:1,5,7",61,z52,"1,5,7",,O:61,FALSE,diarizonae
+IIIb 61:z52:z,61,z52,z,,O:61,FALSE,diarizonae
+IIIb 61:z52:z35,61,z52,z35,,O:61,FALSE,diarizonae
+IIIb 61:z52:z53,61,z52,z53,,O:61,FALSE,diarizonae
+"IV 62:g,z51:-",62,"g,z51",-,,O:62,TRUE,houtenae
+"IIIa 62:g,z51:-",62,"g,z51",-,,O:62,TRUE,arizonae
+IIIa 62:z29:-,62,z29,-,,O:62,TRUE,arizonae
+IIIa 62:z36:-,62,z36,-,,O:62,TRUE,arizonae
+"IIIa 62:z4,z23:-",62,"z4,z23",-,,O:62,TRUE,arizonae
+"IIIa 62:z4,z32:-",62,"z4,z32",-,,O:62,TRUE,arizonae
+IIIb 63:k:z,63,(k),z,,O:63,FALSE,diarizonae
+IIIb 63:(k):z,63,(k),z,,O:63,FALSE,diarizonae
+"IIIa 63:g,z51:-",63,"g,z51",-,,O:63,TRUE,arizonae
+IIIa 63:z36:-,63,z36,-,,O:63,TRUE,arizonae
+"IIIa 63:z4,z23:-",63,"z4,z23",-,,O:63,TRUE,arizonae
+"IIIa 63:z4,z32:-",63,"z4,z32",-,,O:63,TRUE,arizonae
+"II 65:-:1,6",65,-,"1,6",,O:65,FALSE,salamae
+IIIb 65:k:z,65,(k),z,,O:65,FALSE,diarizonae
+IIIb 65:(k):z,65,(k),z,,O:65,FALSE,diarizonae
+IIIb 65:k:z35,65,(k),z35,,O:65,FALSE,diarizonae
+IIIb 65:(k):z35,65,(k),z35,,O:65,FALSE,diarizonae
+IIIb 65:k:z53,65,(k),z53,,O:65,FALSE,diarizonae
+IIIb 65:(k):z53,65,(k),z53,,O:65,FALSE,diarizonae
+"IIIb 65:c:1,5,7",65,c,"1,5,7",,O:65,FALSE,diarizonae
+IIIb 65:c:z,65,c,z,,O:65,FALSE,diarizonae
+IIIb 65:c:z53,65,c,z53,,O:65,FALSE,diarizonae
+"II 65:g,t:-",65,"g,t",-,,O:65,TRUE,salamae
+"IIIb 65:i:e,n,x,z15",65,i,"e,n,x,z15",,O:65,FALSE,diarizonae
+IIIb 65:i:z,65,i,z,,O:65,FALSE,diarizonae
+"IIIb 65:l,v:e,n,x,z15",65,"l,v","e,n,x,z15",,O:65,FALSE,diarizonae
+"IIIb 65:l,v:z",65,"l,v",z,,O:65,FALSE,diarizonae
+"IIIb 65:l,v:z35",65,"l,v",z35,,O:65,FALSE,diarizonae
+"IIIb 65:l,v:z53",65,"l,v",z53,,O:65,FALSE,diarizonae
+IIIb 65:r:z35,65,r,z35,,O:65,FALSE,diarizonae
+"IIIb 65:z10:e,n,x,z15",65,z10,"e,n,x,z15",,O:65,FALSE,diarizonae
+IIIb 65:z10:z,65,z10,z,,O:65,FALSE,diarizonae
+"IIIb 65:z52:e,n,x,z15",65,z52,"e,n,x,z15",,O:65,FALSE,diarizonae
+IIIb 65:z52:z,65,z52,z,,O:65,FALSE,diarizonae
+IIIb 65:z52:z35,65,z52,z35,,O:65,FALSE,diarizonae
+IIIb 65:z52:z53,65,z52,z53,,O:65,FALSE,diarizonae
+V 66:z35:-,66,z35,-,,O:66,TRUE,bongori
+V 66:z39:-,66,z39,-,,O:66,TRUE,bongori
+V 66:z41:-,66,z41,-,,O:66,TRUE,bongori
+V 66:z65:-,66,z65,-,,O:66,TRUE,bongori
+V 66:z81:-,66,z81,-,,O:66,TRUE,bongori
+Crossness,67,r,"1,2",,O:67,FALSE,enterica
+IIIb 38:k:-,38,(k),-,,P,TRUE,diarizonae
+"IIIb 38:(k):1,5,7",38,(k),"1,5,7",,P,FALSE,diarizonae
+IIIb 38:k:z35,38,(k),z35,,P,FALSE,diarizonae
+IIIb 38:k:z55,38,(k),z55,,P,FALSE,diarizonae
+Oran,38,a,"e,n,z15",,P,FALSE,enterica
+"II 38:b:1,2",38,b,"1,2",,P,FALSE,salamae
+Rittersbach,38,b,"e,n,z15",,P,FALSE,enterica
+Sheffield,38,c,"1,5",,P,FALSE,enterica
+Kidderminster,38,c,"1,6",[z58],P,FALSE,enterica
+"II 38:d:[1,5]",38,d,"1,5",,P,TRUE,salamae
+"II 38:d:1,5",38,d,"1,5",,P,TRUE,salamae
+Willamette,38,d,"1,5",,P,FALSE,enterica
+II 38:d:z39,38,d,z39,,P,FALSE,salamae
+Thiaroye,38,"e,h","1,2",,P,FALSE,enterica
+Kasenyi,38,"e,h","1,5",,P,FALSE,enterica
+Korovi,38,"g,m,[s]",-,,P,TRUE,enterica
+"II 38:g,t:-",38,"g,t",-,,P,TRUE,salamae
+"IIIa 38:g,z51:-",38,"g,z51",-,,P,TRUE,arizonae
+"IV 38:g,z51:-",38,"g,z51",-,,P,TRUE,houtenae
+Mgulani,38,i,"1,2",,P,FALSE,enterica
+Lansing,38,i,"1,5",,P,FALSE,enterica
+IIIb 38:i:z,38,i,z,,P,FALSE,diarizonae
+IIIb 38:i:z53,38,i,z53,,P,FALSE,diarizonae
+Echa,38,k,"1,2",,P,FALSE,enterica
+Mango,38,k,"1,5",,P,FALSE,enterica
+Inverness,38,k,"1,6",,P,FALSE,enterica
+Njala,38,k,"e,n,x",,P,FALSE,enterica
+"IIIb 38:k:e,n,x,z15",38,k,"e,n,x,z15",,P,FALSE,diarizonae
+IIIb 38:k:z,38,k,z,,P,FALSE,diarizonae
+IIIb 38:k:z53,38,k,z53,,P,FALSE,diarizonae
+Alger,38,"l,v","1,2",,P,FALSE,enterica
+Kimberley,38,"l,v","1,5",,P,FALSE,enterica
+Roan,38,"l,v","e,n,x",,P,FALSE,enterica
+Taylor,38,"l,v","e,n,z15",,P,FALSE,enterica
+"IIIb 38:l,v:z",38,"l,v",z,,P,FALSE,diarizonae
+"IIIb 38:l,v:z35",38,"l,v",z35,,P,FALSE,diarizonae
+"IIIb 38:l,v:[z53]:[z54]",38,"l,v",z53,[z54],P,TRUE,diarizonae
+"IIIb 38:l,v:z53",38,"l,v",z53,,P,TRUE,diarizonae
+Rothenburgsort,38,"m,t",-,,P,TRUE,enterica
+Lindi,38,r,"1,5",,P,FALSE,enterica
+"IIIb 38:r:1,5,7",38,r,"1,5,7",,P,FALSE,diarizonae
+Emmastad,38,r,"1,6",,P,FALSE,enterica
+"IIIb 38:r:e,n,x,z15",38,r,"e,n,x,z15",,P,FALSE,diarizonae
+IIIb 38:r:z:[z57],38,r,z,[z57],P,FALSE,diarizonae
+IIIb 38:r:z,38,r,z,,P,FALSE,diarizonae
+IIIb 38:r:z35,38,r,z35,,P,FALSE,diarizonae
+Freetown,38,y,"1,5",,P,FALSE,enterica
+Colombo,38,y,"1,6",,P,FALSE,enterica
+Perth,38,y,"e,n,x",,P,FALSE,enterica
+Stachus,38,z,-,,P,TRUE,enterica
+Neunkirchen,38,z10,"1,5",,P,TRUE,enterica
+IIIb 38:z10:z,38,z10,z,,P,FALSE,diarizonae
+IIIb 38:z10:z53,38,z10,z53,,P,FALSE,diarizonae
+Carpentras,38,z35,"e,n,z15",,P,FALSE,enterica
+Klouto,38,z38,-,,P,TRUE,enterica
+"IIIa 38:z4,z23:-",38,"z4,z23",-,,P,TRUE,arizonae
+"IV 38:z4,z23:-",38,"z4,z23",-,,P,TRUE,houtenae
+Yoff,38,"z4,z23","1,2",,P,FALSE,enterica
+Bangkok,38,"z4,z24",-,,P,TRUE,enterica
+IIIb 38:z52:z35,38,z52,z35,,P,FALSE,diarizonae
+IIIb 38:z52:z53,38,z52,z53,,P,FALSE,diarizonae
+"IIIb 38:z53:-:[z47],[z50],[z76]",38,z53,-,"[z47],[z50],[z76]",P,TRUE,diarizonae
+IIIb 38:z53:-,38,z53,-,,P,TRUE,diarizonae
+IIIb 38:z61:[z53],38,z61,z53,,P,TRUE,diarizonae
+IIIb 38:z61:z53,38,z61,z53,,P,TRUE,diarizonae
+"II 39:-:1,7",39,-,"1,7",,Q,FALSE,salamae
+"II 39:[g],m,t:[e,n,x]",39,"[g],m,t","e,n,x",,Q,TRUE,salamae
+"II 39:g,m,t:e,n,x",39,"[g],m,t","e,n,x",,Q,TRUE,salamae
+II 39:a:z39,39,a,z39,,Q,FALSE,salamae
+Wandsworth,39,b,"1,2",,Q,FALSE,enterica
+Abidjan,39,b,"l,w",,Q,FALSE,enterica
+"II 39:c:e,n,x",39,c,"e,n,x",,Q,FALSE,salamae
+Logone,39,d,"1,5",,Q,FALSE,enterica
+Bruebach,39,"e,h","1,2",,Q,FALSE,enterica
+Mara,39,"e,h","1,5",,Q,FALSE,enterica
+"II 39:e,n,x:1,7",39,"e,n,x","1,7",,Q,FALSE,salamae
+Hofit,39,i,"1,5",,Q,FALSE,enterica
+Cumberland,39,i,"e,n,x",,Q,FALSE,enterica
+Alma,39,i,"e,n,z15",,Q,FALSE,enterica
+Champaign,39,k,"1,5",[z48],Q,FALSE,enterica
+Newjersey,39,k,"e,n,x",,Q,FALSE,enterica
+"II 39:l,v:1,5",39,"l,v","1,5",,Q,FALSE,salamae
+Kokomlemle,39,"l,v","e,n,x",,Q,FALSE,enterica
+Oerlikon,39,"l,v","e,n,z15",,Q,FALSE,enterica
+"II 39:l,z28:e,n,x",39,"l,z28","e,n,x",,Q,FALSE,salamae
+"II 39:l,z28:z39",39,"l,z28",z39,,Q,FALSE,salamae
+Dietrichsdorf,39,"m,t",-,,Q,TRUE,enterica
+Anfo,39,y,"1,2",,Q,FALSE,enterica
+Windermere,39,y,"1,5",,Q,FALSE,enterica
+Delan,39,y,"e,n,z15",,Q,FALSE,enterica
+Hegau,39,z10,-,,Q,TRUE,enterica
+II 39:z10:z6,39,z10,z6,,Q,FALSE,salamae
+Namur,39,"z4,z23",-,,Q,TRUE,enterica
+"II 1,40:[z42]:1,(5),7","1,40",[z42],"1,(5),7",,R,FALSE,salamae
+Shikmonah,40,a,"1,5",,R,FALSE,enterica
+Salinas,40,a,"1,7",,R,FALSE,enterica
+II 40:a:z39,40,a,z39,,R,FALSE,salamae
+Greiz,40,a,z6,,R,FALSE,enterica
+II 40:b:-,40,b,-,,R,TRUE,salamae
+Riogrande,40,b,"1,5",,R,FALSE,enterica
+Saugus,40,b,"1,7",,R,FALSE,enterica
+Johannesburg,"1,40",b,"e,n,x",,R,FALSE,enterica
+Duval,"1,40",b,"e,n,z15",,R,FALSE,enterica
+Benguella,40,b,z6,,R,FALSE,enterica
+"II 1,40:c:e,n,x,z15","1,40",c,"e,n,x,z15",,R,FALSE,salamae
+"II 1,40:c:z39","1,40",c,z39,,R,FALSE,salamae
+II 40:c:z6,40,c,z6,,R,FALSE,salamae
+II 40:d:-,40,d,-,,R,TRUE,salamae
+Driffield,"1,40",d,"1,5",,R,FALSE,enterica
+Tilene,"1,40","e,h","1,2",,R,FALSE,enterica
+"II 1,40:e,n,x:1,[5],7","1,40","e,n,x","1,5,7",,R,FALSE,salamae
+"II 1,40:e,n,x,z15:1,6","1,40","e,n,x,z15","1,6",,R,FALSE,salamae
+"II 1,40:g,[m],[s],[t]:e,n,x","1,40","g,[m],[s],[t]","e,n,x",,R,FALSE,salamae
+"II 1,40:g,[m],[s],t:[1,5]","1,40","g,[m],[s],t","1,5",,R,TRUE,salamae
+"II 1,40:g,[m],[s],t:z42","1,40","g,[m],[s],t",z42,,R,FALSE,salamae
+Bijlmer,"1,40","g,m",-,,R,TRUE,enterica
+Athens,"1,40","g,m,s","e,n,x",,R,FALSE,enterica
+"IV 1,40:g,t:-","1,40","g,t",-,,R,TRUE,houtenae
+"II 1,40:g,t:e,n,x,z15","1,40","g,t","e,n,x,z15",,R,FALSE,salamae
+"II 40:g,t:z39",40,"g,t",z39,,R,FALSE,salamae
+"IIIa 40:g,z51:-",40,"g,z51",-,,R,TRUE,arizonae
+"IV 1,40:g,z51:-","1,40","g,z51",-,,R,TRUE,houtenae
+"IIIb 40:g,z51:e,n,x,z15",40,"g,z51","e,n,x,z15",,R,FALSE,diarizonae
+"IIIb 40:i:1,5,7",40,i,"1,5,7",,R,FALSE,diarizonae
+Goulfey,"1,40",k,"1,5",,R,FALSE,enterica
+Allandale,"1,40",k,"1,6",,R,FALSE,enterica
+Hann,40,k,"e,n,x",,R,FALSE,enterica
+"II 1,40:k:e,n,x,z15","1,40",k,"e,n,x,z15",,R,FALSE,salamae
+IIIb 40:k:z:z57,40,k,z,z57,R,FALSE,diarizonae
+IIIb 40:k:z53,40,k,z53,,R,FALSE,diarizonae
+II 40:k:z6,40,k,z6,,R,FALSE,salamae
+Millesi,"1,40","l,v","1,2",,R,FALSE,enterica
+Canary,40,"l,v","1,6",,R,FALSE,enterica
+"II 40:l,v:e,n,x",40,"l,v","e,n,x",,R,FALSE,salamae
+"IIIb 40:l,v:z",40,"l,v",z,,R,FALSE,diarizonae
+"IIIb 1,40:l,v:z53","1,40","l,v",z53,,R,FALSE,diarizonae
+Overchurch,"1,40","l,w","1,2",,R,TRUE,enterica
+Tiko,"1,40","l,z13,z28","1,2",,R,FALSE,enterica
+"II 1,40:l,z28:1,5:z42","1,40","l,z28","1,5",z42,R,FALSE,salamae
+Bukavu,"1,40","l,z28","1,5",,R,FALSE,enterica
+Santhiaba,40,"l,z28","1,6",,R,FALSE,enterica
+"II 40:l,z28:e,n,x",40,"l,z28","e,n,x",,R,FALSE,salamae
+"II 1,40:l,z28:z39","1,40","l,z28",z39,,R,FALSE,salamae
+"IV 40:m,t:-",40,"m,t",-,,R,TRUE,houtenae
+"II 40:m,t:e,n,x",40,"m,t","e,n,x",,R,FALSE,salamae
+"II 40:m,t:z39",40,"m,t",z39,,R,FALSE,salamae
+"II 1,40:m,t:z42","1,40","m,t",z42,,R,FALSE,salamae
+IIIb 40:r:z53,40,r,z53,,R,FALSE,diarizonae
+Odienne,40,y,"1,5",,R,FALSE,enterica
+"II 1,40:z:1,5","1,40",z,"1,5",,R,FALSE,salamae
+Casamance,40,z,"e,n,x",,R,FALSE,enterica
+"II 1,40:z:z39","1,40",z,z39,,R,FALSE,salamae
+II 40:z:z42,40,z,z42,,R,FALSE,salamae
+"II 1,40:z:z6","1,40",z,z6,,R,FALSE,salamae
+Nowawes,40,z,z6,,R,FALSE,enterica
+"II 40:z10:e,n,x",40,z10,"e,n,x",,R,FALSE,salamae
+IIIb 40:z10:z35,40,z10,z35,,R,FALSE,diarizonae
+Trotha,40,z10,z6,,R,FALSE,enterica
+IIIa 40:z29:-,40,z29,-,,R,TRUE,arizonae
+Omifisan,"1,40",z29,-,,R,TRUE,enterica
+"V 1,40:z35:-","1,40",z35,-,,R,TRUE,bongori
+"II 1,40:z35:e,n,x,z15","1,40",z35,"e,n,x,z15",,R,FALSE,salamae
+Yekepa,"1,40",z35,"e,n,z15",,R,FALSE,enterica
+IIIa 40:z36:-,40,z36,-,,R,TRUE,arizonae
+"II 1,40:z39:1,5:z42","1,40",z39,"1,5",z42,R,FALSE,salamae
+"II 1,40:z39:1,6","1,40",z39,"1,6",,R,FALSE,salamae
+"IIIb 40:z39:1,6",40,z39,"1,6",,R,FALSE,diarizonae
+"II 40:z39:1,7",40,z39,"1,7",,R,FALSE,salamae
+"IIIa 40:z4,z23:-",40,"z4,z23",-,,R,TRUE,arizonae
+"IV 1,40:z4,z23:-","1,40","z4,z23",-,,R,TRUE,houtenae
+"II 40:z42:1,5,7","1,40",[z42],"1,(5),7",,R ,FALSE,salamae
+"II 40:c:e,n,x,z15","1,40",c,"e,n,x,z15",,R ,FALSE,salamae
+II 40:c:z39,"1,40",c,z39,,R ,FALSE,salamae
+"II 40:e,n,x:1,5,7","1,40","e,n,x","1,5,7",,R ,FALSE,salamae
+"II 40:e,n,x,z15:1,6","1,40","e,n,x,z15","1,6",,R ,FALSE,salamae
+"II 40:g,m,s,t:e,n,x","1,40","g,[m],[s],[t]","e,n,x",,R ,FALSE,salamae
+"II 40:g,m,s,t:1,5","1,40","g,[m],[s],t","1,5",,R ,TRUE,salamae
+"II 40:g,m,s,t:z42","1,40","g,[m],[s],t",z42,,R ,FALSE,salamae
+"IV 40:g,t:-","1,40","g,t",-,,R ,TRUE,houtenae
+"II 40:g,t:e,n,x,z15","1,40","g,t","e,n,x,z15",,R ,FALSE,salamae
+"IV 40:g,z51:e,n,x,z15",40,"g,z51","e,n,x,z15",,R ,FALSE,houtenae
+"II 40:k:e,n,x,z15","1,40",k,"e,n,x,z15",,R ,FALSE,salamae
+IIIb 40:k:z,40,k,z,,R ,FALSE,diarizonae
+"IIIb 40:l,v:z53","1,40","l,v",z53,,R ,FALSE,diarizonae
+"II 40:l,z28:1,5","1,40","l,z28","1,5",,R ,FALSE,salamae
+"II 40:l,z28:z39","1,40","l,z28",z39,,R ,FALSE,salamae
+"II 40:m,t:z42","1,40","m,t",z42,,R ,FALSE,salamae
+"II 40:z:1,5","1,40",z,"1,5",,R ,FALSE,salamae
+II 40:z:z39,"1,40",z,z39,,R ,FALSE,salamae
+II 40:z:z6,"1,40",z,z6,,R ,FALSE,salamae
+V 40:z35:-,"1,40",z35,-,,R ,TRUE,bongori
+"II 40:z35:e,n,x,z15","1,40",z35,"e,n,x,z15",,R ,FALSE,salamae
+"II 40:z39:1,5","1,40",z39,"1,5",,R ,FALSE,salamae
+"II 40:z39:1,6","1,40",z39,"1,6",,R ,FALSE,salamae
+"IV 40:z4,z23:-","1,40","z4,z23",-,,R ,TRUE,houtenae
+"IIIa 40:z4,z24:-",40,"z4,z24",-,,R ,TRUE,arizonae
+"IV 40:z4,z24:-","1,40","z4,z24",-,,R ,TRUE,houtenae
+"II 40:z4,z24:z39",40,"z4,z24",z39,,R ,FALSE,salamae
+"IIIa 40:z4,z32:-",40,"z4,z32",-,,R ,TRUE,arizonae
+"IV 40:z4,z32:-","1,40","z4,z32",-,,R ,TRUE,houtenae
+Karamoja,"1,40",z41,"1,2",,R ,FALSE,enterica
+"II 40:z42:1,6","1,40",z42,"1,6",,R ,FALSE,salamae
+"II 40:z6:1,5","1,40",z6,"1,5",,R ,FALSE,salamae
+V 40:z81:-,"1,40",z81,-,,R ,TRUE,bongori
+II 40:z81:z6,"1,40",z81,z6,,R ,FALSE,salamae
+"II 41:-:1,6",41,-,"1,6",,S,FALSE,salamae
+IIIb 41:k:z35,41,(k),z35,,S,FALSE,diarizonae
+Burundi,41,a,-,,S,TRUE,enterica
+"II 41:b:1,5",41,b,"1,5",,S,FALSE,salamae
+Vaugirard,41,b,"1,6",,S,FALSE,enterica
+"VI 41:b:1,7",41,b,"1,7",,S,FALSE,indica
+Sica,41,b,"e,n,z15",,S,FALSE,enterica
+Vietnam,41,b,z6,,S,FALSE,enterica
+Lonestar,41,c,-,,S,TRUE,enterica
+"IIIb 41:c:e,n,x,z15",41,c,"e,n,x,z15",,S,FALSE,diarizonae
+II 41:c:z6,41,c,z6,,S,FALSE,salamae
+Egusi,41,d,"1,5",,S,FALSE,enterica
+II 41:d:z6,41,d,z6,,S,FALSE,salamae
+"II 41:g,m,s,t:z6",41,"g,m,s,t",z6,,S,FALSE,salamae
+"II 41:g,t:-",41,"g,t",-,,S,TRUE,salamae
+"IIIa 41:g,z51:-",41,"g,z51",-,,S,TRUE,arizonae
+Samaru,41,i,"1,5",,S,FALSE,enterica
+Verona,41,i,"1,6",,S,FALSE,enterica
+Ferlo,41,k,"1,6",,S,FALSE,enterica
+"II 41:k:1,6",41,k,"1,6",,S,FALSE,salamae
+II 41:k:z6,41,k,z6,,S,FALSE,salamae
+"II 41:l,z13,z28:e,n,x,z15",41,"l,z13,z28","e,n,x,z15",,S,FALSE,salamae
+Leatherhead,41,"m,t","1,6",,S,FALSE,enterica
+Lubumbashi,41,r,"1,5",,S,FALSE,enterica
+Konongo,41,r,"1,7",,S,FALSE,enterica
+"II 41:z:1,5",41,z,"1,5",,S,FALSE,salamae
+Sally,41,z,"1,6",,S,FALSE,enterica
+"II 41:z10:1,2",41,z10,"1,2",,S,FALSE,salamae
+Leipzig,41,z10,"1,5",,S,FALSE,enterica
+Landala,41,z10,"1,6",,S,FALSE,enterica
+Inpraw,41,z10,"e,n,x",,S,FALSE,enterica
+"II 41:z10:e,n,x,z15",41,z10,"e,n,x,z15",,S,FALSE,salamae
+II 41:z10:z6,41,z10,z6,,S,FALSE,salamae
+IIIa 41:z29:-,41,z29,-,,S,TRUE,arizonae
+IV 41:z29:-,41,z29,-,,S,TRUE,houtenae
+Lodz,41,z29,-,,S,TRUE,enterica
+Ahoutoue,41,z35,"1,6",,S,FALSE,enterica
+IIIa 41:z36:-,41,z36,-,,S,TRUE,arizonae
+IV 41:z36:-,41,z36,-,,S,TRUE,houtenae
+Offa,41,z38,-,,S,TRUE,enterica
+"IIIa 41:z4,z23:-",41,"z4,z23",-,,S,TRUE,arizonae
+"IV 41:z4,z23:-",41,"z4,z23",-,,S,TRUE,houtenae
+Bofflens,41,"z4,z23","1,7",,S,FALSE,enterica
+Waycross,41,"z4,z23","e,n,z15",,S,TRUE,enterica
+"IIIa 41:z4,z23,z32:-",41,"z4,z23,z32",-,,S,TRUE,arizonae
+"IIIa 41:z4,z24:-",41,"z4,z24",-,,S,TRUE,arizonae
+Ipswich,41,"z4,z24","1,5",,S,FALSE,enterica
+"IIIa 41:z4,z32:-",41,"z4,z32",-,,S,TRUE,arizonae
+IV 41:z52:-,41,z52,-,,S,TRUE,houtenae
+IIIb 42:k:z35,42,(k),z35,,T,FALSE,diarizonae
+Faji,"1,42",a,"e,n,z15",,T,FALSE,enterica
+"II 42:b:1,5",42,b,"1,5",,T,FALSE,salamae
+Orbe,42,b,"1,6",,T,FALSE,enterica
+"II 42:b:e,n,x,z15",42,b,"e,n,x,z15",,T,FALSE,salamae
+Tomegbe,"1,42",b,"e,n,z15",,T,FALSE,enterica
+Frederiksberg,"1,42",b,"l,w",,T,FALSE,enterica
+Egusitoo,"1,42",b,z6,,T,FALSE,enterica
+II 42:b:z6,42,b,z6,,T,FALSE,salamae
+Antwerpen,"1,42",c,"e,n,z15",,T,FALSE,enterica
+Kampala,"1,42",c,z6,,T,FALSE,enterica
+II 42:d:z6,42,d,z6,,T,FALSE,salamae
+"II 42:e,n,x:1,6",42,"e,n,x","1,6",,T,FALSE,salamae
+"II 42:g,t:-",42,"g,t",-,,T,TRUE,salamae
+"IIIb 42:g,z51:-",42,"g,z51",-,,T,TRUE,diarizonae
+"IV 42:g,z51:-","1,42","g,z51",-,,T,TRUE,houtenae
+"IV 42:g,z51:1,5","1,42","g,z51","1,5",,T,FALSE,houtenae
+Borromea,42,i,"1,6",,T,FALSE,enterica
+Kaneshie,"1,42",i,"l,w",,T,FALSE,enterica
+Middlesbrough,"1,42",i,z6,,T,FALSE,enterica
+Haferbreite,42,k,"1,6",,T,FALSE,enterica
+"IIIb 42:k:e,n,x,z15",42,k,"e,n,x,z15",,T,FALSE,diarizonae
+IIIb 42:k:z,42,k,z,,T,FALSE,diarizonae
+Gwale,"1,42",k,z6,,T,FALSE,enterica
+"II 42:l,z13,z28:z6","1,42","l,[z13],z28",z6,,T,TRUE,salamae
+"IIIb 42:l,v:1,5,7",42,"l,v","1,5,7",,T,FALSE,diarizonae
+"II 42:l,v:e,n,x,z15",42,"l,v","e,n,x,z15",,T,FALSE,salamae
+"IIIb 42:l,v:e,n,x,z15",42,"l,v","e,n,x,z15",,T,FALSE,diarizonae
+Coogee,42,"l,v","e,n,z15",,T,FALSE,enterica
+"IIIb 42:l,v:z",42,"l,v",z,,T,FALSE,diarizonae
+"IIIb 42:l,v:z53",42,"l,v",z53,,T,FALSE,diarizonae
+"II 42:l,w:e,n,x","1,42","l,w","e,n,x",,T,FALSE,salamae
+Parakou,"1,42","l,w",z35,,T,FALSE,enterica
+Waral,"1,42","m,t",-,,T,TRUE,enterica
+"II 42:m,t:e,n,x,z15",42,"m,t","e,n,x,z15",,T,TRUE,salamae
+II 42:r:-,42,r,-,,T,TRUE,salamae
+IIIb 42:r:-,42,r,-,,T,TRUE,diarizonae
+Sipane,"1,42",r,"e,n,z15",,T,FALSE,enterica
+Brive,"1,42",r,"l,w",,T,FALSE,enterica
+IIIb 42:r:z,42,r,z,,T,FALSE,diarizonae
+IIIb 42:r:z53,42,r,z53,,T,FALSE,diarizonae
+Spalentor,"1,42",y,"e,n,z15",,T,FALSE,enterica
+Harvestehude,"1,42",y,z6,,T,FALSE,enterica
+"II 42:z:1,5",42,z,"1,5",,T,FALSE,salamae
+Ursenbach,"1,42",z,"1,6",,T,FALSE,enterica
+"II 42:z:e,n,x,z15",42,z,"e,n,x,z15",,T,FALSE,salamae
+Melbourne,42,z,"e,n,z15",,T,FALSE,enterica
+II 42:z:z6,42,z,z6,,T,FALSE,salamae
+"II 42:z10:1,2",42,z10,"1,2",,T,FALSE,salamae
+"II 42:z10:e,n,x,z15",42,z10,"e,n,x,z15",,T,FALSE,salamae
+"IIIb 42:z10:e,n,x,z15",42,z10,"e,n,x,z15",,T,FALSE,diarizonae
+IIIb 42:z10:z,42,z10,z,,T,FALSE,diarizonae
+IIIb 42:z10:z35,42,z10,z35,,T,FALSE,diarizonae
+II 42:z10:z6,42,z10,z6,,T,FALSE,salamae
+Loenga,"1,42",z10,z6,,T,FALSE,enterica
+IIIb 42:z10:z67,42,z10,z67,,T,FALSE,diarizonae
+II 42:z29:-,42,z29,-,,T,TRUE,salamae
+Djama,"1,42",z29,"1,5",,T,TRUE,enterica
+Kahla,"1,42",z35,"1,6",,T,FALSE,enterica
+Hennekamp,42,z35,"e,n,z15",,T,FALSE,enterica
+Tema,"1,42",z35,z6,,T,FALSE,enterica
+IV 42:z36:-,42,z36,-,,T,TRUE,houtenae
+Weslaco,42,z36,-,,T,TRUE,enterica
+Vogan,"1,42",z38,z6,,T,FALSE,enterica
+"IIIa 42:z4,z23:-",42,"z4,z23",-,,T,TRUE,arizonae
+Gera,"1,42","z4,z23","1,6",,T,FALSE,enterica
+Broc,42,"z4,z23","e,n,z15",,T,FALSE,enterica
+"IIIa 42:z4,z24:-",42,"z4,z24",-,,T,TRUE,arizonae
+"IV 42:z4,z24:-","1,42","z4,z24",-,,T,TRUE,houtenae
+Toricada,"1,42","z4,z24",-,,T,TRUE,enterica
+Taset,"1,42",z41,-,,T,TRUE,enterica
+IIIb 42:z52:z,42,z52,z,,T,FALSE,diarizonae
+"IIIb 42:z57:1,5",42,z57,"1,5",,T,FALSE,diarizonae
+"II 42:z6:1,6",42,z6,"1,6",,T,FALSE,salamae
+Graz,43,a,"1,2",,U,FALSE,enterica
+Berkeley,43,a,"1,5",,U,FALSE,enterica
+"II 43:a:1,5",43,a,"1,5",,U,FALSE,salamae
+II 43:a:z6,43,a,z6,,U,FALSE,salamae
+Niederoderwitz,43,b,-,,U,TRUE,enterica
+Ede,43,b,"e,n,z15",,U,FALSE,enterica
+II 43:b:z42,43,b,z42,,U,FALSE,salamae
+Montreal,43,c,"1,5",,U,FALSE,enterica
+Orleans,43,d,"1,5",,U,FALSE,enterica
+"II 43:d:e,n,x,z15",43,d,"e,n,x,z15",,U,FALSE,salamae
+II 43:d:z39,43,d,z39,,U,FALSE,salamae
+II 43:d:z42,43,d,z42,,U,FALSE,salamae
+"II 43:e,n,x,z15:1,5,7",43,"e,n,x,z15","1,(5),7",,U,FALSE,salamae
+"II 43:e,n,x,z15:1,6",43,"e,n,x,z15","1,6",,U,FALSE,salamae
+Milwaukee,43,"f,g,[t]",-,,U,TRUE,enterica
+"II 43:g,m,s,t:z42",43,"g,m,[s],t",z42,,U,TRUE,salamae
+"IIIb 43:g,t:_",43,"g,t",-,,U,TRUE,diarizonae
+"II 43:g,t:1,5",43,"g,t","1,5",,U,TRUE,salamae
+"IIIa 43:g,z51:-",43,"g,z51",-,,U,TRUE,arizonae
+"II 43:g,z62:e,n,x",43,"g,z62","e,n,x",,U,FALSE,salamae
+Mbao,43,i,"1,2",,U,FALSE,enterica
+Voulte,43,i,"e,n,x",,U,FALSE,enterica
+Thetford,43,k,"1,2",,U,FALSE,enterica
+Ahuza,43,k,"1,5",,U,FALSE,enterica
+IIIb 43:k:z,43,k,z,,U,FALSE,diarizonae
+"IIIb 43:l,v:z53",43,"l,v",z53,,U,FALSE,diarizonae
+Epalinges,43,"l,w",z44,,U,TRUE,enterica
+Sudan,43,"l,z13",-,,U,TRUE,enterica
+"II 43:l,z13,z28:1,5",43,"l,z13,z28","1,5",,U,FALSE,salamae
+"IIIb 43:r:e,n,x,z15",43,r,"e,n,x,z15",,U,FALSE,diarizonae
+IIIb 43:r:z,43,r,z,,U,FALSE,diarizonae
+IIIb 43:r:z53,43,r,z53,,U,FALSE,diarizonae
+Farcha,43,y,"1,2",,U,FALSE,enterica
+Kingabwa,43,y,"1,5",,U,FALSE,enterica
+"II 43:z:1,5",43,z,"1,5",,U,FALSE,salamae
+Ogbete,43,z,"1,5",,U,FALSE,enterica
+Arusha,43,z,"e,n,z15",,U,FALSE,enterica
+Adana,43,z10,"1,5",,U,FALSE,enterica
+IIIa 43:z29:-,43,z29,-,,U,TRUE,arizonae
+IV 43:z29:-,43,z29,-,,U,TRUE,houtenae
+Makiling,43,z29,-,,U,TRUE,enterica
+"II 43:z29:e,n,x",43,z29,"e,n,x",,U,FALSE,salamae
+II 43:z29:z42,43,z29,z42,,U,FALSE,salamae
+Ahepe,43,z35,"1,6",,U,FALSE,enterica
+IIIa 43:z36:-,43,z36,-,,U,TRUE,arizonae
+"IV 43:z36,z38:-",43,"z36,z38",-,,U,TRUE,houtenae
+Irigny,43,z38,-,,U,TRUE,enterica
+"II 43:z4,z23:-",43,"z4,z23",-,,U,TRUE,salamae
+"IIIa 43:z4,z23:-",43,"z4,z23",-,,U,TRUE,arizonae
+"IV 43:z4,z23:-",43,"z4,z23",-,,U,TRUE,houtenae
+Farmingdale,43,"z4,z23","1,2",,U,TRUE,enterica
+"IIIa 43:z4,z24:-",43,"z4,z24",-,,U,TRUE,arizonae
+"IV 43:z4,z24:-",43,"z4,z24",-,,U,TRUE,houtenae
+"IV 43:z4,z32:-",43,"z4,z32",-,,U,TRUE,houtenae
+"II 43:z42:1,5,7",43,z42,"1,5,7",,U,TRUE,salamae
+IIIb 43:z52:z53,43,z52,z53,,U,FALSE,diarizonae
+IV 44:a:-,44,a,-,,V,TRUE,houtenae
+Niakhar,44,a,"1,5",,V,FALSE,enterica
+Tiergarten,44,a,"e,n,x",,V,FALSE,enterica
+Niarembe,44,a,"l,w",,V,FALSE,enterica
+Shahalam,44,b,"1,6",,V,FALSE,enterica
+Elbeuf,44,b,"e,n,x",,V,FALSE,enterica
+Sedgwick,44,b,"e,n,z15",,V,FALSE,enterica
+Madigan,44,c,"1,5",,V,FALSE,enterica
+Quebec,44,c,"e,n,z15",,V,FALSE,enterica
+Bobo,44,d,"1,5",,V,FALSE,enterica
+Kermel,44,d,"e,n,x",,V,FALSE,enterica
+Fischerstrasse,44,d,"e,n,z15",,V,FALSE,enterica
+Palamaner,"1,44",d,z35,,V,FALSE,enterica
+"II 44:e,n,x:1,6","1,44","e,n,x","1,6",,V,FALSE,salamae
+Vleuten,44,"f,g",-,,V,TRUE,enterica
+Gamaba,"1,44","g,m,[s]","1,6",,V,TRUE,enterica
+Splott,44,"g,s,t","1,7",,V,TRUE,enterica
+"IIIb 44:g,t:1,5","1,44","g,t","1,5",,V,FALSE,diarizonae
+"II 44:g,t:z42",44,"g,t",z42,,V,FALSE,salamae
+"IV 44:g,z51:-",44,"g,z51",-,,V,TRUE,houtenae
+Maricopa,44,"g,z51",-,,V,TRUE,enterica
+Maritzburg,"1,44",i,"e,n,z15",,V,FALSE,enterica
+Lawra,44,k,"e,n,z15",,V,FALSE,enterica
+Malika,44,"l,z28","1,5",,V,FALSE,enterica
+Muguga,44,"m,t",-,,V,TRUE,enterica
+"II 44:m,t:z42","1,44","m,t",z42,,V,FALSE,salamae
+V 44:r:-,44,r,-,,V,TRUE,bongori
+Albertbanjul,44,r,"1,5",,V,FALSE,enterica
+Brefet,44,r,"e,n,z15",,V,FALSE,enterica
+Brackenridge,44,z,"1,5",,V,FALSE,enterica
+Bolama,44,z,"e,n,x",,V,FALSE,enterica
+Uhlenhorst,44,z,"l,w",,V,FALSE,enterica
+Guinea,"1,44",z10,"1,7",,V,FALSE,enterica
+Llobregat,"1,44",z10,"e,n,x",,V,FALSE,enterica
+IV 44:z29:-,44,z29,-,,V,TRUE,houtenae
+Zinder,44,z29,-,,V,TRUE,enterica
+"II 44:z29:e,n,x",44,z29,"e,n,x",,V,FALSE,salamae
+"IV 44:z36,z38:-",44,"z36,[z38]",-,,V,TRUE,houtenae
+Koketime,44,z38,-,,V,TRUE,enterica
+V 44:z39:-,44,z39,-,,V,TRUE,bongori
+"II 44:z39:e,n,x,z15","1,44",z39,"e,n,x,z15",,V,FALSE,salamae
+"II 44:z4,z23:-",44,"z4,z23",-,,V,TRUE,salamae
+"IIIa 44:z4,z23:-",44,"z4,z23",-,,V,TRUE,arizonae
+"IV 44:z4,z23:-",44,"z4,z23",-,,V,TRUE,houtenae
+Kua,44,"z4,z23",-,,V,TRUE,enterica
+Ploufragan,"1,44","z4,z23","e,n,z15",,V,FALSE,enterica
+"IIIa 44:z4,z23,z32:-",44,"z4,z23,z32",-,,V,TRUE,arizonae
+Christiansborg,44,"z4,z24",-,,V,TRUE,enterica
+"IIIa 44:z4,z24:-",44,"z4,z24",-,,V,TRUE,arizonae
+"IV 44:z4,z24:-",44,"z4,z24",-,,V,TRUE,houtenae
+"IIIa 44:z4,z32:-",44,"z4,z32",-,,V,TRUE,arizonae
+"IV 44:z4,z32:-","1,44","z4,z32",-,,V,TRUE,houtenae
+"VI 45:a:e,n,x",45,a,"e,n,x",,W,FALSE,indica
+Meekatharra,45,a,"e,n,z15",,W,FALSE,enterica
+II 45:a:z10,45,a,z10,,W,FALSE,salamae
+Riverside,45,b,"1,5",,W,FALSE,enterica
+Fomeco,45,b,"e,n,z15",,W,FALSE,enterica
+Deversoir,45,c,"e,n,x",,W,FALSE,enterica
+Dugbe,45,d,"1,6",,W,FALSE,enterica
+Karachi,45,d,"e,n,x",,W,FALSE,enterica
+Warmsen,45,d,"e,n,z15",,W,FALSE,enterica
+Suelldorf,45,"f,g",-,,W,TRUE,enterica
+Tornow,45,"g,m,[s],[t]",-,,W,TRUE,enterica
+"II 45:g,m,s,t:1,5",45,"g,m,s,t","1,5",,W,FALSE,salamae
+"II 45:g,m,s,t:e,n,x",45,"g,m,s,t","e,n,x",,W,FALSE,salamae
+"II 45:g,m,t:e,n,x,z15",45,"g,m,t","e,n,x,z15",,W,FALSE,salamae
+Binningen,45,"g,s,t",-,,W,TRUE,enterica
+"IIIa 45:g,z51:-",45,"g,z51",-,,W,TRUE,arizonae
+"IV 45:g,z51:-",45,"g,z51",-,,W,TRUE,houtenae
+Verviers,45,k,"1,5",,W,FALSE,enterica
+Casablanca,45,k,"1,7",,W,FALSE,enterica
+Cairns,45,k,"e,n,z15",,W,FALSE,enterica
+Imo,45,"l,v","e,n,z15",,W,TRUE,enterica
+Apapa,45,"m,t",-,,W,TRUE,enterica
+"II 45:m,t:1,5",45,"m,t","1,5",,W,FALSE,salamae
+Kofandoka,45,r,"e,n,z15",,W,FALSE,enterica
+"II 45:z:1,5",45,z,"1,5",,W,FALSE,salamae
+Yopougon,45,z,"e,n,z15",,W,FALSE,enterica
+II 45:z:z39,45,z,z39,,W,FALSE,salamae
+Aprad,45,z10,-,,W,TRUE,enterica
+IIIa 45:z29:_,45,z29,-,,W,TRUE,arizonae
+Jodhpur,45,z29,-,,W,TRUE,enterica
+"II 45:z29:1,5",45,z29,"1,5",,W,FALSE,salamae
+"II 45:z29:e,n,x",45,z29,"e,n,x",,W,FALSE,salamae
+II 45:z29:z42,45,z29,z42,,W,FALSE,salamae
+Lattenkamp,45,z35,"1,5",,W,FALSE,enterica
+Balcones,45,z36,-,,W,TRUE,enterica
+IIIa 45:z36:-,45,z36,-,,W,TRUE,arizonae
+"IV 45:z36,z38:-",45,"z36,z38",-,,W,TRUE,houtenae
+"IIIa 45:z4,z23:-",45,"z4,z23",-,,W,TRUE,arizonae
+"IV 45:z4,z23:-",45,"z4,z23",-,,W,TRUE,houtenae
+"IIIa 45:z4,z24:-",45,"z4,z24",-,,W,TRUE,arizonae
+Transvaal,45,"z4,z24",-,,W,TRUE,enterica
+"IIIa 45:z4,z32:-",45,"z4,z32",-,,W,TRUE,arizonae
+"II 47:g,t:e,n,x",47,"[g,t]","e,n,x",,X,FALSE,salamae
+"II 47:a:1,5",47,a,"1,5",,X,FALSE,salamae
+"II 47:a:e,n,x,z15",47,a,"e,n,x,z15",,X,FALSE,salamae
+Wenatchee,47,b,"1,2",,X,FALSE,enterica
+"II 47:b:1,5",47,b,"1,5",,X,FALSE,salamae
+"II 47:b:e,n,x,z15",47,b,"e,n,x,z15",,X,FALSE,salamae
+II 47:b:z6,47,b,z6,,X,FALSE,salamae
+Sya,47,b,z6,,X,FALSE,enterica
+"IIIb 47:c:1,5,7",47,c,"1,5,7",,X,FALSE,diarizonae
+Kodjovi,47,c,"1,6",,X,FALSE,enterica
+"IIIb 47:c:e,n,x,z15",47,c,"e,n,x,z15",,X,FALSE,diarizonae
+IIIb 47:c:z,47,c,z,,X,FALSE,diarizonae
+IIIb 47:c:z35,47,c,z35,,X,FALSE,diarizonae
+"II 47:d:1,5",47,d,"1,5",,X,FALSE,salamae
+Stellingen,47,d,"e,n,x",,X,FALSE,enterica
+"II 47:d:e,n,x,z15",47,d,"e,n,x,z15",,X,FALSE,salamae
+II 47:d:z39,47,d,z39,,X,FALSE,salamae
+"II 47:e,n,x,z15:1,6",47,"e,n,x,z15","1,6",,X,FALSE,salamae
+Sljeme,"1,47","f,g",-,,X,TRUE,enterica
+Luke,"1,47","g,m",-,,X,TRUE,enterica
+Carswell,47,"g,z51",-,,X,TRUE,enterica
+"IIIb 47:i:e,n,x,z15",47,i,"e,n,x,z15",,X,FALSE,diarizonae
+Bergen,47,i,"e,n,z15",,X,FALSE,enterica
+IIIb 47:i:z,47,i,z,,X,FALSE,diarizonae
+IIIb 47:i:z35,47,i,z35,,X,FALSE,diarizonae
+IIIb 47:i:z53,47,i,z53,,X,FALSE,diarizonae
+Staoueli,47,k,"1,2",,X,FALSE,enterica
+Bootle,47,k,"1,5",,X,FALSE,enterica
+"IIIb 47:k:1,5,7",47,k,"1,5,7",,X,FALSE,diarizonae
+Dahomey,47,k,"1,6",,X,FALSE,enterica
+"IIIb 47:k:e,n,x,z15",47,k,"e,n,x,z15",,X,FALSE,diarizonae
+Lyon,47,k,"e,n,z15",,X,FALSE,enterica
+IIIb 47:k:z,47,k,z,,X,FALSE,diarizonae
+IIIb 47:k:z35,47,k,z35,,X,FALSE,diarizonae
+IIIb 47:k:z53,47,k,z53,,X,FALSE,diarizonae
+"IV 47:l,v:-",47,"l,v",-,,X,TRUE,houtenae
+"IIIb 47:l,v:1,5,7",47,"l,v","1,5,7",,X,FALSE,diarizonae
+Drac,47,"l,v","e,n,x",,X,FALSE,enterica
+"IIIb 47:l,v:e,n,x,z15",47,"l,v","e,n,x,z15",,X,FALSE,diarizonae
+"IIIb 47:l,v:z",47,"l,v",z,,X,FALSE,diarizonae
+"IIIb 47:l,v:z35",47,"l,v",z35,,X,FALSE,diarizonae
+"IIIb 47:l,v:z53",47,"l,v",z53,,X,FALSE,diarizonae
+"IIIb 47:l,v:z57",47,"l,v",z57,,X,FALSE,diarizonae
+Teshie,"1,47","l,z13,z28","e,n,z15",,X,FALSE,enterica
+Mesbit,47,"m,t","e,n,z15",,X,FALSE,enterica
+Dapango,47,r,"1,2",,X,FALSE,enterica
+"IIIb 47:r:1,5,7",47,r,"1,5,7",,X,FALSE,diarizonae
+"IIIb 47:r:e,n,x,z15",47,r,"e,n,x,z15",,X,FALSE,diarizonae
+IIIb 47:r:z,47,r,z,,X,FALSE,diarizonae
+IIIb 47:r:z53,47,r,z53,,X,FALSE,diarizonae
+"IIIb 47:r,i:z35",47,"r,[i]",z35,,X,FALSE,diarizonae
+Moualine,47,y,"1,6",,X,FALSE,enterica
+Blitta,47,y,"e,n,x",,X,FALSE,enterica
+Mountpleasant,47,z,"1,5",,X,FALSE,enterica
+Kaolack,47,z,"1,6",,X,FALSE,enterica
+"II 47:z:e,n,x,z15",47,z,"e,n,x,z15",,X,FALSE,salamae
+II 47:z:z6,47,z,z6,,X,FALSE,salamae
+"IIIb 47:z10:1,5,7",47,z10,"1,5,7",,X,FALSE,diarizonae
+Namoda,47,z10,"e,n,z15",,X,FALSE,enterica
+IIIb 47:z10:z,47,z10,z,,X,FALSE,diarizonae
+IIIb 47:z10:z35,47,z10,z35,,X,FALSE,diarizonae
+Ekpoui,47,z29,-,,X,TRUE,enterica
+IIIa 47:z29:-,47,z29,-,,X,TRUE,arizonae
+"II 47:z29:e,n,x,z15",47,z29,"e,n,x,z15",,X,FALSE,salamae
+Bingerville,47,z35,"e,n,z15",,X,FALSE,enterica
+Yombesali,47,z35,z6,,X,FALSE,enterica
+IV 47:z36:-,47,z36,-,,X,TRUE,houtenae
+Alexanderplatz,47,z38,-,,X,TRUE,enterica
+"IIIa 47:z4,z23:-",47,"z4,z23",-,,X,TRUE,arizonae
+Fehrbellin,47,"z4,z23","1,6",,X,FALSE,enterica
+Tabligbo,47,"z4,z23","e,n,z15",,X,FALSE,enterica
+Binche,47,"z4,z23","l,w",,X,FALSE,enterica
+Bere,47,"z4,z23",z6,,X,FALSE,enterica
+Tamberma,47,"z4,z24",-,,X,TRUE,enterica
+Quinhon,47,z44,-,,X,TRUE,enterica
+"IIIb 47:z52:1,5",47,z52,"1,5",,X,FALSE,diarizonae
+"IIIb 47:z52:1,5,7",47,z52,"1,5,7",,X,FALSE,diarizonae
+"IIIb 47:z52:e,n,x,z15",47,z52,"e,n,x,z15",,X,FALSE,diarizonae
+IIIb 47:z52:z,47,z52,z,,X,FALSE,diarizonae
+IIIb 47:z52:z35,47,z52,z35,,X,FALSE,diarizonae
+IIIb 47:z53:-,47,z53,-,,X,TRUE,diarizonae
+"II 47:z6:1,6",47,z6,"1,6",,X,FALSE,salamae
+II 48:d:z6,48,d,z6,,Y,FALSE,salamae
+Hisingen,48,a,"1,5,7",,Y1,FALSE,enterica
+II 48:a:z39,48,a,z39,,Y1,FALSE,salamae
+II 48:a:z6,48,a,z6,,Y1,FALSE,salamae
+V 48:b:-,48,b,-,,Y1,TRUE,bongori
+"II 48:b:e,n,x,z15",48,b,"e,n,x,z15",,Y1,FALSE,salamae
+II 48:b:z6,48,b,z6,,Y1,FALSE,salamae
+IIIb 48:c:z,48,c,z,,Y1,FALSE,diarizonae
+Buckeye,48,d,-,,Y1,TRUE,enterica
+"II 48:d:1,2",48,d,"1,2",,Y1,FALSE,salamae
+II 48:d:z6,48,d,z6,,Y1,FALSE,salamae
+Fitzroy,48,"e,h","1,5",,Y1,FALSE,enterica
+"II 48:e,n,x,z15:z6",48,"e,n,x,z15",z6,,Y1,FALSE,salamae
+"II 48:g,m,t:-",48,"g,m,t",-,,Y1,TRUE,salamae
+"IIIa 48:g,z51:-",48,"g,z51",-,,Y1,TRUE,arizonae
+"IV 48:g,z51:-",48,"g,z51",-,,Y1,TRUE,houtenae
+V 48:i:-,48,i,-,,Y1,TRUE,bongori
+IIIb 48:i:z,48,i,z,,Y1,FALSE,diarizonae
+IIIb 48:i:z35,48,i,z35,,Y1,FALSE,diarizonae
+IIIb 48:i:z53,48,i,z53,,Y1,FALSE,diarizonae
+IIIb 48:i:z61,48,i,z61,,Y1,FALSE,diarizonae
+"IIIb 48:k:1,5,7",48,k,"1,5,(7)",,Y1,FALSE,diarizonae
+"II 48:k:e,n,x,z15",48,k,"e,n,x,z15",,Y1,FALSE,salamae
+"IIIb 48:k:e,n,x,z15",48,k,"e,n,x,z15",,Y1,FALSE,diarizonae
+Dahlem,48,k,"e,n,z15",,Y1,FALSE,enterica
+IIIb 48:k:z,48,k,z,,Y1,FALSE,diarizonae
+IIIb 48:k:z35,48,k,z35,,Y1,FALSE,diarizonae
+II 48:k:z39,48,k,z39,,Y1,FALSE,salamae
+IIIb 48:k:z53,48,k,z53,,Y1,FALSE,diarizonae
+Australia,48,"l,v","1,5",,Y1,FALSE,enterica
+"IIIb 48:l,v:1,5,7",48,"l,v","1,5,(7)",,Y1,FALSE,diarizonae
+"IIIb 48:l,v:z",48,"l,v",z,,Y1,FALSE,diarizonae
+"IIIb 48:l,w:1,5,7",48,"l,w","1,5,7",,Y1,FALSE,diarizonae
+"IIIb 48:r:e,n,x,z15",48,r,"e,n,x,z15",,Y1,FALSE,diarizonae
+IIIb 48:r:z,48,r,z,,Y1,FALSE,diarizonae
+"II 48:z:1,5",48,z,"1,5",,Y1,FALSE,salamae
+Toucra,48,z,"1,5",,Y1,FALSE,enterica
+"IIIb 48:z:1,5,7",48,z,"1,5,7",,Y1,FALSE,diarizonae
+"II 48:z10:1,5",48,z10,"1,5",,Y1,TRUE,salamae
+"VI 48:z10:1,5",48,z10,"1,5",,Y1,FALSE,indica
+"II 48:z10:1,6",48,z10,"1,6",,Y1,FALSE,salamae
+Isaszeg,48,z10,"e,n,x",,Y1,FALSE,enterica
+"IIIb 48:z10:e,n,x,z15",48,z10,"e,n,x,z15",,Y1,FALSE,diarizonae
+IIIb 48:z10:z,48,z10,z,,Y1,FALSE,diarizonae
+II 48:z29:-,48,z29,-,,Y1,TRUE,salamae
+IIIa 48:z29:-,48,z29,-,,Y1,TRUE,arizonae
+IV 48:z29:-,48,z29,-,,Y1,TRUE,houtenae
+V 48:z35:-,48,z35,-,,Y1,TRUE,bongori
+IIIb 48:z35:z52,48,z35,z52,,Y1,FALSE,diarizonae
+IIIa 48:z36:-,48,z36,-,,Y1,TRUE,arizonae
+"IV 48:z36,z38:-",48,"z36,[z38]",-,,Y1,TRUE,houtenae
+V 48:z39:-,48,z39,-,,Y1,TRUE,bongori
+II 48:z39:z81,48,z39,z81,,Y1,FALSE,salamae
+"IIIa 48:z4,z23:-",48,"z4,z23",-,,Y1,TRUE,arizonae
+"IV 48:z4,z23:-",48,"z4,z23",-,,Y1,TRUE,houtenae
+"IIIa 48:z4,z23,z32:-",48,"z4,z23,z32",-,,Y1,TRUE,arizonae
+Djakarta,48,"z4,z24",-,,Y1,TRUE,enterica
+"IIIa 48:z4,z24:-",48,"z4,z24",-,,Y1,TRUE,arizonae
+"IIIb 48:z4,z24:_",48,"z4,z24",-,,Y1,TRUE,diarizonae
+"IIIa 48:z4,z32:-",48,"z4,z32",-,,Y1,TRUE,arizonae
+"IV 48:z4,z32:-",48,"z4,z32",-,,Y1,TRUE,houtenae
+V 48:z41:-,48,z41,-,,Y1,TRUE,bongori
+"IIIb 48:z52:e,n,x,z15",48,z52,"e,n,x,z15",,Y1,FALSE,diarizonae
+IIIb 48:z52:z,48,z52,z,,Y1,FALSE,diarizonae
+V 48:z65:-,48,z65,-,,Y1,TRUE,bongori
+V 48:z81:-,48,z81,-,,Y1,TRUE,bongori
+IV 50:a:-,50,a,-,,Z,TRUE,houtenae
+IV 50:b:-,50,b,-,,Z,TRUE,houtenae
+Rochdale,50,b,"e,n,x",,Z,FALSE,enterica
+II 50:b:z6,50,b,z6,,Z,FALSE,salamae
+IV 50:d:-,50,d,-,,Z,TRUE,houtenae
+Hemingford,50,d,"1,5",,Z,FALSE,enterica
+"II 50:e,n,x:1,7",50,"e,n,x","1,7",,Z,FALSE,salamae
+"II 50:g,m,s,t:1,5",50,"g,[m],s,t","1,5",,Z,TRUE,salamae
+"IIIa 50:g,z51:-",50,"g,z51",-,,Z,TRUE,arizonae
+"IV 50:g,z51:-",50,"g,z51",-,,Z,TRUE,houtenae
+"II 50:g,z62:e,n,x",50,"g,z62","e,n,x",,Z,FALSE,salamae
+"IIIb 50:i:1,5,7",50,i,"1,5,7",,Z,FALSE,diarizonae
+"IIIb 50:i:e,n,x,z15",50,i,"e,n,x,z15",,Z,FALSE,diarizonae
+IIIb 50:i:z,50,i,z,,Z,FALSE,diarizonae
+IIIb 50:i:z53,50,i,z53,,Z,FALSE,diarizonae
+"IIIb 50:k:1,5,7",50,k,"1,5,7",,Z,FALSE,diarizonae
+"II 50:k:e,n,x",50,k,"e,n,x",,Z,FALSE,salamae
+"IIIb 50:k:e,n,x,z15",50,k,"e,n,x,z15",,Z,FALSE,diarizonae
+IIIb 50:k:z,50,k,z,,Z,FALSE,diarizonae
+IIIb 50:k:z35,50,k,z35,,Z,FALSE,diarizonae
+IIIb 50:k:z53,50,k,z53,,Z,FALSE,diarizonae
+II 50:k:z6,50,k,z6,,Z,FALSE,salamae
+Fass,50,"l,v","1,2",,Z,FALSE,enterica
+"IIIb 50:l,v:e,n,x,z15",50,"l,v","e,n,x,z15",,Z,FALSE,diarizonae
+"IIIb 50:l,v:z",50,"l,v",z,,Z,FALSE,diarizonae
+"IIIb 50:l,v:z35",50,"l,v",z35,,Z,FALSE,diarizonae
+"IIIb 50:l,v:z57",50,"l,v",z57,,Z,FALSE,diarizonae
+"VI 50:l,v:z67",50,"l,v",z67,,Z,FALSE,indica
+"II 50:l,w:e,n,x,z15",50,"l,w","e,n,x,z15",,Z,FALSE,salamae
+"II 50:l,z28:z42",50,"l,z28",z42,,Z,FALSE,salamae
+"II 50:m,t:z6",50,"m,t",z6,,Z,FALSE,salamae
+"IIIb 50:r:1,5,7",50,r,"1,5,(7)",,Z,FALSE,diarizonae
+"IIIb 50:r:e,n,x,z15",50,r,"e,n,x,z15",,Z,FALSE,diarizonae
+IIIb 50:r:z,50,r,z,,Z,FALSE,diarizonae
+IIIb 50:r:z35,50,r,z35,,Z,FALSE,diarizonae
+IIIb 50:r:z53,50,r,z53,,Z,FALSE,diarizonae
+Dougi,50,y,"1,6",,Z,FALSE,enterica
+"II 50:z:e,n,x",50,z,"e,n,x",,Z,FALSE,salamae
+IIIb 50:z:z52,50,z,z52,,Z,FALSE,diarizonae
+IIIb 50:z10:z,50,z10,z,,Z,FALSE,diarizonae
+IIIb 50:z10:z53,50,z10,z53,,Z,FALSE,diarizonae
+II 50:z10:z6,50,z10,z6,,Z,FALSE,salamae
+IIIa 50:z29:-,50,z29,-,,Z,TRUE,arizonae
+Ivorycoast,50,z29,-,,Z,TRUE,enterica
+IIIa 50:z36:-,50,z36,-,,Z,TRUE,arizonae
+"IIIa 50:z4,z23:-",50,"z4,z23",-,,Z,TRUE,arizonae
+"IV 50:z4,z23:-",50,"z4,z23",-,,Z,TRUE,houtenae
+"IIIa 50:z4,z23,z32:-",50,"z4,z23,z32",-,,Z,TRUE,arizonae
+"IIIa 50:z4,z24:-",50,"z4,z24",-,,Z,TRUE,arizonae
+"IV 50:z4,z24:-",50,"z4,z24",-,,Z,TRUE,houtenae
+"IIIa 50:z4,z32:-",50,"z4,z32",-,,Z,TRUE,arizonae
+"IV 50:z4,z32:-",50,"z4,z32",-,,Z,TRUE,houtenae
+"II 50:z42:1,7",50,z42,"1,7",,Z,FALSE,salamae
+"IIIb 50:z52:1,5,7",50,z52,"1,5,7",,Z,FALSE,diarizonae
+IIIb 50:z52:z35,50,z52,z35,,Z,FALSE,diarizonae
+IIIb 50:z52:z53,50,z52,z53,,Z,FALSE,diarizonae

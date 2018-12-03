@@ -22,7 +22,9 @@ def qc(fasta_path, cgmlst_results, prediction):
             for marker, results in cgmlst_results.items():
                 if results['name'] is None:
                     missing_cgmlst_count += 1
-
+        qc_msgs.append('INFO: Number of cgMLST330 loci found (n={})'.format(
+            (330-missing_cgmlst_count),
+            ERR_MISSING_CGMLST_MARKERS))
         if missing_cgmlst_count >= ERR_MISSING_CGMLST_MARKERS:
             qc_status = 'FAIL'
             qc_msgs.append('FAIL: Large number of cgMLST330 loci missing (n={} > {})'.format(

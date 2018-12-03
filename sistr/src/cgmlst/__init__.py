@@ -342,6 +342,7 @@ def run_cgmlst(blast_runner, full=False):
                                                     full=full)
     logging.info('Type retrieved_marker_alleles %s', type(retrieved_marker_alleles))
     all_marker_results = marker_match_results.copy()
+    found_cgmlst_genes = 0
     for marker, res in retrieved_marker_alleles.items():
         all_marker_results[marker] = res
     for marker in df_cgmlst_profiles.columns:
@@ -350,13 +351,14 @@ def run_cgmlst(blast_runner, full=False):
                                           'name': None,
                                           'seq': None,}
     cgmlst_results = {}
+
     for marker, res in all_marker_results.items():
         try:
             cgmlst_results[marker] = int(res['name'])
+            found_cgmlst_genes+=1
         except:
             logging.error('Missing cgmlst_results for %s', marker)
             logging.debug(res)
-
     logging.info('Calculating number of matching alleles to serovar predictive cgMLST330 profiles')
     df_relatives = find_closest_related_genome(cgmlst_results, df_cgmlst_profiles)
     genome_serovar_dict = genomes_to_serovar()
@@ -377,6 +379,7 @@ def run_cgmlst(blast_runner, full=False):
     for idx, row in df_relatives.iterrows():
         cgmlst_distance = row['distance']
         cgmlst_matching_alleles = row['matching']
+        cgmlst_found_loci = found_cgmlst_genes
         cgmlst_serovar = row['serovar'] if cgmlst_distance <= 1.0 else None
         cgmlst_matching_genome = idx if cgmlst_distance <= 1.0 else None
         logging.info('Top serovar by cgMLST profile matching: "{}" with {} matching alleles, distance={:.1%}'.format(
@@ -408,6 +411,7 @@ def run_cgmlst(blast_runner, full=False):
             'genome_match': cgmlst_matching_genome,
             'serovar': cgmlst_serovar,
             'matching_alleles': cgmlst_matching_alleles,
+            'found_loci':cgmlst_found_loci,
             'subspecies': spp,
             'cgmlst330_ST': cgmlst_st,},
            all_marker_results, )
