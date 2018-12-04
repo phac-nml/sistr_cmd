@@ -11,7 +11,7 @@ from sistr.src.serovar_prediction.constants import \
     WZX_FASTA_PATH, \
     SEROGROUP_SIMILARITY_GROUPS, \
     SEROVAR_TABLE_PATH, \
-    CGMLST_DISTANCE_THRESHOLD, MASH_DISTANCE_THRESHOLD
+    CGMLST_DISTANCE_THRESHOLD, MASH_DISTANCE_THRESHOLD, SISTR_DATA_DIR , SISTR_DB_URL
 
 spp_name_to_roman = {'enterica': 'I',
                      'salamae': 'II',

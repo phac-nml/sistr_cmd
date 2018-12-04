@@ -5,15 +5,16 @@ import argparse
 from collections import Counter
 from datetime import datetime
 import logging
-import os
-import re
+import re, sys
+import os, pycurl, tarfile, zipfile, gzip, shutil
+from pkg_resources import resource_filename
 
 from sistr.version import __version__
 from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
 from sistr.src.logger import init_console_logger
 from sistr.src.qc import qc
-from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call, serovar_table
+from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call, serovar_table, SISTR_DB_URL, SISTR_DATA_DIR
 
 
 def init_parser():
@@ -371,5 +372,61 @@ def main():
         logging.info('Wrote %s alleles to %s', count, args.novel_alleles)
 
 
+def download_to_file(url,file):
+    with open(file, 'wb') as f:
+        c = pycurl.Curl()
+        # Redirects to https://www.python.org/.
+        c.setopt(c.URL, url)
+        # Follow redirect.
+        c.setopt(c.FOLLOWLOCATION, True)
+        c.setopt(c.WRITEDATA, f)
+        c.perform()
+        c.close()
+
+def extract(fname,outdir):
+    if (fname.endswith("tar.gz")):
+        tar = tarfile.open(fname, "r:gz")
+        tar.extractall()
+        tar.close()
+    elif (fname.endswith("tar")):
+        tar = tarfile.open(fname, "r:")
+        tar.extractall(outdir)
+        tar.close()
+    elif(fname.endswith("zip")):
+        zip_ref = zipfile.ZipFile(fname, 'r')
+        zip_ref.extractall(outdir)
+        zip_ref.close()
+    elif(fname.endswith("gz")):
+        outfile = os.path.join(outdir,fname.replace('.gz',''))
+        with gzip.open(fname, 'rb') as f_in:
+            with open(outfile, 'wb') as f_out:
+                shutil.copyfileobj(f_in, f_out)
+            f_in.close()
+            f_out.close()
+            os.remove(fname)
+
+def setup_sistr_dbs():
+    tmp_file = resource_filename('sistr', 'data.tar.gz')
+    logging.info('Downloading needed SISTR databases')
+    download_to_file(SISTR_DB_URL, tmp_file)
+    if (not os.path.isfile(tmp_file)):
+        logging.error('Downloading databases failed, please check your internet connection and retry')
+        sys.exit(-1)
+    else:
+        logging.info('Downloading databases successful')
+        f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
+        f.write("DB downloaded on : {}".format(datetime.datetime.today().strftime('%Y-%m-%d')))
+        f.close()
+
+    extract(tmp_file, SISTR_DATA_DIR)
+    os.remove(tmp_file)
+
+
+
+
 if __name__ == '__main__':
+    if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
+        setup_sistr_dbs()
     main()
+
+
