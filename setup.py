@@ -49,6 +49,7 @@ setup(
         'numpy>=1.11.1',
         'pandas>=0.18.1',
         'tables>=3.3.0',
+        'pycurl>=7.43.0'
     ],
     extras_require={
         'test': ['pytest>=2.9.2',],
