@@ -65,12 +65,17 @@ def find_all_centroid_alleles(marker_alleles, threads=1, word_size=28, cluster_t
     if threads == 1:
         logging.info('Running centroid allele finding in serial single-threaded mode')
         for marker_name, alleles in marker_alleles.items():
+            #print (marker_name)
             centroids = find_centroid_alleles(alleles, bp=word_size, t=cluster_threshold)
-            logging.info('Found {} centroid alleles for marker {} ({}% reduction from {})'.format(
+            #print(centroids)
+            #print(str(len(centroids)))
+            #print(str((1.0 - len(centroids) / float(len(alleles))) * 100))
+            '''logging.info('Found {} centroid alleles for marker {} ({}% reduction from {})'.format(
                          len(centroids),
                          marker_name,
                          (1.0 - len(centroids) / float(len(alleles))) * 100),
-                         len(alleles))
+                         len(alleles))'''
+            #print (marker_name)
             out[marker_name] = centroids
     else:
         logging.info('Running centroid allele finding in parallel mode with %s threads', threads)
@@ -89,11 +94,11 @@ def find_all_centroid_alleles(marker_alleles, threads=1, word_size=28, cluster_t
             out[marker_name] = job.get()
         for marker_name, centroids in out.items():
             alleles = marker_alleles[marker_name]
-            logging.info('Found {} centroid alleles for marker {} ({}% reduction from {})'.format(
+            '''logging.info('Found {} centroid alleles for marker {} ({}% reduction from {})'.format(
                      len(centroids),
                      marker_name,
                      (1.0 - len(centroids) / float(len(alleles))) * 100,
-                     len(alleles)))
+                     len(alleles)))'''
     return out
 
 

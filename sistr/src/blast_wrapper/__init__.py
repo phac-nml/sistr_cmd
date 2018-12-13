@@ -160,7 +160,7 @@ class BlastReader:
     df = None
 
 
-    def __init__(self, blast_outfile):
+    def __init__(self, blast_outfile,filter='N/A'):
         """Read BLASTN output file into a pandas DataFrame
         Sort the DataFrame by BLAST bitscore.
         If there are no BLASTN results, then no results can be returned.
@@ -187,10 +187,13 @@ class BlastReader:
 
             logging.debug(self.df.head())
             self.is_missing = False
+            self.filter_rows(filter)
         except EmptyDataError as exc:
             logging.warning('No BLASTN results to parse from file %s', blast_outfile)
             self.is_missing = True
 
+    def filter_rows(self,filter):
+        self.df = self.df[~self.df['qseqid'].str.contains(filter)]
 
     def df_dict(self):
         if not self.is_missing:
