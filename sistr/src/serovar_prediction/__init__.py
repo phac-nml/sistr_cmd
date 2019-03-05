@@ -218,7 +218,7 @@ class H1Predictor(BlastAntigenGeneMixin):
         self.blast_runner = blast_runner
         self.h1_prediction = H1FliCPrediction()
 
-    def predict(self):
+    def predict(self,filter='N/A'):
         self.h1_prediction = self.get_antigen_gene_blast_results(self.h1_prediction, FLIC_FASTA_PATH)
         if not self.h1_prediction.is_missing:
             if not self.h1_prediction.is_perfect_match:

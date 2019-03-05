@@ -1,6 +1,9 @@
 import os
 from distutils.core import setup
 from setuptools import find_packages
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from sistr.version import __version__
 
 classifiers = """
 Development Status :: 3 - Alpha
@@ -49,7 +52,8 @@ setup(
         'numpy>=1.11.1',
         'pandas>=0.18.1',
         'tables>=3.3.0',
-        'pycurl>=7.43.0'
+        'pycurl>=7.43.0',
+        'scipy>=1.1.0'
     ],
     extras_require={
         'test': ['pytest>=2.9.2',],

@@ -9,6 +9,7 @@ import re, sys
 import os, pycurl, tarfile, zipfile, gzip, shutil
 from pkg_resources import resource_filename
 
+
 from sistr.version import __version__
 from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
@@ -92,10 +93,6 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         type=int,
                         default=1,
                         help='Number of parallel threads to run sistr_cmd analysis.')
-    parser.add_argument('-c', '--conservative',
-                        required = False,
-                        action='store_true',
-                        help = 'Run SISTR in conservative mode to be more stringent in use of cgMLST to refine serotype' )
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
@@ -380,7 +377,7 @@ def main():
     keep_tmp = args.keep_tmp
     output_format = args.output_format
     output_path = args.output_prediction
-    conservative_mode = args.conservative
+
 
     n_threads = args.threads
     if n_threads == 1:

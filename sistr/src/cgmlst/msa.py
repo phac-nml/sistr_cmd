@@ -33,12 +33,12 @@ def msa_mafft(seqs):
         mafft_stdin = seqs
     else:
         raise Exception('Unexpected type for param seqs of "{}"'.format(type(seqs)))
-
     p = Popen(['mafft', '-'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate(input=mafft_stdin.encode())
     if isinstance(stdout, bytes):
         stdout = stdout.decode()
-    if stdout[0] == '>':
+
+    if len(stdout) > 0 and stdout[0] == '>':
         if isinstance(seqs, list):
             return [s for h,s in parse_aln_out(stdout)]
         elif isinstance(seqs, (dict, str)):
