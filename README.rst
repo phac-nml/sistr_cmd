@@ -523,6 +523,12 @@ Getting started
 
 Pull requests for feature additions and bug fixes welcome!
 
+Git LFS Files
+-------------
+
+Some database files (under [sistr/data](sistr/data)) are stored using [Git LFS](https://git-lfs.github.com/) and require you to install the Git LFS software to properly download the files (see [here](https://www.atlassian.com/git/tutorials/git-lfs#clone-respository)).
+
+If you cannot download these files using Git LFS, note that the database files are also available from PyPI in the SISTR project <https://pypi.org/project/sistr-cmd/#files>. You should be able to download the *.tar.gz* file and extract the `sistr/data` directory into the repository.
 
 Using ``sistr_cmd`` in your Python application
 ----------------------------------------------
