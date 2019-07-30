@@ -206,7 +206,7 @@ def extract(fname,outdir):
 
 def setup_sistr_dbs(logging):
     tmp_file = resource_filename('sistr', 'data.tar.gz')
-    logging.info('Downloading needed SISTR databases')
+    logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
     download_to_file(SISTR_DB_URL, tmp_file)
     if os.path.isdir(resource_filename('sistr', 'data/')):
         shutil.rmtree(resource_filename('sistr', 'data/'))
@@ -217,7 +217,7 @@ def setup_sistr_dbs(logging):
     else:
         logging.info('Downloading databases successful')
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
-        f.write("DB downloaded on : {}".format(datetime.today().strftime('%Y-%m-%d')))
+        f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
         f.close()
 
     extract(tmp_file, resource_filename('sistr', ''))
@@ -357,7 +357,9 @@ def main():
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name
     if len(input_fastas) == 0 and (paths_names is None or len(paths_names) == 0):
-        raise Exception('No FASTA files specified!')
+        logging.error('No FASTA files specified!')
+        parser.print_help()
+        sys.exit(-1)
     if paths_names is None:
         genome_names = [genome_name_from_fasta_path(x) for x in input_fastas]
     else:
@@ -369,9 +371,11 @@ def main():
             input_fastas = [x for x,y in paths_names] + tmp
             genome_names = [y for x,y in paths_names] + [genome_name_from_fasta_path(x) for x in tmp]
         else:
-            raise Exception('Unhandled fasta input args: input_fastas="{}" | input_fasta_genome_name="{}"'.format(
+            logging.error('Unhandled fasta input args: input_fastas="{}" | input_fasta_genome_name="{}"'.format(
                 input_fastas,
                 paths_names))
+            parser.print_help()
+            sys.exit(-1)
 
     tmp_dir = args.tmp_dir
     keep_tmp = args.keep_tmp
