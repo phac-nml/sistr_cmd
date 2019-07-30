@@ -173,7 +173,7 @@ class BlastReader:
         """
         self.blast_outfile = blast_outfile
         try:
-            self.df = pd.read_table(self.blast_outfile, header=None)
+            self.df = pd.read_csv(self.blast_outfile, header=None, sep='\t')
             self.df.columns = BLAST_TABLE_COLS
             # calculate the coverage for when results need to be validated
             self.df.loc[:, 'coverage'] = self.df.length / self.df.qlen

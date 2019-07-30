@@ -274,7 +274,6 @@ def write_serovar_and_spp_tables(outdir, df_serovar, predictions, genome_names):
     pred_genome_serovar = {}
     pred_genome_spp = {}
     for genome, prediction in zip(genome_names, predictions):
-        print(genome)
         pred_dict = prediction.__dict__
         pred_genome_serovar[genome] = pred_dict['serovar']
         if 'cgmlst_subspecies' in pred_dict:
@@ -286,8 +285,6 @@ def write_serovar_and_spp_tables(outdir, df_serovar, predictions, genome_names):
         for i, row in df_serovar.iterrows():
             genome = row['genome']
             serovar = row['serovar']
-            print("{}\t{}".format(genome,serovar))
-            print(pred_genome_serovar)
             if not serovar in pred_genome_serovar[genome]:
                 logging.warning('Genome "%s" user specified serovar "%s" not in serovar prediction "%s"',
                                 genome,
