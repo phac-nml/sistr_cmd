@@ -204,7 +204,7 @@ def extract(fname,outdir):
             f_out.close()
             os.remove(fname)
 
-def setup_sistr_dbs(logging):
+def setup_sistr_dbs():
     tmp_file = resource_filename('sistr', 'data.tar.gz')
     logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
     download_to_file(SISTR_DB_URL, tmp_file)
@@ -353,7 +353,7 @@ def main():
     init_console_logger(args.verbose)
     logging.info('Running sistr_cmd {}'.format(__version__))
     if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
-        setup_sistr_dbs(logging)
+        setup_sistr_dbs()
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name
     if len(input_fastas) == 0 and (paths_names is None or len(paths_names) == 0):
