@@ -143,7 +143,12 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzx_prediction.serogroup = None
                 return
 
-            if top_result_length < 400:
+            if top_result_length < 300:
+                self.wzx_prediction.is_missing = True
+                self.wzx_prediction.serogroup = None
+                return
+
+            if (top_result_length > 300 and top_result_length < 500) or top_result_pident < 99.0:
                 self.wzx_prediction.is_missing = True
                 self.wzx_prediction.serogroup = None
                 return
@@ -163,10 +168,16 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzy_prediction.serogroup = None
                 return
 
-            if top_result_length < 600:
+            if top_result_length < 300:
                 self.wzy_prediction.is_missing = True
                 self.wzy_prediction.serogroup = None
                 return
+
+            if (top_result_length > 300 and top_result_length < 500) or top_result_pident < 99.0:
+                self.wzy_prediction.is_missing = True
+                self.wzy_prediction.serogroup = None
+                return
+
 
             self.wzy_prediction.serogroup = get_antigen_name(top_result['qseqid'])
 
@@ -227,10 +238,14 @@ class H1Predictor(BlastAntigenGeneMixin):
                     (df_blast_results['mismatch'] <= 25) & (df_blast_results['length'] >= 700)]
 
                 if df_blast_results.shape[0] == 0:
-                    self.h1_prediction.is_missing = True
-                    self.h1_prediction.top_result = None
-                    self.h1_prediction.h1 = None
-                    return
+                    df_blast_results = pd.DataFrame(self.h1_prediction.blast_results)
+                    df_blast_results = df_blast_results[
+                        (df_blast_results['mismatch'] <= 0) & (df_blast_results['length'] >= 400)]
+                    if df_blast_results.shape[0] == 0:
+                        self.h1_prediction.is_missing = True
+                        self.h1_prediction.top_result = None
+                        self.h1_prediction.h1 = None
+                        return
 
                 df_blast_results_over1000 = df_blast_results[
                     (df_blast_results['mismatch'] <= 5) & (df_blast_results['length'] >= 1000)]
@@ -266,26 +281,29 @@ class H2Predictor(BlastAntigenGeneMixin):
                 match_len = top_result['length']
                 pident = top_result['pident']
 
-                # short lower %ID matches are treated as missing or '-' for H2
-                if match_len <= 600 and pident < 88.0:
-                    self.h2_prediction.h2 = '-'
-                    self.h2_prediction.is_missing = True
-                    return
-
-                if match_len <= 600 and not self.h2_prediction.is_trunc:
-                    self.h2_prediction.h2 = '-'
-                    self.h2_prediction.is_missing = True
-                    return
 
                 df_blast_results = pd.DataFrame(self.h2_prediction.blast_results)
                 df_blast_results = df_blast_results[
                     (df_blast_results['mismatch'] <= 50) & (df_blast_results['length'] >= 700)]
 
                 if df_blast_results.shape[0] == 0:
-                    self.h2_prediction.is_missing = True
-                    self.h2_prediction.top_result = None
+                    df_blast_results = pd.DataFrame(self.h2_prediction.blast_results)
+                    df_blast_results = df_blast_results[
+                        (df_blast_results['mismatch'] <= 0) & (df_blast_results['length'] >= 600)]
+
+                    if df_blast_results.shape[0] == 0:
+                        self.h2_prediction.is_missing = True
+                        self.h2_prediction.top_result = None
+                        self.h2_prediction.h2 = '-'
+                        return
+
+                # short lower %ID matches are treated as missing or '-' for H2
+                if match_len <= 600 and pident < 88.0:
                     self.h2_prediction.h2 = '-'
+                    self.h2_prediction.is_missing = True
                     return
+
+
 
                 df_blast_results_over1000 = df_blast_results[
                     (df_blast_results['mismatch'] <= 5) & (df_blast_results['length'] >= 1000)]
@@ -557,9 +575,7 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
         if cgmlst_serovar is not None:
             if cgmlst_serovar in serovars_from_antigen:
                 serovar_prediction.serovar = cgmlst_serovar
-            #else:
-            #    if float(cgmlst_distance) <= CGMLST_DISTANCE_THRESHOLD:
-            #        serovar_prediction.serovar = cgmlst_serovar
+
         elif 'mash_match' in serovar_prediction.__dict__:
             spd = serovar_prediction.__dict__
             mash_serovar = spd['mash_serovar']
