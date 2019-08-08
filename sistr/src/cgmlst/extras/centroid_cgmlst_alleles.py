@@ -6,7 +6,7 @@ from scipy.cluster.hierarchy import fcluster, linkage
 
 
 NT_TO_INT = {'A':1,'C':2,'G':3,'T':4,'N':5}
-INT_TO_NT = {1:'A',2:'C',3:'G',4:'T',5:'5'}
+INT_TO_NT = {1:'A',2:'C',3:'G',4:'T',5:'N'}
 
 
 def group_alleles_by_size(alleles):
