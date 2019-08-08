@@ -44,7 +44,7 @@ SEROGROUP_SIMILARITY_GROUPS = [
     ['E1', 'E4'],
     ['A', 'D1', 'D2'],
     ['C1', 'F'],
-    ['S', 'O62']
+    ['S', '62']
 ]
 
 # Determined the following H1 antigen similarity groups based on a
