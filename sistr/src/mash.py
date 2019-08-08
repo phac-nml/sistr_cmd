@@ -58,6 +58,8 @@ def mash_output_to_pandas_df(mash_out):
 
 
 def mash_subspeciation(df_mash):
+    if df_mash.empty:
+        return None
     closest_distance = df_mash['dist'].min()
     if closest_distance > MASH_SUBSPECIATION_DISTANCE_THRESHOLD:
         logging.warning('Min Mash distance (%s) above subspeciation distance threshold (%s)',
