@@ -158,18 +158,19 @@ def merge_cgmlst_prediction(serovar_prediction, cgmlst_prediction):
     return serovar_prediction
 
 
-def infer_o_antigen(prediction):
 
+def infer_o_antigen(prediction):
     df_serovar = serovar_table()
-    predicted_serovars = prediction.serovar.split('|') if '|' in prediction.serovar else [prediction.serovar]
-    series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
-    if series_o_antigens.size == 0:
-        sg = prediction.serogroup
+    if '|' in prediction.serovar:
         prediction.o_antigen = '-'
     else:
-        counter_o_antigens = Counter(series_o_antigens)
-        prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
-
+        predicted_serovars = [prediction.serovar]
+        series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
+        if series_o_antigens.size == 0:
+            prediction.o_antigen = '-'
+        else:
+            counter_o_antigens = Counter(series_o_antigens)
+            prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
 
 def download_to_file(url,file):
     with open(file, 'wb') as f:
