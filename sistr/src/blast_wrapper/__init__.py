@@ -160,7 +160,7 @@ class BlastReader:
     df = None
 
 
-    def __init__(self, blast_outfile,filter='N/A'):
+    def __init__(self, blast_outfile,filter=list('')):
         """Read BLASTN output file into a pandas DataFrame
         Sort the DataFrame by BLAST bitscore.
         If there are no BLASTN results, then no results can be returned.
@@ -193,7 +193,9 @@ class BlastReader:
             self.is_missing = True
 
     def filter_rows(self,filter):
-        self.df = self.df[~self.df['qseqid'].str.contains(filter)]
+
+        for f in filter:
+            self.df = self.df[~self.df['qseqid'].str.contains(f)]
 
     def df_dict(self):
         if not self.is_missing:
@@ -218,7 +220,7 @@ class BlastReader:
 
             Else if `df` is `None`, returns `None`
         """
-        if df is not None:
+        if df is not None and not df.empty:
             return [dict(r) for i, r in df.head(1).iterrows()][0]
 
     @staticmethod
@@ -302,6 +304,9 @@ class BlastReader:
         # This is the first result in dataframe since the df is ordered by
         # bitscore in descending order.
         result_dict = BlastReader.df_first_row_to_dict(self.df)
+        if result_dict is None:
+            return None
+
         result_trunc = BlastReader.is_blast_result_trunc(qstart=result_dict['qstart'],
                                                          qend=result_dict['qend'],
                                                          sstart=result_dict['sstart'],

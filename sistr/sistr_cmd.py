@@ -107,6 +107,17 @@ def run_mash(input_fasta):
 
     mash_out = mash_dist_trusted(input_fasta)
     df_mash = mash_output_to_pandas_df(mash_out)
+    if df_mash.empty:
+        logging.error('Could not perform Mash subspeciation!')
+        mash_result_dict = {
+            'mash_genome': '',
+            'mash_serovar': '',
+            'mash_distance': 1.0,
+            'mash_match': 0,
+            'mash_subspecies': '',
+            'mash_top_5': {},
+        }
+        return mash_result_dict
     df_mash_top_5 = df_mash[['ref', 'dist', 'n_match', 'serovar']].head(n=5)
     logging.debug('Mash top 5 results:\n{}\n'.format(df_mash_top_5))
     mash_spp_tuple = mash_subspeciation(df_mash)
