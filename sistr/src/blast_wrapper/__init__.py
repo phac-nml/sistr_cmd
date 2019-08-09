@@ -160,7 +160,7 @@ class BlastReader:
     df = None
 
 
-    def __init__(self, blast_outfile,filter=list('')):
+    def __init__(self, blast_outfile,filter=[]):
         """Read BLASTN output file into a pandas DataFrame
         Sort the DataFrame by BLAST bitscore.
         If there are no BLASTN results, then no results can be returned.

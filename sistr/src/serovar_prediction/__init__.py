@@ -97,7 +97,7 @@ def serovar_table():
 
 
 class BlastAntigenGeneMixin:
-    def get_antigen_gene_blast_results(self, model_obj, antigen_gene_fasta,exclude='N/A'):
+    def get_antigen_gene_blast_results(self, model_obj, antigen_gene_fasta,exclude=['N/A']):
         blast_outfile = self.blast_runner.blast_against_query(antigen_gene_fasta)
         blast_reader = BlastReader(blast_outfile,exclude)
         is_missing = blast_reader.is_missing
@@ -133,7 +133,6 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
 
     def search_for_wzx(self):
         self.wzx_prediction = self.get_antigen_gene_blast_results(self.wzx_prediction, WZX_FASTA_PATH)
-
         if not self.wzx_prediction.is_missing and not self.wzx_prediction.top_result is None :
             top_result = self.wzx_prediction.top_result
             top_result_pident = top_result['pident']
@@ -236,7 +235,7 @@ class H1Predictor(BlastAntigenGeneMixin):
         self.blast_runner = blast_runner
         self.h1_prediction = H1FliCPrediction()
 
-    def predict(self,filter=list('N/A')):
+    def predict(self,filter=['N/A']):
         self.h1_prediction = self.get_antigen_gene_blast_results(self.h1_prediction, FLIC_FASTA_PATH,filter)
         if not self.h1_prediction.is_missing and self.h1_prediction.top_result is not None:
             if not self.h1_prediction.is_perfect_match:
@@ -279,7 +278,7 @@ class H2Predictor(BlastAntigenGeneMixin):
         self.blast_runner = blast_runner
         self.h2_prediction = H2FljBPrediction()
 
-    def predict(self,filter=list('N/A')):
+    def predict(self,filter=['N/A']):
 
         self.h2_prediction = self.get_antigen_gene_blast_results(self.h2_prediction, FLJB_FASTA_PATH,filter)
         if not self.h2_prediction.is_missing and self.h2_prediction.top_result is not None:
