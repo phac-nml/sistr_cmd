@@ -527,18 +527,16 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
     cgmlst_serovar = serovar_prediction.serovar_cgmlst
     cgmlst_distance = float(serovar_prediction.cgmlst_distance)
 
-    h1_in_h2_similarity_groups = False
+
+    h1_h2_share_group = False
     for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
-        if h1 in h2_groups:
-            h1_in_h2_similarity_groups = True
-            break
-    h2_in_h1_similarity_groups = False
-    for h1_groups in H2_FLJB_SIMILARITY_GROUPS:
-        if h2 in h1_groups:
-            h2_in_h1_similarity_groups = True
+        if h1 in h2_groups and h2 in h2_groups:
+            h1_h2_share_group = True
             break
 
-    if(h1_in_h2_similarity_groups and h1 != '-' and cgmlst_serovar is not  None):
+
+
+    if(h1_h2_share_group and h1 != '-' and cgmlst_serovar is not  None):
         cgmlst_serovar_antigens = antigen_predictor.lookup_serovar_antigens(serovar_table(),cgmlst_serovar)
         h1_in_h2_similarity_groups = False
         for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
