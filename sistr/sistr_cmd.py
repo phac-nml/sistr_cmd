@@ -5,15 +5,17 @@ import argparse
 from collections import Counter
 from datetime import datetime
 import logging
-import os
-import re
+import re, sys
+import os, pycurl, tarfile, zipfile, gzip, shutil
+from pkg_resources import resource_filename
+
 
 from sistr.version import __version__
 from sistr.src.blast_wrapper import BlastRunner
 from sistr.src.cgmlst import run_cgmlst
 from sistr.src.logger import init_console_logger
 from sistr.src.qc import qc
-from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call, serovar_table
+from sistr.src.serovar_prediction import SerovarPredictor, overall_serovar_call, serovar_table, SISTR_DB_URL, SISTR_DATA_DIR
 
 
 def init_parser():
@@ -105,6 +107,17 @@ def run_mash(input_fasta):
 
     mash_out = mash_dist_trusted(input_fasta)
     df_mash = mash_output_to_pandas_df(mash_out)
+    if df_mash.empty:
+        logging.error('Could not perform Mash subspeciation!')
+        mash_result_dict = {
+            'mash_genome': '',
+            'mash_serovar': '',
+            'mash_distance': 1.0,
+            'mash_match': 0,
+            'mash_subspecies': '',
+            'mash_top_5': {},
+        }
+        return mash_result_dict
     df_mash_top_5 = df_mash[['ref', 'dist', 'n_match', 'serovar']].head(n=5)
     logging.debug('Mash top 5 results:\n{}\n'.format(df_mash_top_5))
     mash_spp_tuple = mash_subspeciation(df_mash)
@@ -146,27 +159,82 @@ def merge_cgmlst_prediction(serovar_prediction, cgmlst_prediction):
     serovar_prediction.cgmlst_distance = cgmlst_prediction['distance']
     serovar_prediction.cgmlst_genome_match = cgmlst_prediction['genome_match']
     serovar_prediction.serovar_cgmlst = cgmlst_prediction['serovar']
+    if 'found_loci' in cgmlst_prediction:
+        serovar_prediction.cgmlst_found_loci = cgmlst_prediction['found_loci']
+    else:
+        serovar_prediction.cgmlst_found_loci = 0
     serovar_prediction.cgmlst_matching_alleles = cgmlst_prediction['matching_alleles']
     serovar_prediction.cgmlst_subspecies = cgmlst_prediction['subspecies']
     serovar_prediction.cgmlst_ST = cgmlst_prediction['cgmlst330_ST']
     return serovar_prediction
 
 
+
 def infer_o_antigen(prediction):
     df_serovar = serovar_table()
-    predicted_serovars = prediction.serovar.split('|') if '|' in prediction.serovar else [prediction.serovar]
-    series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
-    if series_o_antigens.size == 0:
-        sg = prediction.serogroup
-        if sg is None or sg == '' or sg == '-':
+    if '|' in prediction.serovar:
+        prediction.o_antigen = '-'
+    else:
+        predicted_serovars = [prediction.serovar]
+        series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
+        if series_o_antigens.size == 0:
             prediction.o_antigen = '-'
         else:
-            series_o_antigens = df_serovar.O_antigen[df_serovar.Serogroup == sg]
             counter_o_antigens = Counter(series_o_antigens)
             prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+
+def download_to_file(url,file):
+    with open(file, 'wb') as f:
+        c = pycurl.Curl()
+        # Redirects to https://www.python.org/.
+        c.setopt(c.URL, url)
+        # Follow redirect.
+        c.setopt(c.FOLLOWLOCATION, True)
+        c.setopt(c.WRITEDATA, f)
+        c.perform()
+        c.close()
+
+def extract(fname,outdir):
+    if (fname.endswith("tar.gz")):
+        tar = tarfile.open(fname, "r:gz")
+        tar.extractall(outdir)
+        tar.close()
+    elif (fname.endswith("tar")):
+        tar = tarfile.open(fname, "r:")
+        tar.extractall(outdir)
+        tar.close()
+    elif(fname.endswith("zip")):
+        zip_ref = zipfile.ZipFile(fname, 'r')
+        zip_ref.extractall(outdir)
+        zip_ref.close()
+    elif(fname.endswith("gz")):
+        outfile = os.path.join(outdir,fname.replace('.gz',''))
+        with gzip.open(fname, 'rb') as f_in:
+            with open(outfile, 'wb') as f_out:
+                shutil.copyfileobj(f_in, f_out)
+            f_in.close()
+            f_out.close()
+            os.remove(fname)
+
+def setup_sistr_dbs():
+    tmp_file = resource_filename('sistr', 'data.tar.gz')
+    logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
+    download_to_file(SISTR_DB_URL, tmp_file)
+    if os.path.isdir(resource_filename('sistr', 'data/')):
+        shutil.rmtree(resource_filename('sistr', 'data/'))
+        os.mkdir(resource_filename('sistr', 'data/'))
+    if (not os.path.isfile(tmp_file)):
+        logging.error('Downloading databases failed, please check your internet connection and retry')
+        sys.exit(-1)
     else:
-        counter_o_antigens = Counter(series_o_antigens)
-        prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+        logging.info('Downloading databases successful')
+        f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
+        f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
+        f.close()
+
+    extract(tmp_file, resource_filename('sistr', ''))
+    os.remove(tmp_file)
+
 
 
 def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
@@ -196,6 +264,7 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
 
         serovar_predictor = SerovarPredictor(blast_runner, spp)
         serovar_predictor.predict_serovar_from_antigen_blast()
+
         prediction = serovar_predictor.get_serovar_prediction()
         prediction.genome = genome_name
         prediction.fasta_filepath = os.path.abspath(input_fasta)
@@ -290,14 +359,19 @@ def write_novel_alleles(cgmlst_results, output_path):
 
 
 def main():
+
     parser = init_parser()
     args = parser.parse_args()
     init_console_logger(args.verbose)
     logging.info('Running sistr_cmd {}'.format(__version__))
+    if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
+        setup_sistr_dbs()
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name
     if len(input_fastas) == 0 and (paths_names is None or len(paths_names) == 0):
-        raise Exception('No FASTA files specified!')
+        logging.error('No FASTA files specified!')
+        parser.print_help()
+        sys.exit(-1)
     if paths_names is None:
         genome_names = [genome_name_from_fasta_path(x) for x in input_fastas]
     else:
@@ -309,14 +383,17 @@ def main():
             input_fastas = [x for x,y in paths_names] + tmp
             genome_names = [y for x,y in paths_names] + [genome_name_from_fasta_path(x) for x in tmp]
         else:
-            raise Exception('Unhandled fasta input args: input_fastas="{}" | input_fasta_genome_name="{}"'.format(
+            logging.error('Unhandled fasta input args: input_fastas="{}" | input_fasta_genome_name="{}"'.format(
                 input_fastas,
                 paths_names))
+            parser.print_help()
+            sys.exit(-1)
 
     tmp_dir = args.tmp_dir
     keep_tmp = args.keep_tmp
     output_format = args.output_format
     output_path = args.output_prediction
+
 
     n_threads = args.threads
     if n_threads == 1:
@@ -333,6 +410,7 @@ def main():
         outputs = [x.get() for x in res]
 
     prediction_outputs = [x for x,y in outputs]
+
     cgmlst_results = [y for x,y in outputs]
 
     if output_path:
@@ -363,5 +441,9 @@ def main():
         logging.info('Wrote %s alleles to %s', count, args.novel_alleles)
 
 
+
+
 if __name__ == '__main__':
     main()
+
+

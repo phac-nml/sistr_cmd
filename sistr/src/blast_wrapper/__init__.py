@@ -160,7 +160,7 @@ class BlastReader:
     df = None
 
 
-    def __init__(self, blast_outfile):
+    def __init__(self, blast_outfile,filter=[]):
         """Read BLASTN output file into a pandas DataFrame
         Sort the DataFrame by BLAST bitscore.
         If there are no BLASTN results, then no results can be returned.
@@ -173,7 +173,7 @@ class BlastReader:
         """
         self.blast_outfile = blast_outfile
         try:
-            self.df = pd.read_table(self.blast_outfile, header=None)
+            self.df = pd.read_csv(self.blast_outfile, header=None, sep='\t')
             self.df.columns = BLAST_TABLE_COLS
             # calculate the coverage for when results need to be validated
             self.df.loc[:, 'coverage'] = self.df.length / self.df.qlen
@@ -187,10 +187,15 @@ class BlastReader:
 
             logging.debug(self.df.head())
             self.is_missing = False
+            self.filter_rows(filter)
         except EmptyDataError as exc:
             logging.warning('No BLASTN results to parse from file %s', blast_outfile)
             self.is_missing = True
 
+    def filter_rows(self,filter):
+
+        for f in filter:
+            self.df = self.df[~self.df['qseqid'].str.contains(f)]
 
     def df_dict(self):
         if not self.is_missing:
@@ -215,7 +220,7 @@ class BlastReader:
 
             Else if `df` is `None`, returns `None`
         """
-        if df is not None:
+        if df is not None and not df.empty:
             return [dict(r) for i, r in df.head(1).iterrows()][0]
 
     @staticmethod
@@ -299,6 +304,9 @@ class BlastReader:
         # This is the first result in dataframe since the df is ordered by
         # bitscore in descending order.
         result_dict = BlastReader.df_first_row_to_dict(self.df)
+        if result_dict is None:
+            return None
+
         result_trunc = BlastReader.is_blast_result_trunc(qstart=result_dict['qstart'],
                                                          qend=result_dict['qend'],
                                                          sstart=result_dict['sstart'],

@@ -11,7 +11,7 @@ from sistr.src.serovar_prediction.constants import \
     WZX_FASTA_PATH, \
     SEROGROUP_SIMILARITY_GROUPS, \
     SEROVAR_TABLE_PATH, \
-    CGMLST_DISTANCE_THRESHOLD, MASH_DISTANCE_THRESHOLD
+    CGMLST_DISTANCE_THRESHOLD, MASH_DISTANCE_THRESHOLD, SISTR_DATA_DIR , SISTR_DB_URL
 
 spp_name_to_roman = {'enterica': 'I',
                      'salamae': 'II',
@@ -59,8 +59,10 @@ class SerovarPrediction():
     serovar_cgmlst = None
     cgmlst_distance = 1.0
     cgmlst_matching_alleles = 0
+    cgmlst_found_loci = 0
     cgmlst_genome_match = None
     cgmlst_subspecies = None
+
 
     serovar_antigen = None
     serogroup = None
@@ -95,9 +97,9 @@ def serovar_table():
 
 
 class BlastAntigenGeneMixin:
-    def get_antigen_gene_blast_results(self, model_obj, antigen_gene_fasta):
+    def get_antigen_gene_blast_results(self, model_obj, antigen_gene_fasta,exclude=['N/A']):
         blast_outfile = self.blast_runner.blast_against_query(antigen_gene_fasta)
-        blast_reader = BlastReader(blast_outfile)
+        blast_reader = BlastReader(blast_outfile,exclude)
         is_missing = blast_reader.is_missing
         model_obj.is_missing = is_missing
         if not is_missing:
@@ -131,7 +133,7 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
 
     def search_for_wzx(self):
         self.wzx_prediction = self.get_antigen_gene_blast_results(self.wzx_prediction, WZX_FASTA_PATH)
-        if not self.wzx_prediction.is_missing:
+        if not self.wzx_prediction.is_missing and not self.wzx_prediction.top_result is None :
             top_result = self.wzx_prediction.top_result
             top_result_pident = top_result['pident']
             top_result_length = top_result['length']
@@ -141,7 +143,12 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzx_prediction.serogroup = None
                 return
 
-            if top_result_length < 400:
+            if top_result_length < 300:
+                self.wzx_prediction.is_missing = True
+                self.wzx_prediction.serogroup = None
+                return
+
+            if (top_result_length >= 300 and top_result_length < 500) and top_result_pident < 99.0:
                 self.wzx_prediction.is_missing = True
                 self.wzx_prediction.serogroup = None
                 return
@@ -151,7 +158,7 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
 
     def search_for_wzy(self):
         self.wzy_prediction = self.get_antigen_gene_blast_results(self.wzy_prediction, WZY_FASTA_PATH)
-        if not self.wzy_prediction.is_missing:
+        if not self.wzy_prediction.is_missing and not self.wzy_prediction.top_result is None:
             top_result = self.wzy_prediction.top_result
             top_result_pident = top_result['pident']
             top_result_length = top_result['length']
@@ -161,10 +168,16 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzy_prediction.serogroup = None
                 return
 
-            if top_result_length < 600:
+            if top_result_length < 300:
                 self.wzy_prediction.is_missing = True
                 self.wzy_prediction.serogroup = None
                 return
+
+            if (top_result_length >= 300 and top_result_length < 500) and top_result_pident < 99.0:
+                self.wzy_prediction.is_missing = True
+                self.wzy_prediction.serogroup = None
+                return
+
 
             self.wzy_prediction.serogroup = get_antigen_name(top_result['qseqid'])
 
@@ -197,18 +210,24 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
         top_wzy_result = self.wzy_prediction.top_result
         top_wzx_result = self.wzx_prediction.top_result
 
-        wzx_cov = top_wzx_result['coverage']
-        wzx_pident = top_wzx_result['pident']
+        wzx_bitscore = 0
+        wzy_bitscore = 0
 
-        wzy_cov = top_wzy_result['coverage']
-        wzy_pident = top_wzy_result['pident']
+        if top_wzx_result is not None:
+            wzx_cov = top_wzx_result['coverage']
+            wzx_pident = top_wzx_result['pident']
+            wzx_bitscore = top_wzx_result['bitscore']
 
-        if wzx_cov >= wzy_cov and wzx_pident >= wzy_pident:
+        if top_wzy_result is not None:
+            wzy_cov = top_wzy_result['coverage']
+            wzy_pident = top_wzy_result['pident']
+            wzy_bitscore = top_wzy_result['bitscore']
+
+        if wzx_bitscore >= wzy_bitscore:
             self.serogroup_prediction.serogroup = self.wzx_prediction.serogroup
-        elif wzx_cov < wzy_cov and wzx_pident < wzy_pident:
-            self.serogroup_prediction.serogroup = self.wzy_prediction.serogroup
         else:
-            self.serogroup_prediction.serogroup = self.wzx_prediction.serogroup
+            self.serogroup_prediction.serogroup = self.wzy_prediction.serogroup
+
 
 
 class H1Predictor(BlastAntigenGeneMixin):
@@ -216,19 +235,23 @@ class H1Predictor(BlastAntigenGeneMixin):
         self.blast_runner = blast_runner
         self.h1_prediction = H1FliCPrediction()
 
-    def predict(self):
-        self.h1_prediction = self.get_antigen_gene_blast_results(self.h1_prediction, FLIC_FASTA_PATH)
-        if not self.h1_prediction.is_missing:
+    def predict(self,filter=['N/A']):
+        self.h1_prediction = self.get_antigen_gene_blast_results(self.h1_prediction, FLIC_FASTA_PATH,filter)
+        if not self.h1_prediction.is_missing and self.h1_prediction.top_result is not None:
             if not self.h1_prediction.is_perfect_match:
                 df_blast_results = pd.DataFrame(self.h1_prediction.blast_results)
                 df_blast_results = df_blast_results[
                     (df_blast_results['mismatch'] <= 25) & (df_blast_results['length'] >= 700)]
 
                 if df_blast_results.shape[0] == 0:
-                    self.h1_prediction.is_missing = True
-                    self.h1_prediction.top_result = None
-                    self.h1_prediction.h1 = None
-                    return
+                    df_blast_results = pd.DataFrame(self.h1_prediction.blast_results)
+                    df_blast_results = df_blast_results[
+                        (df_blast_results['mismatch'] <= 0) & (df_blast_results['length'] >= 400)]
+                    if df_blast_results.shape[0] == 0:
+                        self.h1_prediction.is_missing = True
+                        self.h1_prediction.top_result = None
+                        self.h1_prediction.h1 = None
+                        return
 
                 df_blast_results_over1000 = df_blast_results[
                     (df_blast_results['mismatch'] <= 5) & (df_blast_results['length'] >= 1000)]
@@ -255,13 +278,30 @@ class H2Predictor(BlastAntigenGeneMixin):
         self.blast_runner = blast_runner
         self.h2_prediction = H2FljBPrediction()
 
-    def predict(self):
-        self.h2_prediction = self.get_antigen_gene_blast_results(self.h2_prediction, FLJB_FASTA_PATH)
-        if not self.h2_prediction.is_missing:
-            if not self.h2_prediction.is_perfect_match:
+    def predict(self,filter=['N/A']):
+
+        self.h2_prediction = self.get_antigen_gene_blast_results(self.h2_prediction, FLJB_FASTA_PATH,filter)
+        if not self.h2_prediction.is_missing and self.h2_prediction.top_result is not None:
+            if not self.h2_prediction.is_perfect_match :
                 top_result = self.h2_prediction.top_result
                 match_len = top_result['length']
                 pident = top_result['pident']
+
+
+                df_blast_results = pd.DataFrame(self.h2_prediction.blast_results)
+                df_blast_results = df_blast_results[
+                    (df_blast_results['mismatch'] <= 50) & (df_blast_results['length'] >= 700)]
+
+                if df_blast_results.shape[0] == 0:
+                    df_blast_results = pd.DataFrame(self.h2_prediction.blast_results)
+                    df_blast_results = df_blast_results[
+                        (df_blast_results['mismatch'] <= 0) & (df_blast_results['length'] >= 600)]
+
+                    if df_blast_results.shape[0] == 0:
+                        self.h2_prediction.is_missing = True
+                        self.h2_prediction.top_result = None
+                        self.h2_prediction.h2 = '-'
+                        return
 
                 # short lower %ID matches are treated as missing or '-' for H2
                 if match_len <= 600 and pident < 88.0:
@@ -269,20 +309,7 @@ class H2Predictor(BlastAntigenGeneMixin):
                     self.h2_prediction.is_missing = True
                     return
 
-                if match_len <= 600 and not self.h2_prediction.is_trunc:
-                    self.h2_prediction.h2 = '-'
-                    self.h2_prediction.is_missing = True
-                    return
 
-                df_blast_results = pd.DataFrame(self.h2_prediction.blast_results)
-                df_blast_results = df_blast_results[
-                    (df_blast_results['mismatch'] <= 50) & (df_blast_results['length'] >= 700)]
-
-                if df_blast_results.shape[0] == 0:
-                    self.h2_prediction.is_missing = True
-                    self.h2_prediction.top_result = None
-                    self.h2_prediction.h2 = '-'
-                    return
 
                 df_blast_results_over1000 = df_blast_results[
                     (df_blast_results['mismatch'] <= 5) & (df_blast_results['length'] >= 1000)]
@@ -333,6 +360,7 @@ class SerovarPredictor:
         self.serogroup = self.serogroup_predictor.serogroup_prediction.serogroup
         return self.serogroup, self.h1, self.h2
 
+
     @staticmethod
     def get_serovar(df, sg, h1, h2, spp):
         h2_is_missing = '-' in h2
@@ -348,12 +376,25 @@ class SerovarPredictor:
         else:
             b_spp = b_sg
         df_prediction = df[(b_spp & b_sg & b_h1 & b_h2)]
+
         logging.debug('Serovar prediction for %s %s:%s:%s is %s', spp, sg, h1, h2, list(df_prediction['Serovar']))
         if df_prediction.shape[0] > 0:
             return '|'.join(list(df_prediction['Serovar']))
 
+    @staticmethod
+    def lookup_serovar_antigens(df, serovar):
+
+        df_prediction = df.loc[df['Serovar'] == serovar]
+        spp = df_prediction['subspecies'].values.item(0)
+        sg = df_prediction['Serogroup'].values.item(0)
+        h1 = df_prediction['H1'].values.item(0)
+        h2 = df_prediction['H2'].values.item(0)
+
+        logging.debug('Serovar antigens for %s  are: %s %s:%s:%s', serovar,spp, sg, h1, h2, )
+        return {'spp':spp,'sg':sg,'h1':h1,'h2':h2}
 
     def predict_serovar_from_antigen_blast(self):
+
         if not self.serogroup or not self.h2 or not self.h1:
             self.predict_antigens()
 
@@ -361,6 +402,7 @@ class SerovarPredictor:
         sg = self.serogroup
         h1 = self.h1
         h2 = self.h2
+
 
         # no antigen results then serovar == '-:-:-'
         if sg is None \
@@ -379,15 +421,20 @@ class SerovarPredictor:
             sg = [sg]
 
         for h1_groups in H1_FLIC_SIMILARITY_GROUPS:
+            if h1 is None or h1 == '-':
+                break
             if h1 in h1_groups:
                 h1 = h1_groups
                 break
+
         if h1 is None:
             h1 = list(df['H1'].unique())
         if not isinstance(h1, list):
             h1 = [h1]
 
         for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
+            if h2 is None or h2 == '-':
+                break
             if h2 in h2_groups:
                 h2 = h2_groups
                 break
@@ -396,6 +443,7 @@ class SerovarPredictor:
             h2 = [h2]
 
         self.serovar = SerovarPredictor.get_serovar(df, sg, h1, h2, self.subspecies)
+
         if self.serovar is None:
             try:
                 spp_roman = spp_name_to_roman[self.subspecies]
@@ -403,13 +451,18 @@ class SerovarPredictor:
                 spp_roman = None
             from collections import Counter
             c = Counter(df.O_antigen[df.Serogroup.isin(sg)])
-            o_antigen = c.most_common()[0][0]
+            temp_o = c.most_common()
+
+            if 0 in temp_o and 0 in temp_o[0]:
+                o_antigen = c.most_common()[0][0]
+            else:
+                o_antigen = sg.pop()
             h1_first = h1[0]
             h2_first = h2[0]
             if spp_roman:
-                self.serovar = '{} {}:{}:{}'.format(spp_roman, o_antigen, h1_first, h2_first)
+                self.serovar = '{} {}:{}:{}'.format(spp_roman, o_antigen, self.h1, self.h2)
             else:
-                self.serovar = '{}:{}:{}'.format(o_antigen, h1_first, h2_first)
+                self.serovar = '{}:{}:{}'.format(o_antigen, self.h1, self.h2)
         return self.serovar
 
     def get_serovar_prediction(self):
@@ -471,9 +524,62 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             spp = serovar_prediction.__dict__['mash_subspecies']
 
     serovar_prediction.serovar_antigen = antigen_predictor.serovar
-
     cgmlst_serovar = serovar_prediction.serovar_cgmlst
     cgmlst_distance = float(serovar_prediction.cgmlst_distance)
+
+
+    h1_h2_share_group = False
+    for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
+        if h1 in h2_groups and h2 in h2_groups:
+            h1_h2_share_group = True
+            break
+
+
+
+    if(h1_h2_share_group and h1 != '-' and cgmlst_serovar is not  None):
+        cgmlst_serovar_antigens = antigen_predictor.lookup_serovar_antigens(serovar_table(),cgmlst_serovar)
+        h1_in_h2_similarity_groups = False
+        for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
+            if cgmlst_serovar_antigens['h1'] in h2_groups:
+                h1_in_h2_similarity_groups = True
+                groups = h2_groups
+                break
+        h2_in_h1_similarity_groups = False
+        for h1_groups in H1_FLIC_SIMILARITY_GROUPS:
+            if cgmlst_serovar_antigens['h2'] in h1_groups:
+                h2_in_h1_similarity_groups = True
+                groups = h1_groups
+                break
+        if antigen_predictor.serogroup is None:
+            antigen_predictor.serogroup = '-'
+
+        if(h1_in_h2_similarity_groups):
+            temp = H2Predictor(antigen_predictor.blast_runner)
+            temp.predict(filter=groups)
+            antigen_predictor.h2_predictor = temp
+            h2 = temp.h2_prediction.h2
+            if h2 is None:
+                h2 = '-'
+            antigen_predictor.h2 = h2
+            serovar_prediction.h2 = h2
+            serovar_prediction.h2_fljb_prediction.h2 = h2
+
+        elif(h2_in_h1_similarity_groups):
+            temp = H1Predictor(antigen_predictor.blast_runner)
+            temp.predict(filter=groups)
+            antigen_predictor.h1_predictor = temp
+            h1 = temp.h1_prediction.h1
+            if h1 is None:
+                h1 = '-'
+            antigen_predictor.h1 = h1
+            serovar_prediction.h1 = h1
+            serovar_prediction.h1_flic_prediction.h1 = h1
+
+
+
+    antigen_predictor.predict_serovar_from_antigen_blast()
+    serovar_prediction.serovar_antigen = antigen_predictor.serovar
+
 
     null_result = '-:-:-'
 
@@ -489,10 +595,13 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
     if antigen_predictor.serovar is None:
         if is_antigen_null(sg) and is_antigen_null(h1) and is_antigen_null(h2):
             if spp_roman is not None:
+
                 serovar_prediction.serovar = '{} {}:{}:{}'.format(spp_roman, sg, h1, h2)
             else:
+
                 serovar_prediction.serovar = '{}:{}:{}'.format(spp_roman, sg, h1, h2)
         elif cgmlst_serovar is not None and cgmlst_distance <= CGMLST_DISTANCE_THRESHOLD:
+
             serovar_prediction.serovar = cgmlst_serovar
         else:
             serovar_prediction.serovar = null_result
@@ -508,9 +617,7 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
         if cgmlst_serovar is not None:
             if cgmlst_serovar in serovars_from_antigen:
                 serovar_prediction.serovar = cgmlst_serovar
-            else:
-                if float(cgmlst_distance) <= CGMLST_DISTANCE_THRESHOLD:
-                    serovar_prediction.serovar = cgmlst_serovar
+
         elif 'mash_match' in serovar_prediction.__dict__:
             spd = serovar_prediction.__dict__
             mash_serovar = spd['mash_serovar']

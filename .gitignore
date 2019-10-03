@@ -14,3 +14,8 @@ tmp
 *.b6
 .RData
 .Rhistory
+*.fasta
+*.csv
+*.hdf
+*.txt
+*.msh

@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 import argparse
 from collections import defaultdict
-import logging
+import logging, shutil
 import os
 from subprocess import Popen
 import re
 from datetime import datetime
-
+import sys
 import pandas as pd
 import numpy as np
+
 
 from sistr.misc.reduce_to_centroid_alleles import run_allele_reduction
 from sistr.sistr_cmd import genome_name_from_fasta_path
@@ -325,6 +326,30 @@ def create_merge_mash_sketches(input_fastas, data_outdir, sketch_outdir):
     sketch_paths = [sketch_fasta(fasta, sketch_outdir) for fasta in input_fastas]
     merge_sketches(data_outdir, sketch_paths)
 
+def write_cgmlst_profiles_hdf5(outdir, cgmlst_results, genome_names):
+    df_profiles_old = pd.read_hdf(CGMLST_PROFILES_PATH, key='cgmlst')
+    markers = df_profiles_old.columns
+
+    genome_marker_allele_results = defaultdict(dict)
+    for genome, cgmlst_result in zip(genome_names, cgmlst_results):
+        for marker in markers:
+            allele = None
+            if marker in cgmlst_result:
+                r = cgmlst_result[marker]
+                if 'name' in r:
+                    allele = int(r['name']) if r['name'] is not None else None
+                else:
+                    allele = None
+            genome_marker_allele_results[genome][marker] = allele
+    df_profiles_new = pd.DataFrame(genome_marker_allele_results).transpose()
+    df_all_profiles = pd.concat([df_profiles_new, df_profiles_old])
+    profiles_output_path = os.path.join(outdir, 'cgmlst-profiles.hdf')
+    df_all_profiles.to_hdf(profiles_output_path, float_format='%.0f',key='cgmlst')
+    assert os.path.exists(profiles_output_path), 'cgMLST profiles HDF5 file was not written to "{}"'.format(
+        profiles_output_path)
+    logging.info('cgMLST profiles (dim=%s) HDF5 written to "%s"',
+                 df_all_profiles.shape,
+                 profiles_output_path)
 
 def main():
     parser = init_parser()
@@ -350,6 +375,7 @@ def main():
         if not force:
             raise Exception('Output directory already exists at {}!'.format(outdir))
         else:
+            shutil.rmtree(outdir)
             logging.warning('Using existing output directory at %s', outdir)
     try:
         os.makedirs(outdir)
@@ -367,7 +393,7 @@ def main():
         else:
             logging.info('Trying to read serovar table "%s" as tab-delimited', serovar_table_path)
             df_serovar = pd.read_table(serovar_table_path)
-        expected_columns = ['genome', 'serovar']
+        expected_columns = ['genome', 'serovar','subspecies']
         assert np.all(
             df_serovar.columns.isin(expected_columns)), 'User serovar table did not contain expected columns {}'.format(
             expected_columns)
@@ -377,7 +403,7 @@ def main():
         genome_names_series = pd.Series(genome_names)
         genomes_in_serovar_table = genome_names_series.isin(df_serovar.genome)
         if not np.all(genomes_in_serovar_table):
-            missing_genomes = ', '.join([x for x in genome_names_series[~genomes_in_serovar_table]])
+            missing_genomes = '-->,->'.join([x for x in genome_names_series[~genomes_in_serovar_table]])
             logging.error('The following genomes were not found in the serovar table: %s', missing_genomes)
             raise Exception('Not all user provided genome FASTA files in the provided serovar table!')
 
@@ -413,7 +439,7 @@ def main():
     sketch_outdir = create_subdirs(outdir, 'mash-sketches')
     # write files with new and old data
     cgmlst_fasta = write_cgmlst_fasta(cgmlst_outdir, cgmlst_results)
-    write_cgmlst_profiles_csv(cgmlst_outdir, cgmlst_results, genome_names)
+    write_cgmlst_profiles_hdf5(cgmlst_outdir, cgmlst_results, genome_names)
     write_serovar_and_spp_tables(data_outdir, df_serovar, prediction_outputs, genome_names)
     create_merge_mash_sketches(input_fastas, data_outdir, sketch_outdir)
 
