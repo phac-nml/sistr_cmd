@@ -148,7 +148,7 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzx_prediction.serogroup = None
                 return
 
-            if (top_result_length > 300 and top_result_length < 500) and top_result_pident < 99.0:
+            if (top_result_length >= 300 and top_result_length < 500) and top_result_pident < 99.0:
                 self.wzx_prediction.is_missing = True
                 self.wzx_prediction.serogroup = None
                 return
@@ -173,7 +173,7 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
                 self.wzy_prediction.serogroup = None
                 return
 
-            if (top_result_length > 300 and top_result_length < 500) and top_result_pident < 99.0:
+            if (top_result_length >= 300 and top_result_length < 500) and top_result_pident < 99.0:
                 self.wzy_prediction.is_missing = True
                 self.wzy_prediction.serogroup = None
                 return
