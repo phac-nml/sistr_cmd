@@ -1,12 +1,9 @@
-import os
 from distutils.core import setup
 from setuptools import find_packages
-import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from sistr.version import __version__
 
 classifiers = """
-Development Status :: 3 - Alpha
+Development Status :: 4 - Beta
 Environment :: Console
 License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
 Intended Audience :: Science/Research
@@ -21,16 +18,11 @@ Programming Language :: Python :: Implementation :: CPython
 Operating System :: POSIX :: Linux
 """.strip().split('\n')
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
-exec(open('sistr/version.py').read())
-
 setup(
     name='sistr_cmd',
     version=__version__,
     packages=find_packages(exclude=['tests']),
-    url='https://github.com/peterk87/sistr_cmd',
+    url='https://github.com/phac-nml/sistr_cmd',
     license='GPLv3',
     author='Peter Kruczkiewicz',
     author_email='peter.kruczkiewicz@gmail.com',
@@ -39,15 +31,7 @@ setup(
     keywords='Salmonella serotyping genotyping cgMLST BLAST Mash MinHash',
     classifiers=classifiers,
     package_dir={'sistr':'sistr'},
-    package_data={'sistr': ['data/*.msh',
-                            'data/*.csv',
-                            'data/*.txt',
-                            'data/antigens/*.fasta',
-                            'data/cgmlst/*.fasta',
-                            'data/cgmlst/*.txt',
-                            'data/cgmlst/*.csv',
-                            'data/cgmlst/*.hdf'
-                            ]},
+    include_package_data=True,
     install_requires=[
         'numpy>=1.11.1',
         'pandas>=0.18.1',

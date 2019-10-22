@@ -3,4 +3,5 @@ include README.rst
 include MANIFEST.in
 include setup.py
 
-recursive-include sistr/data/ *.fasta *.txt *.csv *.msh
+include sistr/dbstatus.txt
+recursive-include sistr/data/ *
