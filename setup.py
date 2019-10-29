@@ -5,7 +5,7 @@ from sistr.version import __version__
 classifiers = """
 Development Status :: 4 - Beta
 Environment :: Console
-License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+License :: OSI Approved :: Apache Software License
 Intended Audience :: Science/Research
 Topic :: Scientific/Engineering
 Topic :: Scientific/Engineering :: Bio-Informatics
@@ -23,7 +23,7 @@ setup(
     version=__version__,
     packages=find_packages(exclude=['tests']),
     url='https://github.com/phac-nml/sistr_cmd',
-    license='GPLv3',
+    license='Apache 2.0',
     author='Peter Kruczkiewicz',
     author_email='peter.kruczkiewicz@gmail.com',
     description=('Serovar predictions from Salmonella whole-genome sequence assemblies by determination of antigen gene'
