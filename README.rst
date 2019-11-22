@@ -7,8 +7,8 @@
 
 .. |pypi| image:: https://badge.fury.io/py/sistr-cmd.svg
     :target: https://pypi.python.org/pypi/sistr-cmd/
-.. |license| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
-	:target: https://www.gnu.org/licenses/gpl-3.0
+.. |license| image:: https://img.shields.io/github/license/phac-nml/sistr_cmd
+	:target: https://www.apache.org/licenses/LICENSE-2.0
 .. |nbsp| unicode:: 0xA0 
    :trim:
 
@@ -552,4 +552,4 @@ License
 
 Copyright 2017 Public Health Agency of Canada
 
-Distributed under the GNU Public License version 3.0
+Distributed under the Apache 2.0 license.
