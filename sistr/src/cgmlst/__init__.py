@@ -55,6 +55,7 @@ def process_cgmlst_results(df):
         pandas.DataFrame: cgMLST330 BLAST results DataFrame with extra fields (`marker`, `allele`, `is_perfect`, `has_perfect_match`)
     """
     assert isinstance(df, pd.DataFrame)
+    df.sort_values(by='bitscore', ascending=True)
     markers = []
     alleles = []
     for x in  df['qseqid']:
