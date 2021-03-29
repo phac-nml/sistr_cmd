@@ -2,16 +2,16 @@
 ``sistr_cmd``: Salmonella In Silico Typing Resource (SISTR) commandline tool
 ****************************************************************************
 
-
-|pypi| |nbsp| |license| |nbsp|
+|pypi| |nbsp| |license| |nbsp| |galaxy| |nbsp| 
 
 .. |pypi| image:: https://badge.fury.io/py/sistr-cmd.svg
     :target: https://pypi.python.org/pypi/sistr-cmd/
 .. |license| image:: https://img.shields.io/github/license/phac-nml/sistr_cmd
 	:target: https://www.apache.org/licenses/LICENSE-2.0
+.. |galaxy| image:: https://img.shields.io/badge/usegalaxy-.eu-brightgreen
+	:target: https://usegalaxy.eu/root?tool_id=sistr_cmd	
 .. |nbsp| unicode:: 0xA0 
    :trim:
-
 
 
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
@@ -481,6 +481,15 @@ For example, here are the QC messages for an unusually small *Salmonella* assemb
 
 The QC messages produced by ``sistr_cmd`` should help you understand your serovar prediction results.
 
+Galaxy workflows
+================
+The `galaxy <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy>`_ folder contains Galaxy Project SISTR workflows that allow to process samples in large batches.
+
+
+- `Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy/Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga>`_
+	+ Summary: Assembles genomes from raw reads, performs serotyping and generates overall report
+	+ Uses tool dependencies: ``sistr 1.1.1+galaxy1``, ``shovill 1.0.4+galaxy1`` and ``tp_cat 0.1.0``
+
 
 Issues
 ======
@@ -502,7 +511,7 @@ Help us improve SISTR serovar predictions! Contribute *Salmonella* genomes to SI
 
 You can contribute by:
 
-- let us know here: https://github.com/peterk87/sistr_cmd/issues/15
+- let us know here: https://github.com/phac-nml/sistr_cmd/issues/15
 - linking to your genome on NCBI SRA/BioSample/Assembly
 - sending us an email at sistr.salmonella@gmail.com
 - contacting the authors of SISTR
