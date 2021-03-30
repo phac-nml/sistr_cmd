@@ -19,7 +19,7 @@ Serovar predictions from whole-genome sequence assemblies by determination of an
 
 .. epigraph::
 
-	`Latest stable version <https://github.com/peterk87/sistr_cmd/releases/latest>`_
+	`Latest stable version <https://github.com/phac-nml/sistr_cmd/releases/latest>`_
 
 
 *Don't want to use a command-line app?* Try the `SISTR web app <https://lfz.corefacility.ca/sistr-app/>`_
@@ -513,7 +513,6 @@ You can contribute by:
 
 - let us know here: https://github.com/phac-nml/sistr_cmd/issues/15
 - linking to your genome on NCBI SRA/BioSample/Assembly
-- sending us an email at sistr.salmonella@gmail.com
 - contacting the authors of SISTR
 
 
@@ -524,7 +523,7 @@ Getting started
 
 .. code-block:: bash
 	
-	git clone https://github.com/peterk87/sistr_cmd.git
+	git clone https://github.com/phac-nml/sistr_cmd.git
 	cd sistr_cmd/
 	export PYTHONPATH=$(pwd)
 	# run tests
