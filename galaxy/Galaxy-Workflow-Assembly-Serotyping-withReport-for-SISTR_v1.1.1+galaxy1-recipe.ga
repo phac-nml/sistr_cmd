@@ -1,0 +1,234 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "Type Salmonella isolates from raw Illumina paired reads\n",
+    "format-version": "0.1",
+    "name": "Shovill with SISTR version 1.1.1 with final report",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [],
+            "label": "Fastqc Collection of Paired Illumina FastQ Reads",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 178.34375,
+                "top": 326.375
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list:paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "c9adb266-f506-4aeb-a5ea-ca99908fc540",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "f328266e-962c-424e-9145-86b72f8581f3"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4+galaxy1",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "library|input1": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Shovill",
+            "outputs": [
+                {
+                    "name": "shovill_std_log",
+                    "type": "txt"
+                },
+                {
+                    "name": "contigs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "contigs_graph",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 399.140625,
+                "top": 387.390625
+            },
+            "post_job_actions": {
+                "DeleteIntermediatesActionshovill_std_log": {
+                    "action_arguments": {},
+                    "action_type": "DeleteIntermediatesAction",
+                    "output_name": "shovill_std_log"
+                },
+                "HideDatasetActioncontigs_graph": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "contigs_graph"
+                },
+                "HideDatasetActionshovill_std_log": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "shovill_std_log"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "8d1af5db538d",
+                "name": "shovill",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"0\\\", \\\"gsize\\\": \\\"5000000\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"0\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"false\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
+            "tool_version": "1.0.4+galaxy1",
+            "type": "tool",
+            "uuid": "59e2932f-dbea-432a-be1e-1b46d840aaba",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "contigs",
+                    "uuid": "c6bda851-6327-4843-9616-eca0576c29ed"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/sistr_cmd/sistr_cmd/1.1.1+galaxy1",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "input_fastas": {
+                    "id": 1,
+                    "output_name": "contigs"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool sistr_cmd",
+                    "name": "input_fastas"
+                }
+            ],
+            "label": null,
+            "name": "sistr_cmd",
+            "outputs": [
+                {
+                    "name": "output_prediction_tab",
+                    "type": "tabular"
+                },
+                {
+                    "name": "cgmlst_profiles",
+                    "type": "csv"
+                },
+                {
+                    "name": "novel_alleles",
+                    "type": "fasta"
+                },
+                {
+                    "name": "alleles_output",
+                    "type": "json"
+                }
+            ],
+            "position": {
+                "left": 801,
+                "top": 200
+            },
+            "post_job_actions": {
+                "RenameDatasetActionoutput_prediction_tab": {
+                    "action_arguments": {
+                        "newname": "SISTRReports"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "output_prediction_tab"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/sistr_cmd/sistr_cmd/1.1.1+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "24a7a95867b0",
+                "name": "sistr_cmd",
+                "owner": "nml",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"use_full_cgmlst_db\": \"\\\"false\\\"\", \"no_cgmlst\": \"\\\"false\\\"\", \"input_fastas\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"output_format\": \"\\\"tab\\\"\", \"keep_tmp\": \"\\\"false\\\"\", \"run_mash\": \"\\\"true\\\"\", \"more_output\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"qc\": \"\\\"true\\\"\", \"verbosity\": \"\\\"-vv\\\"\"}",
+            "tool_version": "1.1.1+galaxy1",
+            "type": "tool",
+            "uuid": "e3d07411-1f11-4731-ac8b-0bbf1121e028",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "alleles_output",
+                    "uuid": "19cb7590-cd92-4e1a-bca7-f952a320adad"
+                },
+                {
+                    "label": null,
+                    "output_name": "output_prediction_tab",
+                    "uuid": "0b28d0dc-b352-42bf-91b3-fd204bcb25a0"
+                },
+                {
+                    "label": null,
+                    "output_name": "novel_alleles",
+                    "uuid": "991eb012-c9a2-41ce-bc23-4a29aad2f423"
+                },
+                {
+                    "label": null,
+                    "output_name": "cgmlst_profiles",
+                    "uuid": "a0978297-d956-403e-a77a-a53a4a76f372"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.0",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "inputs": {
+                    "id": 2,
+                    "output_name": "output_prediction_tab"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Concatenate datasets",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "left": 1014.46875,
+                "top": 551.0625
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.0",
+            "tool_shed_repository": {
+                "changeset_revision": "ddf54b12c295",
+                "name": "text_processing",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"inputs\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"queries\": \"[]\"}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "e70aea1d-4389-42ad-808a-4ef53179efa8",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file1",
+                    "uuid": "7d632a3b-c9b4-4bc5-a5e5-69b7ba7e5395"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "e9b840d9-e168-4fb0-b433-e5e568421049",
+    "version": 1
+}
