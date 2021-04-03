@@ -141,13 +141,13 @@ def write_pickle(fh, output):
 def write_csv(fh, output):
     import pandas as pd
     df = pd.DataFrame(output)
-    df.to_csv(fh, index=False)
+    df[oder_columns_csv_tab(df)].to_csv(fh, index=False)
 
 
 def write_tab(fh, output):
     import pandas as pd
     df = pd.DataFrame(output)
-    df.to_csv(fh, index=False, sep='\t')
+    df[oder_columns_csv_tab(df)].to_csv(fh, index=False, sep='\t')
 
 
 fmt_to_write_func = {'json': write_json,
@@ -155,8 +155,25 @@ fmt_to_write_func = {'json': write_json,
                      'csv': write_csv,
                      'tab': write_tab, }
 
+def oder_columns_csv_tab(df):
+    columns = df.columns.to_list()
+    columns_order_dict = dict(zip(columns, [columns.index(i) for i in columns]))
+
+    # order o_antigen BEFORE h1 and h2 antigens
+    if columns_order_dict.get('o_antigen') > columns_order_dict.get('h1'):
+        columns = columns[:columns_order_dict.get("h1")] + \
+                  columns[columns_order_dict.get('o_antigen'):columns_order_dict.get('o_antigen') + 1] + \
+                  columns[columns_order_dict.get('h1'):columns_order_dict.get('h2') + 1] + \
+                  columns[columns_order_dict.get('o_antigen') + 1:]
+
+    # make sure 'genome' is the first column
+    idx_genome = columns_order_dict.get('genome')
+    columns_ordered = columns[idx_genome:idx_genome + 1] + columns[idx_genome + 1:] + columns[:idx_genome]
+
+    return  columns_ordered
 
 def write(dest, fmt, serovar_predictions, more_results=0):
+
     assert isinstance(serovar_predictions, list)
     if not fmt in fmt_to_write_func:
         logging.warn('Invalid output format "%s". Defaulting to "json"', fmt)

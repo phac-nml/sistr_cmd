@@ -191,6 +191,8 @@ def download_to_file(url,file):
         # Follow redirect.
         c.setopt(c.FOLLOWLOCATION, True)
         c.setopt(c.WRITEDATA, f)
+        c.setopt(pycurl.SSL_VERIFYPEER, 0)
+        c.setopt(pycurl.SSL_VERIFYHOST, 0)
         c.perform()
         c.close()
 

@@ -5,3 +5,4 @@ include setup.py
 
 include sistr/dbstatus.txt
 recursive-include sistr/data/ *
+

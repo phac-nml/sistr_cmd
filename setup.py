@@ -1,6 +1,9 @@
-from distutils.core import setup
-from setuptools import find_packages
+from setuptools import setup,find_packages
 from sistr.version import __version__
+from setuptools.command.install import install
+#init database before package setup
+from pre_setup import db_init
+import os
 
 classifiers = """
 Development Status :: 4 - Beta
@@ -18,6 +21,15 @@ Programming Language :: Python :: Implementation :: CPython
 Operating System :: POSIX :: Linux
 """.strip().split('\n')
 
+
+class GetDBFirst(install):
+    def run(self):
+        """Install special binary dependencies before the others."""
+        db_init()
+        install.run(self)
+        self.do_egg_install()
+
+
 setup(
     name='sistr_cmd',
     version=__version__,
@@ -32,6 +44,7 @@ setup(
     classifiers=classifiers,
     package_dir={'sistr':'sistr'},
     include_package_data=True,
+    setup_requires=['pycurl>=7.43.0', 'pandas>=0.18.1'],
     install_requires=[
         'numpy>=1.11.1',
         'pandas>=0.18.1',
@@ -39,12 +52,14 @@ setup(
         'pycurl>=7.43.0',
         'scipy>=1.1.0'
     ],
+    cmdclass={"install": GetDBFirst},
     extras_require={
         'test': ['pytest>=2.9.2',],
     },
     entry_points={
         'console_scripts': [
-            'sistr=sistr.sistr_cmd:main',
+            'sistr=sistr.sistr_cmd:main'
         ],
     },
 )
+
