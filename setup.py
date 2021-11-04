@@ -1,6 +1,10 @@
 from distutils.core import setup
 from setuptools import find_packages
 from sistr.version import __version__
+from sistr.sistr_cmd import setup_sistr_dbs
+
+#download SISTR databases
+setup_sistr_dbs()
 
 classifiers = """
 Development Status :: 4 - Beta
