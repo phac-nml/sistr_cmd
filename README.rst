@@ -102,11 +102,11 @@ You can install ``sistr_cmd`` using ``pip``:
 
 Web application
 ---------------
-SISTR can be publically accessed as a web application and is available via:
+SISTR can be publically accessed as a web application via:
 
 - Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
-- Heroku platform as a DEMO web application* at https://sistr-app.herokuapp.com/ |heroku|
-**Note:** The Heroku web application might take up to 30 seconds to load on the first run due to VM on-demand deployment
+- Heroku platform as a DEMO web application at https://sistr-app.herokuapp.com/ |heroku|
+**NOTE:** The Heroku web application might take up to 20 seconds to load on the first run
 
 SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
 
