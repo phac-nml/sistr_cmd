@@ -2,7 +2,7 @@
 ``sistr_cmd``: Salmonella In Silico Typing Resource (SISTR) commandline tool
 ****************************************************************************
 
-|pypi| |nbsp| |license| |nbsp| |galaxy| |nbsp| 
+|pypi| |nbsp| |license| |nbsp| |galaxy| |nbsp| |heroku|
 
 .. |pypi| image:: https://badge.fury.io/py/sistr-cmd.svg
     :target: https://pypi.python.org/pypi/sistr-cmd/
@@ -12,7 +12,9 @@
 	:target: https://usegalaxy.eu/root?tool_id=sistr_cmd	
 .. |nbsp| unicode:: 0xA0 
    :trim:
-
+.. |heroku| image:: https://pyheroku-badge.herokuapp.com/?app=sistr-app&style=flat
+   :target: https://sistr-app.herokuapp.com
+   :alt: Heroku
 
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 `Mash MinHash <https://mash.readthedocs.io/en/latest/>`_ can also be used for serovar prediction.
@@ -57,6 +59,7 @@ BibTeX
 	}
 
 
+
 Installation
 ============
 
@@ -95,6 +98,18 @@ You can install ``sistr_cmd`` using ``pip``:
 ``sistr_cmd`` is available from PYPI at https://pypi.python.org/pypi/sistr-cmd
 
 **NOTE:** You will need to ensure that external dependencies are installed (i.e. ``blast+``, ``mafft``, ``mash`` [optionally])
+
+
+Web application
+---------------
+SISTR can be publically accessed as a web application and is available via:
+
+- Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
+- Heroku platform as a DEMO web application* at https://sistr-app.herokuapp.com/ |heroku|
+**Note:** The Heroku web application might take up to 30 seconds to load on the first run due to VM on-demand deployment
+
+SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
+
 
 
 Dependencies
