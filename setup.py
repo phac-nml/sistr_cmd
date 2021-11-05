@@ -1,10 +1,8 @@
 from distutils.core import setup
 from setuptools import find_packages
+from setuptools.command.install import install
 from sistr.version import __version__
 from sistr.sistr_cmd import setup_sistr_dbs
-
-#download SISTR databases
-setup_sistr_dbs()
 
 classifiers = """
 Development Status :: 4 - Beta
@@ -22,6 +20,13 @@ Programming Language :: Python :: Implementation :: CPython
 Operating System :: POSIX :: Linux
 """.strip().split('\n')
 
+class PreInstallCommand(install):
+    """Post-installation of SISTR databases for installation mode"""
+    def run(self):
+        setup_sistr_dbs()
+        install.run(self)
+        
+
 setup(
     name='sistr_cmd',
     version=__version__,
@@ -36,6 +41,9 @@ setup(
     classifiers=classifiers,
     package_dir={'sistr':'sistr'},
     include_package_data=True,
+    cmdclass={
+        'install': PreInstallCommand
+    },
     install_requires=[
         'numpy>=1.11.1',
         'pandas>=0.18.1',
