@@ -24,7 +24,7 @@ Serovar predictions from whole-genome sequence assemblies by determination of an
 	`Latest stable version <https://github.com/phac-nml/sistr_cmd/releases/latest>`_
 
 
-*Don't want to use a command-line app?* Try the `SISTR web app <https://lfz.corefacility.ca/sistr-app/>`_
+*Don't want to use a command-line app?* Try the `SISTR web app <https://github.com/phac-nml/sistr_cmd#web-application>`_
 
 
 Citation
