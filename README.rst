@@ -99,6 +99,15 @@ You can install ``sistr_cmd`` using ``pip``:
 
 **NOTE:** You will need to ensure that external dependencies are installed (i.e. ``blast+``, ``mafft``, ``mash`` [optionally])
 
+Using ``setup.py``
+------------------
+You can install ``sistr_cmd`` directly from the source code:
+
+.. code-block:: bash
+
+	python setup.py install
+
+**NOTE:** If you run into ``pycurl`` library installation issues, you can try to resolve them by installing system dependencies via a package manager such as ``apt`` (``apt install python3-pycurl libcurl4-openssl-dev libssl-dev``)
 
 Web application
 ---------------
