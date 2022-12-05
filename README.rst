@@ -2,7 +2,7 @@
 ``sistr_cmd``: Salmonella In Silico Typing Resource (SISTR) commandline tool
 ****************************************************************************
 
-|pypi| |nbsp| |license| |nbsp| |galaxy| |nbsp| |heroku|
+|pypi| |nbsp| |license| |nbsp| |galaxy| |nbsp| |render|
 
 .. |pypi| image:: https://badge.fury.io/py/sistr-cmd.svg
     :target: https://pypi.python.org/pypi/sistr-cmd/
@@ -12,9 +12,9 @@
 	:target: https://usegalaxy.eu/root?tool_id=sistr_cmd	
 .. |nbsp| unicode:: 0xA0 
    :trim:
-.. |heroku| image:: https://pyheroku-badge.herokuapp.com/?app=sistr-app&style=flat
-   :target: https://sistr-app.herokuapp.com
-   :alt: Heroku
+.. |render| image:: https://img.shields.io/badge/render.com-deployed-brightgreen
+   :target: https://sistr-app.onrender.com/
+   :alt: web app deployed on Render.com Cloud Hosting
 
 Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 `Mash MinHash <https://mash.readthedocs.io/en/latest/>`_ can also be used for serovar prediction.
@@ -114,8 +114,8 @@ Web application
 SISTR can be publically accessed as a web application via:
 
 - Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
-- Heroku platform as a DEMO web application at https://sistr-app.herokuapp.com/ |heroku|
-**NOTE:** The Heroku web application might take up to 20 seconds to load on the first run
+- Render.com Cloud Hosting Platform-as-a-Service (PaaS) platform hosts a **DEMO** SISTR web application |render|
+**NOTE:** The SISTR web application hosted on Render.com might take up to 20 seconds to load on the first run and will shutdown after 15 min of inactivity
 
 SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
 
