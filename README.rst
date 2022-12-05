@@ -114,7 +114,7 @@ Web application
 SISTR can be publically accessed as a web application via:
 
 - Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
-- Render.com Cloud Hosting Platform-as-a-Service (PaaS) platform hosts a **DEMO** SISTR web application |render|
+- Render.com Cloud Hosting Platform-as-a-Service (PaaS) platform hosts a **DEMO** SISTR web application https://sistr-app.onrender.com/ |render|
 **NOTE:** The SISTR web application hosted on Render.com might take up to 20 seconds to load on the first run and will shutdown after 15 min of inactivity
 
 SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
