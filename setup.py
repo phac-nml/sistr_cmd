@@ -48,11 +48,11 @@ setup(
         'install': CustomInstallCommand
     },
     install_requires=[
-        'numpy>=1.11.1',
-        'pandas>=0.18.1',
-        'tables>=3.3.0',
-        'pycurl>=7.43.0',
-        'scipy>=1.1.0'
+        'numpy>=1.11.1,<1.23.5',
+        'tables>=3.3.0,<4',
+        'pandas>=0.22.0,<=1.0.5',
+        'pycurl>=7.43.0,<8',
+        'scipy>=1.1.0,<2',
     ],
     extras_require={
         'test': ['pytest>=2.9.2',],
