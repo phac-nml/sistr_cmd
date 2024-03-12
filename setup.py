@@ -1,5 +1,5 @@
 from distutils.core import setup
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools.command.install import install
 from sistr.version import __version__
 import subprocess
@@ -33,7 +33,7 @@ class CustomInstallCommand(install):
 setup(
     name='sistr_cmd',
     version=__version__,
-    packages=find_packages(exclude=['tests']),
+    packages=find_namespace_packages(exclude=['tests']),
     url='https://github.com/phac-nml/sistr_cmd',
     license='Apache 2.0',
     author='Peter Kruczkiewicz',
