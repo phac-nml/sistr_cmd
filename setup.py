@@ -5,14 +5,13 @@ from sistr.version import __version__
 from sistr.sistr_cmd import setup_sistr_dbs
 
 classifiers = """
-Development Status :: 4 - Beta
+Development Status :: Release
 Environment :: Console
 License :: OSI Approved :: Apache Software License
 Intended Audience :: Science/Research
 Topic :: Scientific/Engineering
 Topic :: Scientific/Engineering :: Bio-Informatics
 Programming Language :: Python
-Programming Language :: Python :: 2.7
 Programming Language :: Python :: 3.4
 Programming Language :: Python :: 3.5
 Programming Language :: Python :: 3.6
@@ -50,7 +49,7 @@ setup(
     install_requires=[
         'numpy>=1.11.1,<1.23.5',
         'tables>=3.3.0,<4',
-        'pandas>=0.22.0,<2',
+        'pandas>=0.22.0,<3',
         'pycurl>=7.43.0,<8',
         'scipy>=1.1.0,<2',
     ],
