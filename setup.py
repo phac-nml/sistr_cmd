@@ -2,7 +2,7 @@ from distutils.core import setup
 from setuptools import find_namespace_packages
 from setuptools.command.install import install
 from sistr.version import __version__
-import subprocess
+from sistr.sistr_cmd import setup_sistr_dbs
 
 classifiers = """
 Development Status :: 4 - Beta
@@ -26,7 +26,7 @@ class CustomInstallCommand(install):
         install.run(self)
         self.do_egg_install()
         print("SISTR DB Setup ...")
-        subprocess.run("sistr_init")
+        setup_sistr_dbs()
         print("Done")
 
 
@@ -50,7 +50,7 @@ setup(
     install_requires=[
         'numpy>=1.11.1,<1.23.5',
         'tables>=3.3.0,<4',
-        'pandas>=0.22.0,<=1.0.5',
+        'pandas>=0.22.0,<2',
         'pycurl>=7.43.0,<8',
         'scipy>=1.1.0,<2',
     ],
