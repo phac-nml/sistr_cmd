@@ -8,7 +8,7 @@ MASH_DISTANCE_THRESHOLD = 0.005
 CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD = 0.9
 MASH_SUBSPECIATION_DISTANCE_THRESHOLD = 0.01
 
-SISTR_DB_URL = 'https://sairidapublic.blob.core.windows.net/downloads/sistr/database/SISTR_V_1.1_db.tar.gz'
+SISTR_DB_URL = 'https://drive.usercontent.google.com/download?id=1OAVWUiMiPLJxPSm-Q88WMPSyk2UGJtl4&export=download&confirm=f'
 SISTR_DATA_DIR = resource_filename('sistr','data')
 SEROVAR_TABLE_PATH = resource_filename('sistr', 'data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
 WZX_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzx.fasta')

@@ -215,7 +215,7 @@ def matches_to_marker_results(df):
                 logging.debug('Selecting allele %s from contig with length %s', allele, slen)
                 seq = r['sseq']
                 if '-' in seq:
-                    logging.warning('Gaps found in allele. Removing gaps. %s', r)
+                    logging.debug('Gaps found in allele %s. Removing gaps. %s', allele, r)
                     seq = seq.replace('-', '').upper()
                     allele = allele_name(seq)
                 marker_results[k] = allele_result_dict(allele, seq, r.to_dict())

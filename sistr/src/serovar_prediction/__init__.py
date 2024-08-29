@@ -376,8 +376,8 @@ class SerovarPredictor:
         else:
             b_spp = b_sg
         df_prediction = df[(b_spp & b_sg & b_h1 & b_h2)]
-
-        logging.debug('Serovar prediction for %s %s:%s:%s is %s', spp, sg, h1, h2, list(df_prediction['Serovar']))
+        logging.debug(f"Antigen to serovar dataframe filtered:\n{df_prediction}\n")
+        logging.debug('Rough antigenic serovar(s) prediction for subspecies %s sg=%s:h1=%s:h2=%s is %s serovar(s)', spp, sg, h1, h2, list(df_prediction['Serovar']))
         if df_prediction.shape[0] > 0:
             return '|'.join(list(df_prediction['Serovar']))
 
@@ -441,9 +441,9 @@ class SerovarPredictor:
 
         if not isinstance(h2, list):
             h2 = [h2]
-
+        print(f"L444 sistr/src/serovar_prediction/__init__.py predict_serovar_from_antigen_blast() self.serovar = {self.serovar}")
         self.serovar = SerovarPredictor.get_serovar(df, sg, h1, h2, self.subspecies)
-
+        print(f"L446 sistr/src/serovar_prediction/__init__.py predict_serovar_from_antigen_blast() self.serovar = {self.serovar}")
         if self.serovar is None:
             try:
                 spp_roman = spp_name_to_roman[self.subspecies]
@@ -514,6 +514,9 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
     """
     assert isinstance(serovar_prediction, SerovarPrediction)
     assert isinstance(antigen_predictor, SerovarPredictor)
+    print(f"serovar_prediction: {serovar_prediction.__dict__}")
+    print(f"antigen_predictor: {antigen_predictor.__dict__}")
+    print(f"sistr/src/serovar_prediction/__init__.py L518: {serovar_prediction.serovar}")
 
     h1 = antigen_predictor.h1
     h2 = antigen_predictor.h2
@@ -523,10 +526,10 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
         if 'mash_match' in serovar_prediction.__dict__:
             spp = serovar_prediction.__dict__['mash_subspecies']
 
-    serovar_prediction.serovar_antigen = antigen_predictor.serovar
+    serovar_prediction.serovar_antigen = antigen_predictor.serovar #assign antigen serovar from antigen_predictor object
     cgmlst_serovar = serovar_prediction.serovar_cgmlst
     cgmlst_distance = float(serovar_prediction.cgmlst_distance)
-
+    print(f"sistr/src/serovar_prediction/__init__.py L530: serovar_prediction.serovar_antigen ={serovar_prediction.serovar_antigen} cgmlst_serovar = {serovar_prediction.serovar_cgmlst} mash_serovar = {serovar_prediction.mash_serovar}")
 
     h1_h2_share_group = False
     for h2_groups in H2_FLJB_SIMILARITY_GROUPS:
@@ -576,9 +579,11 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             serovar_prediction.h1_flic_prediction.h1 = h1
 
 
-
+    print(f"sistr/src/serovar_prediction/__init__.py L582: antigen_predictor.serovar = {antigen_predictor.serovar}")
     antigen_predictor.predict_serovar_from_antigen_blast()
+    print(f"sistr/src/serovar_prediction/__init__.py L584: antigen_predictor.serovar = {antigen_predictor.serovar}")
     serovar_prediction.serovar_antigen = antigen_predictor.serovar
+    print(f"sistr/src/serovar_prediction/__init__.py L584: serovar_prediction.serovar_antigen ={serovar_prediction.serovar_antigen}")
 
 
     null_result = '-:-:-'
@@ -595,13 +600,10 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
     if antigen_predictor.serovar is None:
         if is_antigen_null(sg) and is_antigen_null(h1) and is_antigen_null(h2):
             if spp_roman is not None:
-
                 serovar_prediction.serovar = '{} {}:{}:{}'.format(spp_roman, sg, h1, h2)
             else:
-
                 serovar_prediction.serovar = '{}:{}:{}'.format(spp_roman, sg, h1, h2)
         elif cgmlst_serovar is not None and cgmlst_distance <= CGMLST_DISTANCE_THRESHOLD:
-
             serovar_prediction.serovar = cgmlst_serovar
         else:
             serovar_prediction.serovar = null_result
@@ -616,6 +618,7 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             serovars_from_antigen = [serovars_from_antigen]
         if cgmlst_serovar is not None:
             if cgmlst_serovar in serovars_from_antigen:
+                logging.info(f"Antigen predictor has multiple serovar results {antigen_predictor.serovar}, but assigned cgmlst serovar {cgmlst_serovar} ...")
                 serovar_prediction.serovar = cgmlst_serovar
 
         elif 'mash_match' in serovar_prediction.__dict__:
@@ -624,11 +627,16 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             mash_dist = float(spd['mash_distance'])
             if mash_serovar in serovars_from_antigen:
                 serovar_prediction.serovar = mash_serovar
+                logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned mash serovar {mash_serovar} ...")        
             else:
                 if mash_dist <= MASH_DISTANCE_THRESHOLD:
                     serovar_prediction.serovar = mash_serovar
-
+                    logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned mash serovar {mash_serovar} ...")        
+                else:
+                    logging.info(f"MASH serovar prediction was NOT assigned as mash distance {mash_dist} > {MASH_DISTANCE_THRESHOLD} ")
+            
         if serovar_prediction.serovar is None:
+            logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar} and it will be assigned as final serovar ...")
             serovar_prediction.serovar = serovar_prediction.serovar_antigen
 
     if serovar_prediction.h1 is None:

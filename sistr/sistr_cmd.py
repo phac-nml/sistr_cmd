@@ -177,11 +177,18 @@ def infer_o_antigen(prediction):
     else:
         predicted_serovars = [prediction.serovar]
         series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
+        
         if series_o_antigens.size == 0:
             prediction.o_antigen = '-'
         else:
             counter_o_antigens = Counter(series_o_antigens)
-            prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+            most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
+            if '25' in most_common_o_antigen or '24' in most_common_o_antigen:
+                logging.info(f"Cleaning most common O antigen {most_common_o_antigen} ....")
+                for pattern in [',\[24\]', ',\[25\]', ',24', ',25','\[1\],','1,']:
+                    most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)
+            logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
+            prediction.o_antigen = most_common_o_antigen
 
 def download_to_file(url,file):
     with open(file, 'wb') as f:
@@ -268,11 +275,15 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         prediction = serovar_predictor.get_serovar_prediction()
         prediction.genome = genome_name
         prediction.fasta_filepath = os.path.abspath(input_fasta)
+        print(f"sistr_cmd.py L271: Antigen serovar prediction: {prediction.serovar} and {serovar_predictor.serovar}")
         if cgmlst_prediction:
             merge_cgmlst_prediction(prediction, cgmlst_prediction)
+            print(f"sistr_cmd.py L275: add cgmlst_prediction_serovar: {prediction.serovar}");
         if mash_prediction:
             merge_mash_prediction(prediction, mash_prediction)
+            print(f"sistr_cmd.py L278: add mash_prediction_serovar: {prediction.serovar}");
         overall_serovar_call(prediction, serovar_predictor)
+        print(f"sistr_cmd.py L280: overall_serovar: {prediction.serovar}"); #raise Exception;
         infer_o_antigen(prediction)
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
                      genome_name,
@@ -281,6 +292,8 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
                      prediction.o_antigen,
                      prediction.h1,
                      prediction.h2)
+        logging.info(f'{genome_name} | cgMLST serovar prediction: {prediction.serovar_cgmlst} assigned by '
+                     f'top matching genome {prediction.cgmlst_genome_match} at {prediction.cgmlst_matching_alleles}/330 matching alleles ratio')
         logging.info('%s | Subspecies prediction: %s',
                      genome_name,
                      spp)
