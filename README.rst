@@ -16,7 +16,7 @@
    :target: https://sistr-app.onrender.com/
    :alt: web app deployed on Render.com Cloud Hosting
 
-Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
+*Salmonella* serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 `Mash MinHash <https://mash.readthedocs.io/en/latest/>`_ can also be used for serovar prediction.
 
 .. epigraph::
@@ -64,7 +64,7 @@ Installation
 ============
 
 Using Conda [Recommended]
------------
+---------------------------
 
 You can install ``sistr_cmd`` using `Conda <https://conda.io/miniconda.html>`_ from the `BioConda channel <https://bioconda.github.io/>`_:
 
@@ -115,10 +115,19 @@ SISTR can be publically accessed as a web application via:
 
 - Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
 - Render.com Cloud Hosting Platform-as-a-Service (PaaS) hosts a **DEMO** SISTR web application https://sistr-app.onrender.com/ |render|
+
 **NOTE:** The SISTR web application hosted on Render.com might take up to 20 seconds to load on the first run and will shutdown after 15 min of inactivity
 
 SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
 
+
+Database
+=========
+SISTR will automatically initialize database of *Salmonella* serovar determination antigens, cgMLST profiles and MASH sketch of reference genomes by downloading it from a remote location. 
+The SISTR database v1.3 got minor updates by collapsing some of the serovars detailed in ``CHANGELOG.md`` file
+
+- SISTR v1.1 database is available at https://zenodo.org/records/13618515 or via a direct url https://zenodo.org/records/13618515/files/SISTR_V_1.1_db.tar.gz?download=1
+- SISTR v1.3 database is available at 
 
 
 Dependencies
