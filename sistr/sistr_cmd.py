@@ -183,7 +183,7 @@ def infer_o_antigen(prediction):
         else:
             counter_o_antigens = Counter(series_o_antigens)
             most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
-            if '25' in most_common_o_antigen or '24' in most_common_o_antigen:
+            if any([True if antigen in most_common_o_antigen else False for antigen in ['24','25'] ]):
                 logging.info(f"Cleaning most common O antigen {most_common_o_antigen} ....")
                 for pattern in [',\[24\]', ',\[25\]', ',24', ',25','\[1\],','1,']:
                     most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)

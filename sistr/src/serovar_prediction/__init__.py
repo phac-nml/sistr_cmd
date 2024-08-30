@@ -363,6 +363,7 @@ class SerovarPredictor:
 
     @staticmethod
     def get_serovar(df, sg, h1, h2, spp):
+        #print(df.query(f'H1=="z"'))
         h2_is_missing = '-' in h2
         b_sg = df['Serogroup'].isin(sg)
         b_h1 = df['H1'].isin(h1)
@@ -371,12 +372,15 @@ class SerovarPredictor:
         else:
             b_h2 = df['H2'].isin(h2)
 
-        if spp is not None:
+    
+        if spp is not None and spp != '':
             b_spp = df['subspecies'] == spp
         else:
             b_spp = b_sg
+        
         df_prediction = df[(b_spp & b_sg & b_h1 & b_h2)]
-        logging.debug(f"Antigen to serovar dataframe filtered:\n{df_prediction}\n")
+
+        logging.debug(f"Antigen to serovar dataframe filtered {spp} {sg} {h1} {h2}:\n{df_prediction}\n")
         logging.debug('Rough antigenic serovar(s) prediction for subspecies %s sg=%s:h1=%s:h2=%s is %s serovar(s)', spp, sg, h1, h2, list(df_prediction['Serovar']))
         if df_prediction.shape[0] > 0:
             return '|'.join(list(df_prediction['Serovar']))
@@ -441,7 +445,7 @@ class SerovarPredictor:
 
         if not isinstance(h2, list):
             h2 = [h2]
-        print(f"L444 sistr/src/serovar_prediction/__init__.py predict_serovar_from_antigen_blast() self.serovar = {self.serovar}")
+        print(f"L444 sistr/src/serovar_prediction/__init__.py predict_serovar_from_antigen_blast() self.serovar = {self.serovar} self.subspecies = {self.subspecies}")
         self.serovar = SerovarPredictor.get_serovar(df, sg, h1, h2, self.subspecies)
         print(f"L446 sistr/src/serovar_prediction/__init__.py predict_serovar_from_antigen_blast() self.serovar = {self.serovar}")
         if self.serovar is None:

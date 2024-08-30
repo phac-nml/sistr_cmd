@@ -37,10 +37,13 @@ def mash_dist_trusted(fasta_path):
 def mash_output_to_pandas_df(mash_out):
     from io import BytesIO
     df = pd.read_csv(BytesIO(mash_out), header=None, sep="\t")
+    
     df.columns = ['ref', 'query', 'dist', 'pval', 'matching']
     refs = [re.sub(r'(\.fa$)|(\.fas$)|(\.fasta$)|(\.fna$)', '', os.path.basename(r)) for r in df['ref']]
     df['ref'] = refs
     df = df[df['dist'] < MASH_SUBSPECIATION_DISTANCE_THRESHOLD]
+    if df.empty:
+        logging.warning(f"Empty MASH results dataframe. All hits above the MASH_SUBSPECIATION_DISTANCE_THRESHOLD = {MASH_SUBSPECIATION_DISTANCE_THRESHOLD}")
     refs = df['ref']
     serovars = []
     genome_serovar_dict = genomes_to_serovar()
@@ -53,7 +56,7 @@ def mash_output_to_pandas_df(mash_out):
     df['serovar'] = serovars
     df['n_match'] = [int(x.split('/')[0]) for x in df['matching']]
     df.sort_values(by='dist', inplace=True)
-
+    
     return df
 
 

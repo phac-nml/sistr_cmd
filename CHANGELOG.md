@@ -1,10 +1,18 @@
 # 1.1.3
 Serovar nomenclature update after USA Cantaloupe Outbreaks in Novermber 2023. The O24 and O25 antigens would not be wet-lab typed causing the collapse of certain serovars detailed below. The selected serovar is the one that will be reported by SISTR and the other serovar in the pair will be dropped and no O24 or O25 will be reported in the antigenic formula
 
-|Serovar pair          | Serovar Selected |
-|----------------------|------------------|
-|Soahanina / Sundsvall |  Sundsvall       |
-
+|Serovar pair            | Serovar selected |
+|------------------------|------------------|
+|Soahanina - Sundsvall   |  Sundsvall       |
+|Martonos - Finkenwerder | Finkenwerder   |
+|Midway - Florida      |   Florida        |
+|Lindern - Charity     |   Charity        |
+|Bahrenfeld - Onderstepoort | Onderstepoort |
+| Schalkwijk - Moussoro  |   Schalkwijk |
+|Amberg - Boecker       | Boecker      |
+| Carrau - Madelia      | Carrau     |
+| Chichiri - Uzaramo   | Uzaramo     |
+| Poano -  Stafford    | Poano       |
 
 ### Changes of serovar assignments in `sistr/data/genomes-to-serovar.txt`
 
@@ -69,6 +77,18 @@ Serovar nomenclature update after USA Cantaloupe Outbreaks in Novermber 2023. Th
 |SAL_DA7014AA	|Martonos | Finkenwerder
 |SRR1300569	|Martonos | Finkenwerder
 |SRR1973814	|Martonos | Finkenwerder
+
+### Changes to `Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv` antigen to serovar lookup database
+Removed the following entries
+1. Martonos,"6,14,24",d,"1,5",,H,FALSE,enterica
+2. Midway,"6,14,24",d,"1,7",,H,FALSE,enterica
+3. Lindern,"6,14,[24]",d,"e,n,x",,H,FALSE,enterica
+4. Bahrenfeld,"6,14,[24]","e,h","1,5",,H,FALSE,enterica
+5. Moussoro,"1,6,14,25",i,"e,n,z15",,H,FALSE,enterica
+6. Amberg,"6,14,24","l,v","1,7",,H,FALSE,enterica
+7. Madelia,"1,6,14,25",y,"1,7",,H,FALSE,enterica
+8. Soahanina,"6,14,24",z,"e,n,x",,H,FALSE,enterica
+9. Chichiri,"6,14,24","z4,z24",-,,H,TRUE,enterica
 
 # 1.1.1
 
