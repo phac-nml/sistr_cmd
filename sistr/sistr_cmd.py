@@ -207,6 +207,7 @@ def download_to_file(url,file):
         c.setopt(pycurl.SSL_VERIFYHOST, 0)
         c.perform()
         c.close()
+        
 
 def extract(fname,outdir):
     if (fname.endswith("tar.gz")):
@@ -241,7 +242,7 @@ def setup_sistr_dbs():
         logging.error('Downloading databases failed, please check your internet connection and retry')
         sys.exit(-1)
     else:
-        logging.info('Downloading databases successful')
+        logging.info(f'Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}')
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
         f.close()

@@ -31,6 +31,7 @@ jobs:
         python3 -m pip install --upgrade pip setuptools
         pip3 install pytest fastcluster openpyxl pycurl pandas scipy "numpy<2"
         python setup.py install
+        sistr_init
     - name: Test  with pytest
       run: |
         pytest -o log_cli=true --basetemp=tmp-pytest
