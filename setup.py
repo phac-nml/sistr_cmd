@@ -47,7 +47,7 @@ setup(
         'install': CustomInstallCommand
     },
     install_requires=[
-        'numpy>=1.11.1',
+        'numpy>=1.11.1,<1.23.5',
         'tables>=3.3.0,<4',
         'pandas>=0.22.0,<3',
         'pycurl>=7.43.0,<8',
