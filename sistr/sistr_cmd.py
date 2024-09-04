@@ -189,7 +189,7 @@ def infer_o_antigen(prediction):
             # for O24 and O25 antigens need to remove those antigens as we do not doe any testing in the lab
             if any([True if antigen in most_common_o_antigen else False for antigen in ['24','25'] ]):
                 logging.info(f"Cleaning O antigen from 24 and 25 antigens {most_common_o_antigen} ....")
-                for pattern in [',\[24\]', ',\[25\]', ',24', ',25','\[1\],','1,']:
+                for pattern in [r",\[24\]", r",\[25\]", r",24", r",25",r"\[1\],",r"1,"]:
                     most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)
             logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
             prediction.o_antigen = most_common_o_antigen
@@ -252,14 +252,14 @@ def setup_sistr_dbs():
 def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
     blast_runner = None
     serovars_selected_list = []
-
-    if args.list_serovars_file:
-        if os.path.exists(args.list_serovars_file):
-            with open(args.list_serovars_file) as fp:
+    print(args)
+    if args.list_of_serovars:
+        if os.path.exists(args.list_of_serovars):
+            with open(args.list_of_serovars) as fp:
                 serovars_selected_list = [l.rstrip() for l in fp.readlines()]
-            logging.info(f"Selected serovars list to check predictions against from {args.list_serovars_file} is {serovars_selected_list}")
+            logging.info(f"Selected serovars list to check predictions against from {args.list_of_serovars} is {serovars_selected_list}")
         else:
-            logging.warning(f"File {args.list_serovars_file} does not exist in path specified. Would not check against list of provided serovars ...")      
+            logging.warning(f"File {args.list_of_serovars} does not exist in path specified. Would not check against list of provided serovars ...")      
     
     try:
         assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
@@ -308,7 +308,6 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
                     print(selected_serovar, prediction.serovar)
                     prediction.serovar_in_list = "Y"
                     break
-
 
         print(f"L288: sistr_cmd.py antigenic_formula: {prediction.antigenic_profile}")
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',

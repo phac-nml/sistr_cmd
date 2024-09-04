@@ -27,9 +27,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install mash ncbi-blast+ libssl-dev libcurl4-openssl-dev mafft libssl-dev ca-certificates -y
-        sudo apt-get install python3-pip python3-dev python3-pandas python3-requests python3-pycurl python3-biopython -y
+        sudo apt-get install python3-pip python3-dev python3-pandas python3-requests python3-biopython -y
         python3 -m pip install --upgrade pip setuptools
-        pip3 install pytest fastcluster openpyxl
+        pip3 install pytest fastcluster openpyxl pycurl
         if [ -f requirements.txt ]; then 
           pip3 install -r requirements.txt;
         else
