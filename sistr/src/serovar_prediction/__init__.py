@@ -466,7 +466,7 @@ class SerovarPredictor:
             if spp_roman:
                 self.serovar = '{} {}:{}:{}'.format(spp_roman, o_antigen, self.h1, self.h2)
             else:
-                self.serovar = '{}:{}:{}'.format(o_antigen, self.h1, self.h2)
+                self.serovar = '{}:{}:{}'.format(o_antigen, self.h1, self.h2)   
         return self.serovar
 
     def get_serovar_prediction(self):
@@ -622,7 +622,7 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             serovars_from_antigen = [serovars_from_antigen]
         if cgmlst_serovar is not None:
             if cgmlst_serovar in serovars_from_antigen:
-                logging.info(f"Antigen predictor has multiple serovar results {antigen_predictor.serovar}, but assigned cgmlst serovar {cgmlst_serovar} ...")
+                logging.info(f"Antigen predictor has multiple serovar results {antigen_predictor.serovar}, but assigned final cgmlst serovar {cgmlst_serovar} ...")
                 serovar_prediction.serovar = cgmlst_serovar
 
         elif 'mash_match' in serovar_prediction.__dict__:
@@ -631,16 +631,16 @@ def overall_serovar_call(serovar_prediction, antigen_predictor):
             mash_dist = float(spd['mash_distance'])
             if mash_serovar in serovars_from_antigen:
                 serovar_prediction.serovar = mash_serovar
-                logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned mash serovar {mash_serovar} ...")        
+                logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned final mash serovar {mash_serovar} ...")        
             else:
                 if mash_dist <= MASH_DISTANCE_THRESHOLD:
                     serovar_prediction.serovar = mash_serovar
-                    logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned mash serovar {mash_serovar} ...")        
+                    logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar}, but assigned final mash serovar {mash_serovar} ...")        
                 else:
                     logging.info(f"MASH serovar prediction was NOT assigned as mash distance {mash_dist} > {MASH_DISTANCE_THRESHOLD} ")
             
         if serovar_prediction.serovar is None:
-            logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar} and it will be assigned as final serovar ...")
+            logging.info(f"Antigen predictor has a serovar result {antigen_predictor.serovar} and it will be assigned as a final serovar ...")
             serovar_prediction.serovar = serovar_prediction.serovar_antigen
 
     if serovar_prediction.h1 is None:

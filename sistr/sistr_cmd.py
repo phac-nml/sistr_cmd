@@ -51,7 +51,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-f',
                         '--output-format',
                         default='json',
-                        help='Output format (json, csv, pickle)')
+                        help='Output format (json, csv, tab, pickle)')
     parser.add_argument('-o',
                         '--output-prediction',
                         help='SISTR serovar prediction output path')
@@ -93,6 +93,9 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         type=int,
                         default=1,
                         help='Number of parallel threads to run sistr_cmd analysis.')
+    parser.add_argument('-l', '--list-of-serovars',
+                        type=str, required=False,
+                        help='A path to a single column text file containing list of serovar(s) to check serovar prediction against. Report predicted serovar is Y (present) and N (absent) in the list')
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
@@ -183,12 +186,14 @@ def infer_o_antigen(prediction):
         else:
             counter_o_antigens = Counter(series_o_antigens)
             most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
+            # for O24 and O25 antigens need to remove those antigens as we do not doe any testing in the lab
             if any([True if antigen in most_common_o_antigen else False for antigen in ['24','25'] ]):
-                logging.info(f"Cleaning most common O antigen {most_common_o_antigen} ....")
+                logging.info(f"Cleaning O antigen from 24 and 25 antigens {most_common_o_antigen} ....")
                 for pattern in [',\[24\]', ',\[25\]', ',24', ',25','\[1\],','1,']:
                     most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)
             logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
             prediction.o_antigen = most_common_o_antigen
+    prediction.antigenic_profile=f"{prediction.o_antigen}:{prediction.h1}:{prediction.h2}"    
 
 def download_to_file(url,file):
     with open(file, 'wb') as f:
@@ -246,6 +251,16 @@ def setup_sistr_dbs():
 
 def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
     blast_runner = None
+    serovars_selected_list = []
+
+    if args.list_serovars_file:
+        if os.path.exists(args.list_serovars_file):
+            with open(args.list_serovars_file) as fp:
+                serovars_selected_list = [l.rstrip() for l in fp.readlines()]
+            logging.info(f"Selected serovars list to check predictions against from {args.list_serovars_file} is {serovars_selected_list}")
+        else:
+            logging.warning(f"File {args.list_serovars_file} does not exist in path specified. Would not check against list of provided serovars ...")      
+    
     try:
         assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
         if genome_name is None or genome_name == '':
@@ -285,6 +300,17 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         overall_serovar_call(prediction, serovar_predictor)
         print(f"sistr_cmd.py L280: overall_serovar: {prediction.serovar}"); #raise Exception;
         infer_o_antigen(prediction)
+        # if list of reportable serovars is provided to check prediction serovar against
+        if serovars_selected_list:
+            prediction.serovar_in_list = "N"
+            for selected_serovar in serovars_selected_list:
+                if selected_serovar == prediction.serovar:
+                    print(selected_serovar, prediction.serovar)
+                    prediction.serovar_in_list = "Y"
+                    break
+
+
+        print(f"L288: sistr_cmd.py antigenic_formula: {prediction.antigenic_profile}")
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
                      genome_name,
                      prediction.serovar_antigen,

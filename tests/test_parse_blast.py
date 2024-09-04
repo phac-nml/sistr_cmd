@@ -31,7 +31,7 @@ def test_BlastReader(blast_runner):
     blast_outfile = blast_runner.run_blast(WZX_FASTA_PATH)
     blast_reader = BlastReader(blast_outfile)
     top_result = blast_reader.top_result()
-    assert get_antigen_name(top_result['qseqid']) == 'O58'
+    assert get_antigen_name(top_result['qseqid']) == 'O:58'
 
 
 def test_BlastReader_is_blast_result_trunc():
@@ -83,7 +83,7 @@ def test_BlastReader_is_blast_result_trunc():
 def test_SerovarPredictor(blast_runner):
     sp = SerovarPredictor(blast_runner, "salamae")
     sp.predict_serovar_from_antigen_blast()
-    assert sp.serogroup == 'O58'
+    assert sp.serogroup == 'O:58'
     assert sp.h1 == 'l,z13,z28'
     assert sp.h2 == 'z6'
     assert sp.serovar == 'II 58:l,z13,z28:z6'

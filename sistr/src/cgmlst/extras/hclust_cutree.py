@@ -9,7 +9,8 @@ def profiles_to_np_array(profiles_csv_path):
     """
 
     """
-    df = pd.read_csv(profiles_csv_path, index_col=0)
+    df = pd.read_hdf(profiles_csv_path, key='cgmlst')
+    #df = pd.read_csv(profiles_csv_path, index_col=0)
     arr = np.array(df, dtype=np.float64)
     genomes = df.index
     markers = df.columns

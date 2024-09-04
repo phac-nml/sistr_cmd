@@ -89,6 +89,7 @@ Removed the following entries
 7. Madelia,"1,6,14,25",y,"1,7",,H,FALSE,enterica
 8. Soahanina,"6,14,24",z,"e,n,x",,H,FALSE,enterica
 9. Chichiri,"6,14,24","z4,z24",-,,H,TRUE,enterica
+10. II 4:a:z39,"1,4,12,[27]",a,z39,,B,FALSE,salamae
 
 # 1.1.1
 

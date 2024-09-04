@@ -12,6 +12,7 @@ def test_read_profiles():
 
 
 def test_cutree():
+    print(f"Reading cgMLST profiles file {CGMLST_PROFILES_PATH} ...")
     M, genomes, markers = profiles_to_np_array(CGMLST_PROFILES_PATH)
     print(M.shape)
     M_nr, genome_groups = nr_profiles(M, genomes)
@@ -20,13 +21,14 @@ def test_cutree():
     print(dm.shape)
     Z = complete_linkage(dm)
     print(Z.shape)
-    df_clusters = cutree(Z, [0, 0.1, 0.2, 0.3, 0.4])
+    df_clusters = cutree(Z, [0, 0.1, 0.2, 0.3, 0.4, 0.5])
     print(df_clusters)
     df_clusters = expand_clusters_dataframe(df_clusters, genome_groups)
     print(df_clusters)
     # check that each genome group of size >= 2 is part of the same 0.0 dist cluster
     for gs in genome_groups:
+        gs=list(set(gs))
         if len(gs) == 1:
             continue
-        df = df_clusters.ix[gs]
-        assert df[0.0].unique().size == 1
+        df = df_clusters.loc[gs]
+        assert df[0.5].unique().size == 1
