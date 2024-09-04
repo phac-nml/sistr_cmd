@@ -186,14 +186,14 @@ def infer_o_antigen(prediction):
         else:
             counter_o_antigens = Counter(series_o_antigens)
             most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
-            # for O24 and O25 antigens need to remove those antigens as we do not doe any testing in the lab
+            # for O24 and O25 antigens need to remove those antigens as we do not any wet-lab testing
             if any([True if antigen in most_common_o_antigen else False for antigen in ['24','25'] ]):
-                logging.info(f"Cleaning O antigen from 24 and 25 antigens {most_common_o_antigen} ....")
+                logging.info(f"Cleaning, simplifying O antigen as 24 or 25 antigen found ...")
                 for pattern in [r",\[24\]", r",\[25\]", r",24", r",25",r"\[1\],",r"1,"]:
                     most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)
             logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
             prediction.o_antigen = most_common_o_antigen
-    prediction.antigenic_profile=f"{prediction.o_antigen}:{prediction.h1}:{prediction.h2}"    
+    prediction.antigenic_formula=f"{prediction.o_antigen}:{prediction.h1}:{prediction.h2}"    
 
 def download_to_file(url,file):
     with open(file, 'wb') as f:
@@ -245,7 +245,7 @@ def setup_sistr_dbs():
         logging.info(f"Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}")
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
-        logging.info(f"{f.name}")
+        logging.info(f"DB status file written at {f.name} path")
         f.close()
         
 
@@ -257,7 +257,6 @@ def setup_sistr_dbs():
 def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
     blast_runner = None
     serovars_selected_list = []
-    print(args)
     if args.list_of_serovars:
         if os.path.exists(args.list_of_serovars):
             with open(args.list_of_serovars) as fp:
@@ -295,26 +294,21 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         prediction = serovar_predictor.get_serovar_prediction()
         prediction.genome = genome_name
         prediction.fasta_filepath = os.path.abspath(input_fasta)
-        print(f"sistr_cmd.py L271: Antigen serovar prediction: {prediction.serovar} and {serovar_predictor.serovar}")
+
         if cgmlst_prediction:
             merge_cgmlst_prediction(prediction, cgmlst_prediction)
-            print(f"sistr_cmd.py L275: add cgmlst_prediction_serovar: {prediction.serovar}");
         if mash_prediction:
             merge_mash_prediction(prediction, mash_prediction)
-            print(f"sistr_cmd.py L278: add mash_prediction_serovar: {prediction.serovar}");
         overall_serovar_call(prediction, serovar_predictor)
-        print(f"sistr_cmd.py L280: overall_serovar: {prediction.serovar}"); #raise Exception;
         infer_o_antigen(prediction)
         # if list of reportable serovars is provided to check prediction serovar against
         if serovars_selected_list:
             prediction.serovar_in_list = "N"
             for selected_serovar in serovars_selected_list:
                 if selected_serovar == prediction.serovar:
-                    print(selected_serovar, prediction.serovar)
                     prediction.serovar_in_list = "Y"
                     break
 
-        print(f"L288: sistr_cmd.py antigenic_formula: {prediction.antigenic_profile}")
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
                      genome_name,
                      prediction.serovar_antigen,
