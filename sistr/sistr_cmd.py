@@ -242,7 +242,8 @@ def setup_sistr_dbs():
         logging.error('Downloading databases failed, please check your internet connection and retry')
         sys.exit(-1)
     else:
-        logging.info(f'Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}')
+        logging.info(f"Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}")
+        logging.info(f"{os.listdir(os.path.abspath(resource_filename('sistr', 'data/')))}")
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
         f.close()
