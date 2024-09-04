@@ -243,10 +243,11 @@ def setup_sistr_dbs():
         sys.exit(-1)
     else:
         logging.info(f"Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}")
-        logging.info(f"{os.listdir(os.path.abspath(resource_filename('sistr', 'data/')))}")
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
+        logging.info(f"{f.name}")
         f.close()
+        
 
     extract(tmp_file, resource_filename('sistr', ''))
     os.remove(tmp_file)
