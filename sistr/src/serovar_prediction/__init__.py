@@ -133,6 +133,8 @@ class SerogroupPredictor(BlastAntigenGeneMixin):
 
     def search_for_wzx(self):
         self.wzx_prediction = self.get_antigen_gene_blast_results(self.wzx_prediction, WZX_FASTA_PATH)
+        #'blast_results', 'is_missing', 'is_perfect_match', 'is_trunc', 'serogroup', 'top_result'
+        #print( self.wzx_prediction.top_result); raise Exception()
         if not self.wzx_prediction.is_missing and not self.wzx_prediction.top_result is None :
             top_result = self.wzx_prediction.top_result
             top_result_pident = top_result['pident']
@@ -379,7 +381,7 @@ class SerovarPredictor:
         
         df_prediction = df[(b_spp & b_sg & b_h1 & b_h2)]
 
-        logging.debug(f"Antigen to serovar dataframe filtered {spp} {sg} {h1} {h2}:\n{df_prediction}\n")
+        logging.debug(f"Antigen to serovar dataframe filtered spp={spp} sg={sg} h1={h1} h2{h2}\n Total of {df_prediction.shape[0]} serovar hits:\n{df_prediction}\n")
         logging.debug('Rough antigenic serovar(s) prediction for subspecies %s sg=%s:h1=%s:h2=%s is %s serovar(s)', spp, sg, h1, h2, list(df_prediction['Serovar']))
         if df_prediction.shape[0] > 0:
             return '|'.join(list(df_prediction['Serovar']))

@@ -91,6 +91,10 @@ Removed the following entries
 9. Chichiri,"6,14,24","z4,z24",-,,H,TRUE,enterica
 10. II 4:a:z39,"1,4,12,[27]",a,z39,,B,FALSE,salamae
 
+### New fields 
+- Added `antigenic_formula` field that aggregates the O, H1 and H2 antigen values in a single location for convenience
+- Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. This could be useful for cases when only a certain list of serovars could be reported
+
 # 1.1.1
 
 * Fixed issue with sorting of BLAST results (causing cgMLST types to be different between BLAST versions). Pull request #43.

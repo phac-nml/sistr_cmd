@@ -138,7 +138,7 @@ These are the external dependencies required for ``sistr_cmd``:
 - Python (>= v2.7 OR >= v3.4)
 - BLAST+ (>= v2.2.30)
 - MAFFT (>=v7.271 (2016/1/6))
-- `Mash v1.0+ <https://github.com/marbl/Mash/releases>`_ [optional]
+- `Mash v2.0+ <https://github.com/marbl/Mash/releases>`_ [optional]
 
 Python Dependencies
 -------------------
@@ -219,6 +219,11 @@ If you run ``sistr -h``, you should see the following usage info:
 	                        serovar prediction results.
 	  -t THREADS, --threads THREADS
 	                        Number of parallel threads to run sistr_cmd analysis.
+	  -l LIST_OF_SEROVARS, --list-of-serovars LIST_OF_SEROVARS
+                        	A path to a single column text file containing list of
+                        	serovar(s) to check serovar prediction against. Report
+                        	predicted serovar is Y (present) and N (absent) in the
+                        	list
 	  -v, --verbose         Logging verbosity level (-v == show warnings; -vvv ==
 	                        show debug info)
 	  -V, --version         show program's version number and exit
