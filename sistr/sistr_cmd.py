@@ -186,11 +186,6 @@ def infer_o_antigen(prediction):
         else:
             counter_o_antigens = Counter(series_o_antigens)
             most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
-            # for O24 and O25 antigens need to remove those antigens as we do not any wet-lab testing
-            if any([True if antigen in most_common_o_antigen else False for antigen in ['24','25'] ]):
-                logging.info(f"Cleaning, simplifying O antigen as 24 or 25 antigen found ...")
-                for pattern in [r",\[24\]", r",\[25\]", r",24", r",25",r"\[1\],",r"1,"]:
-                    most_common_o_antigen = re.sub(pattern,'',most_common_o_antigen)
             logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
             prediction.o_antigen = most_common_o_antigen
     prediction.antigenic_formula=f"{prediction.o_antigen}:{prediction.h1}:{prediction.h2}"    
