@@ -231,8 +231,7 @@ def setup_sistr_dbs():
     logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
     download_to_file(SISTR_DB_URL, tmp_file)
     if os.path.isdir(resource_filename('sistr', 'data/')):
-        shutil.rmtree(resource_filename('sistr', 'data/'))
-        os.mkdir(resource_filename('sistr', 'data/'))
+        os.makedirs(resource_filename('sistr', 'data/'),exist_ok=True)
     if (not os.path.isfile(tmp_file)):
         logging.error('Downloading databases failed, please check your internet connection and retry')
         sys.exit(-1)
