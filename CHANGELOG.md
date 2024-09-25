@@ -91,21 +91,24 @@ Removed the following entries
 9. Chichiri,"6,14,24","z4,z24",-,,H,TRUE,enterica
 10. II 4:a:z39,"1,4,12,[27]",a,z39,,B,FALSE,salamae
 
-Modified the following entries
-1. Sundsvall,"[1],6,14,[25]",z,"e,n,x",,H,FALSE,enterica --> Sundsvall,"6,14",z,"e,n,x",,H,FALSE,enterica 
-2. Finkenwerder,"[1],6,14,[25]",d,"1,5",,H,FALSE,enterica --> Finkenwerder,"6,14",d,"1,5",,H,FALSE,enterica
-3. Florida,"[1],6,14,[25]",d,"1,7",,H,FALSE,enterica --> Florida,"6,14",d,"1,7",,H,FALSE,enterica
-4. Charity,"[1],6,14,[25]",d,"e,n,x",,H,FALSE,enterica --> Charity,"6,14",d,"e,n,x",,H,FALSE,enterica
-5. Onderstepoort,"1,6,14,[25]","e,h","1,5",,H,FALSE,enterica --> Onderstepoort,"6,14","e,h","1,5",,H,FALSE,enterica
-6. Schalkwijk,"6,14,[24]",i,"e,n,z15",,H,FALSE,enterica --> Schalkwijk,"6,14",i,"e,n,z15",,H,FALSE,enterica
-7. Boecker,"[1],6,14,[25]","l,v","1,7",,H,FALSE,enterica --> Boecker,"6,14","l,v","1,7",,H,FALSE,enterica
-8. Carrau,"6,14,[24]",y,"1,7",,H,FALSE,enterica --> Carrau,"6,14",y,"1,7",,H,FALSE,enterica
-9. Uzaramo,"1,6,14,25","z4,z24",-,,H,TRUE,enterica --> Uzaramo,"6,14","z4,z24",-,,H,TRUE,enterica
-10. Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,FALSE,enterica --> Poano,"6,14",z,"l,z13,z28",,H,FALSE,enterica
+The following entries were modified in the in the `O_antigen` field as such
+
+| Before | After |
+|--------|-------|
+|Sundsvall,"[1],6,14,[25]",z,"e,n,x",,H,FALSE,enterica|  Sundsvall,"6,14",z,"e,n,x",,H,FALSE,enterica |
+|Finkenwerder,"[1],6,14,[25]",d,"1,5",,H,FALSE,enterica | Finkenwerder,"6,14",d,"1,5",,H,FALSE,enterica |
+|Florida,"[1],6,14,[25]",d,"1,7",,H,FALSE,enterica | Florida,"6,14",d,"1,7",,H,FALSE,enterica |
+| Charity,"[1],6,14,[25]",d,"e,n,x",,H,FALSE,enterica | Charity,"6,14",d,"e,n,x",,H,FALSE,enterica |
+| Onderstepoort,"1,6,14,[25]","e,h","1,5",,H,FALSE,enterica | Onderstepoort,"6,14","e,h","1,5",,H,FALSE,enterica |
+| Schalkwijk,"6,14,[24]",i,"e,n,z15",,H,FALSE,enterica | Schalkwijk,"6,14",i,"e,n,z15",,H,FALSE,enterica |
+| Boecker,"[1],6,14,[25]","l,v","1,7",,H,FALSE,enterica |Boecker,"6,14","l,v","1,7",,H,FALSE,enterica |
+| Carrau,"6,14,[24]",y,"1,7",,H,FALSE,enterica | Carrau,"6,14",y,"1,7",,H,FALSE,enterica |
+| Uzaramo,"1,6,14,25","z4,z24",-,,H,TRUE,enterica | Uzaramo,"6,14","z4,z24",-,,H,TRUE,enterica |
+| Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,FALSE,enterica |  Poano,"6,14",z,"l,z13,z28",,H,FALSE,enterica |
 
 ### New fields 
 - Added `antigenic_formula` field that aggregates the O, H1 and H2 antigen values in a single location for convenience
-- Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. This could be useful for cases when only a certain list of serovars could be reported
+- Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. The result will be reportedi in `serovar_in_list` field as `Y` or `N` if there is match or otherwise. This could be useful for cases when only a certain list of serovars could be reported
 
 # 1.1.1
 
