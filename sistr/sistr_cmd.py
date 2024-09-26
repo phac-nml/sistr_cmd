@@ -95,7 +95,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         help='Number of parallel threads to run sistr_cmd analysis.')
     parser.add_argument('-l', '--list-of-serovars', nargs='?',
                         required=False, const=os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/serovar-list.txt"),
-                        help='A path to a single column text file containing list of serovar(s) to check serovar prediction against. Report predicted serovar in "serovar_in_list" field as  Y (present) and N (absent) in the list. The default list will be used if not file specified.')
+                        help='A path to a single column text file containing list of serovar(s) to check serovar prediction against. Report predicted serovar in "serovar_in_serovar_list" field as  Y (present) and N (absent) in the list. The default list will be used if not file specified.')
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
@@ -297,10 +297,10 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         infer_o_antigen(prediction)
         # if list of reportable serovars is provided to check prediction serovar against
         if serovars_selected_list:
-            prediction.serovar_in_list = "N"
+            prediction.serovar_in_serovar_list = "N"
             for selected_serovar in serovars_selected_list:
                 if selected_serovar == prediction.serovar:
-                    prediction.serovar_in_list = "Y"
+                    prediction.serovar_in_serovar_list = "Y"
                     break
 
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
@@ -394,7 +394,9 @@ def main():
     parser = init_parser()
     args = parser.parse_args()
     init_console_logger(args.verbose)
-    logging.info('Running sistr_cmd {}'.format(__version__))
+    logging.critical('Running sistr_cmd v{} at logging level {} ({}) on'.format(__version__, args.verbose, 
+                                                                                   logging.getLevelName(logging.getLogger().level)))
+    logging.debug(f"Running on command-line arguments {args}")
     if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
         setup_sistr_dbs()
     input_fastas = args.fastas
@@ -446,8 +448,8 @@ def main():
 
     if output_path:
         from sistr.src.writers import write
-        logging.info('Writing results with %s verbosity',
-                     args.more_results)
+        logging.info('Writing results with %s verbosity level (%s)',
+                     args.more_results, logging.getLevelName(logging.getLogger().level))
         write(output_path, output_format, prediction_outputs, more_results=args.more_results)
     else:
         import json
