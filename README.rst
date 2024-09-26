@@ -165,18 +165,18 @@ If you run ``sistr -h``, you should see the following usage info:
 .. code-block:: none
 
 	usage: sistr_cmd [-h] [-i fasta_path genome_name] [-f OUTPUT_FORMAT]
-                 [-o OUTPUT_PREDICTION] [-M] [-p CGMLST_PROFILES]
-                 [-n NOVEL_ALLELES] [-a ALLELES_OUTPUT] [-T TMP_DIR] [-K]
-                 [--use-full-cgmlst-db] [--no-cgmlst] [-m] [--qc] [-t THREADS]
-                 [-l [LIST_OF_SEROVARS]] [-v] [-V]
-                 [F [F ...]]
+	                 [-o OUTPUT_PREDICTION] [-p CGMLST_PROFILES]
+	                 [-n NOVEL_ALLELES] [-a ALLELES_OUTPUT] [-T TMP_DIR] [-K]
+	                 [--use-full-cgmlst-db] [--no-cgmlst] [-m] [--qc] [-t THREADS]
+	                 [-v] [-V]
+	                 [F [F ...]]
 
 	SISTR (Salmonella In Silico Typing Resource) Command-line Tool
 	==============================================================
 	Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene alleles using BLAST.
 
 	Note about using the "--use-full-cgmlst-db" flag:
-    The "centroid" allele database is ~10% the size of the full set so analysis is much quicker with the "centroid" vs "full" set of alleles. Results between 2 cgMLST allele sets should not differ.
+	The "centroid" allele database is ~10% the size of the full set so analysis is much quicker with the "centroid" vs "full" set of alleles. Results between 2 cgMLST allele sets should not differ.
 
 	If you find this program useful in your research, please cite as:
 
@@ -185,52 +185,49 @@ If you run ``sistr -h``, you should see the following usage info:
 	PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
 
 	positional arguments:
-	F                     Input genome FASTA file
+	  F                     Input genome FASTA file
 
 	optional arguments:
-	-h, --help            show this help message and exit
-	-i fasta_path genome_name, --input-fasta-genome-name fasta_path genome_name
-							fasta file path to genome name pair
-	-f OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
-							Output format (json, csv, tab, pickle)
-	-o OUTPUT_PREDICTION, --output-prediction OUTPUT_PREDICTION
-							SISTR serovar prediction output path
-	-M, --more-results    Output more detailed results (-M) and all antigen
-							search blastn results (-MM)
-	-p CGMLST_PROFILES, --cgmlst-profiles CGMLST_PROFILES
-							Output CSV file destination for cgMLST allelic
-							profiles
-	-n NOVEL_ALLELES, --novel-alleles NOVEL_ALLELES
-							Output FASTA file destination of novel cgMLST alleles
-							from input genomes
-	-a ALLELES_OUTPUT, --alleles-output ALLELES_OUTPUT
-							Output path of allele sequences and info to JSON
-	-T TMP_DIR, --tmp-dir TMP_DIR
-							Base temporary working directory for intermediate
-							analysis files.
-	-K, --keep-tmp        Keep temporary analysis files.
-	--use-full-cgmlst-db  Use the full set of cgMLST alleles which can include
-							highly similar alleles. By default the smaller
-							"centroid" alleles or representative alleles are used
-							for each marker.
-	--no-cgmlst           Do not run cgMLST serovar prediction
-	-m, --run-mash        Determine Mash MinHash genomic distances to Salmonella
-							genomes with trusted serovar designations. Mash binary
-							must be in accessible via $PATH (e.g. /usr/bin).
-	--qc                  Perform basic QC to provide level of confidence in
-							serovar prediction results.
-	-t THREADS, --threads THREADS
-							Number of parallel threads to run sistr_cmd analysis.
-	-l [LIST_OF_SEROVARS], --list-of-serovars [LIST_OF_SEROVARS]
-							A path to a single column text file containing list of
-							serovar(s) to check serovar prediction against. Report
-							predicted serovar in "serovar_in_serovar_list" field
-							as Y (present) and N (absent) in the list. The default
-							list will be used if not file specified.
-	-v, --verbose         Logging verbosity level (-v == show warnings; -vvv ==
-							show debug info)
-	-V, --version         show program's version number and exit
-	
+	  -h, --help            show this help message and exit
+	  -i fasta_path genome_name, --input-fasta-genome-name fasta_path genome_name
+	                        fasta file path to genome name pair
+	  -f OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
+	                        Output format (json, csv, pickle)
+	  -o OUTPUT_PREDICTION, --output-prediction OUTPUT_PREDICTION
+	                        SISTR serovar prediction output path
+	  -p CGMLST_PROFILES, --cgmlst-profiles CGMLST_PROFILES
+	                        Output CSV file destination for cgMLST allelic
+	                        profiles
+	  -n NOVEL_ALLELES, --novel-alleles NOVEL_ALLELES
+	                        Output FASTA file destination of novel cgMLST alleles
+	                        from input genomes
+	  -a ALLELES_OUTPUT, --alleles-output ALLELES_OUTPUT
+	                        Output path of allele sequences and info to JSON
+	  -T TMP_DIR, --tmp-dir TMP_DIR
+	                        Base temporary working directory for intermediate
+	                        analysis files.
+	  -K, --keep-tmp        Keep temporary analysis files.
+	  --use-full-cgmlst-db  Use the full set of cgMLST alleles which can include
+	                        highly similar alleles. By default the smaller
+	                        "centroid" alleles or representative alleles are used
+	                        for each marker.
+	  --no-cgmlst           Do not run cgMLST serovar prediction
+	  -m, --run-mash        Determine Mash MinHash genomic distances to Salmonella
+	                        genomes with trusted serovar designations. Mash binary
+	                        must be in accessible via $PATH (e.g. /usr/bin).
+	  --qc                  Perform basic QC to provide level of confidence in
+	                        serovar prediction results.
+	  -t THREADS, --threads THREADS
+	                        Number of parallel threads to run sistr_cmd analysis.
+	  -l LIST_OF_SEROVARS, --list-of-serovars LIST_OF_SEROVARS
+                        	A path to a single column text file containing list of
+                        	serovar(s) to check serovar prediction against. Report
+                        	predicted serovar is Y (present) and N (absent) in the
+                        	list
+	  -v, --verbose         Logging verbosity level (-v == show warnings; -vvv ==
+	                        show debug info)
+	  -V, --version         show program's version number and exit
+
 
 Example Usage
 -------------
