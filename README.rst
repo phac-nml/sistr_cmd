@@ -293,35 +293,10 @@ Summary of output options:
 
 Primary results output (``-o sistr-results``)
 ---------------------------------------------
-SISTR supports various output formats specified by the ``-f`` with ``json`` being the default.
+SISTR supports various text output formats specified by the ``-f`` option with ``json`` being the default.
 
-Tab-delimited results output (``-f tab``):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: tab
-	
-	cgmlst_ST	cgmlst_distance	cgmlst_genome_match	cgmlst_matching_alleles	cgmlst_subspecies	fasta_filepath	genome	h1	h2	o_antigen	qc_messages	qc_status	serogroup	serovar	serovar_antigen	serovar_cgmlst
-	660408169	0.00909090909091	LT2	327	enterica	/home/peter/Downloads/sistr-LT2-example/LT2.fasta	LT2	i	1,2	1,4,[5],12		PASS	B	Typhimurium	Typhimurium	Typhimurium
-
-CSV results output (``-f csv``):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Raw ``csv`` output results opened in a text editor
-
-.. code-block:: csv
-
-	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
-	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
-
-The same ``csv`` results rendered as a table
-
-.. csv-table:: 
-
-	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
-	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
-
-
-JSON results output:
-~~~~~~~~~~~~~~~~~~~~
+JSON results output (``-f json``):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: json
 
 	[
@@ -344,6 +319,32 @@ JSON results output:
 	    "cgmlst_subspecies": "enterica"
 	  }
 	]
+
+
+Tab-delimited results output (``-f tab``):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: text
+	
+	cgmlst_ST	cgmlst_distance	cgmlst_genome_match	cgmlst_matching_alleles	cgmlst_subspecies	fasta_filepath	genome	h1	h2	o_antigen	qc_messages	qc_status	serogroup	serovar	serovar_antigen	serovar_cgmlst
+	660408169	0.00909090909091	LT2	327	enterica	/home/peter/Downloads/sistr-LT2-example/LT2.fasta	LT2	i	1,2	1,4,[5],12		PASS	B	Typhimurium	Typhimurium	Typhimurium
+
+CSV results output (``-f csv``):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Raw ``csv`` output results opened in a text editor
+
+.. code-block:: csv
+
+	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
+	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
+
+The same ``csv`` results rendered as a table
+
+.. csv-table:: 
+
+	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
+	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
+
 
 cgMLST allele search results
 -------------------------------------
