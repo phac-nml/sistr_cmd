@@ -124,7 +124,7 @@ SISTR can be publically accessed as a web application via:
 Database
 =========
 SISTR will automatically initialize database of *Salmonella* serovar determination antigens, cgMLST profiles and MASH sketch of reference genomes by downloading it from a remote location. 
-The SISTR database v1.3 got minor updates by collapsing some of the serovars with O24/O25 antigens detailed in ``CHANGELOG.md`` file
+The SISTR database v1.3 got minor updates by collapsing some of the serovars with O24/O25 antigens detailed in `CHANGELOG.md <CHANGELOG.md>`_ file
 
 - SISTR v1.1 database is available at https://zenodo.org/records/13618515 or via a direct url https://zenodo.org/records/13618515/files/SISTR_V_1.1_db.tar.gz?download=1  (used with SISTR < 1.1.3 )
 - SISTR v1.3 database is available at https://zenodo.org/records/13693495 or va a direct url https://zenodo.org/records/13693495/files/SISTR_V_1.1.3_db.tar.gz?download=1 (used with SISTR >= 1.1.3)
@@ -526,10 +526,10 @@ The QC messages produced by ``sistr_cmd`` should help you understand your serova
 
 Galaxy workflows
 ================
-The `galaxy <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy>`_ folder contains Galaxy SISTR workflows that can be readily imported into existing Galaxy server instance and allow to process WGS samples in large batches starting from raw reads and finishing with serovar results.
+The `galaxy <./galaxy/>`_ folder contains Galaxy SISTR workflows that can be readily imported into existing Galaxy server instance and allow to process WGS samples in large batches starting from raw reads and finishing with serovar results.
 
 
-- `Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy/Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga>`_
+- `Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga <./galaxy/Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga>`_
 	+ Summary: Assembles genomes from raw reads, performs serotyping and generates overall report
 	+ Uses tool dependencies: ``sistr 1.1.1+galaxy1``, ``shovill 1.0.4+galaxy1`` and ``tp_cat 0.1.0``
 
