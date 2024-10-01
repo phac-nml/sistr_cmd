@@ -306,12 +306,14 @@ Tab-delimited results output (``-f tab``):
 CSV results output (``-f csv``):
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Raw ``csv`` output results opened in a text editor
+
 .. code-block:: csv
 
 	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
 	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
 
 The same ``csv`` results rendered as a table
+
 .. csv-table:: 
 
 	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
@@ -437,7 +439,7 @@ Example:
 
 Here's some truncated example allele search results output in JSON format for ``LT2`` sample:
 
-.. code-block:: json
+.. code-block:: text
 
 	{
 	  "LT2": {
@@ -523,7 +525,7 @@ The QC messages produced by ``sistr_cmd`` should help you understand your serova
 
 Galaxy workflows
 ================
-The `galaxy <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy>`_ folder contains Galaxy Project SISTR workflows that allow to process samples in large batches.
+The `galaxy <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy>`_ folder contains Galaxy SISTR workflows that can be readily imported into existing Galaxy server instance and allow to process WGS samples in large batches starting from raw reads and finishing with serovar results.
 
 
 - `Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga <https://github.com/phac-nml/sistr_cmd/tree/master/galaxy/Galaxy-Workflow-Assembly-Serotyping-withReport-for-SISTR_v1.1.1+galaxy1-recipe.ga>`_
