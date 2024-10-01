@@ -24,7 +24,7 @@
 	`Latest stable version <https://github.com/phac-nml/sistr_cmd/releases/latest>`_
 
 
-*Don't want to use a command-line app?* Try the `SISTR web app <https://github.com/phac-nml/sistr_cmd#web-application>`_ deployed on Galaxy and Render.com platforms
+*Don't want to use a command-line app?* Try SISTR with interface deployed on Galaxy and Render.com online platforms (see the `Web application`_ section)  
 
 
 Citation
@@ -116,18 +116,18 @@ SISTR can be publically accessed as a web application via:
 - Galaxy EU instance at https://usegalaxy.eu/root?tool_id=sistr_cmd |galaxy|
 - Render.com Cloud Hosting Platform-as-a-Service (PaaS) hosts a **DEMO** SISTR web application https://sistr-app.onrender.com/ |render|
 
-**NOTE:** The SISTR web application hosted on Render.com might take up to 20 seconds to load on the first run and will shutdown after 15 min of inactivity
+**NOTE 1:** The SISTR web application hosted on Render.com might take up to 20 seconds to load on the first run and will shutdown after 15 min of inactivity
 
-SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
+**NOTE 2:** SISTR web application source code is available at https://github.com/phac-nml/sistr-web-app allowing easy web interface deployment on any infrastructure types (on-premises, cloud/remote). 
 
 
 Database
 =========
 SISTR will automatically initialize database of *Salmonella* serovar determination antigens, cgMLST profiles and MASH sketch of reference genomes by downloading it from a remote location. 
-The SISTR database v1.3 got minor updates by collapsing some of the serovars detailed in ``CHANGELOG.md`` file
+The SISTR database v1.3 got minor updates by collapsing some of the serovars with O24/O25 antigens detailed in ``CHANGELOG.md`` file
 
-- SISTR v1.1 database is available at https://zenodo.org/records/13618515 or via a direct url https://zenodo.org/records/13618515/files/SISTR_V_1.1_db.tar.gz?download=1
-- SISTR v1.3 database is available at https://zenodo.org/records/13693495 or va a direct url https://zenodo.org/records/13693495/files/SISTR_V_1.1.3_db.tar.gz?download=1
+- SISTR v1.1 database is available at https://zenodo.org/records/13618515 or via a direct url https://zenodo.org/records/13618515/files/SISTR_V_1.1_db.tar.gz?download=1  (used with SISTR < 1.1.3 )
+- SISTR v1.3 database is available at https://zenodo.org/records/13693495 or va a direct url https://zenodo.org/records/13693495/files/SISTR_V_1.1.3_db.tar.gz?download=1 (used with SISTR >= 1.1.3)
 
 
 Dependencies
@@ -292,9 +292,11 @@ Summary of output options:
 
 
 Primary results output (``-o sistr-results``)
-------------------------------------------
+---------------------------------------------
+SISTR supports various output formats specified by the ``-f`` with ``json`` being the default.
 
 Tab-delimited results output (``-f tab``):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: tab
 	
@@ -302,14 +304,14 @@ Tab-delimited results output (``-f tab``):
 	660408169	0.00909090909091	LT2	327	enterica	/home/peter/Downloads/sistr-LT2-example/LT2.fasta	LT2	i	1,2	1,4,[5],12		PASS	B	Typhimurium	Typhimurium	Typhimurium
 
 CSV results output (``-f csv``):
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Raw ``csv`` output results opened in a text editor
 .. code-block:: csv
 
 	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
 	660408169,0.00909090909091,LT2,327,enterica,/home/peter/Downloads/sistr-LT2-example/LT2.fasta,LT2,i,"1,2","1,4,[5],12",,PASS,B,Typhimurium,Typhimurium,Typhimurium
 
-How the results should look in a table:
-
+The same ``csv`` results rendered as a table
 .. csv-table:: 
 
 	cgmlst_ST,cgmlst_distance,cgmlst_genome_match,cgmlst_matching_alleles,cgmlst_subspecies,fasta_filepath,genome,h1,h2,o_antigen,qc_messages,qc_status,serogroup,serovar,serovar_antigen,serovar_cgmlst
@@ -317,7 +319,7 @@ How the results should look in a table:
 
 
 JSON results output:
-
+~~~~~~~~~~~~~~~~~~~~
 .. code-block:: json
 
 	[
@@ -350,7 +352,7 @@ These results may be useful for understanding unexpected or low confidence serov
 Schema:
 ~~~~~~~
 
-.. code-block:: json
+.. code-block:: text
 	
 	{
 		<genome name>: {
@@ -427,12 +429,13 @@ Schema:
 				"seq": string
 			}
 			
-		}}
+		}
+	}
 
 Example:
 ~~~~~~~~
 
-Here's some truncated example allele search results output:
+Here's some truncated example allele search results output in JSON format for ``LT2`` sample:
 
 .. code-block:: json
 
@@ -485,7 +488,7 @@ cgMLST allelic profiles output (``--cgmlst-profiles cgmlst-profiles.csv``)
 --------------------------------------------------------------------------
 
 With the ``-p``/``--cgmlst-profiles`` commandline argument, you can output the 330 loci cgMLST allelic profiles for your input genomes (i.e. the allele designation for each cgMLST locus for each input genome). 
-You can use this information to construct phylogenetic trees from this data using a tool such as `Phyloviz Online <https://online.phyloviz.net/index>`_. 
+You can use this information to construct phylogenetic trees from this data using a tool such as `Phyloviz Online <https://online.phyloviz.net/index>`_ by uploading cgMLST profiles data. 
 This type of analysis may be useful to explore why unexpected serovar prediction results were generated (e.g. your genomes are genetically very different from each other). 
 
 Example truncated cgMLST profiles output:
@@ -498,13 +501,13 @@ Example truncated cgMLST profiles output:
 
 
 QC by ``sistr_cmd`` (``--qc``)
--------------------
+------------------------------
 
 If you are running ``sistr_cmd`` with the ``--qc`` commandline argument, ``sistr_cmd`` will run some basic QC to determine the level of confidence in the serovar prediction. 
 
 The ``qc_status`` field should contain a value of ``PASS`` if your genome passes all QC checks, otherwise, it will be ``WARNING`` or ``FAIL`` if there are issues with your results and/or input genome sequence.
 
-The ``qc_messages`` field will contain useful information about why you may have a low confidence serovar prediction result. The QC messages will be delimited by `` | ``.
+The ``qc_messages`` field will contain useful information about why you may have a low confidence serovar prediction result. The QC messages will be delimited by `` | `` symbol.
 
 For example, here are the QC messages for an unusually small *Salmonella* assembly where the predicted serovar was "-:-:-":
 

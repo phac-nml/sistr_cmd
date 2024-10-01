@@ -106,8 +106,10 @@ The following entries were modified in the in the `O_antigen` field as such
 | Uzaramo,"1,6,14,25","z4,z24",-,,H,TRUE,enterica | Uzaramo,"6,14","z4,z24",-,,H,TRUE,enterica |
 | Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,FALSE,enterica |  Poano,"6,14",z,"l,z13,z28",,H,FALSE,enterica |
 
-### New fields 
+### New output field
 - Added `antigenic_formula` field that aggregates the O, H1 and H2 antigen values in a single location for convenience
+
+### New argument
 - Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. The result will be reportedi in `serovar_in_list` field as `Y` or `N` if there is match or otherwise. This could be useful for cases when only a certain list of serovars could be reported
 
 # 1.1.1
