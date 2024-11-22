@@ -255,7 +255,7 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         if os.path.exists(args.list_of_serovars):
             with open(args.list_of_serovars) as fp:
                 serovars_selected_list = [l.rstrip() for l in fp.readlines()]
-            logging.info(f"Selected list of serovars at {args.list_of_serovars} with {len(serovars_selected_list)} serovars to check SISTR serovar prediction against reported in 'serovar_in_serovar_list' field")
+            logging.info(f"Selected list of serovars at {args.list_of_serovars} with {len(serovars_selected_list)} serovars to check SISTR serovar prediction against. Result reported in the 'serovar_in_serovar_list' field")
         else:
             logging.warning(f"File {args.list_of_serovars} does not exist in path specified. Would not perform SISTR serovar check against the list of serovars ...")      
     
