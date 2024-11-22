@@ -95,7 +95,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         help='Number of parallel threads to run sistr_cmd analysis.')
     parser.add_argument('-l', '--list-of-serovars', nargs='?',
                         required=False, const=os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/serovar-list.txt"),
-                        help='A path to a single column text file containing list of serovar(s) to check serovar prediction against. Report predicted serovar in "serovar_in_serovar_list" field as  Y (present) and N (absent) in the list. The default list will be used if not file specified.')
+                        help='A path to a single column text file containing list of serovar(s) to check SISTR serovar prediction against. Report predicted serovar in "serovar_in_serovar_list" field as Y (present) or N (absent).')
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
@@ -255,9 +255,9 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         if os.path.exists(args.list_of_serovars):
             with open(args.list_of_serovars) as fp:
                 serovars_selected_list = [l.rstrip() for l in fp.readlines()]
-            logging.info(f"Selected serovars list to check predictions against from {args.list_of_serovars} containing {len(serovars_selected_list)} serovars")
+            logging.info(f"Selected list of serovars at {args.list_of_serovars} with {len(serovars_selected_list)} serovars to check SISTR serovar prediction against reported in 'serovar_in_serovar_list' field")
         else:
-            logging.warning(f"File {args.list_of_serovars} does not exist in path specified. Would not check against list of provided serovars ...")      
+            logging.warning(f"File {args.list_of_serovars} does not exist in path specified. Would not perform SISTR serovar check against the list of serovars ...")      
     
     try:
         assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
