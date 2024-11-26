@@ -12,7 +12,7 @@ def test_serotyping(fasta_path):
     assert  sistr_json_results['antigenic_formula'] == "58:l,z13,z28:z6"
     assert  sistr_json_results['cgmlst_matching_alleles'] == 330
     assert  sistr_json_results['cgmlst_found_loci'] == 330
-    assert  sistr_json_results['serovar_in_serovar_list'] == "Y"
+    assert  sistr_json_results['predicted_serovar_in_list'] == "Y"
     assert  sistr_json_results['serovar'] == "II 58:l,z13,z28:z6"
 
 def test_noserovarlist_file(fasta_path):
@@ -20,4 +20,4 @@ def test_noserovarlist_file(fasta_path):
     main() 
     with open("sistr_test_results.json") as fp:
         sistr_json_results = json.load(fp)[0]
-    assert 'serovar_in_serovar_list' not in sistr_json_results.keys()       
+    assert 'predicted_serovar_in_list' not in sistr_json_results.keys()       
