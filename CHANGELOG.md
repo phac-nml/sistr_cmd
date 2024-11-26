@@ -1,20 +1,24 @@
 # 1.1.3
-Serovar nomenclature update after USA Cantaloupe Outbreaks in Novermber 2023. The O24 and O25 antigens would not be wet-lab typed causing the collapse of certain serovars detailed below. The selected serovar is the one that will be reported by SISTR and the other serovar in the pair will be dropped and no O24 or O25 will be reported in the antigenic formula
 
-|Serovar pair            | Serovar selected |
-|------------------------|------------------|
+Serovar nomenclature update after USA Cantaloupe Outbreaks in November 2023. The O24 and O25 antigens would not be wet-lab typed reliably causing the collapse of certain serovar pairs detailed below (Table 1). The selected serovar in the pair is the one that will be reported by SISTR and the other serovar in the pair will be dropped. No O24 or O25 will be reported in the antigenic formula (Table 2). 
+
+<h3>Table 1 - serovar pairs that were collapsed</h3>
+
+|Serovar pair            | Serovar selected in v1.1.3 |
+|------------------------|----------------------------|
 |Soahanina - Sundsvall   |  Sundsvall       |
 |Martonos - Finkenwerder | Finkenwerder   |
 |Midway - Florida      |   Florida        |
 |Lindern - Charity     |   Charity        |
 |Bahrenfeld - Onderstepoort | Onderstepoort |
-| Schalkwijk - Moussoro  |   Schalkwijk |
+|Schalkwijk - Moussoro  |   Schalkwijk |
 |Amberg - Boecker       | Boecker      |
 | Carrau - Madelia      | Carrau     |
 | Chichiri - Uzaramo   | Uzaramo     |
 | Poano -  Stafford    | Poano       |
+: Titre du tableau
 
-### Changes of serovar assignments in `sistr/data/genomes-to-serovar.txt`
+### Changes of serovar assignments in `sistr/data/genomes-to-serovar.txt` file
 
 |genome accession | serovar previous | serovar current |
 |-----------------|------------------|-----------------|
@@ -93,24 +97,31 @@ Removed the following entries
 
 The following entries were modified in the in the `O_antigen` field as such
 
-| Before | After |
-|--------|-------|
-|Sundsvall,"[1],6,14,[25]",z,"e,n,x",,H,FALSE,enterica|  Sundsvall,"6,14",z,"e,n,x",,H,FALSE,enterica |
-|Finkenwerder,"[1],6,14,[25]",d,"1,5",,H,FALSE,enterica | Finkenwerder,"6,14",d,"1,5",,H,FALSE,enterica |
-|Florida,"[1],6,14,[25]",d,"1,7",,H,FALSE,enterica | Florida,"6,14",d,"1,7",,H,FALSE,enterica |
-| Charity,"[1],6,14,[25]",d,"e,n,x",,H,FALSE,enterica | Charity,"6,14",d,"e,n,x",,H,FALSE,enterica |
-| Onderstepoort,"1,6,14,[25]","e,h","1,5",,H,FALSE,enterica | Onderstepoort,"6,14","e,h","1,5",,H,FALSE,enterica |
-| Schalkwijk,"6,14,[24]",i,"e,n,z15",,H,FALSE,enterica | Schalkwijk,"6,14",i,"e,n,z15",,H,FALSE,enterica |
-| Boecker,"[1],6,14,[25]","l,v","1,7",,H,FALSE,enterica |Boecker,"6,14","l,v","1,7",,H,FALSE,enterica |
-| Carrau,"6,14,[24]",y,"1,7",,H,FALSE,enterica | Carrau,"6,14",y,"1,7",,H,FALSE,enterica |
-| Uzaramo,"1,6,14,25","z4,z24",-,,H,TRUE,enterica | Uzaramo,"6,14","z4,z24",-,,H,TRUE,enterica |
-| Poano,"[1],6,14,[25]",z,"l,z13,z28",,H,FALSE,enterica |  Poano,"6,14",z,"l,z13,z28",,H,FALSE,enterica |
+<h3>Table 2 - updated antigenic formulas for the O24-25 serovars</h3>
 
-### New output field
+| Before | After (SISTR v1.1.3)|
+|--------|-------|
+|Sundsvall,"[1],6,14,[<b>25</b>]",z,"e,n,x",,H,FALSE,enterica|  Sundsvall,"6,14",z,"e,n,x",,H,FALSE,enterica |
+|Finkenwerder,"[1],6,14,[<b>25</b>]",d,"1,5",,H,FALSE,enterica | Finkenwerder,"6,14",d,"1,5",,H,FALSE,enterica |
+|Florida,"[1],6,14,[<b>25</b>]",d,"1,7",,H,FALSE,enterica | Florida,"6,14",d,"1,7",,H,FALSE,enterica |
+| Charity,"[1],6,14,[<b>25</b>]",d,"e,n,x",,H,FALSE,enterica | Charity,"6,14",d,"e,n,x",,H,FALSE,enterica |
+| Onderstepoort,"1,6,14,[<b>25</b>]","e,h","1,5",,H,FALSE,enterica | Onderstepoort,"6,14","e,h","1,5",,H,FALSE,enterica |
+| Schalkwijk,"6,14,[<b>24</b>]",i,"e,n,z15",,H,FALSE,enterica | Schalkwijk,"6,14",i,"e,n,z15",,H,FALSE,enterica |
+| Boecker,"[1],6,14,[<b>25</b>]","l,v","1,7",,H,FALSE,enterica |Boecker,"6,14","l,v","1,7",,H,FALSE,enterica |
+| Carrau,"6,14,[<b>24</b>]",y,"1,7",,H,FALSE,enterica | Carrau,"6,14",y,"1,7",,H,FALSE,enterica |
+| Uzaramo,"1,6,14,<b>25</b>","z4,z24",-,,H,TRUE,enterica | Uzaramo,"6,14","z4,z24",-,,H,TRUE,enterica |
+| Poano,"[1],6,14,[<b>25</b>]",z,"l,z13,z28",,H,FALSE,enterica |  Poano,"6,14",z,"l,z13,z28",,H,FALSE,enterica |
+
+### New output field `antigenic_formula`
 - Added `antigenic_formula` field that aggregates the O, H1 and H2 antigen values in a single location for convenience
 
-### New argument
-- Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. The result will be reportedi in `serovar_in_list` field as `Y` or `N` if there is match or otherwise. This could be useful for cases when only a certain list of serovars could be reported
+### New argument `--list-of-serovars`
+- Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. The result will be reported in `predicted_serovar_in_list` field as `Y` or `N` if there is match or otherwise. This could be useful for cases when only a certain list of serovars could be reported
+
+### New d-tartrate message for `Paratyphi B`, `Paratyphi B var. Java` and`I 1,4,[5],12:i:-` serovars
+- If Paratyphi B and Paratyphi B var. Java serovar is predicted and the `--qc` is selected, the following message will appear in `qc_messages` field `Perform d-tartrate test (dT) to differentiate between Paratyphi B and Paratyphi B var. Java. The dT+ result is indicative of variant Java.`
+- If  monophasic `I 1,4,[5],12:i:-` predicted, then the `qc_messages` field will suggest d-tartrate test via this message
+`Perform d-tartrate test (dT) as both dT+ and dT- I 1,4,[5],12:i:- subtypes exist.`
 
 # 1.1.1
 
