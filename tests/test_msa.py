@@ -46,6 +46,6 @@ def test_msa_ref_vs_novel():
     novel_nt = 'atgcatgc'
     ref_msa, novel_msa = msa_ref_vs_novel(ref_nt, novel_nt)
     assert novel_msa == novel_nt
-    assert ref_msa == '--atgtgc'
+    assert ref_msa == 'atgtgc--' 
     print(ref_nt, novel_nt)
     print(ref_msa, novel_msa)

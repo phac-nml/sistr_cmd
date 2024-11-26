@@ -51,7 +51,7 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
     parser.add_argument('-f',
                         '--output-format',
                         default='json',
-                        help='Output format (json, csv, pickle)')
+                        help='Output format (json, csv, tab, pickle)')
     parser.add_argument('-o',
                         '--output-prediction',
                         help='SISTR serovar prediction output path')
@@ -93,6 +93,9 @@ PLoS ONE 11(1): e0147101. doi: 10.1371/journal.pone.0147101
                         type=int,
                         default=1,
                         help='Number of parallel threads to run sistr_cmd analysis.')
+    parser.add_argument('-l', '--list-of-serovars', nargs='?',
+                        required=False, const=os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/serovar-list.txt"),
+                        help='A path to a single column text file containing list of serovars to check SISTR serovar prediction against. Result reported in the "predicted_serovar_in_list" field as Y (present) or N (absent) value.')
     parser.add_argument('-v',
                         '--verbose',
                         action='count',
@@ -177,11 +180,15 @@ def infer_o_antigen(prediction):
     else:
         predicted_serovars = [prediction.serovar]
         series_o_antigens = df_serovar.O_antigen[df_serovar.Serovar.isin(predicted_serovars)]
+        
         if series_o_antigens.size == 0:
             prediction.o_antigen = '-'
         else:
             counter_o_antigens = Counter(series_o_antigens)
-            prediction.o_antigen = counter_o_antigens.most_common(1)[0][0]
+            most_common_o_antigen = counter_o_antigens.most_common(1)[0][0]
+            logging.info(f"Reporting final O-antigen result {most_common_o_antigen}")        
+            prediction.o_antigen = most_common_o_antigen
+    prediction.antigenic_formula=f"{prediction.o_antigen}:{prediction.h1}:{prediction.h2}"    
 
 def download_to_file(url,file):
     with open(file, 'wb') as f:
@@ -191,8 +198,11 @@ def download_to_file(url,file):
         # Follow redirect.
         c.setopt(c.FOLLOWLOCATION, True)
         c.setopt(c.WRITEDATA, f)
+        c.setopt(pycurl.SSL_VERIFYPEER, 0)
+        c.setopt(pycurl.SSL_VERIFYHOST, 0)
         c.perform()
         c.close()
+        
 
 def extract(fname,outdir):
     if (fname.endswith("tar.gz")):
@@ -221,16 +231,17 @@ def setup_sistr_dbs():
     logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
     download_to_file(SISTR_DB_URL, tmp_file)
     if os.path.isdir(resource_filename('sistr', 'data/')):
-        shutil.rmtree(resource_filename('sistr', 'data/'))
-        os.mkdir(resource_filename('sistr', 'data/'))
+        os.makedirs(resource_filename('sistr', 'data/'),exist_ok=True)
     if (not os.path.isfile(tmp_file)):
         logging.error('Downloading databases failed, please check your internet connection and retry')
         sys.exit(-1)
     else:
-        logging.info('Downloading databases successful')
+        logging.info(f"Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}")
         f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
+        logging.info(f"DB status file written at {f.name} path")
         f.close()
+        
 
     extract(tmp_file, resource_filename('sistr', ''))
     os.remove(tmp_file)
@@ -239,6 +250,15 @@ def setup_sistr_dbs():
 
 def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
     blast_runner = None
+    serovars_selected_list = []
+    if args.list_of_serovars:
+        if os.path.exists(args.list_of_serovars):
+            with open(args.list_of_serovars) as fp:
+                serovars_selected_list = [l.rstrip() for l in fp.readlines()]
+            logging.info(f"Using the selected list of serovars {args.list_of_serovars} with {len(serovars_selected_list)} serovars to check overall SISTR serovar prediction against. Result will be reported in the 'predicted_serovar_in_list' field")
+        else:
+            logging.warning(f"File {args.list_of_serovars} does not exist in path specified. Would not perform SISTR serovar check against the list of serovars ...")      
+    
     try:
         assert os.path.exists(input_fasta), "Input fasta file '%s' must exist!" % input_fasta
         if genome_name is None or genome_name == '':
@@ -268,12 +288,22 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
         prediction = serovar_predictor.get_serovar_prediction()
         prediction.genome = genome_name
         prediction.fasta_filepath = os.path.abspath(input_fasta)
+
         if cgmlst_prediction:
             merge_cgmlst_prediction(prediction, cgmlst_prediction)
         if mash_prediction:
             merge_mash_prediction(prediction, mash_prediction)
         overall_serovar_call(prediction, serovar_predictor)
         infer_o_antigen(prediction)
+        # if list of reportable serovars is provided to check prediction serovar against
+        if serovars_selected_list:
+            prediction.predicted_serovar_in_list = "N"
+            for serovar in serovars_selected_list:
+                if serovar in prediction.serovar: #try to match list serovar to the predicted serovar(s) 
+                    prediction.predicted_serovar_in_list = "Y"
+                    logging.info(f"Found {serovar} serovar from {args.list_of_serovars} in SISTR predicted serovar(s) ({prediction.serovar})")
+                    break
+
         logging.info('%s | Antigen gene BLAST serovar prediction: "%s" serogroup=%s %s:%s:%s',
                      genome_name,
                      prediction.serovar_antigen,
@@ -281,6 +311,8 @@ def sistr_predict(input_fasta, genome_name, tmp_dir, keep_tmp, args):
                      prediction.o_antigen,
                      prediction.h1,
                      prediction.h2)
+        logging.info(f'{genome_name} | cgMLST serovar prediction: {prediction.serovar_cgmlst} assigned by '
+                     f'top matching genome {prediction.cgmlst_genome_match} at {prediction.cgmlst_matching_alleles}/330 matching alleles ratio')
         logging.info('%s | Subspecies prediction: %s',
                      genome_name,
                      spp)
@@ -363,7 +395,9 @@ def main():
     parser = init_parser()
     args = parser.parse_args()
     init_console_logger(args.verbose)
-    logging.info('Running sistr_cmd {}'.format(__version__))
+    logging.critical('Running sistr_cmd v{} at logging level {} ({}) on'.format(__version__, args.verbose, 
+                                                                                   logging.getLevelName(logging.getLogger().level)))
+    logging.debug(f"Running on command-line arguments {args}")
     if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
         setup_sistr_dbs()
     input_fastas = args.fastas
@@ -415,8 +449,8 @@ def main():
 
     if output_path:
         from sistr.src.writers import write
-        logging.info('Writing results with %s verbosity',
-                     args.more_results)
+        logging.info('Writing results with %s verbosity level (%s)',
+                     args.more_results, logging.getLevelName(logging.getLogger().level))
         write(output_path, output_format, prediction_outputs, more_results=args.more_results)
     else:
         import json

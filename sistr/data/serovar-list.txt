@@ -1,0 +1,282 @@
+Abaetetuba
+Aberdeen
+Abony
+Adelaide
+Adjame
+Agama
+Agbeni
+Ago
+Agona
+Alachua
+Albany
+Altona
+Amager
+Amsterdam
+Anatum
+Anderlecht
+Apapa
+Apeyeme
+Arechavaleta
+Augustenborg
+Baildon
+Bangkok
+Bareilly
+Barranquilla
+Beaudesert
+Berta
+Birkenhead
+Blockley
+Bovismorbificans
+Braenderup
+Brancaster
+Brandenburg
+Bredeney
+Butantan
+Buzu
+Canada
+Cannstatt
+Carmel
+Carno
+Carrau
+Cerro
+Charity
+Chester
+Chicago
+Coeln
+Coleypark
+Colindale
+Colobane
+Concord
+Corvallis
+Cotham
+Cubana
+Curacao
+Daytona
+Denver
+Derby
+Dublin
+Durban
+Ealing
+Eastbourne
+Eko
+Elisabethville
+Enteritidis
+Florida
+Fluntern
+Freetown
+Fresno
+Galiema
+Gallinarum
+Gaminara
+Gatuni
+Give
+Goldcoast
+Grumpensis
+Guinea
+Hadar
+Haifa
+Hartford
+Havana
+Heidelberg
+Herston
+Holcomb
+Hvittingfoss
+I 1,4,[5],12:b:-
+I 1,4,[5],12:d:-
+I 1,4,[5],12:i:-
+I 1,4,[5],12:r:-
+Ibadan
+Idikan
+II 42:b:e,n,x,z15
+II 42:r:-
+II 42:z:1,5
+II 47:b:e,n,x,z15
+II 48:d:z6
+II 50:b:z6
+II 58:d:z6
+II 58:l,z13,z28:z6
+IIIa 1,13,23:g,z51:-
+IIIa 18:z4,z23:-
+IIIa 40:z4,z23:-
+IIIa 41:z4,z23:-
+IIIa 44:z4,z23,z32:-
+IIIa 44:z4,z23:-
+IIIa 48:z4,z24:-
+IIIa 56:z4,z23,z32:-
+IIIb 16:z10:e,n,x,z15
+IIIb 38:k:z
+IIIb 38:k:z35
+IIIb 48:l,v:1,5,7
+IIIb 48:z52:z
+IIIb 50:k:z
+IIIb 50:r:z
+IIIb 53:z10:z35
+IIIb 60:r:e,n,x,z15
+IIIb 60:r:z
+IIIb 61:i:z53
+IIIb 61:k:1,5,7
+IIIb 61:k:z35
+IIIb 61:l,v:1,5,7
+IIIb 61:l,v:z35
+IIIb 61:r:z
+IIIb 61:z52:z53
+IIIb 65:k:z
+IIIb 65:k:z53
+IIIb 65:z10:e,n,x,z15
+Indiana
+Infantis
+Inganda
+Inverness
+Irumu
+Isangi
+Ituri
+IV 11:g,z51:-
+IV 16:z4,z32:-
+IV 40:z4,z24:-
+IV 43:z4,z23:-
+IV 44:z36,z38:-
+IV 44:z4,z23:-
+IV 44:z4,z32:-
+IV 45:g,z51:-
+IV 48:g,z51:-
+IV 48:z4,z32:-
+IV 50:g,z51:-
+IV 50:z4,z23:-
+Jangwani
+Javiana
+Johannesburg
+Kambole
+Kandla
+Kedougou
+Kentucky
+Kenya
+Kiambu
+Kimuenza
+Kingston
+Kirkee
+Kisarawe
+Kottbus
+Kumasi
+Lagos
+Lansing
+Larochelle
+Lattenkamp
+Lexington
+Lille
+Limete
+Litchfield
+Liverpool
+Livingstone
+Lomalinda
+Lome
+London
+Louga
+Lubbock
+Luciana
+Luke
+Malstatt
+Manchester
+Manhattan
+Marseille
+Matadi
+Matopeni
+Mbandaka
+Meleagridis
+Mgulani
+Miami
+Michigan
+Mikawasima
+Milwaukee
+Minnesota
+Mishmarhaemek
+Mississippi
+Molade
+Monschaui
+Montevideo
+Mountpleasant
+Muenchen
+Muenster
+Napoli
+Nchanga
+Newlands
+Newport
+Nigeria
+Norwich
+Nottingham
+Obogu
+Offa
+Ohio
+Onderstepoort
+Onireke
+Oranienburg
+Ordonez
+Orientalis
+Orion
+Oslo
+Ouakam
+Overschie
+Panama
+Paratyphi A
+Paratyphi B
+Paratyphi B var. Java
+Pensacola
+Perth
+Plymouth
+Poano
+Pomona
+Poona
+Potsdam
+Putten
+Reading
+Redlands
+Richmond
+Ridge
+Rissen
+Roodepoort
+Rubislaw
+Saintpaul
+Sandiego
+Sanjuan
+Schwarzengrund
+Sendai
+Senegal
+Senftenberg
+Shubra
+Singapore
+Sinstorf
+Soerenga
+Soumbedioune
+Stanley
+Stanleyville
+Stockholm
+Stourbridge
+Suelldorf
+Sundsvall
+Szentes
+Tafo
+Takoradi
+Tallahassee
+Tamberma
+Tanger
+Tarshyne
+Teddington
+Tees
+Telaviv
+Telelkebir
+Tennessee
+Thompson
+Tudu
+Typhi
+Typhimurium
+Uganda
+Umbilo
+Urbana
+Uzaramo
+Virchow
+Vitkin
+Wandsworth
+Wangata
+Weltevreden
+Wien
+Worthington
+Zaiman
