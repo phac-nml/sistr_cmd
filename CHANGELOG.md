@@ -16,7 +16,6 @@ Serovar nomenclature update after USA Cantaloupe Outbreaks in November 2023. The
 | Carrau - Madelia      | Carrau     |
 | Chichiri - Uzaramo   | Uzaramo     |
 | Poano -  Stafford    | Poano       |
-: Titre du tableau
 
 ### Changes of serovar assignments in `sistr/data/genomes-to-serovar.txt` file
 
