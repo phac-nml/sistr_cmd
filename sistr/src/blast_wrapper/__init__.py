@@ -295,8 +295,9 @@ class BlastReader:
         if self.is_missing:
             return None
 
+        blast_candidate_antigens = set([i.split("|")[-1] for i in self.df['qseqid'].to_list()]) #
         df_perfect_matches = self.df[(self.df['coverage'] == 1.0) & (self.df['pident'] == 100.0)]
-        if df_perfect_matches.shape[0]:
+        if df_perfect_matches.shape[0] > 0 and len(blast_candidate_antigens) == 1:
             self.is_perfect_match = True
             return BlastReader.df_first_row_to_dict(df_perfect_matches)
 

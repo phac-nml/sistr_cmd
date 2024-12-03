@@ -256,7 +256,7 @@ def find_closest_related_genome(marker_results, df_genome_profiles):
     df_relatives['matching'] = genome_profile_similarity_counts
     df_relatives['distance'] = 1.0 - (df_relatives['matching'] / float(n_markers))
     df_relatives.index = df_genome_profiles.index
-    df_relatives.sort_values(by='distance', inplace=True)
+    df_relatives.sort_values(by=['distance','matching'], ascending=[True,False], inplace=True) 
     return df_relatives
 
 

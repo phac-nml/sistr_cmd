@@ -18,7 +18,8 @@ Serovar nomenclature update after USA Cantaloupe Outbreaks in November 2023. The
 | Poano -  Stafford    | Poano       |
 
 ### Changes of serovar assignments in `sistr/data/genomes-to-serovar.txt` file
-
+The following updates were done to better reflect the O24 and O25 nomenclature together with updated 
+Paratyphi B and Paratyphi B var. Java few genome designations with correct variant assignments
 |genome accession | serovar previous | serovar current |
 |-----------------|------------------|-----------------|
 | SAL_DA9822AA | Soahanina |Sundsvall
@@ -80,6 +81,12 @@ Serovar nomenclature update after USA Cantaloupe Outbreaks in November 2023. The
 |SAL_DA7014AA	|Martonos | Finkenwerder
 |SRR1300569	|Martonos | Finkenwerder
 |SRR1973814	|Martonos | Finkenwerder
+|17-2557    |Paratyphi B var. Java | Paratyphi B
+|17-8544    |Paratyphi B var. Java | Paratyphi B
+|17-9304    |Paratyphi B var. Java | Paratyphi B
+|18-0116    |Paratyphi B var. Java | Paratyphi B
+|17-7324    |Paratyphi B var. Java | Paratyphi B
+|17-9312    |Paratyphi B var. Java | Paratyphi B
 
 ### Changes to `Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv` antigen to serovar lookup database
 Removed the following entries
