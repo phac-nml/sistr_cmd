@@ -208,7 +208,7 @@ def matches_to_marker_results(df):
         if len(v) > 1:
             logging.debug('Multiple potential cgMLST allele matches (n=%s) found for marker %s. Selecting match on longest contig.', len(v), k)
             df_marker = pd.DataFrame(v)
-            df_marker.sort_values('slen', ascending=False, inplace=True)
+            df_marker.sort_values(['bitscore','length'], ascending=False, inplace=True)
             for i,r in df_marker.iterrows():
                 allele = r['allele_name']
                 slen = r['slen']
