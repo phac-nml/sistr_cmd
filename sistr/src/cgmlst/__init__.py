@@ -208,7 +208,7 @@ def matches_to_marker_results(df):
         if len(v) > 1:
             logging.debug('Multiple potential cgMLST allele matches (n=%s) found for marker %s. Selecting match on longest contig.', len(v), k)
             df_marker = pd.DataFrame(v)
-            df_marker.sort_values('slen', ascending=False, inplace=True)
+            df_marker.sort_values(['bitscore','length'], ascending=False, inplace=True)
             for i,r in df_marker.iterrows():
                 allele = r['allele_name']
                 slen = r['slen']
@@ -256,7 +256,7 @@ def find_closest_related_genome(marker_results, df_genome_profiles):
     df_relatives['matching'] = genome_profile_similarity_counts
     df_relatives['distance'] = 1.0 - (df_relatives['matching'] / float(n_markers))
     df_relatives.index = df_genome_profiles.index
-    df_relatives.sort_values(by='distance', inplace=True)
+    df_relatives.sort_values(by=['distance','matching'], ascending=[True,False], inplace=True) 
     return df_relatives
 
 
