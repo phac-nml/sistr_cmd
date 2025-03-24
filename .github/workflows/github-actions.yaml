@@ -30,8 +30,7 @@ jobs:
         sudo apt-get install python3-pip python3-dev python3-biopython python3-tables -y
         python3 -m pip install --upgrade pip setuptools
         pip3 install pytest fastcluster openpyxl pycurl pandas scipy "numpy<2"
-        python setup.py install
-        sistr_init
+        pip3 install . --no-deps --no-build-isolation --no-cache-dir -vv
     - name: Test  with pytest
       run: |
         pytest -o log_cli=true --basetemp=tmp-pytest
