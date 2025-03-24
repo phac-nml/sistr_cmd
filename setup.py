@@ -48,7 +48,7 @@ setup(
     },
     install_requires=[
         'numpy>=1.11.1,<2',
-        'tables>=3.3.0,<4',
+        'tables>=3.3.0,<3.10.2',
         'pandas>=0.22.0,<3',
         'pycurl>=7.43.0,<8',
         'scipy>=1.1.0,<2',
