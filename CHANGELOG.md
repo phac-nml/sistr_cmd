@@ -87,6 +87,7 @@ Paratyphi B and Paratyphi B var. Java few genome designations with correct varia
 |18-0116    |Paratyphi B var. Java | Paratyphi B
 |17-7324    |Paratyphi B var. Java | Paratyphi B
 |17-9312    |Paratyphi B var. Java | Paratyphi B
+|SRR3048937 |Ibadan                | Mississippi
 
 ### Changes to `Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv` antigen to serovar lookup database
 Removed the following entries

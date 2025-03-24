@@ -8,7 +8,7 @@ MASH_DISTANCE_THRESHOLD = 0.005
 CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD = 0.9
 MASH_SUBSPECIATION_DISTANCE_THRESHOLD = 0.01
 
-SISTR_DB_URL = 'https://zenodo.org/records/14270992/files/SISTR_V_1.1.3_db.tar.gz?download=1'
+SISTR_DB_URL = 'https://zenodo.org/records/15078586/files/SISTR_V_1.1.3_db.tar.gz?download=1'
 SISTR_DATA_DIR = resource_filename('sistr','data')
 SEROVAR_TABLE_PATH = resource_filename('sistr', 'data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
 WZX_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzx.fasta')

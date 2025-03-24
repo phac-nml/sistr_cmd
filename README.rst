@@ -127,7 +127,7 @@ SISTR will automatically initialize database of *Salmonella* serovar determinati
 The SISTR database v1.3 got minor updates by collapsing some of the serovars with O24/O25 antigens detailed in `CHANGELOG.md <CHANGELOG.md>`_ file
 
 - SISTR v1.1 database is available at https://zenodo.org/records/13618515 or via a direct url https://zenodo.org/records/13618515/files/SISTR_V_1.1_db.tar.gz?download=1  (used with SISTR < 1.1.3 )
-- SISTR v1.3 database is available at https://zenodo.org/records/14270992 or va a direct url https://zenodo.org/records/14270992/files/SISTR_V_1.1.3_db.tar.gz?download=1 (used with SISTR >= 1.1.3)
+- SISTR v1.3 database is available at https://zenodo.org/records/15078586 or va a direct url https://zenodo.org/records/14270992/files/SISTR_V_1.1.3_db.tar.gz?download=1 (used with SISTR >= 1.1.3)
 
 
 Dependencies
