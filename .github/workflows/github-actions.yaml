@@ -27,7 +27,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install mash ncbi-blast+ libssl-dev libcurl4-openssl-dev mafft libssl-dev ca-certificates libhdf5-serial-dev -y
-        sudo apt-get install python3-pip python3-dev python3-biopython python3-tables -y
+        sudo apt-get install python3-pip python3-dev python3-biopython python3-pycurl python3-tables -y
         python3 -m pip install --upgrade pip setuptools
         pip3 install pytest fastcluster openpyxl pycurl blosc2 pandas scipy "numpy<2"
         pip3 install -e .
