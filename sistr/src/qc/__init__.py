@@ -55,7 +55,7 @@ def qc(fasta_path, cgmlst_results, prediction):
 
     if prediction.serovar in 'Paratyphi B|Paratyphi B var. Java':
         qc_msgs.append("Perform d-tartrate test (dT) to differentiate between Paratyphi B and Paratyphi B var. Java. The dT+ result is indicative of variant Java.")
-    if prediction.serovar in 'I 1,4,[5],12:i:-':
+    if prediction.serovar in 'I 1,4,[5],12:b:-':
         qc_msgs.append(f"Perform d-tartrate test (dT) as both dT+ and dT- {prediction.serovar} subtypes exist.")
     qc_msgs.sort()
     return qc_status, qc_msgs

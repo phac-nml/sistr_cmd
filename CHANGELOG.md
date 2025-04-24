@@ -125,10 +125,10 @@ The following entries were modified in the in the `O_antigen` field as such
 ### New argument `--list-of-serovars`
 - Added `--list-of-serovars` option allowing user to provide a single column text file listing all serovars of interest to match against the SISTR prediction. The result will be reported in `predicted_serovar_in_list` field as `Y` or `N` if there is match or otherwise. This could be useful for cases when only a certain list of serovars could be reported
 
-### New d-tartrate message for `Paratyphi B`, `Paratyphi B var. Java` and`I 1,4,[5],12:i:-` serovars
+### New d-tartrate message for `Paratyphi B`, `Paratyphi B var. Java` and`I 1,4,[5],12:b:-` serovars
 - If Paratyphi B and Paratyphi B var. Java serovar is predicted and the `--qc` is selected, the following message will appear in `qc_messages` field `Perform d-tartrate test (dT) to differentiate between Paratyphi B and Paratyphi B var. Java. The dT+ result is indicative of variant Java.`
-- If  monophasic `I 1,4,[5],12:i:-` predicted, then the `qc_messages` field will suggest d-tartrate test via this message
-`Perform d-tartrate test (dT) as both dT+ and dT- I 1,4,[5],12:i:- subtypes exist.`
+- If  monophasic `I 1,4,[5],12:b:-` predicted, then the `qc_messages` field will suggest d-tartrate test via this message
+`Perform d-tartrate test (dT) as both dT+ and dT- I 1,4,[5],12:b:- subtypes exist.`
 
 # 1.1.1
 
