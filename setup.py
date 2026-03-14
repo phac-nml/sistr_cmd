@@ -12,9 +12,10 @@ Intended Audience :: Science/Research
 Topic :: Scientific/Engineering
 Topic :: Scientific/Engineering :: Bio-Informatics
 Programming Language :: Python
-Programming Language :: Python :: 3.4
-Programming Language :: Python :: 3.5
-Programming Language :: Python :: 3.6
+Programming Language :: Python :: 3.9
+Programming Language :: Python :: 3.10
+Programming Language :: Python :: 3.11
+Programming Language :: Python :: 3.12
 Programming Language :: Python :: Implementation :: CPython
 Operating System :: POSIX :: Linux
 """.strip().split('\n')
@@ -32,6 +33,7 @@ class CustomInstallCommand(install):
 setup(
     name='sistr_cmd',
     version=__version__,
+    python_requires='>=3.9',
     packages=find_namespace_packages(exclude=['tests']),
     url='https://github.com/phac-nml/sistr_cmd',
     license='Apache 2.0',

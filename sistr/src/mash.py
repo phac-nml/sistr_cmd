@@ -1,14 +1,14 @@
 import logging
 import re, os
-from pkg_resources import resource_filename
 from subprocess import Popen, PIPE
 import pandas as pd
+from sistr.resource_path import resource_path
 from sistr.src.serovar_prediction.constants import genomes_to_serovar, genomes_to_subspecies
 from sistr.src.serovar_prediction.constants import MASH_SUBSPECIATION_DISTANCE_THRESHOLD
 
 
 MASH_BIN = 'mash'
-MASH_SKETCH_FILE = resource_filename('sistr', 'data/sistr.msh')
+MASH_SKETCH_FILE = resource_path('sistr', 'data/sistr.msh')
 
 
 def mash_dist_trusted(fasta_path):

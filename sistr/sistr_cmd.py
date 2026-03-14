@@ -7,7 +7,7 @@ from datetime import datetime
 import logging
 import re, sys
 import os, pycurl, tarfile, zipfile, gzip, shutil
-from pkg_resources import resource_filename
+from sistr.resource_path import resource_path
 
 
 from sistr.version import __version__
@@ -227,23 +227,23 @@ def extract(fname,outdir):
             os.remove(fname)
 
 def setup_sistr_dbs():
-    tmp_file = resource_filename('sistr', 'data.tar.gz')
+    tmp_file = resource_path('sistr', 'data.tar.gz')
     logging.info("Downloading needed SISTR databases from: {}".format(SISTR_DB_URL))
     download_to_file(SISTR_DB_URL, tmp_file)
-    if os.path.isdir(resource_filename('sistr', 'data/')):
-        os.makedirs(resource_filename('sistr', 'data/'),exist_ok=True)
+    data_dir = resource_path('sistr', 'data')
+    os.makedirs(data_dir, exist_ok=True)
     if (not os.path.isfile(tmp_file)):
         logging.error('Downloading databases failed, please check your internet connection and retry')
         sys.exit(-1)
     else:
-        logging.info(f"Downloading databases successful installed at {os.path.abspath(resource_filename('sistr', 'data/'))}")
-        f = open(resource_filename('sistr', 'dbstatus.txt'),'w')
+        logging.info(f"Downloading databases successful installed at {os.path.abspath(data_dir)}")
+        f = open(resource_path('sistr', 'dbstatus.txt'), 'w')
         f.write("DB downloaded on : {} from {}".format(datetime.today().strftime('%Y-%m-%d'),SISTR_DB_URL))
         logging.info(f"DB status file written at {f.name} path")
         f.close()
         
 
-    extract(tmp_file, resource_filename('sistr', ''))
+    extract(tmp_file, resource_path('sistr', ''))
     os.remove(tmp_file)
 
 
@@ -398,7 +398,7 @@ def main():
     logging.critical('Running sistr_cmd v{} at logging level {} ({}) on'.format(__version__, args.verbose, 
                                                                                    logging.getLevelName(logging.getLogger().level)))
     logging.debug(f"Running on command-line arguments {args}")
-    if not os.path.isfile(resource_filename('sistr', 'dbstatus.txt')):
+    if not os.path.isfile(resource_path('sistr', 'dbstatus.txt')):
         setup_sistr_dbs()
     input_fastas = args.fastas
     paths_names = args.input_fasta_genome_name

@@ -1,4 +1,4 @@
-from pkg_resources import resource_filename
+from sistr.resource_path import resource_path
 import logging
 import zlib
 from collections import Counter, defaultdict
@@ -11,9 +11,9 @@ from sistr.src.parsers import parse_fasta
 from sistr.src.serovar_prediction.constants import CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD, genomes_to_subspecies
 
 
-CGMLST_CENTROID_FASTA_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-centroid.fasta')
-CGMLST_FULL_FASTA_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-full.fasta')
-CGMLST_PROFILES_PATH = resource_filename('sistr', 'data/cgmlst/cgmlst-profiles.hdf')
+CGMLST_CENTROID_FASTA_PATH = resource_path('sistr', 'data/cgmlst/cgmlst-centroid.fasta')
+CGMLST_FULL_FASTA_PATH = resource_path('sistr', 'data/cgmlst/cgmlst-full.fasta')
+CGMLST_PROFILES_PATH = resource_path('sistr', 'data/cgmlst/cgmlst-profiles.hdf')
 BLASTN_PIDENT_THRESHOLD = 90.0
 
 

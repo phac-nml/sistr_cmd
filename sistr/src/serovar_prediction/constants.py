@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-from pkg_resources import resource_filename
+from sistr.resource_path import resource_path
 
 # cgMLST330 distance threshold for refining overall serovar prediction
 CGMLST_DISTANCE_THRESHOLD = 0.1
@@ -9,16 +9,16 @@ CGMLST_SUBSPECIATION_DISTANCE_THRESHOLD = 0.9
 MASH_SUBSPECIATION_DISTANCE_THRESHOLD = 0.01
 
 SISTR_DB_URL = 'https://zenodo.org/records/15078586/files/SISTR_V_1.1.3_db.tar.gz?download=1'
-SISTR_DATA_DIR = resource_filename('sistr','data')
-SEROVAR_TABLE_PATH = resource_filename('sistr', 'data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
-WZX_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzx.fasta')
-WZY_FASTA_PATH = resource_filename('sistr', 'data/antigens/wzy.fasta')
-FLIC_FASTA_PATH = resource_filename('sistr', 'data/antigens/fliC.fasta')
-FLJB_FASTA_PATH = resource_filename('sistr', 'data/antigens/fljB.fasta')
+SISTR_DATA_DIR = resource_path('sistr', 'data')
+SEROVAR_TABLE_PATH = resource_path('sistr', 'data/Salmonella-serotype_serogroup_antigen_table-WHO_2007.csv')
+WZX_FASTA_PATH = resource_path('sistr', 'data/antigens/wzx.fasta')
+WZY_FASTA_PATH = resource_path('sistr', 'data/antigens/wzy.fasta')
+FLIC_FASTA_PATH = resource_path('sistr', 'data/antigens/fliC.fasta')
+FLJB_FASTA_PATH = resource_path('sistr', 'data/antigens/fljB.fasta')
 
 
-GENOMES_TO_SEROVAR_PATH = resource_filename('sistr', 'data/genomes-to-serovar.txt')
-GENOMES_TO_SPP_PATH = resource_filename('sistr', 'data/genomes-to-subspecies.txt')
+GENOMES_TO_SEROVAR_PATH = resource_path('sistr', 'data/genomes-to-serovar.txt')
+GENOMES_TO_SPP_PATH = resource_path('sistr', 'data/genomes-to-subspecies.txt')
 
 
 def genomes_to_serovar():
