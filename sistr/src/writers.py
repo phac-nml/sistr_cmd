@@ -46,8 +46,6 @@ def to_dict(x, depth, exclude_keys=set(), depth_threshold=8):
         return int(x)
     if isinstance(x, np.int64):
         return int(x)
-    if isinstance(x, np.float_):
-        return float(x)
     if isinstance(x, np.float64):
         return float(x)
     if isinstance(x, np.bool_):
