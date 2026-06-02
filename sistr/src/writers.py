@@ -1,6 +1,9 @@
 import logging
 import numpy as np
-
+import pandas as pd
+import json
+import pickle
+from pathlib import Path
 
 def listattrs(x):
     """Get all instance and class attributes for an object
@@ -128,61 +131,49 @@ def flatten_dict(x):
     return out
 
 
-def write_json(fh, output):
-    import json
-    json.dump(output, fh)
-
-
-def write_pickle(fh, output):
-    import cPickle
-    cPickle.dump(output, fh)
-
-
-def write_csv(fh, output):
-    import pandas as pd
-    df = pd.DataFrame(output)
-    df.to_csv(fh, index=False)
-
-
-def write_tab(fh, output):
-    import pandas as pd
-    df = pd.DataFrame(output)
-    df.to_csv(fh, index=False, sep='\t')
-
-
-fmt_to_write_func = {'json': write_json,
-                     'pickle': write_pickle,
-                     'csv': write_csv,
-                     'tab': write_tab, }
-
-
 def write(dest, fmt, serovar_predictions, more_results=0):
     assert isinstance(serovar_predictions, list)
-    if not fmt in fmt_to_write_func:
+    if not fmt in {'json', 'pickle', 'csv', 'tab'}:
         logging.warn('Invalid output format "%s". Defaulting to "json"', fmt)
         fmt = 'json'
     if '.' + fmt not in dest:
         dest += '.' + fmt
+
+    dest = Path(dest)
+    dest_dir = dest.parent
+
+    if not dest_dir.exists():
+        dest_dir.mkdir(parents=True)
+    
+
     logging.info('Writing output "%s" file to "%s"', fmt, dest)
-    fh = open(dest, 'w')
-    try:
-        # write in whatever format necessary
-        write_func = fmt_to_write_func[fmt]
-        exclude_keys_in_output = {'blast_results', 'sseq'}
-        if more_results >= 2:
-            exclude_keys_in_output.remove('blast_results')
-            exclude_keys_in_output.remove('sseq')
-        elif more_results == 1:
-            exclude_keys_in_output.remove('sseq')
-        if fmt in {'pickle', 'json'}:
-            output_dict = [to_dict(v, 0, exclude_keys=exclude_keys_in_output) for v in serovar_predictions]
+    # write in whatever format necessary
+    exclude_keys_in_output = {'blast_results', 'sseq'}
+    if more_results >= 2:
+        exclude_keys_in_output.remove('blast_results')
+        exclude_keys_in_output.remove('sseq')
+    elif more_results == 1:
+        exclude_keys_in_output.remove('sseq')
+    if fmt in {'pickle', 'json'}:
+        
+        output_dict = [to_dict(v, 0, exclude_keys=exclude_keys_in_output) for v in serovar_predictions]
+        if fmt == 'json':
+            with open(dest, "w") as fh:
+                json.dump(output_dict, fh)
         else:
-            if more_results > 0:
-                output_dict = [flatten_dict(to_dict(v, 0, exclude_keys=exclude_keys_in_output)) for v in
-                               serovar_predictions]
-            else:
-                output_dict = [to_dict(v, 0, exclude_keys=exclude_keys_in_output, depth_threshold=1) for v in
-                               serovar_predictions]
-        write_func(fh, output_dict)
-    finally:
-        fh.close()
+            with open(dest, "wb") as fh:
+                pickle.dump(output_dict, fh)
+    else:
+        if more_results > 0:
+            output_dict = [flatten_dict(to_dict(v, 0, exclude_keys=exclude_keys_in_output)) for v in
+                           serovar_predictions]
+        else:
+            output_dict = [to_dict(v, 0, exclude_keys=exclude_keys_in_output, depth_threshold=1) for v in
+                           serovar_predictions]
+        df = pd.DataFrame(output_dict)
+        sep = ','
+        if fmt == 'tab':
+            sep = '\t'
+
+        df.to_csv(dest, index = False, sep = sep)
+
